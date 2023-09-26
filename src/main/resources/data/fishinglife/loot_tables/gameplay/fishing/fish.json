@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "biome": "minecraft:frozen_ocean"
+          }
+        }
+      ],
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:arapaima",
+          "weight": 100,
+          "quality": 1
+        }
+      ]
+    }
+    ],
+
+  "random_sequence": "fishinglife:gameplay/fishing/fish"
+}
+
+
