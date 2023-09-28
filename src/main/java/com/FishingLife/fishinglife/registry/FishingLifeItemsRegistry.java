@@ -12,7 +12,7 @@ public class FishingLifeItemsRegistry {
             DeferredRegister.create(ForgeRegistries.ITEMS, fishinglife.MOD_ID);
 
 
-    public static final RegistryObject<Item> ARAPAIMA = ITEMS.register("arapaima",
+    public static final RegistryObject<Item> ARAPAIMA_GIGAS = ITEMS.register("arapaima_gigas",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
     public static final RegistryObject<Item> SILVER_AROWANA = ITEMS.register("silver_arowana",

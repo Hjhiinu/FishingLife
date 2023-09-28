@@ -6,7 +6,7 @@
         {
           "condition": "minecraft:location_check",
           "predicate": {
-            "biome": "minecraft:frozen_ocean"
+            "biome": "minecraft:jungle"
           }
         }
       ],
@@ -14,8 +14,50 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fishinglife:arapaima",
-          "weight": 100,
+          "name": "fishinglife:arapaima_gigas",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:silver_arowana",
+          "weight": 20,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:brycon_hilarii",
+          "weight": 20,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:hydrolycus_armatus",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:salminus",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:piranha",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:acanthodoras",
+          "weight": 10,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:cetopsidium",
+          "weight": 10,
           "quality": 1
         }
       ]
