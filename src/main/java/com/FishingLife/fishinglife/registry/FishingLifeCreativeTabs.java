@@ -26,7 +26,8 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.ACANTHODORAS.get()); // Acanthodoras
                         pOutput.accept(FishingLifeItemsRegistry.ELECTRIC_EEL.get()); // Electric Eel
                         pOutput.accept(FishingLifeItemsRegistry.CETOPSIDIUM.get()); // Cetopsidium
-
+                        pOutput.accept(FishingLifeItemsRegistry.PANCAKE_STINGRAYS.get());//Pancake stingrays
+                        pOutput.accept(FishingLifeItemsRegistry.PEACOCK_BASS.get());//Peacock bass
 
 
                     })

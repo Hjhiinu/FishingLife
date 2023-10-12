@@ -39,7 +39,11 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> CETOPSIDIUM = ITEMS.register("cetopsidium",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    public static final RegistryObject<Item> PANCAKE_STINGRAYS = ITEMS.register("pancake_stingrays",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    public static final RegistryObject<Item>  PEACOCK_BASS= ITEMS.register("peacock_bass",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
