@@ -8,15 +8,17 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import static net.minecraft.tags.TagEntry.tag;
+
 
 public class ModTags {
-    public static final TagKey<Item> JUNGLE_FISHES = modItemTag("jungle_fishes");
+    public static class Items {
+        public static final TagKey<Item> JUNGLE_FISHES = tag("jungle_fishes");
 
-    private static TagKey<Item> modItemTag(String name) {
-        return ItemTags.create(new ResourceLocation(fishinglife.MOD_ID,name));
+        private static TagKey<Item> tag(String name) {
+            return ItemTags.create(new ResourceLocation(fishinglife.MOD_ID, name));
+        }
     }
 
-    //private static TagKey<Block> modBlockTag(String path) {
-      //  return null;
-    //}
+
 }

@@ -2,6 +2,7 @@ package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,7 +12,7 @@ public class FishingLifeItemsRegistry {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, fishinglife.MOD_ID);
 
-
+    //Fishes
     public static final RegistryObject<Item> ARAPAIMA_GIGAS = ITEMS.register("arapaima_gigas",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
@@ -44,6 +45,27 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item>  PEACOCK_BASS= ITEMS.register("peacock_bass",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item>  DISCUS= ITEMS.register("discus",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item>  RAINBOW_FISH= ITEMS.register("rainbow_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item>  ELEPHANT_FISH= ITEMS.register("elephant_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+
+
+
+    //Seeds
+    public static final RegistryObject<Item> SCALLION_SEEDS = ITEMS.register("scallion_seeds",
+            () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.SCALLION_CROP.get(), new Item.Properties()));
+
+
+    //Crops
+    public static final RegistryObject<Item> SCALLION = ITEMS.register("scallion",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}

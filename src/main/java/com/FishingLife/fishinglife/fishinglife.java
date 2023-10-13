@@ -1,5 +1,6 @@
 package com.FishingLife.fishinglife;
 
+import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.mojang.logging.LogUtils;
@@ -40,7 +41,7 @@ public class fishinglife
         modEventBus.addListener(this::commonSetup);
         FishingLifeCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         FishingLifeItemsRegistry.ITEMS.register(modEventBus);
-
+        FishingLifeBlocksRegistry.BLOCKS.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in
