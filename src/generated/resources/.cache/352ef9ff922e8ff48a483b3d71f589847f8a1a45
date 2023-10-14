@@ -1,12 +1,17 @@
-// 1.20.1	2023-10-13T10:04:09.5606283	Item Models: fishinglife
+// 1.20.1	2023-10-14T15:08:36.6902981	Item Models: fishinglife
 0c54fff685325216973a8c231f558811cd237943 assets/fishinglife/models/item/acanthodoras.json
 64821a019693e72935730797459f76e84e35b4d9 assets/fishinglife/models/item/arapaima_gigas.json
 9b059cc3404d8413dcfb8652dbb47faf897fff91 assets/fishinglife/models/item/brycon_hilarii.json
 74cb69dbbc26537f4173a69c6bef34a96da9ea25 assets/fishinglife/models/item/cetopsidium.json
+2790f3b8730025bbbf1c6e403637246837112f7b assets/fishinglife/models/item/chili_pepper.json
+476bda6755bac3c259ea09b2b7e0858b76096bba assets/fishinglife/models/item/chili_pepper_seeds.json
 d244484c2331fb4b8872fbd86effeeff9957872f assets/fishinglife/models/item/discus.json
 1bc2c3ed80acc49fa1a1d776a616fc23ff08793d assets/fishinglife/models/item/electric_eel.json
 a1d8b93462ad043f00a2a6fabcb07403db69c7e1 assets/fishinglife/models/item/elephant_fish.json
+2bea45df74f7754b291adb17a9b8b654ea9064ad assets/fishinglife/models/item/green_pepper.json
+cf24396eb5578a17de8e7552494a62addabae725 assets/fishinglife/models/item/green_pepper_seeds.json
 b8196d3c9ed39cf3c95dfbaedd67e6cc7f790bcf assets/fishinglife/models/item/hydrolycus_armatus.json
+4a47d7b2f63a76f4fe9cd57c6de6582e949e4353 assets/fishinglife/models/item/panaque.json
 ea964056fb4e8dc37a43c46be7221ea27578c020 assets/fishinglife/models/item/pancake_stingrays.json
 74e767c9e56d5d620759ac4095437d01d5aed182 assets/fishinglife/models/item/peacock_bass.json
 3b333f17ddf12a6b997519445a1a606893638afc assets/fishinglife/models/item/piranha.json

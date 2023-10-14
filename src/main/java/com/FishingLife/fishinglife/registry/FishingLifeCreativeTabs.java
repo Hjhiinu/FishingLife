@@ -16,7 +16,9 @@ public class FishingLifeCreativeTabs {
             ()->CreativeModeTab.builder().icon(()->new ItemStack(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get()))
                     .title(Component.translatable("creativetab.fishinglife_tab"))
                     .displayItems((pParameters,pOutput)->{
-                    //Fishes
+                        //Fishes
+
+                        //Jungle Fishes
                         pOutput.accept(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get()); // Arapaima
                         pOutput.accept(FishingLifeItemsRegistry.SILVER_AROWANA.get()); // Silver Arowana
                         pOutput.accept(FishingLifeItemsRegistry.BRYCON_HILARII.get()); // Brycon hilarii
@@ -31,9 +33,18 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.DISCUS.get());//Discus
                         pOutput.accept(FishingLifeItemsRegistry.RAINBOW_FISH.get());//Rainbow Fish
                         pOutput.accept(FishingLifeItemsRegistry.ELEPHANT_FISH.get());//Elephant Fish
-                        //Seeds
+                        pOutput.accept(FishingLifeItemsRegistry.PANAQUE.get());//Panaque
+
+
+                        // Seeds
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION_SEEDS.get());//Scallion seeds
+                        pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get());//Green pepper seeds
+                        pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get());//Chili pepper seeds
+                        //Crops
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION.get());//Scallion
+                        pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER.get());//Green pepper
+                        pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER.get());//Chili pepper
+
 
                     })
                     .build());

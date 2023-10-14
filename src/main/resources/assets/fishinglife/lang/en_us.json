@@ -15,11 +15,17 @@
   "item.fishinglife.rainbow_fish": "Rainbow Fish",
   "item.fishinglife.discus": "Discus",
   "item.fishinglife.elephant_fish": "Elephant Fish",
-
+  "item.fishinglife.panaque": "Panaque",
 
 
   "item.fishinglife.scallion_seeds": "Scallion Seeds",
   "item.fishinglife.scallion": "Scallion",
+
+  "item.fishinglife.green_pepper_seeds": "Green Pepper Seeds",
+  "item.fishinglife.green_pepper": "Green Pepper",
+
+  "item.fishinglife.chili_pepper_seeds": "Chili Pepper Seeds",
+  "item.fishinglife.chili_pepper": "Chili Pepper",
 
 
   "creativetab.fishinglife_tab": "Fishing Life"

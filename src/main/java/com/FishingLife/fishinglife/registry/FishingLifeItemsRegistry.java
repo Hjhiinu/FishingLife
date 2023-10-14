@@ -7,8 +7,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraftforge.common.loot.LootTableIdCondition;
 public class FishingLifeItemsRegistry {
+
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, fishinglife.MOD_ID);
 
@@ -55,16 +58,28 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item>  ELEPHANT_FISH= ITEMS.register("elephant_fish",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
-
+    public static final RegistryObject<Item>  PANAQUE= ITEMS.register("panaque",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
     //Seeds
     public static final RegistryObject<Item> SCALLION_SEEDS = ITEMS.register("scallion_seeds",
             () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.SCALLION_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> GREEN_PEPPER_SEEDS = ITEMS.register("green_pepper_seeds",
+            () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.GREEN_PEPPER_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> CHILI_PEPPER_SEEDS = ITEMS.register("chili_pepper_seeds",
+            () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), new Item.Properties()));
 
     //Crops
     public static final RegistryObject<Item> SCALLION = ITEMS.register("scallion",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
+
+    public static final RegistryObject<Item> GREEN_PEPPER = ITEMS.register("green_pepper",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
+
+    public static final RegistryObject<Item> CHILI_PEPPER = ITEMS.register("chili_pepper",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
 

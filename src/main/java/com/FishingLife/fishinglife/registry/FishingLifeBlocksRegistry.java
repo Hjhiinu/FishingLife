@@ -1,20 +1,14 @@
 package com.FishingLife.fishinglife.registry;
 
 //import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
 import com.FishingLife.fishinglife.fishinglife;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,8 +20,18 @@ public class FishingLifeBlocksRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, fishinglife.MOD_ID);
 
+
+
+    //CropBlock
     public static final RegistryObject<Block> SCALLION_CROP = BLOCKS.register("scallion_crop",
             () -> new ScallionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> GREEN_PEPPER_CROP = BLOCKS.register("green_pepper_crop",
+            () -> new GreenPepperCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CHILI_PEPPER_CROP = BLOCKS.register("chili_pepper_crop",
+            () -> new ChiliPepperCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

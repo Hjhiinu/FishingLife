@@ -34,10 +34,22 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.PANCAKE_STINGRAYS.get(),
                         FishingLifeItemsRegistry.RAINBOW_FISH.get(),
                         FishingLifeItemsRegistry.SILVER_AROWANA.get(),
-                        FishingLifeItemsRegistry.SALMINUS.get()
-
+                        FishingLifeItemsRegistry.SALMINUS.get(),
+                        FishingLifeItemsRegistry.PANAQUE.get()
 
                 );
 
+
+
+
+        this.tag(ModTags.Items.CROPS)
+                .add(FishingLifeItemsRegistry.SCALLION.get(),
+                        FishingLifeItemsRegistry.GREEN_PEPPER.get(),
+                        FishingLifeItemsRegistry.CHILI_PEPPER.get()
+
+
+
+
+                );
     }
 }

@@ -34,9 +34,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.RAINBOW_FISH);
         simpleItem(FishingLifeItemsRegistry.SILVER_AROWANA);
         simpleItem(FishingLifeItemsRegistry.SALMINUS);
+        simpleItem(FishingLifeItemsRegistry.PANAQUE);
+
+
+
+
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SCALLION);
-
+        simpleItem(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS);
+        simpleItem(FishingLifeItemsRegistry.GREEN_PEPPER);
+        simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS);
+        simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
