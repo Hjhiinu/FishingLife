@@ -4,6 +4,7 @@ package com.FishingLife.fishinglife.registry;
 import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
+import com.FishingLife.fishinglife.block.utilBlock.Fermenter;
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -20,7 +21,10 @@ public class FishingLifeBlocksRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, fishinglife.MOD_ID);
 
+    //UtilBlock
 
+    public static final RegistryObject<Block> FERMENTER = registerBlock("fermenter",
+            () -> new Fermenter(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     //CropBlock
     public static final RegistryObject<Block> SCALLION_CROP = BLOCKS.register("scallion_crop",

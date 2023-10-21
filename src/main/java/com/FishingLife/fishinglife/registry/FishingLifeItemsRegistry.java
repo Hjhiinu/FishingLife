@@ -62,6 +62,12 @@ public class FishingLifeItemsRegistry {
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
+    //Other items
+    public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> CREAM = ITEMS.register("cream",()->new Item(new Item.Properties()));
+
+
     //Seeds
     public static final RegistryObject<Item> SCALLION_SEEDS = ITEMS.register("scallion_seeds",
             () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.SCALLION_CROP.get(), new Item.Properties()));
@@ -82,6 +88,12 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> CHILI_PEPPER = ITEMS.register("chili_pepper",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
+    public static final RegistryObject<Item> CUCUMBER = ITEMS.register("cucumber",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
+
+
+    public static final RegistryObject<Item> SPINACH = ITEMS.register("spinach",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
     public static void register(IEventBus eventBus) {ITEMS.register(eventBus);}
 }

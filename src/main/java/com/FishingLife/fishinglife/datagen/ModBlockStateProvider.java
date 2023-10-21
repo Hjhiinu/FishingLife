@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -26,6 +27,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        //Normal Blocks
+        simpleBlockWithItem(FishingLifeBlocksRegistry.FERMENTER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/fermenter")));
+        //Crop  Blocks
         makeScallionCrop((CropBlock) FishingLifeBlocksRegistry.SCALLION_CROP.get(), "scallion_stage", "scallion_stage");
         makeGreenPepperCrop((CropBlock) FishingLifeBlocksRegistry.GREEN_PEPPER_CROP.get(), "green_pepper_stage", "green_pepper_stage");
         makeChiliPepperCrop((CropBlock) FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), "chili_pepper_stage", "chili_pepper_stage");

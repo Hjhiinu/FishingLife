@@ -1,5 +1,6 @@
-// 1.20.1	2023-10-14T15:08:36.6828515	Block States: fishinglife
+// 1.20.1	2023-10-20T18:10:49.921429	Block States: fishinglife
 e3837308762308df8caed477865b01ffd160b382 assets/fishinglife/blockstates/chili_pepper_crop.json
+ef3f5118193c799c4698af7cd0140ba2b49cc363 assets/fishinglife/blockstates/fermenter.json
 c95425279d89b924a9cf101a077c40ca803f7665 assets/fishinglife/blockstates/green_pepper_crop.json
 505f5344ba483e20704ddf9ef6fff782ded9274a assets/fishinglife/blockstates/scallion_crop.json
 268559a1a4bf3714cfe09f4951c9f9c1e105f49f assets/fishinglife/models/block/chili_pepper_stage0.json
@@ -20,3 +21,4 @@ e4f227a7ec93bfcaac0bd268e9a148d2146da877 assets/fishinglife/models/block/green_p
 a3aa17fdbef4f333f0eb8e82067bed085b2fa9bf assets/fishinglife/models/block/scallion_stage3.json
 5a2e6f5c2bc253d3cccf72f250155864665cd4ee assets/fishinglife/models/block/scallion_stage4.json
 74e621f9a555474a1b7878bd62fe6b27ef15a6ae assets/fishinglife/models/block/scallion_stage5.json
+c52ea374ef0e8cf4ec773eda2f07461d0245655d assets/fishinglife/models/item/fermenter.json

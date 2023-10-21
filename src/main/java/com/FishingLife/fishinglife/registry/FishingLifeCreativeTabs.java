@@ -45,6 +45,13 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER.get());//Green pepper
                         pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER.get());//Chili pepper
 
+                        //Other items
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_MEAT.get());//Fish meat
+                        pOutput.accept(FishingLifeItemsRegistry.CREAM.get());//Cream
+
+
+                        //Blocks
+                        pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());
 
                     })
                     .build());

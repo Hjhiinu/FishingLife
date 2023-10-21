@@ -51,5 +51,25 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
                 );
+
+
+        this.tag(ModTags.Items.MODFISH)
+                .add(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get(),
+                FishingLifeItemsRegistry.ACANTHODORAS.get(),
+                FishingLifeItemsRegistry.BRYCON_HILARII.get(),
+                FishingLifeItemsRegistry.CETOPSIDIUM.get(),
+                FishingLifeItemsRegistry.DISCUS.get(),
+                FishingLifeItemsRegistry.ELECTRIC_EEL.get(),
+                FishingLifeItemsRegistry.ELEPHANT_FISH.get(),
+                FishingLifeItemsRegistry.HYDROLYCUS_ARMATUS.get(),
+                FishingLifeItemsRegistry.PEACOCK_BASS.get(),
+                FishingLifeItemsRegistry.PIRANHA.get(),
+                FishingLifeItemsRegistry.PANCAKE_STINGRAYS.get(),
+                FishingLifeItemsRegistry.RAINBOW_FISH.get(),
+                FishingLifeItemsRegistry.SILVER_AROWANA.get(),
+                FishingLifeItemsRegistry.SALMINUS.get(),
+                FishingLifeItemsRegistry.PANAQUE.get()
+
+                );
     }
 }

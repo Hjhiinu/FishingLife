@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "fishinglife:scallion_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "fishinglife:green_pepper_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "fishinglife:chili_pepper_seeds"
+        }
+      ]
+    }
+    ],
+  "random_sequence": "fishinglife:gameplay/fishing/junk"
+}

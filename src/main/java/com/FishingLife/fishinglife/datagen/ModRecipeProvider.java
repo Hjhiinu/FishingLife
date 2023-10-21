@@ -1,11 +1,10 @@
 package com.FishingLife.fishinglife.datagen;
 
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -28,6 +27,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.CREAM.get())
+                .pattern("S")
+                .pattern("W")
+                .define('S', Items.SUGAR)
+                .define('W', Items.MILK_BUCKET)
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
+                .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
+                .save(pWriter);
 
     }
 

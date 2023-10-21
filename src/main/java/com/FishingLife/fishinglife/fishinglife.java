@@ -1,10 +1,15 @@
 package com.FishingLife.fishinglife;
 
+import com.FishingLife.fishinglife.GUIscreen.FermenterScreen;
+import com.FishingLife.fishinglife.GUIscreen.ModMenuTypes;
+import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
+import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,10 +43,19 @@ public class fishinglife
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
+
+
         modEventBus.addListener(this::commonSetup);
+
+
+
         FishingLifeCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         FishingLifeItemsRegistry.ITEMS.register(modEventBus);
         FishingLifeBlocksRegistry.BLOCKS.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
+
 
 
         // Register ourselves for server and other game events we are interested in
@@ -91,6 +105,8 @@ public class fishinglife
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
         }
     }
 }

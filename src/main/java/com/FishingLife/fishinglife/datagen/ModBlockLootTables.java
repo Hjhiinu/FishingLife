@@ -23,6 +23,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        //Normal Blocks
+
+        this.dropSelf(FishingLifeBlocksRegistry.FERMENTER.get());
+
+
+
         //Scallion
         LootItemCondition.Builder lootitemcondition$builder_scallion = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(FishingLifeBlocksRegistry.SCALLION_CROP.get())

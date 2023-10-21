@@ -1,0 +1,15 @@
+{
+  "type": "fishinglife:fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "fishinglife:cream"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "minecraft:diamond"
+  }
+}
