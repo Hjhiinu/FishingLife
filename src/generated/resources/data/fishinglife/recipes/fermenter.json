@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "minecraft:iron_bars"
+    },
+    "S": {
+      "tag": "minecraft:planks"
+    },
+    "W": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "X": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "pattern": [
+    "SQS",
+    "SXS",
+    "WWW"
+  ],
+  "result": {
+    "item": "fishinglife:fermenter"
+  },
+  "show_notification": true
+}

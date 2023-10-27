@@ -4,6 +4,7 @@ package com.FishingLife.fishinglife.datagen;
 import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -53,6 +54,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), createCropDrops(FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), FishingLifeItemsRegistry.CHILI_PEPPER.get(),
                 FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get(), lootitemcondition$builder_chili_pepper));
+
+        //Soybean
+        LootItemCondition.Builder lootitemcondition$builder_soybean = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(FishingLifeBlocksRegistry.SOYBEAN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SoybeanCropBlock.AGE, 5));
+
+        this.add(FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), createCropDrops(FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), FishingLifeItemsRegistry.SOYBEAN.get(),
+                FishingLifeItemsRegistry.SOYBEAN_SEEDS.get(), lootitemcondition$builder_soybean));
     }
 
     @Override

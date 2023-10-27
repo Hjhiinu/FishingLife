@@ -1,4 +1,5 @@
-// 1.20.1	2023-10-20T18:10:49.9252696	Tags for minecraft:item mod id fishinglife
+// 1.20.1	2023-10-25T11:42:57.926444	Tags for minecraft:item mod id fishinglife
 4428223a0118d484b6fbdba18fbabcd8c27d0bf7 data/fishinglife/tags/items/crops.json
+b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/fishinglife/tags/items/fruits.json
 75bb364ded85cc316b58564c388ae960c8735b54 data/fishinglife/tags/items/jungle_fishes.json
 75bb364ded85cc316b58564c388ae960c8735b54 data/fishinglife/tags/items/modfish.json

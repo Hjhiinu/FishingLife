@@ -1,0 +1,15 @@
+{
+  "type": "fishinglife:fermenting",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fishinglife:yeast_powder"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "fishinglife:vingar"
+  }
+}

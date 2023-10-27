@@ -3,6 +3,7 @@ package com.FishingLife.fishinglife;
 import com.FishingLife.fishinglife.GUIscreen.FermenterScreen;
 import com.FishingLife.fishinglife.GUIscreen.ModMenuTypes;
 import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
+
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
@@ -10,7 +11,10 @@ import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +37,7 @@ public class fishinglife
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "fishinglife";
+
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -58,6 +63,8 @@ public class fishinglife
 
 
 
+
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -66,7 +73,11 @@ public class fishinglife
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
     }
+
+
+
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {

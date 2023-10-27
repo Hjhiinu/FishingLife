@@ -24,18 +24,18 @@ public class ModFishLoot {
         return BuiltInLootTables.register(new ResourceLocation(fishinglife.MOD_ID, path));
     }
 
-
     @SubscribeEvent
-    public static void addLootPools(LootTableLoadEvent event) {
-        if ( event.getName().equals(BuiltInLootTables.FISHING) ) {
+    public static void onLootTableLoad(LootTableLoadEvent event) {
+        ResourceLocation name = event.getName();
+        if (name.equals(BuiltInLootTables.FISHING)) {
             LootPool pool = event.getTable().getPool("main");
-            if ( pool != null ) {
-                addEntry(pool, getInjectEntry(FISH, 80, 0));
+            if (pool != null) {
+                addEntry(pool, getInjectEntry(FISH, 80, 1));
                 addEntry(pool, getInjectEntry(JUNK, 20, 0));
+
             }
         }
     }
-
 
     private static LootPoolEntryContainer getInjectEntry(ResourceLocation location, int weight, int quality) {
         return LootTableReference.lootTableReference(location).setWeight(weight).setQuality(quality).build();

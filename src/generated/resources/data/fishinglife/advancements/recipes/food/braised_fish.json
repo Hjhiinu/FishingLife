@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fish_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_meat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scallion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:scallion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soy_sauce": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:soy_sauce"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sugar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sugar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:braised_fish"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar",
+      "has_fish_meat",
+      "has_scallion",
+      "has_soy_sauce",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:braised_fish"
+    ]
+  },
+  "sends_telemetry_event": false
+}

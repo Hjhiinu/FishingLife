@@ -2,14 +2,14 @@
   "type": "fishinglife:fermenting",
   "ingredients": [
     {
-      "item": "minecraft:coal"
+      "item": "fishinglife:yeast_powder"
     },
     {
-      "item": "fishinglife:cream"
+      "item": "fishinglife:soybean"
     }
   ],
   "output": {
-    "count": 1,
-    "item": "minecraft:diamond"
+    "count": 2,
+    "item": "fishinglife:soy_sauce"
   }
 }

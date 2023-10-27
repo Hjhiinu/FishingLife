@@ -1,3 +1,9 @@
-// 1.20.1	2023-10-15T14:43:21.4264195	Recipes
+// 1.20.1	2023-10-27T17:18:12.5986804	Recipes
+b8545e6cd42cb7be83603f22c67e19e388eb05d8 data/fishinglife/advancements/recipes/food/braised_fish.json
+8e3cdc75a049ec25496084f781aed7b45f40a2a0 data/fishinglife/advancements/recipes/food/miso_grilled_fish.json
 e608d4c776cc43583c3016a3a760ab0f592e8fcb data/fishinglife/advancements/recipes/misc/cream.json
+b7e059a320ce5e0dfc790c0d2608eedab98f844a data/fishinglife/advancements/recipes/misc/fermenter.json
+73c2bee5c2faf857d1fa9f8b41e301e739ac2975 data/fishinglife/recipes/braised_fish.json
 b7ba8a974bd8a1b038252989bc1de658811cec30 data/fishinglife/recipes/cream.json
+e32729d1152a90cad8b11398c80164e4dfb106a3 data/fishinglife/recipes/fermenter.json
+0b779c11291521dc8ba06ab1a8ab4813c64000c0 data/fishinglife/recipes/miso_grilled_fish.json

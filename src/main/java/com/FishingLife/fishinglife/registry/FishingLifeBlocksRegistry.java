@@ -4,6 +4,7 @@ package com.FishingLife.fishinglife.registry;
 import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
 import com.FishingLife.fishinglife.block.utilBlock.Fermenter;
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraft.world.item.BlockItem;
@@ -35,6 +36,9 @@ public class FishingLifeBlocksRegistry {
 
     public static final RegistryObject<Block> CHILI_PEPPER_CROP = BLOCKS.register("chili_pepper_crop",
             () -> new ChiliPepperCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> SOYBEAN_CROP = BLOCKS.register("soybean_crop",
+            () -> new SoybeanCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
 

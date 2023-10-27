@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "minecraft:sugar"
+    },
+    "S": {
+      "item": "fishinglife:fish_meat"
+    },
+    "W": {
+      "item": "fishinglife:scallion"
+    },
+    "X": {
+      "item": "fishinglife:soy_sauce"
+    }
+  },
+  "pattern": [
+    " Q ",
+    "WXS"
+  ],
+  "result": {
+    "item": "fishinglife:braised_fish"
+  },
+  "show_notification": true
+}

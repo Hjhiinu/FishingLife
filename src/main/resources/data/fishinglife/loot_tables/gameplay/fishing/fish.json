@@ -2,136 +2,374 @@
   "type": "minecraft:fishing",
   "pools": [
     {
-      "conditions": [
-        {
-          "condition": "minecraft:any_of",
-          "terms": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:jungle"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:sparse_jungle"
-              }
-            },
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biome": "minecraft:bamboo_jungle"
-              }
+    "rolls": 1.0,
+      "bonus_rolls": 0.0,
+    "entries": [
+
+
+
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
             }
-          ]
-        }
+          }
+        ],
+        "name": "fishinglife:arapaima_gigas",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:silver_arowana",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:brycon_hilarii",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:hydrolycus_armatus",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:salminus",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:piranha",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:acanthodoras",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:cetopsidium",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:pancake_stingrays",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:peacock_bass",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:discus",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:rainbow_fish",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:elephant_fish",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:electric_eel",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_jungle"
+            }
+          }
+        ],
+        "name": "fishinglife:panaque",
+        "weight": 5,
+        "quality": 1
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
         ],
 
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:arapaima_gigas",
-          "weight": 10,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:silver_arowana",
-          "weight": 10,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:brycon_hilarii",
-          "weight": 10,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:hydrolycus_armatus",
-          "weight": 10,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:salminus",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:piranha",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:acanthodoras",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:cetopsidium",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:cetopsidium",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:pancake_stingrays",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:peacock_bass",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:discus",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:rainbow_fish",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:elephant_fish",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:electric_eel",
-          "weight": 5,
-          "quality": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "fishinglife:panaque",
-          "weight": 5,
-          "quality": 1
-        }
-      ]
+        "name": "fishinglife:common_carp",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:lake_whitefish",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:orangespotted_sunfish",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:american_shad",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:black_crappie",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:brook_trout",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:longnose_gar",
+        "weight": 5,
+        "quality": 1
+      },
+      {
+        "type": "minecraft:item",
+        "conditions": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "#minecraft:is_forest"
+            }
+          }
+
+        ],
+
+        "name": "fishinglife:shortnose_gar",
+        "weight": 5,
+        "quality": 1
+      }
+
+
+    ]
     }
 
+
+
+
   ],
-
-
 
   "random_sequence": "fishinglife:gameplay/fishing/fish"
 }

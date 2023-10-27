@@ -3,6 +3,7 @@ package com.FishingLife.fishinglife.datagen;
 import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
 import com.FishingLife.fishinglife.fishinglife;
 
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
@@ -34,6 +35,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeScallionCrop((CropBlock) FishingLifeBlocksRegistry.SCALLION_CROP.get(), "scallion_stage", "scallion_stage");
         makeGreenPepperCrop((CropBlock) FishingLifeBlocksRegistry.GREEN_PEPPER_CROP.get(), "green_pepper_stage", "green_pepper_stage");
         makeChiliPepperCrop((CropBlock) FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), "chili_pepper_stage", "chili_pepper_stage");
+        makeSoybeanCrop((CropBlock) FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), "soybean_stage", "soybean_stage");
     }
 
 
@@ -79,7 +81,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(fishinglife.MOD_ID, "block/" + textureName + state.getValue(((ChiliPepperCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
+
     }
+    //Soybean
+    public void makeSoybeanCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> soybeanStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] soybeanStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SoybeanCropBlock) block).getAgeProperty()),
+                new ResourceLocation(fishinglife.MOD_ID, "block/" + textureName + state.getValue(((SoybeanCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+
+    }
+
 
 
 

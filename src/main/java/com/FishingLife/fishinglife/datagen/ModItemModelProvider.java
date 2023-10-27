@@ -45,10 +45,38 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.GREEN_PEPPER);
         simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS);
         simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER);
+        simpleItem(FishingLifeItemsRegistry.SOYBEAN_SEEDS);
+        simpleItem(FishingLifeItemsRegistry.SOYBEAN);
+
+
+        simpleItem(FishingLifeItemsRegistry.COMMON_CARP);
+        simpleItem(FishingLifeItemsRegistry.LAKE_WHITEFISH);
+        simpleItem(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH);
+        simpleItem(FishingLifeItemsRegistry.AMERICAN_SHAD);
+        simpleItem(FishingLifeItemsRegistry.BLACK_CRAPPIE);
+        simpleItem(FishingLifeItemsRegistry.BROOK_TROUT);
+        simpleItem(FishingLifeItemsRegistry.LONGNOSE_GAR);
+        simpleItem(FishingLifeItemsRegistry.SHORTNOSE_GAR);
+
+
 
 
         simpleItem(FishingLifeItemsRegistry.FISH_MEAT);
         simpleItem(FishingLifeItemsRegistry.CREAM);
+
+        simpleItem(FishingLifeItemsRegistry.VINEGAR);
+        simpleItem(FishingLifeItemsRegistry.COOKING_WINE);
+        simpleItem(FishingLifeItemsRegistry.SOY_SAUCE);
+        simpleItem(FishingLifeItemsRegistry.YEAST_POWDER);
+        simpleItem(FishingLifeItemsRegistry.MISO_SAUCE);
+
+
+        simpleItem(FishingLifeItemsRegistry.BRAISED_FISH); // Braised Fish
+        simpleItem(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES); // Sweet and Sour Fish Slices
+        simpleItem(FishingLifeItemsRegistry.FISH_OMELETTE); // Fish Omelette
+        simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);//Miso grilled fish
+
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

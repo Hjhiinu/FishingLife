@@ -7,18 +7,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 10,
+          "weight": 5,
           "name": "fishinglife:scallion_seeds"
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
+          "weight": 5,
           "name": "fishinglife:green_pepper_seeds"
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
+          "weight": 5,
           "name": "fishinglife:chili_pepper_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "fishinglife:soybean_seeds"
         }
       ]
     }

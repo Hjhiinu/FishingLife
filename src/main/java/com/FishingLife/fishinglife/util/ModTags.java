@@ -19,7 +19,7 @@ public class ModTags {
 
         public static final TagKey<Item> CROPS = tag("crops");
 
-
+        public static final TagKey<Item> FRUITS = tag("fruits");
 
 
         private static TagKey<Item> tag(String name) {

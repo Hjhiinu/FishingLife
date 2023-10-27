@@ -35,23 +35,50 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.ELEPHANT_FISH.get());//Elephant Fish
                         pOutput.accept(FishingLifeItemsRegistry.PANAQUE.get());//Panaque
 
+                        //Temperate Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.COMMON_CARP.get()); // Common Carp
+                        pOutput.accept(FishingLifeItemsRegistry.LAKE_WHITEFISH.get()); // Lake Whitefish
+                        pOutput.accept(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get()); // Orangespotted Sunfish
+                        pOutput.accept(FishingLifeItemsRegistry.AMERICAN_SHAD.get()); // American Shad
+                        pOutput.accept(FishingLifeItemsRegistry.BLACK_CRAPPIE.get()); // Black Crappie
+                        pOutput.accept(FishingLifeItemsRegistry.BROOK_TROUT.get()); // Brook Trout
+                        pOutput.accept(FishingLifeItemsRegistry.LONGNOSE_GAR.get()); // Longnose Gar
+                        pOutput.accept(FishingLifeItemsRegistry.SHORTNOSE_GAR.get()); // Shortnose Gar
+
+
+
 
                         // Seeds
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION_SEEDS.get());//Scallion seeds
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get());//Green pepper seeds
                         pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get());//Chili pepper seeds
+                        pOutput.accept(FishingLifeItemsRegistry.SOYBEAN_SEEDS.get());//Soybean seeds
                         //Crops
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION.get());//Scallion
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER.get());//Green pepper
                         pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER.get());//Chili pepper
+                        pOutput.accept(FishingLifeItemsRegistry.SOYBEAN.get());//Soybean
+
+                        //Condiment
+                        pOutput.accept(FishingLifeItemsRegistry.SOY_SAUCE.get()); // Soy Sauce
+                        pOutput.accept(FishingLifeItemsRegistry.YEAST_POWDER.get()); // Yeast Powder
+                        pOutput.accept(FishingLifeItemsRegistry.VINEGAR.get()); // Vinegar
+                        pOutput.accept(FishingLifeItemsRegistry.MISO_SAUCE.get()); // Miso Sauce
+                        pOutput.accept(FishingLifeItemsRegistry.COOKING_WINE.get()); // Cooking Wine
 
                         //Other items
                         pOutput.accept(FishingLifeItemsRegistry.FISH_MEAT.get());//Fish meat
                         pOutput.accept(FishingLifeItemsRegistry.CREAM.get());//Cream
 
+                        //Dishes
+                        pOutput.accept(FishingLifeItemsRegistry.BRAISED_FISH.get());//Braised Fish
+                        pOutput.accept(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES.get());//Sweet and Sour Fish Slices
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_OMELETTE.get());//Fish Omelette
+                        pOutput.accept(FishingLifeItemsRegistry.MISO_GRILLED_FISH.get());//Miso Grilled Fish
+
 
                         //Blocks
-                        pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());
+                        pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
 
                     })
                     .build());

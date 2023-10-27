@@ -17,6 +17,15 @@
   "item.fishinglife.elephant_fish": "Elephant Fish",
   "item.fishinglife.panaque": "Panaque",
 
+  "item.fishinglife.common_carp": "Common Carp",
+  "item.fishinglife.lake_whitefish": "Lake Whitefish",
+  "item.fishinglife.orangespotted_sunfish": "Orangespotted Sunfish",
+  "item.fishinglife.american_shad": "American Shad",
+  "item.fishinglife.black_crappie": "Black Crappie",
+  "item.fishinglife.brook_trout": "Brook Trout",
+  "item.fishinglife.longnose_gar": "Longnose Gar",
+  "item.fishinglife.shortnose_gar": "Shortnose Gar",
+
 
   "item.fishinglife.scallion_seeds": "Scallion Seeds",
   "item.fishinglife.scallion": "Scallion",
@@ -27,8 +36,28 @@
   "item.fishinglife.chili_pepper_seeds": "Chili Pepper Seeds",
   "item.fishinglife.chili_pepper": "Chili Pepper",
 
+
+  "item.fishinglife.soybean_seeds": "Soybean Seeds",
+  "item.fishinglife.soybean_pepper": "Soybean",
+
+
   "item.fishinglife.fish_meat": "Fish Meat",
   "item.fishinglife.cream": "Cream",
+
+
+  "item.fishinglife.soy_sauce": "Soy Sauce",
+  "item.fishinglife.yeast_powder": "Yeast Powder",
+  "item.fishinglife.vinegar": "Vinegar",
+  "item.fishinglife.miso_sauce": "Miso Sauce",
+  "item.fishinglife.cooking_wine": "Cooking Wine",
+
+
+
+  "item.fishinglife.braised_fish": "Braised Fish",
+  "item.fishinglife.sweet_and_sour_fish_slices": "Sweet and Sour Fish Slices",
+  "item.fishinglife.fish_omelette": "Fish Omelette",
+  "item.fishinglife.braised_fish": "Braised Fish",
+  "item.fishinglife.miso_grilled_fish": "Miso-Grilled Fish",
 
   "block.fishinglife.fermenter": "Fermenter",
 
