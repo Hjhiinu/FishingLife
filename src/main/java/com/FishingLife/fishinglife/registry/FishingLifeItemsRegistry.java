@@ -117,6 +117,27 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> SHORTNOSE_GAR = ITEMS.register("shortnose_gar",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    public static final RegistryObject<Item> EUROPEAN_PERCH = ITEMS.register("european_perch",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> KOI = ITEMS.register("koi",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> MUSKELLUNGE = ITEMS.register("muskellunge",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> EUROPEAN_GRAYLING = ITEMS.register("european_grayling",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> PUMPKINSEED_SUNFISH = ITEMS.register("pumpkinseed_sunfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> TENCH = ITEMS.register("tench",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> WALLEYE = ITEMS.register("walleye",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
 
 
 

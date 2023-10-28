@@ -36,8 +36,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.SALMINUS);
         simpleItem(FishingLifeItemsRegistry.PANAQUE);
 
-
-
+        simpleItem(FishingLifeItemsRegistry.COMMON_CARP);
+        simpleItem(FishingLifeItemsRegistry.LAKE_WHITEFISH);
+        simpleItem(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH);
+        simpleItem(FishingLifeItemsRegistry.AMERICAN_SHAD);
+        simpleItem(FishingLifeItemsRegistry.BLACK_CRAPPIE);
+        simpleItem(FishingLifeItemsRegistry.BROOK_TROUT);
+        simpleItem(FishingLifeItemsRegistry.LONGNOSE_GAR);
+        simpleItem(FishingLifeItemsRegistry.SHORTNOSE_GAR);
+        simpleItem(FishingLifeItemsRegistry.EUROPEAN_PERCH);
+        simpleItem(FishingLifeItemsRegistry.EUROPEAN_GRAYLING);
+        simpleItem(FishingLifeItemsRegistry.KOI);
+        simpleItem(FishingLifeItemsRegistry.MUSKELLUNGE);
+        simpleItem(FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH);
+        simpleItem(FishingLifeItemsRegistry.TENCH);
+        simpleItem(FishingLifeItemsRegistry.WALLEYE);
 
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SCALLION);
@@ -47,19 +60,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER);
         simpleItem(FishingLifeItemsRegistry.SOYBEAN_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SOYBEAN);
-
-
-        simpleItem(FishingLifeItemsRegistry.COMMON_CARP);
-        simpleItem(FishingLifeItemsRegistry.LAKE_WHITEFISH);
-        simpleItem(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH);
-        simpleItem(FishingLifeItemsRegistry.AMERICAN_SHAD);
-        simpleItem(FishingLifeItemsRegistry.BLACK_CRAPPIE);
-        simpleItem(FishingLifeItemsRegistry.BROOK_TROUT);
-        simpleItem(FishingLifeItemsRegistry.LONGNOSE_GAR);
-        simpleItem(FishingLifeItemsRegistry.SHORTNOSE_GAR);
-
-
-
 
         simpleItem(FishingLifeItemsRegistry.FISH_MEAT);
         simpleItem(FishingLifeItemsRegistry.CREAM);
@@ -71,10 +71,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.MISO_SAUCE);
 
 
-        simpleItem(FishingLifeItemsRegistry.BRAISED_FISH); // Braised Fish
-        simpleItem(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES); // Sweet and Sour Fish Slices
-        simpleItem(FishingLifeItemsRegistry.FISH_OMELETTE); // Fish Omelette
-        simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);//Miso grilled fish
+        simpleItem(FishingLifeItemsRegistry.BRAISED_FISH);
+        simpleItem(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES);
+        simpleItem(FishingLifeItemsRegistry.FISH_OMELETTE);
+        simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);
 
 
     }

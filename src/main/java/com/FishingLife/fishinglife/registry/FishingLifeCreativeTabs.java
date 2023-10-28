@@ -38,12 +38,20 @@ public class FishingLifeCreativeTabs {
                         //Temperate Fishes
                         pOutput.accept(FishingLifeItemsRegistry.COMMON_CARP.get()); // Common Carp
                         pOutput.accept(FishingLifeItemsRegistry.LAKE_WHITEFISH.get()); // Lake Whitefish
-                        pOutput.accept(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get()); // Orangespotted Sunfish
+                        pOutput.accept(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get()); // Orange-Spotted Sunfish
                         pOutput.accept(FishingLifeItemsRegistry.AMERICAN_SHAD.get()); // American Shad
                         pOutput.accept(FishingLifeItemsRegistry.BLACK_CRAPPIE.get()); // Black Crappie
                         pOutput.accept(FishingLifeItemsRegistry.BROOK_TROUT.get()); // Brook Trout
                         pOutput.accept(FishingLifeItemsRegistry.LONGNOSE_GAR.get()); // Longnose Gar
                         pOutput.accept(FishingLifeItemsRegistry.SHORTNOSE_GAR.get()); // Shortnose Gar
+                        pOutput.accept(FishingLifeItemsRegistry.EUROPEAN_PERCH.get()); // European Perch
+                        pOutput.accept(FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get()); // European Grayling
+                        pOutput.accept(FishingLifeItemsRegistry.KOI.get()); // Koi
+                        pOutput.accept(FishingLifeItemsRegistry.MUSKELLUNGE.get()); // Muskellunge
+                        pOutput.accept(FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get()); // Pumpkinseed Sunfish
+                        pOutput.accept(FishingLifeItemsRegistry.TENCH.get()); // Tench
+                        pOutput.accept(FishingLifeItemsRegistry.WALLEYE.get()); // Walleye
+
 
 
 

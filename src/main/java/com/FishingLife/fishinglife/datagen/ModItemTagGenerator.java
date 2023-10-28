@@ -39,6 +39,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.SALMINUS.get(),
                         FishingLifeItemsRegistry.PANAQUE.get()
 
+
                 );
 
 
@@ -70,11 +71,48 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 FishingLifeItemsRegistry.RAINBOW_FISH.get(),
                 FishingLifeItemsRegistry.SILVER_AROWANA.get(),
                 FishingLifeItemsRegistry.SALMINUS.get(),
-                FishingLifeItemsRegistry.PANAQUE.get()
+                FishingLifeItemsRegistry.PANAQUE.get(),
+                        FishingLifeItemsRegistry.COMMON_CARP.get(),
+                        FishingLifeItemsRegistry.LAKE_WHITEFISH.get(),
+                        FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get(),
+                        FishingLifeItemsRegistry.AMERICAN_SHAD.get(),
+                        FishingLifeItemsRegistry.BLACK_CRAPPIE.get(),
+                        FishingLifeItemsRegistry.BROOK_TROUT.get(),
+                        FishingLifeItemsRegistry.LONGNOSE_GAR.get(),
+                        FishingLifeItemsRegistry.SHORTNOSE_GAR.get(),
+                        FishingLifeItemsRegistry.EUROPEAN_PERCH.get(),
+                        FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get(),
+                        FishingLifeItemsRegistry.KOI.get(),
+                        FishingLifeItemsRegistry.MUSKELLUNGE.get(),
+                        FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(),
+                        FishingLifeItemsRegistry.TENCH.get(),
+                        FishingLifeItemsRegistry.WALLEYE.get()
+
 
                 );
         this.tag(ModTags.Items.FRUITS)
                 .add(Items.APPLE
+
+
+                );
+
+
+        this.tag(ModTags.Items.TEMPERATE_FISHES)
+                .add(FishingLifeItemsRegistry.COMMON_CARP.get(),
+                        FishingLifeItemsRegistry.LAKE_WHITEFISH.get(),
+                        FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get(),
+                        FishingLifeItemsRegistry.AMERICAN_SHAD.get(),
+                        FishingLifeItemsRegistry.BLACK_CRAPPIE.get(),
+                        FishingLifeItemsRegistry.BROOK_TROUT.get(),
+                        FishingLifeItemsRegistry.LONGNOSE_GAR.get(),
+                        FishingLifeItemsRegistry.SHORTNOSE_GAR.get(),
+                        FishingLifeItemsRegistry.EUROPEAN_PERCH.get(),
+                        FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get(),
+                        FishingLifeItemsRegistry.KOI.get(),
+                        FishingLifeItemsRegistry.MUSKELLUNGE.get(),
+                        FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(),
+                        FishingLifeItemsRegistry.TENCH.get(),
+                        FishingLifeItemsRegistry.WALLEYE.get()
 
 
                 );

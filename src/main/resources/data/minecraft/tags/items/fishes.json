@@ -16,6 +16,25 @@
     "fishinglife:rainbow_fish",
     "fishinglife:elephant_fish",
     "fishinglife:electric_eel",
-    "fishinglife:panaque"
+    "fishinglife:panaque",
+
+    "fishinglife:common_carp",
+    "fishinglife:lake_whitefish",
+    "fishinglife:orangespotted_sunfish",
+    "fishinglife:american_shad",
+    "fishinglife:black_crappie",
+    "fishinglife:brook_trout",
+    "fishinglife:longnose_gar",
+    "fishinglife:shortnose_gar",
+    "fishinglife:european_perch",
+    "fishinglife:european_grayling",
+    "fishinglife:koi",
+    "fishinglife:muskellunge",
+    "fishinglife:pumpkinseed_sunfish",
+    "fishinglife:tench",
+    "fishinglife:walleye"
+
+
+
   ]
 }

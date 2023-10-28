@@ -17,6 +17,8 @@ public class ModTags {
         public static final TagKey<Item> MODFISH = tag("modfish");
         public static final TagKey<Item> JUNGLE_FISHES = tag("jungle_fishes");
 
+        public static final TagKey<Item> TEMPERATE_FISHES = tag("temperate_fishes");
+
         public static final TagKey<Item> CROPS = tag("crops");
 
         public static final TagKey<Item> FRUITS = tag("fruits");
