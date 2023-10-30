@@ -2,521 +2,800 @@
   "type": "minecraft:fishing",
   "pools": [
     {
-    "rolls": 1.0,
-      "bonus_rolls": 0.0,
-    "entries": [
-
-
-
-
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:arapaima_gigas",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:silver_arowana",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:brycon_hilarii",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:hydrolycus_armatus",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:salminus",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:piranha",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:acanthodoras",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:cetopsidium",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:pancake_stingrays",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:peacock_bass",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:discus",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:rainbow_fish",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
+            }
+          ],
+          "name": "fishinglife:arapaima_gigas",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:silver_arowana",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:brycon_hilarii",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:hydrolycus_armatus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:salminus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:piranha",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:acanthodoras",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:cetopsidium",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:pancake_stingrays",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:peacock_bass",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:discus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:rainbow_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:common_carp",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:lake_whitefish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:orangespotted_sunfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:american_shad",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:black_crappie",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:brook_trout",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:longnose_gar",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:shortnose_gar",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:european_perch",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:european_grayling",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:koi",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:muskellunge",
+          "weight": 5,
+          "quality": 1
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "fishinglife:professional_fishing_rod"
             ]
           }
-        ],
-        "name": "fishinglife:elephant_fish",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
-            ]
-          }
-        ],
-        "name": "fishinglife:electric_eel",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+            }
+          ],
+          "name": "fishinglife:arapaima_gigas",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
-            ]
-          }
-        ],
-        "name": "fishinglife:panaque",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
             }
-          }
-        ],
-        "name": "fishinglife:common_carp",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:lake_whitefish",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:orangespotted_sunfish",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:american_shad",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:black_crappie",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:brook_trout",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:longnose_gar",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:shortnose_gar",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:european_perch",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:european_grayling",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:koi",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biome": "minecraft:river"
-            }
-          }
-        ],
-        "name": "fishinglife:muskellunge",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+          ],
+          "name": "fishinglife:silver_arowana",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
-            ]
-          }
-        ],
-        "name": "fishinglife:pumpkinseed_sunfish",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+            }
+          ],
+          "name": "fishinglife:brycon_hilarii",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
-            ]
-          }
-        ],
-        "name": "fishinglife:tench",
-        "weight": 5,
-        "quality": 1
-      },
-      {
-        "type": "minecraft:item",
-        "conditions": [
-          {
-            "condition": "minecraft:all_of",
-            "terms": [
-              {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "biome": "minecraft:river"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "fishinglife:professional_fishing_rod"
-                  ]
-                }
+            }
+          ],
+          "name": "fishinglife:hydrolycus_armatus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
               }
-            ]
-          }
-        ],
-        "name": "fishinglife:walleye",
-        "weight": 5,
-        "quality": 1
-      }
+            }
+          ],
+          "name": "fishinglife:salminus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:piranha",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:acanthodoras",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:cetopsidium",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:pancake_stingrays",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:peacock_bass",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:discus",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:rainbow_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:common_carp",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:lake_whitefish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:orangespotted_sunfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:american_shad",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:black_crappie",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:brook_trout",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:longnose_gar",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:shortnose_gar",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:european_perch",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:european_grayling",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:koi",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+          "name": "fishinglife:muskellunge",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
 
+          "name": "fishinglife:elephant_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
 
+          "name": "fishinglife:electric_eel",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
 
-    ]
+          "name": "fishinglife:panaque",
+          "weight": 5,
+          "quality": 1
+        },
+
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+
+          "name": "fishinglife:pumpkinseed_sunfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+
+          "name": "fishinglife:tench",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ],
+
+          "name": "fishinglife:walleye",
+          "weight": 5,
+          "quality": 1
+        }
+
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "fishinglife:professional_fishing_rod"
+            ]
+          }
+        }
+      ]
     }
-
-
-
-
-  ],
+  ] ,
 
   "random_sequence": "fishinglife:gameplay/fishing/fish"
 }
