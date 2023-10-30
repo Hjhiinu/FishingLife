@@ -85,6 +85,18 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.MISO_GRILLED_FISH.get());//Miso Grilled Fish
 
 
+
+                        //Fishing rods
+                        pOutput.accept(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get()); // Professional Fishing Rod
+                        pOutput.accept(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get()); // Elite Fishing Rod
+                        pOutput.accept(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get()); // Master Fishing Rod
+                        pOutput.accept(FishingLifeItemsRegistry.LEGENDARY_FISHING_ROD.get()); // Legendary Fishing Rod
+                        pOutput.accept(FishingLifeItemsRegistry.PRIMEVAL_FISHING_ROD.get()); // Primeval Fishing Rod
+                        pOutput.accept(FishingLifeItemsRegistry.DIVINE_FISHING_ROD.get()); // Divine Fishing Rod
+
+
+
+
                         //Blocks
                         pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
 

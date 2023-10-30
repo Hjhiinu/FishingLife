@@ -64,10 +64,20 @@
   "item.fishinglife.braised_fish": "Braised Fish",
   "item.fishinglife.sweet_and_sour_fish_slices": "Sweet and Sour Fish Slices",
   "item.fishinglife.fish_omelette": "Fish Omelette",
-  "item.fishinglife.braised_fish": "Braised Fish",
   "item.fishinglife.miso_grilled_fish": "Miso-Grilled Fish",
 
+
+  "item.fishinglife.professional_fishing_rod": "Professional Fishing Rod",
+  "item.fishinglife.elite_fishing_rod": "Elite Fishing Rod",
+  "item.fishinglife.master_fishing_rod": "Master Fishing Rod",
+  "item.fishinglife.legendary_fishing_rod": "Legendary Fishing Rod",
+  "item.fishinglife.primeval_fishing_rod": "Primeval Fishing Rod",
+  "item.fishinglife.divine_fishing_rod": "Divine Fishing Rod",
+
+
   "block.fishinglife.fermenter": "Fermenter",
+
+
 
 
   "creativetab.fishinglife_tab": "Fishing Life"

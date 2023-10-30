@@ -1,6 +1,7 @@
 package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -19,15 +20,15 @@ public class FishingLifeItemsRegistry {
     //Fishing Rods
 
 
-    public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125)));
+    public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> ELITE_FISHING_ROD = ITEMS.register("elite_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
 
-    public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> LEGENDARY_FISHING_ROD = ITEMS.register("legendary_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> LEGENDARY_FISHING_ROD = ITEMS.register("legendary_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(200).rarity(Rarity.RARE)));
 
-    public static final RegistryObject<Item> PRIMEVAL_FISHING_ROD = ITEMS.register("primeval_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> PRIMEVAL_FISHING_ROD = ITEMS.register("primeval_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(200).rarity(Rarity.EPIC)));
 
-    public static final RegistryObject<Item> DIVINE_FISHING_ROD = ITEMS.register("divine_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> DIVINE_FISHING_ROD = ITEMS.register("divine_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(250).rarity(Rarity.create("LEGENDARY", ChatFormatting.DARK_RED))));
 
 
 

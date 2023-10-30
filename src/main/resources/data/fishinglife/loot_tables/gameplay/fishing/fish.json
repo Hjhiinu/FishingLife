@@ -8,13 +8,14 @@
 
 
 
+
       {
         "type": "minecraft:item",
         "conditions": [
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -28,7 +29,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -42,7 +43,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -56,7 +57,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -70,7 +71,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -84,7 +85,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -98,7 +99,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -112,7 +113,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -126,7 +127,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -140,7 +141,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -154,7 +155,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -168,7 +169,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_jungle"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -180,10 +181,23 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_jungle"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:elephant_fish",
@@ -194,10 +208,23 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_jungle"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:electric_eel",
@@ -208,43 +235,39 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_jungle"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:panaque",
         "weight": 5,
         "quality": 1
       },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {
         "type": "minecraft:item",
         "conditions": [
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:common_carp",
         "weight": 5,
         "quality": 1
@@ -255,12 +278,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:lake_whitefish",
         "weight": 5,
         "quality": 1
@@ -271,12 +292,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:orangespotted_sunfish",
         "weight": 5,
         "quality": 1
@@ -287,12 +306,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:american_shad",
         "weight": 5,
         "quality": 1
@@ -303,12 +320,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:black_crappie",
         "weight": 5,
         "quality": 1
@@ -319,12 +334,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:brook_trout",
         "weight": 5,
         "quality": 1
@@ -335,12 +348,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:longnose_gar",
         "weight": 5,
         "quality": 1
@@ -351,12 +362,10 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
-
         ],
-
         "name": "fishinglife:shortnose_gar",
         "weight": 5,
         "quality": 1
@@ -367,7 +376,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -381,7 +390,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -395,7 +404,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -409,7 +418,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "biomes": "#minecraft:is_forest"
+              "biome": "minecraft:river"
             }
           }
         ],
@@ -421,10 +430,23 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_forest"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:pumpkinseed_sunfish",
@@ -435,10 +457,23 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_forest"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:tench",
@@ -449,16 +484,30 @@
         "type": "minecraft:item",
         "conditions": [
           {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "#minecraft:is_forest"
-            }
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "biome": "minecraft:river"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": [
+                    "fishinglife:professional_fishing_rod"
+                  ]
+                }
+              }
+            ]
           }
         ],
         "name": "fishinglife:walleye",
         "weight": 5,
         "quality": 1
       }
+
 
 
     ]

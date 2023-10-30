@@ -42,7 +42,7 @@ public class fishinglife
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-
+    //public static LootItemConditionType BIOME_TAG_CHECK;
     public fishinglife()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

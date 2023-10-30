@@ -77,6 +77,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);
 
 
+
+
+
+
+        simpleItem(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD);
+
+
+        simpleItem(FishingLifeItemsRegistry.ELITE_FISHING_ROD);
+
+
+        simpleItem(FishingLifeItemsRegistry.MASTER_FISHING_ROD);
+
+        simpleItem(FishingLifeItemsRegistry.LEGENDARY_FISHING_ROD);
+
+
+        simpleItem(FishingLifeItemsRegistry.PRIMEVAL_FISHING_ROD);
+
+        simpleItem(FishingLifeItemsRegistry.DIVINE_FISHING_ROD);
+
+
+
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
