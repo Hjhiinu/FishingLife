@@ -2,21 +2,31 @@ package com.FishingLife.fishinglife;
 
 import com.FishingLife.fishinglife.GUIscreen.FermenterScreen;
 import com.FishingLife.fishinglife.GUIscreen.ModMenuTypes;
+import com.FishingLife.fishinglife.ModVillager.ModVillagers;
 import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
 
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
+//import com.FishingLife.fishinglife.util.ModEventBusEvents;
+//import com.FishingLife.fishinglife.util.CustomNBTRecipeSerializer;
+//import com.FishingLife.fishinglife.util.NBTIngredient;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.crafting.IIngredientSerializer;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,9 +37,12 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-import org.apache.logging.log4j.LogManager;
+import net.minecraftforge.registries.*;
+
 import org.slf4j.Logger;
+
+import java.util.stream.Stream;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(fishinglife.MOD_ID)
@@ -41,8 +54,10 @@ public class fishinglife
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
-    //public static LootItemConditionType BIOME_TAG_CHECK;
+
+
+
+
     public fishinglife()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -60,7 +75,7 @@ public class fishinglife
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
-
+        ModVillagers.register(modEventBus);
 
 
 
@@ -75,7 +90,6 @@ public class fishinglife
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
     }
-
 
 
 
@@ -120,4 +134,5 @@ public class fishinglife
             MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
         }
     }
+
 }

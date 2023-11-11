@@ -28,6 +28,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        //Basic Blocks
+        simpleBlockWithItem(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/jungle_fisherman_workbench")));
+        simpleBlockWithItem(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/desert_fisherman_workbench")));
+        simpleBlockWithItem(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/general_fisherman_workbench")));
         //Normal Blocks
         simpleBlockWithItem(FishingLifeBlocksRegistry.FERMENTER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/fermenter")));

@@ -52,6 +52,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.TENCH);
         simpleItem(FishingLifeItemsRegistry.WALLEYE);
 
+        simpleItem(FishingLifeItemsRegistry.AFRICAN_BARB); // African Barb
+        simpleItem(FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH); // African Desert Catfish
+        simpleItem(FishingLifeItemsRegistry.AFRICAN_LUNGFISH); // African Lungfish
+        simpleItem(FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY); // Australian Desert Goby
+        simpleItem(FishingLifeItemsRegistry.DESERT_ZEBRAFISH); // Desert Zebrafish
+        simpleItem(FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER); // Egyptian Mouthbrooder
+        simpleItem(FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL); // Highland Swordtail
+        simpleItem(FishingLifeItemsRegistry.NILE_PERCH); // Nile Perch
+        simpleItem(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI); // Nothobranchius Furzeri
+
+
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SCALLION);
         simpleItem(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS);
@@ -76,6 +87,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.FISH_OMELETTE);
         simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);
 
+        simpleItem(FishingLifeItemsRegistry.DESERTFISH_COLLECTION); // Desertfish Collection
+        simpleItem(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION); // Temperatefish Collection
+        simpleItem(FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION); // Junglefish Collection
+
+        simpleItem(FishingLifeItemsRegistry.ARISQUEDO_COIN);
 
 
 

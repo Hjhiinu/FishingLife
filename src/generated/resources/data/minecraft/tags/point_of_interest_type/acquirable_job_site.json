@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "fishinglife:jungle_fisherman_poi",
+      "required": false
+    },
+    {
+      "id": "fishinglife:general_fisherman_poi",
+      "required": false
+    },
+    {
+      "id": "fishinglife:desert_fisherman_poi",
+      "required": false
+    }
+  ]
+}

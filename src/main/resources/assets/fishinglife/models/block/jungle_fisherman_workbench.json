@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"4": "fishinglife:block/jungle_fisherman_workbench",
+		"particle": "fishinglife:block/jungle_fisherman_workbench"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#4"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#4"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#4"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#4"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#4"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#4"}
+			}
+		}
+	],
+	"display": {}
+}

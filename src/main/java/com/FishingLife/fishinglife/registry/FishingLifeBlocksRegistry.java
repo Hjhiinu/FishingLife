@@ -22,6 +22,16 @@ public class FishingLifeBlocksRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, fishinglife.MOD_ID);
 
+
+    //General Block
+    public static final RegistryObject<Block> JUNGLE_FISHERMAN_WORKBENCH= registerBlock("jungle_fisherman_workbench",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> GENERAL_FISHERMAN_WORKBENCH= registerBlock("general_fisherman_workbench",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> DESERT_FISHERMAN_WORKBENCH= registerBlock("desert_fisherman_workbench",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+
+
     //UtilBlock
 
     public static final RegistryObject<Block> FERMENTER = registerBlock("fermenter",

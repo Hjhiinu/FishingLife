@@ -33,6 +33,15 @@
   "item.fishinglife.tench": "Tench",
   "item.fishinglife.walleye": "Walleye",
 
+  "item.fishinglife.african_barb": "African Barb",
+  "item.fishinglife.african_desert_catfish": "African Desert Catfish",
+  "item.fishinglife.african_lungfish": "African Lungfish",
+  "item.fishinglife.australian_desert_goby": "Australian Desert Goby",
+  "item.fishinglife.desert_zebrafish": "Desert Zebrafish",
+  "item.fishinglife.egyptian_mouthbrooder": "Egyptian Mouthbrooder",
+  "item.fishinglife.highland_swordtail": "Highland Swordtail",
+  "item.fishinglife.nile_perch": "Nile Perch",
+  "item.fishinglife.nothobranchius_furzeri": "Nothobranchius Furzeri",
 
 
   "item.fishinglife.scallion_seeds": "Scallion Seeds",
@@ -46,7 +55,7 @@
 
 
   "item.fishinglife.soybean_seeds": "Soybean Seeds",
-  "item.fishinglife.soybean_pepper": "Soybean",
+  "item.fishinglife.soybean": "Soybean",
 
 
   "item.fishinglife.fish_meat": "Fish Meat",
@@ -75,9 +84,29 @@
   "item.fishinglife.divine_fishing_rod": "Divine Fishing Rod",
 
 
+  "item.fishinglife.desertfish_collection": "Desertfish Collection",
+  "item.fishinglife.temperatefish_collection": "Temperatefish Collection",
+  "item.fishinglife.junglefish_collection": "Junglefish Collection",
+
+
+  "item.fishinglife.arisquedo_coin": "Arisquedo Coin",
+
+
+
+
+
   "block.fishinglife.fermenter": "Fermenter",
+  "block.fishinglife.jungle_fisherman_workbench": "Jungle Fisherman Workbench",
+  "block.fishinglife.general_fisherman_workbench": "General Fisherman Workbench",
+  "block.fishinglife.desert_fisherman_workbench": "Desert Fisherman Workbench",
+
+  "entity.minecraft.villager.fishinglife.jungle_fisherman": "Jungle Fisherman",
+  "entity.minecraft.villager.fishinglife.desert_fisherman": "Desert Fisherman",
+  "entity.minecraft.villager.fishinglife.general_fisherman": "General Fisherman",
 
 
+  "fishinglife.Quality.quality": "Quality: %s",
+  "fishinglife.Age.age": "Age: %s years",
 
 
   "creativetab.fishinglife_tab": "Fishing Life"

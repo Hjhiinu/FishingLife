@@ -1,6 +1,9 @@
-// 1.20.1	2023-10-25T11:42:57.92267	Loot Tables
+// 1.20.1	2023-11-08T11:08:06.7643565	Loot Tables
 35d8599536428f9bbfa65551d6ab43f53cbef227 data/fishinglife/loot_tables/blocks/chili_pepper_crop.json
+41a673bfd612df675029190ceaa4a54149d6acbb data/fishinglife/loot_tables/blocks/desert_fisherman_workbench.json
 30004b3bcdcb5a45e985021de0b1364063a450b6 data/fishinglife/loot_tables/blocks/fermenter.json
+1373b80f0619946b51ea788f5c39be927013307d data/fishinglife/loot_tables/blocks/general_fisherman_workbench.json
 950be974b28e7573a93ce636d25c4faca4ec935f data/fishinglife/loot_tables/blocks/green_pepper_crop.json
+bbb212e68f02c00d64dfc422bd47acd252fa9e75 data/fishinglife/loot_tables/blocks/jungle_fisherman_workbench.json
 15df7e07e55bd945426e3f182f8b8f9957feb59f data/fishinglife/loot_tables/blocks/scallion_crop.json
 f6fb0ab3f709baf72162d2f93d2125bf46d41d14 data/fishinglife/loot_tables/blocks/soybean_crop.json

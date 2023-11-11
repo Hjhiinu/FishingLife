@@ -140,8 +140,43 @@ public class FishingLifeItemsRegistry {
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
+    //Desert Fishes
+    public static final RegistryObject<Item> AFRICAN_BARB = ITEMS.register("african_barb",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> AFRICAN_DESERT_CATFISH = ITEMS.register("african_desert_catfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> AFRICAN_LUNGFISH = ITEMS.register("african_lungfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> AUSTRALIAN_DESERT_GOBY = ITEMS.register("australian_desert_goby",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> DESERT_ZEBRAFISH = ITEMS.register("desert_zebrafish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> EGYPTIAN_MOUTHBROODER = ITEMS.register("egyptian_mouthbrooder",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> HIGHLAND_SWORDTAIL = ITEMS.register("highland_swordtail",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> NILE_PERCH = ITEMS.register("nile_perch",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> NOTHOBRANCHIUS_FURZERI = ITEMS.register("nothobranchius_furzeri",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
+
+
+    //Fish Collection
+
+    public static final RegistryObject<Item> DESERTFISH_COLLECTION = ITEMS.register("desertfish_collection",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TEMPERATEFISH_COLLECTION = ITEMS.register("temperatefish_collection",()->new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> JUNGLEFISH_COLLECTION = ITEMS.register("junglefish_collection",()->new Item(new Item.Properties()));
     //Other items
     public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties()));
 
@@ -183,7 +218,7 @@ public class FishingLifeItemsRegistry {
 
     */
 
-    //Fishing rods
+
 
 
 
@@ -201,7 +236,8 @@ public class FishingLifeItemsRegistry {
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
 
 
-
+    //Currency
+    public static final RegistryObject<Item> ARISQUEDO_COIN = ITEMS.register("arisquedo_coin",()->new Item(new Item.Properties()));
 
 
 

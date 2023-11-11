@@ -52,8 +52,23 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.TENCH.get()); // Tench
                         pOutput.accept(FishingLifeItemsRegistry.WALLEYE.get()); // Walleye
 
+                        //Desert Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.AFRICAN_BARB.get()); // African Barb
+                        pOutput.accept(FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get()); // African Desert Catfish
+                        pOutput.accept(FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get()); // African Lungfish
+                        pOutput.accept(FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get()); // Australian Desert Goby
+                        pOutput.accept(FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get()); // Desert Zebrafish
+                        pOutput.accept(FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get()); // Egyptian Mouthbrooder
+                        pOutput.accept(FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get()); // Highland Swordtail
+                        pOutput.accept(FishingLifeItemsRegistry.NILE_PERCH.get()); // Nile Perch
+                        pOutput.accept(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get()); // Nothobranchius Furzeri
 
 
+                        //Fishes Collection
+
+                        pOutput.accept(FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get()); // Desertfish Collection
+                        pOutput.accept(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION.get()); // Temperatefish Collection
+                        pOutput.accept(FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get()); // Junglefish Collection
 
 
                         // Seeds
@@ -96,9 +111,14 @@ public class FishingLifeCreativeTabs {
 
 
 
-
+                        //Currency
+                        pOutput.accept(FishingLifeItemsRegistry.ARISQUEDO_COIN.get());
                         //Blocks
                         pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
+                        pOutput.accept(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
+                        pOutput.accept(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
+                        pOutput.accept(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());
+
 
                     })
                     .build());

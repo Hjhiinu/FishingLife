@@ -86,10 +86,20 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.MUSKELLUNGE.get(),
                         FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(),
                         FishingLifeItemsRegistry.TENCH.get(),
-                        FishingLifeItemsRegistry.WALLEYE.get()
+                        FishingLifeItemsRegistry.WALLEYE.get(),
+                        FishingLifeItemsRegistry.AFRICAN_BARB.get(),
+                        FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get(),
+                        FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get(),
+                        FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get(),
+                        FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get(),
+                        FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get(),
+                        FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(),
+                        FishingLifeItemsRegistry.NILE_PERCH.get(),
+                        FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get()
 
 
-                );
+
+                        );
         this.tag(ModTags.Items.FRUITS)
                 .add(Items.APPLE
 
@@ -116,5 +126,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
                 );
+        this.tag(ModTags.Items.DESERT_FISHES)
+                .add(FishingLifeItemsRegistry.AFRICAN_BARB.get(),
+                        FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get(),
+                        FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get(),
+                        FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get(),
+                        FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get(),
+                        FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get(),
+                        FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(),
+                        FishingLifeItemsRegistry.NILE_PERCH.get(),
+                        FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get());
     }
 }
