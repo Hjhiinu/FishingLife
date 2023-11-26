@@ -169,6 +169,26 @@ public class FishingLifeItemsRegistry {
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
+    //Warm Ocean
+    public static final RegistryObject<Item> ANCHOVY = ITEMS.register("anchovy",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> CRIMSON_SNAPPER = ITEMS.register("crimson_snapper",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> FLYINGFISH = ITEMS.register("flyingfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> LUTJANUS_SEBAE = ITEMS.register("lutjanus_sebae",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item>MAHI_MAHI= ITEMS.register("mahi_mahi",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> PAMPUS_ARGENTEUS = ITEMS.register("pampus_argenteus",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> PARROTFISH = ITEMS.register("parrotfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> PSETTA_MAXIMA = ITEMS.register("psetta_maxima",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> STRIPED_BEAKFISH = ITEMS.register("striped_beakfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
 
     //Fish Collection

@@ -1,9 +1,10 @@
-// 1.20.1	2023-11-08T17:51:59.1030943	Item Models: fishinglife
+// 1.20.1	2023-11-26T14:41:09.1407325	Item Models: fishinglife
 0c54fff685325216973a8c231f558811cd237943 assets/fishinglife/models/item/acanthodoras.json
 55a172a8531f52dde38e13d5d00eb57a5e395f3c assets/fishinglife/models/item/african_barb.json
 ed27e1ce3a338cc8e8ef8fc7bd3fafcd476cee52 assets/fishinglife/models/item/african_desert_catfish.json
 9062dc3966e2be3f28d8af063fbddcfaa68d5e7b assets/fishinglife/models/item/african_lungfish.json
 84456fde156adbac98dd7cde369ed8bc02f82493 assets/fishinglife/models/item/american_shad.json
+9f5a28197fe52088270a4b55663db9e7037b8437 assets/fishinglife/models/item/anchovy.json
 64821a019693e72935730797459f76e84e35b4d9 assets/fishinglife/models/item/arapaima_gigas.json
 a69c407906fdd74cc23b5f144f9c4f3b39199da8 assets/fishinglife/models/item/arisquedo_coin.json
 f267eab510b42774a5b42fdf5dc0c39bde8540ed assets/fishinglife/models/item/australian_desert_goby.json
@@ -17,6 +18,7 @@ a0bc73df841505fbf927b4e0a0043d0e86f99899 assets/fishinglife/models/item/braised_
 b9b49f36f4edca96e3f16de193a8a3ef0ebd989a assets/fishinglife/models/item/common_carp.json
 688a8c5e75d7fe73c0110d693a64bc722e9aef81 assets/fishinglife/models/item/cooking_wine.json
 9cbf1f5432e1cabb034c201a3f9e0f87121c1d6f assets/fishinglife/models/item/cream.json
+e07d0a22367b59d179910bd6fed7f3d358b8c47d assets/fishinglife/models/item/crimson_snapper.json
 2bdd098265fdf48aa410772266751e8c8a4caf5e assets/fishinglife/models/item/desertfish_collection.json
 110ebaf9c39561f1ab96080cf8ce8f09312b48e2 assets/fishinglife/models/item/desert_zebrafish.json
 d244484c2331fb4b8872fbd86effeeff9957872f assets/fishinglife/models/item/discus.json
@@ -29,6 +31,7 @@ a1d8b93462ad043f00a2a6fabcb07403db69c7e1 assets/fishinglife/models/item/elephant
 57992df724a593b2cca958d2409c7d2d4c8bea59 assets/fishinglife/models/item/european_perch.json
 baab9a6a4ce7049ffca4dd14fbd90f159c2e31a7 assets/fishinglife/models/item/fish_meat.json
 29d2625280bb5cdcb6040a4623b9a474984b4966 assets/fishinglife/models/item/fish_omelette.json
+0f7c57347541f13571f1b3e4117f1cf57323a519 assets/fishinglife/models/item/flyingfish.json
 2bea45df74f7754b291adb17a9b8b654ea9064ad assets/fishinglife/models/item/green_pepper.json
 cf24396eb5578a17de8e7552494a62addabae725 assets/fishinglife/models/item/green_pepper_seeds.json
 88bc6e1c0b600c382971865ec3485ca8256ae908 assets/fishinglife/models/item/highland_swordtail.json
@@ -38,6 +41,8 @@ d5d6859e31ee3fd0ddb074f9f6381586d1009987 assets/fishinglife/models/item/junglefi
 3b00c08cf67b18fbdbb7786c7b5fbdef1eff608f assets/fishinglife/models/item/lake_whitefish.json
 0d3a5e69913b9101c25919c228c4a4db416097e4 assets/fishinglife/models/item/legendary_fishing_rod.json
 7d36a82697a634d69512d9df9e46563e46db0c46 assets/fishinglife/models/item/longnose_gar.json
+599f3e28eb22ba9299467e46cf310f207a80e7f2 assets/fishinglife/models/item/lutjanus_sebae.json
+dd252379c1d66010a9e6506a517de42b0f436de8 assets/fishinglife/models/item/mahi_mahi.json
 bf3044ed9d2d685928fe39859f27a8a9a6fd5b8f assets/fishinglife/models/item/master_fishing_rod.json
 7b01755986a8f53161fef99476219c34653b4c5b assets/fishinglife/models/item/miso_grilled_fish.json
 562083782f9e8dbfa303ec47b61d71249cddc202 assets/fishinglife/models/item/miso_sauce.json
@@ -45,12 +50,15 @@ bf3044ed9d2d685928fe39859f27a8a9a6fd5b8f assets/fishinglife/models/item/master_f
 a00ad4ff2114b0f04c7805e0b5992a3fdfd1cf8a assets/fishinglife/models/item/nile_perch.json
 ef7b0854510bc64b99414a04371b93758ba0408d assets/fishinglife/models/item/nothobranchius_furzeri.json
 fdc3d3f06af82ef73affc9af68cc4aa179146b79 assets/fishinglife/models/item/orangespotted_sunfish.json
+3ff098ecf9396b61a90beb242df769151fae3de4 assets/fishinglife/models/item/pampus_argenteus.json
 4a47d7b2f63a76f4fe9cd57c6de6582e949e4353 assets/fishinglife/models/item/panaque.json
 ea964056fb4e8dc37a43c46be7221ea27578c020 assets/fishinglife/models/item/pancake_stingrays.json
+e113119e9fcb8a4eb3e8844d7afbde4f08a830e0 assets/fishinglife/models/item/parrotfish.json
 74e767c9e56d5d620759ac4095437d01d5aed182 assets/fishinglife/models/item/peacock_bass.json
 3b333f17ddf12a6b997519445a1a606893638afc assets/fishinglife/models/item/piranha.json
 f3f35efdd55ea3b2226fd7c6d02f9309ed29f708 assets/fishinglife/models/item/primeval_fishing_rod.json
 5144d2eaa8a043efd647635465fbc6a7b3b9d4de assets/fishinglife/models/item/professional_fishing_rod.json
+1725289f037225cb5f62b1844e904a29b003ec3f assets/fishinglife/models/item/psetta_maxima.json
 91f723ec0822e974fb3eceb88e99a8f2acb42694 assets/fishinglife/models/item/pumpkinseed_sunfish.json
 718e12a2f3a1355a833ed7b4a8c732b9a277951d assets/fishinglife/models/item/rainbow_fish.json
 54c3ab3e4cd227c3a2ebb8d4d0c8cc9407e24eda assets/fishinglife/models/item/salminus.json
@@ -61,6 +69,7 @@ bb49bad2fe6fc4dd3d04ab6ca3872ce823043f20 assets/fishinglife/models/item/scallion
 67aeafca498ad5f7b4eabbfea2ec4cbacb8cbad3 assets/fishinglife/models/item/soybean.json
 03bf0db462758f06bb6d8e3d7329dbfbec8f5bc4 assets/fishinglife/models/item/soybean_seeds.json
 a89c602b4ee51b78cc8637543b7c0f3a3dd04e1d assets/fishinglife/models/item/soy_sauce.json
+979639c06c28622eed5b5abc6c459728e46e3910 assets/fishinglife/models/item/striped_beakfish.json
 85e0ea3f7faeb9f5607e52de51c586ff997582a7 assets/fishinglife/models/item/sweet_and_sour_fish_slices.json
 d67d42cc7850dbfa025dd3dd9e53b978bdec2dd3 assets/fishinglife/models/item/temperatefish_collection.json
 a50d5e0966771859c2a5eb913d30232ae060b511 assets/fishinglife/models/item/tench.json

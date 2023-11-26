@@ -95,7 +95,18 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get(),
                         FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(),
                         FishingLifeItemsRegistry.NILE_PERCH.get(),
-                        FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get()
+                        FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get(),
+
+                        FishingLifeItemsRegistry.ANCHOVY.get(),
+                        FishingLifeItemsRegistry.CRIMSON_SNAPPER.get(),
+                        FishingLifeItemsRegistry.FLYINGFISH.get(),
+                        FishingLifeItemsRegistry.LUTJANUS_SEBAE.get(),
+                        FishingLifeItemsRegistry.MAHI_MAHI.get(),
+                        FishingLifeItemsRegistry.PAMPUS_ARGENTEUS.get(),
+                        FishingLifeItemsRegistry.PARROTFISH.get(),
+                        FishingLifeItemsRegistry.PSETTA_MAXIMA.get(),
+                        FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()
+
 
 
 
@@ -136,5 +147,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(),
                         FishingLifeItemsRegistry.NILE_PERCH.get(),
                         FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get());
+
+        this.tag(ModTags.Items.WARM_OCEAN_FISHES)
+                .add(FishingLifeItemsRegistry.ANCHOVY.get(),
+                        FishingLifeItemsRegistry.CRIMSON_SNAPPER.get(),
+                        FishingLifeItemsRegistry.FLYINGFISH.get(),
+                        FishingLifeItemsRegistry.LUTJANUS_SEBAE.get(),
+                        FishingLifeItemsRegistry.MAHI_MAHI.get(),
+                        FishingLifeItemsRegistry.PAMPUS_ARGENTEUS.get(),
+                        FishingLifeItemsRegistry.PARROTFISH.get(),
+                        FishingLifeItemsRegistry.PSETTA_MAXIMA.get(),
+                        FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()
+                        );
     }
 }

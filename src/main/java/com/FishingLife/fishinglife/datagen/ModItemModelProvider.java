@@ -62,6 +62,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.NILE_PERCH); // Nile Perch
         simpleItem(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI); // Nothobranchius Furzeri
 
+        simpleItem(FishingLifeItemsRegistry.ANCHOVY); // Anchovy
+        simpleItem(FishingLifeItemsRegistry.CRIMSON_SNAPPER); // Crimson Snapper
+        simpleItem(FishingLifeItemsRegistry.FLYINGFISH); // Flyingfish
+        simpleItem(FishingLifeItemsRegistry.LUTJANUS_SEBAE); // Lutjanus Sebae
+        simpleItem(FishingLifeItemsRegistry.MAHI_MAHI); // Mahi Mahi
+        simpleItem(FishingLifeItemsRegistry.PAMPUS_ARGENTEUS); // Pampus Argenteus
+        simpleItem(FishingLifeItemsRegistry.PARROTFISH); // Parrotfish
+        simpleItem(FishingLifeItemsRegistry.PSETTA_MAXIMA); // Psetta Maxima
+        simpleItem(FishingLifeItemsRegistry.STRIPED_BEAKFISH); // Striped Beakfish
+
+
 
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SCALLION);

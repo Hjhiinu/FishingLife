@@ -64,6 +64,19 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get()); // Nothobranchius Furzeri
 
 
+                        //Warm Ocean Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.ANCHOVY.get()); // Anchovy
+                        pOutput.accept(FishingLifeItemsRegistry.CRIMSON_SNAPPER.get()); // Crimson Snapper
+                        pOutput.accept(FishingLifeItemsRegistry.FLYINGFISH.get()); // Flyingfish
+                        pOutput.accept(FishingLifeItemsRegistry.LUTJANUS_SEBAE.get()); // Lutjanus Sebae
+                        pOutput.accept(FishingLifeItemsRegistry.MAHI_MAHI.get()); // Mahi Mahi
+                        pOutput.accept(FishingLifeItemsRegistry.PAMPUS_ARGENTEUS.get()); // Pampus Argenteus
+                        pOutput.accept(FishingLifeItemsRegistry.PARROTFISH.get()); // Parrotfish
+                        pOutput.accept(FishingLifeItemsRegistry.PSETTA_MAXIMA.get()); // Psetta Maxima
+                        pOutput.accept(FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()); // Striped Beakfish
+
+
+
                         //Fishes Collection
 
                         pOutput.accept(FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get()); // Desertfish Collection

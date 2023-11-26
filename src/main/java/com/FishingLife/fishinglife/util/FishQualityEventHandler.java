@@ -25,7 +25,7 @@ import net.minecraftforge.fml.common.Mod;
 public class FishQualityEventHandler{
     @SubscribeEvent
     public static void onItemFished(ItemFishedEvent event) {
-        boolean k=event.getEntity().getMainHandItem().getItem().equals(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get());
+        boolean k=event.getEntity().getMainHandItem().getItem().equals(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get());
        // System.out.println(k);
 
         if (!event.getDrops().isEmpty()) {

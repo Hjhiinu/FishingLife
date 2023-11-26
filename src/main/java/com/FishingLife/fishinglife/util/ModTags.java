@@ -21,6 +21,8 @@ public class ModTags {
 
         public static final TagKey<Item> DESERT_FISHES = tag("desert_fishes");
 
+        public static final TagKey<Item> WARM_OCEAN_FISHES = tag("warm_ocean_fishes");
+
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(fishinglife.MOD_ID, name));
