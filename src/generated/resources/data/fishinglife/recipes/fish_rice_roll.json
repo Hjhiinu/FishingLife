@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "fishinglife:paddy"
+    },
+    "S": {
+      "item": "fishinglife:chili_pepper"
+    },
+    "W": {
+      "item": "fishinglife:fish_meat"
+    },
+    "X": {
+      "item": "minecraft:kelp"
+    }
+  },
+  "pattern": [
+    " Q ",
+    "WXS",
+    " X "
+  ],
+  "result": {
+    "item": "fishinglife:fish_rice_roll"
+  },
+  "show_notification": true
+}

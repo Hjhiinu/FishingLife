@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "fishinglife:green_pepper"
+    },
+    "S": {
+      "item": "minecraft:egg"
+    },
+    "X": {
+      "item": "fishinglife:fish_meat"
+    }
+  },
+  "pattern": [
+    " Q ",
+    "SXS"
+  ],
+  "result": {
+    "item": "fishinglife:fish_omelette"
+  },
+  "show_notification": true
+}

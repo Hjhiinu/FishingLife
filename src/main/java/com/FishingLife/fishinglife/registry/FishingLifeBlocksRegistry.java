@@ -1,11 +1,9 @@
 package com.FishingLife.fishinglife.registry;
 
 //import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.*;
 import com.FishingLife.fishinglife.block.utilBlock.Fermenter;
+import com.FishingLife.fishinglife.block.utilBlock.FishingMachine;
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -36,7 +34,8 @@ public class FishingLifeBlocksRegistry {
 
     public static final RegistryObject<Block> FERMENTER = registerBlock("fermenter",
             () -> new Fermenter(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-
+    public static final RegistryObject<Block> FISHINGMACHINE = registerBlock("fishingmachine",
+            () -> new FishingMachine(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     //CropBlock
     public static final RegistryObject<Block> SCALLION_CROP = BLOCKS.register("scallion_crop",
             () -> new ScallionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
@@ -49,6 +48,12 @@ public class FishingLifeBlocksRegistry {
 
     public static final RegistryObject<Block> SOYBEAN_CROP = BLOCKS.register("soybean_crop",
             () -> new SoybeanCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> BOK_CHOY_CROP = BLOCKS.register("bok_choy_crop",
+            () -> new BokChoyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> PADDY_CROP = BLOCKS.register("paddy_crop",
+            () -> new PaddyCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
 

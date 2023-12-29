@@ -2,10 +2,7 @@ package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraft.ChatFormatting;
-import net.minecraft.world.item.FishingRodItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -168,6 +165,36 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> NOTHOBRANCHIUS_FURZERI = ITEMS.register("nothobranchius_furzeri",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    //All Ocean
+    public static final RegistryObject<Item> BLACK_SCRAPER = ITEMS.register("black_scraper",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> HAIRTAIL = ITEMS.register("hairtail",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> MACKEREL = ITEMS.register("mackerel",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> PACIFIC_SAURY = ITEMS.register("pacific_saury",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> POMFRET = ITEMS.register("pomfret",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> RED_HORSEHEAD_FISH = ITEMS.register("red_horsehead_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> RED_SNAPPER = ITEMS.register("red_snapper",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> SARDINE = ITEMS.register("sardine",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> SOLE_FISH = ITEMS.register("sole_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> YELLOW_CROAKER = ITEMS.register("yellow_croaker",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
     //Warm Ocean
     public static final RegistryObject<Item> ANCHOVY = ITEMS.register("anchovy",
@@ -197,10 +224,14 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> TEMPERATEFISH_COLLECTION = ITEMS.register("temperatefish_collection",()->new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> JUNGLEFISH_COLLECTION = ITEMS.register("junglefish_collection",()->new Item(new Item.Properties()));
+
+
     //Other items
     public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CREAM = ITEMS.register("cream",()->new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> POTATO_STRIPS = ITEMS.register("potato_strips",()->new Item(new Item.Properties()));
 
 
     //Seeds
@@ -216,6 +247,14 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> SOYBEAN_SEEDS = ITEMS.register("soybean_seeds",
             () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> BOK_CHOY_SEEDS = ITEMS.register("bok_choy_seeds",
+            () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.BOK_CHOY_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> PADDY_SEEDS = ITEMS.register("paddy_seeds",
+            () -> new ItemNameBlockItem(FishingLifeBlocksRegistry.PADDY_CROP.get(), new Item.Properties()));
+
+
+
     //Crops
     public static final RegistryObject<Item> SCALLION = ITEMS.register("scallion",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
@@ -229,6 +268,12 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> SOYBEAN = ITEMS.register("soybean",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
+    public static final RegistryObject<Item> BOK_CHOY = ITEMS.register("bok_choy",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
+
+    public static final RegistryObject<Item> PADDY = ITEMS.register("paddy",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
+
    /* public static final RegistryObject<Item> CUCUMBER = ITEMS.register("cucumber",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.CROPS)));
 
@@ -240,7 +285,9 @@ public class FishingLifeItemsRegistry {
 
 
 
-
+    //BowlFood
+    public static final RegistryObject<Item>  PEPPER_SHAKE= ITEMS.register("pepper_shake",
+            () -> new BowlFoodItem(new BowlFoodItem.Properties().food(FishingLifeFoodsRegistry.PEPPER_SHAKE)));
 
     //Dishes
     public static final RegistryObject<Item>  BRAISED_FISH= ITEMS.register("braised_fish",
@@ -254,6 +301,15 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item>  MISO_GRILLED_FISH= ITEMS.register("miso_grilled_fish",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+
+    public static final RegistryObject<Item>  FISH_RICE_ROLL= ITEMS.register("fish_rice_roll",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+
+    public static final RegistryObject<Item>  FISH_SANDWICH= ITEMS.register("fish_sandwich",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+
+    public static final RegistryObject<Item>  FISH_SUSHI= ITEMS.register("fish_sushi",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.GENERAL_DISHES)));
 
 
     //Currency

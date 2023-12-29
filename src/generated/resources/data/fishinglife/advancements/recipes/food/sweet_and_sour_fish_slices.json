@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fish_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_meat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scallion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:scallion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sugar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sugar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:sweet_and_sour_fish_slices"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vinegar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:vinegar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar",
+      "has_fish_meat",
+      "has_scallion",
+      "has_vinegar",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:sweet_and_sour_fish_slices"
+    ]
+  },
+  "sends_telemetry_event": false
+}

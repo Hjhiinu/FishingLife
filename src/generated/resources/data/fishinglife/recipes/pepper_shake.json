@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "minecraft:bowl"
+    },
+    "S": {
+      "item": "fishinglife:chili_pepper"
+    },
+    "W": {
+      "item": "fishinglife:cream"
+    },
+    "X": {
+      "item": "fishinglife:green_pepper"
+    }
+  },
+  "pattern": [
+    "WXS",
+    " Q "
+  ],
+  "result": {
+    "item": "fishinglife:pepper_shake"
+  },
+  "show_notification": true
+}

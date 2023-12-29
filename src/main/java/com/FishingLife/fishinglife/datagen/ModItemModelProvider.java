@@ -72,6 +72,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.PSETTA_MAXIMA); // Psetta Maxima
         simpleItem(FishingLifeItemsRegistry.STRIPED_BEAKFISH); // Striped Beakfish
 
+        simpleItem(FishingLifeItemsRegistry.BLACK_SCRAPER); // Black Scraper
+        simpleItem(FishingLifeItemsRegistry.HAIRTAIL); // Hairtail
+        simpleItem(FishingLifeItemsRegistry.MACKEREL); // Mackerel
+        simpleItem(FishingLifeItemsRegistry.PACIFIC_SAURY); // Pacific Saury
+        simpleItem(FishingLifeItemsRegistry.POMFRET); // Pomfret
+        simpleItem(FishingLifeItemsRegistry.RED_HORSEHEAD_FISH); // Red Horsehead Fish
+        simpleItem(FishingLifeItemsRegistry.RED_SNAPPER); // Red Snapper
+        simpleItem(FishingLifeItemsRegistry.SARDINE); // Sardine
+        simpleItem(FishingLifeItemsRegistry.SOLE_FISH); // Sole Fish
+        simpleItem(FishingLifeItemsRegistry.YELLOW_CROAKER); // Yellow Croaker
+
 
 
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
@@ -82,6 +93,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.CHILI_PEPPER);
         simpleItem(FishingLifeItemsRegistry.SOYBEAN_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SOYBEAN);
+        simpleItem(FishingLifeItemsRegistry.BOK_CHOY_SEEDS);
+        simpleItem(FishingLifeItemsRegistry.BOK_CHOY);
+        simpleItem(FishingLifeItemsRegistry.PADDY_SEEDS);
+        simpleItem(FishingLifeItemsRegistry.PADDY);
+
 
         simpleItem(FishingLifeItemsRegistry.FISH_MEAT);
         simpleItem(FishingLifeItemsRegistry.CREAM);
@@ -97,6 +113,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES);
         simpleItem(FishingLifeItemsRegistry.FISH_OMELETTE);
         simpleItem(FishingLifeItemsRegistry.MISO_GRILLED_FISH);
+        simpleItem(FishingLifeItemsRegistry.FISH_SANDWICH);
+        simpleItem(FishingLifeItemsRegistry.FISH_SUSHI);
+        simpleItem(FishingLifeItemsRegistry.FISH_RICE_ROLL);
 
         simpleItem(FishingLifeItemsRegistry.DESERTFISH_COLLECTION); // Desertfish Collection
         simpleItem(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION); // Temperatefish Collection

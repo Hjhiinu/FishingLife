@@ -435,7 +435,144 @@
           "name": "fishinglife:walleye",
           "weight": 5,
           "quality": 1
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "fishinglife:professional_fishing_rod"
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:river"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:black_scraper",
+          "weight": 5,
+          "quality": 1
         },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:hairtail",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:mackerel",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pacific_saury",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pomfret",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_horsehead_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_snapper",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:sardine",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:sole_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:yellow_croaker",
+          "weight": 5,
+          "quality": 1
+        }
+
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": [
+                  "fishinglife:professional_fishing_rod"
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:ocean"
+              }
+            }
+          ]
+        }
+      ]
+    },
 
 
 
@@ -443,6 +580,10 @@
 
 
 
+
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
           "name": "fishinglife:anchovy",
@@ -496,18 +637,67 @@
           "name": "fishinglife:striped_beakfish",
           "weight": 5,
           "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:black_scraper",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:hairtail",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:mackerel",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pacific_saury",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pomfret",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_horsehead_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_snapper",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:sardine",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:sole_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:yellow_croaker",
+          "weight": 5,
+          "quality": 1
         }
-
-
-
-
-
-
-
-
-
-
-
 
       ],
       "conditions": [
@@ -525,7 +715,7 @@
             {
               "condition": "minecraft:location_check",
               "predicate": {
-                "biome": "minecraft:river"
+                "biome": "minecraft:warm_ocean"
               }
             }
           ]

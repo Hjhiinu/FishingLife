@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chili_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:chili_pepper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fish_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_meat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_kelp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:kelp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_paddy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:paddy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:fish_rice_roll"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kelp",
+      "has_fish_meat",
+      "has_paddy",
+      "has_chili_pepper",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:fish_rice_roll"
+    ]
+  },
+  "sends_telemetry_event": false
+}

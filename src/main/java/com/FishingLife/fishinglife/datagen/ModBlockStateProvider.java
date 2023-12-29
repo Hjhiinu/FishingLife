@@ -1,9 +1,6 @@
 package com.FishingLife.fishinglife.datagen;
 
-import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.*;
 import com.FishingLife.fishinglife.fishinglife;
 
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
@@ -43,6 +40,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         makeGreenPepperCrop((CropBlock) FishingLifeBlocksRegistry.GREEN_PEPPER_CROP.get(), "green_pepper_stage", "green_pepper_stage");
         makeChiliPepperCrop((CropBlock) FishingLifeBlocksRegistry.CHILI_PEPPER_CROP.get(), "chili_pepper_stage", "chili_pepper_stage");
         makeSoybeanCrop((CropBlock) FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), "soybean_stage", "soybean_stage");
+        makeBokChoyCrop((CropBlock) FishingLifeBlocksRegistry.BOK_CHOY_CROP.get(), "bok_choy_stage", "bok_choy_stage");
+        makePaddyCrop((CropBlock) FishingLifeBlocksRegistry.PADDY_CROP.get(), "paddy_stage", "paddy_stage");
     }
 
 
@@ -100,6 +99,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SoybeanCropBlock) block).getAgeProperty()),
                 new ResourceLocation(fishinglife.MOD_ID, "block/" + textureName + state.getValue(((SoybeanCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+
+    }
+    //Bok Choy
+    public void makeBokChoyCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> bokchoyStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] bokchoyStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((BokChoyCropBlock) block).getAgeProperty()),
+                new ResourceLocation(fishinglife.MOD_ID, "block/" + textureName + state.getValue(((BokChoyCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+
+    }
+    //Paddy
+    public void makePaddyCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> paddyStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+    private ConfiguredModel[] paddyStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((PaddyCropBlock) block).getAgeProperty()),
+                new ResourceLocation(fishinglife.MOD_ID, "block/" + textureName + state.getValue(((PaddyCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
 

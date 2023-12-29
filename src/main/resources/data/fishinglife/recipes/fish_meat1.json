@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "fishinglife:small_fishes"
+    }
+  ],
+  "result": {
+    "item": "fishinglife:fish_meat"
+  }
+}

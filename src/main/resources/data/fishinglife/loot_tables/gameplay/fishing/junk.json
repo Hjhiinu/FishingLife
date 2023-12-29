@@ -24,6 +24,16 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "fishinglife:soybean_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "fishinglife:bok_choy_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "fishinglife:paddy_seeds"
         }
       ]
     }

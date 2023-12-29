@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "fishinglife:vinegar"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "fishinglife:scallion"
+    },
+    "X": {
+      "item": "fishinglife:fish_meat"
+    }
+  },
+  "pattern": [
+    " Q ",
+    "WXS"
+  ],
+  "result": {
+    "item": "fishinglife:sweet_and_sour_fish_slices"
+  },
+  "show_notification": true
+}

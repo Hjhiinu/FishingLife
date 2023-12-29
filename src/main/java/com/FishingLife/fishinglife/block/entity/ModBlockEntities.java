@@ -18,6 +18,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(FermenterBlockEntity::new,
                             FishingLifeBlocksRegistry.FERMENTER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<FishingMachineBlockEntity>> FISHINGMACHINE_PROCESS_BE =
+            BLOCK_ENTITIES.register("fishingmachine_process_be", () ->
+                    BlockEntityType.Builder.of(FishingMachineBlockEntity::new,
+                            FishingLifeBlocksRegistry.FISHINGMACHINE.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

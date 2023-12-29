@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "R": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:iron_bars"
+    },
+    "X": {
+      "tag": "fishinglife:temperate_fishes"
+    }
+  },
+  "pattern": [
+    "QQQ",
+    "SXS",
+    "RRR"
+  ],
+  "result": {
+    "item": "fishinglife:general_fisherman_workbench"
+  },
+  "show_notification": true
+}

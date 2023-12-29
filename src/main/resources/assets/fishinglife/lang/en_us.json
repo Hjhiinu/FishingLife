@@ -53,6 +53,17 @@
   "item.fishinglife.psetta_maxima": "Psetta Maxima",
   "item.fishinglife.striped_beakfish": "Striped Beakfish",
 
+  "item.fishinglife.black_scraper": "Black Scraper",
+  "item.fishinglife.hairtail": "Hairtail",
+  "item.fishinglife.mackerel": "Mackerel",
+  "item.fishinglife.pacific_saury": "Pacific Saury",
+  "item.fishinglife.pomfret": "Pomfret",
+  "item.fishinglife.red_horsehead_fish": "Red Horsehead Fish",
+  "item.fishinglife.red_snapper": "Red Snapper",
+  "item.fishinglife.sardine": "Sardine",
+  "item.fishinglife.sole_fish": "Sole Fish",
+  "item.fishinglife.yellow_croaker": "Yellow Croaker",
+
 
 
   "item.fishinglife.scallion_seeds": "Scallion Seeds",
@@ -67,6 +78,12 @@
 
   "item.fishinglife.soybean_seeds": "Soybean Seeds",
   "item.fishinglife.soybean": "Soybean",
+
+  "item.fishinglife.bok_choy_seeds": "Bok Choy Seeds",
+  "item.fishinglife.bok_choy": "Bok Choy",
+
+  "item.fishinglife.paddy_seeds": "Paddy Seeds",
+  "item.fishinglife.paddy": "Paddy",
 
 
   "item.fishinglife.fish_meat": "Fish Meat",
@@ -85,6 +102,9 @@
   "item.fishinglife.sweet_and_sour_fish_slices": "Sweet and Sour Fish Slices",
   "item.fishinglife.fish_omelette": "Fish Omelette",
   "item.fishinglife.miso_grilled_fish": "Miso-Grilled Fish",
+  "item.fishinglife.fish_sandwich": "Fish Sandwich",
+  "item.fishinglife.fish_rice_roll": "Fish Rice Roll",
+  "item.fishinglife.fish_sushi": "Fish Sushi",
 
 
   "item.fishinglife.professional_fishing_rod": "Professional Fishing Rod",
@@ -107,6 +127,8 @@
 
 
   "block.fishinglife.fermenter": "Fermenter",
+  "block.fishinglife.fishingmachine": "Fishing Machine",
+
   "block.fishinglife.jungle_fisherman_workbench": "Jungle Fisherman Workbench",
   "block.fishinglife.general_fisherman_workbench": "General Fisherman Workbench",
   "block.fishinglife.desert_fisherman_workbench": "Desert Fisherman Workbench",

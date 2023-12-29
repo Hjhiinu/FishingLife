@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fish_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_meat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_paddy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:paddy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:fish_sushi"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fish_meat",
+      "has_paddy",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:fish_sushi"
+    ]
+  },
+  "sends_telemetry_event": false
+}

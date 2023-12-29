@@ -63,6 +63,18 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.NILE_PERCH.get()); // Nile Perch
                         pOutput.accept(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get()); // Nothobranchius Furzeri
 
+                        //All Ocean Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.BLACK_SCRAPER.get()); // Black Scraper
+                        pOutput.accept(FishingLifeItemsRegistry.HAIRTAIL.get()); // Hairtail
+                        pOutput.accept(FishingLifeItemsRegistry.MACKEREL.get()); // Mackerel
+                        pOutput.accept(FishingLifeItemsRegistry.PACIFIC_SAURY.get()); // Pacific Saury
+                        pOutput.accept(FishingLifeItemsRegistry.POMFRET.get()); // Pomfret
+                        pOutput.accept(FishingLifeItemsRegistry.RED_HORSEHEAD_FISH.get()); // Red Horsehead Fish
+                        pOutput.accept(FishingLifeItemsRegistry.RED_SNAPPER.get()); // Red Snapper
+                        pOutput.accept(FishingLifeItemsRegistry.SARDINE.get()); // Sardine
+                        pOutput.accept(FishingLifeItemsRegistry.SOLE_FISH.get()); // Sole Fish
+                        pOutput.accept(FishingLifeItemsRegistry.YELLOW_CROAKER.get()); // Yellow Croaker
+
 
                         //Warm Ocean Fishes
                         pOutput.accept(FishingLifeItemsRegistry.ANCHOVY.get()); // Anchovy
@@ -89,11 +101,16 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get());//Green pepper seeds
                         pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get());//Chili pepper seeds
                         pOutput.accept(FishingLifeItemsRegistry.SOYBEAN_SEEDS.get());//Soybean seeds
+                        pOutput.accept(FishingLifeItemsRegistry.BOK_CHOY_SEEDS.get());//Bok Choy seeds
+                        pOutput.accept(FishingLifeItemsRegistry.PADDY_SEEDS.get());
+
                         //Crops
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION.get());//Scallion
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER.get());//Green pepper
                         pOutput.accept(FishingLifeItemsRegistry.CHILI_PEPPER.get());//Chili pepper
                         pOutput.accept(FishingLifeItemsRegistry.SOYBEAN.get());//Soybean
+                        pOutput.accept(FishingLifeItemsRegistry.BOK_CHOY.get());//Bok Choy
+                        pOutput.accept(FishingLifeItemsRegistry.PADDY.get());
 
                         //Condiment
                         pOutput.accept(FishingLifeItemsRegistry.SOY_SAUCE.get()); // Soy Sauce
@@ -111,6 +128,9 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES.get());//Sweet and Sour Fish Slices
                         pOutput.accept(FishingLifeItemsRegistry.FISH_OMELETTE.get());//Fish Omelette
                         pOutput.accept(FishingLifeItemsRegistry.MISO_GRILLED_FISH.get());//Miso Grilled Fish
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_SANDWICH.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_SUSHI.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_RICE_ROLL.get());
 
 
 
@@ -128,6 +148,8 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.ARISQUEDO_COIN.get());
                         //Blocks
                         pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
+                        pOutput.accept(FishingLifeBlocksRegistry.FISHINGMACHINE.get());//Fishing Machine
+
                         pOutput.accept(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());

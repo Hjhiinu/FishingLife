@@ -1,10 +1,7 @@
 package com.FishingLife.fishinglife.datagen;
 
 
-import com.FishingLife.fishinglife.block.cropsBlock.ChiliPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.GreenPepperCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.ScallionCropBlock;
-import com.FishingLife.fishinglife.block.cropsBlock.SoybeanCropBlock;
+import com.FishingLife.fishinglife.block.cropsBlock.*;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -27,6 +24,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Normal Blocks
 
         this.dropSelf(FishingLifeBlocksRegistry.FERMENTER.get());
+        this.dropSelf(FishingLifeBlocksRegistry.FISHINGMACHINE.get());
         this.dropSelf(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
         this.dropSelf(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
         this.dropSelf(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());
@@ -64,6 +62,22 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), createCropDrops(FishingLifeBlocksRegistry.SOYBEAN_CROP.get(), FishingLifeItemsRegistry.SOYBEAN.get(),
                 FishingLifeItemsRegistry.SOYBEAN_SEEDS.get(), lootitemcondition$builder_soybean));
+
+        //Bok Choy
+        LootItemCondition.Builder lootitemcondition$builder_bokchoy = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(FishingLifeBlocksRegistry.BOK_CHOY_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BokChoyCropBlock.AGE, 5));
+
+        this.add(FishingLifeBlocksRegistry.BOK_CHOY_CROP.get(), createCropDrops(FishingLifeBlocksRegistry.BOK_CHOY_CROP.get(), FishingLifeItemsRegistry.BOK_CHOY.get(),
+                FishingLifeItemsRegistry.BOK_CHOY_SEEDS.get(), lootitemcondition$builder_bokchoy));
+        //Paddy
+        LootItemCondition.Builder lootitemcondition$builder_paddy = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(FishingLifeBlocksRegistry.PADDY_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PaddyCropBlock.AGE, 5));
+
+        this.add(FishingLifeBlocksRegistry.PADDY_CROP.get(), createCropDrops(FishingLifeBlocksRegistry.PADDY_CROP.get(), FishingLifeItemsRegistry.PADDY.get(),
+                FishingLifeItemsRegistry.PADDY_SEEDS.get(), lootitemcondition$builder_paddy));
+
     }
 
     @Override

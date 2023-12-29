@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "fishinglife:fish_meat"
+    },
+    "X": {
+      "item": "fishinglife:paddy"
+    }
+  },
+  "pattern": [
+    " QQ",
+    " XX"
+  ],
+  "result": {
+    "item": "fishinglife:fish_sushi"
+  },
+  "show_notification": true
+}

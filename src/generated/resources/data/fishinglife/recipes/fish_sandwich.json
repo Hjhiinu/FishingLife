@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "fishinglife:green_pepper"
+    },
+    "S": {
+      "item": "fishinglife:chili_pepper"
+    },
+    "W": {
+      "item": "fishinglife:fish_meat"
+    },
+    "X": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    "WXS",
+    " Q "
+  ],
+  "result": {
+    "item": "fishinglife:fish_sandwich"
+  },
+  "show_notification": true
+}
