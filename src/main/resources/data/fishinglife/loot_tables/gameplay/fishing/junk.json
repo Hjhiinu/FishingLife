@@ -34,6 +34,11 @@
           "type": "minecraft:item",
           "weight": 5,
           "name": "fishinglife:paddy_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "fishinglife:plastic_trash"
         }
       ]
     }

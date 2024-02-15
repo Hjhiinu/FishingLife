@@ -119,7 +119,19 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.RED_SNAPPER.get(),
                         FishingLifeItemsRegistry.SARDINE.get(),
                         FishingLifeItemsRegistry.SOLE_FISH.get(),
-                        FishingLifeItemsRegistry.YELLOW_CROAKER.get()
+                        FishingLifeItemsRegistry.YELLOW_CROAKER.get(),
+
+                        FishingLifeItemsRegistry.WHITE_HAKE.get(),
+                        FishingLifeItemsRegistry.CAPELIN.get(),
+                        FishingLifeItemsRegistry.ARCTIC_SKATE.get(),
+                        FishingLifeItemsRegistry.ALASKA_POLLOCK.get(),
+                        FishingLifeItemsRegistry.RAINBOW_TROUT.get(),
+                        FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
+                        FishingLifeItemsRegistry.HADDOCK.get(),
+                        FishingLifeItemsRegistry.ATLANTIC_COD.get(),
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
+
+
 
 
 
@@ -172,6 +184,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.PSETTA_MAXIMA.get(),
                         FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()
                         );
+        this.tag(ModTags.Items.COLD_OCEAN_FISHES)
+                .add(FishingLifeItemsRegistry.WHITE_HAKE.get(),
+                        FishingLifeItemsRegistry.CAPELIN.get(),
+                        FishingLifeItemsRegistry.ARCTIC_SKATE.get(),
+                        FishingLifeItemsRegistry.ALASKA_POLLOCK.get(),
+                        FishingLifeItemsRegistry.RAINBOW_TROUT.get(),
+                        FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
+                        FishingLifeItemsRegistry.HADDOCK.get(),
+                        FishingLifeItemsRegistry.ATLANTIC_COD.get(),
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
+                        );
         this.tag(ModTags.Items.BIG_FISHES)
                 .add(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get(),
                         FishingLifeItemsRegistry.SILVER_AROWANA.get(),
@@ -189,7 +212,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.HAIRTAIL.get(),
                         FishingLifeItemsRegistry.POMFRET.get(),
                         FishingLifeItemsRegistry.RED_HORSEHEAD_FISH.get(),
-                        FishingLifeItemsRegistry.RED_SNAPPER.get()
+                        FishingLifeItemsRegistry.RED_SNAPPER.get(),
+                        FishingLifeItemsRegistry.ALASKA_POLLOCK.get(),
+                        FishingLifeItemsRegistry.ATLANTIC_COD.get(),
+                        FishingLifeItemsRegistry.HADDOCK.get()
+
                         );
         this.tag(ModTags.Items.MEDIUM_FISHES)
                 .add(FishingLifeItemsRegistry.BRYCON_HILARII.get(),
@@ -221,7 +248,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.RAINBOW_FISH.get(),
                         FishingLifeItemsRegistry.MACKEREL.get(),
                         FishingLifeItemsRegistry.PACIFIC_SAURY.get(),
-                        FishingLifeItemsRegistry.YELLOW_CROAKER.get()
+                        FishingLifeItemsRegistry.YELLOW_CROAKER.get(),
+                        FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
+                        FishingLifeItemsRegistry.RAINBOW_TROUT.get(),
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
+
                         );
         this.tag(ModTags.Items.SMALL_FISHES)
                 .add(FishingLifeItemsRegistry.CETOPSIDIUM.get(),
@@ -234,7 +265,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get(),
                         FishingLifeItemsRegistry.ANCHOVY.get(),
                         FishingLifeItemsRegistry.SARDINE.get(),
-                        FishingLifeItemsRegistry.SOLE_FISH.get()
+                        FishingLifeItemsRegistry.SOLE_FISH.get(),
+                        FishingLifeItemsRegistry.WHITE_HAKE.get(),
+                        FishingLifeItemsRegistry.CAPELIN.get(),
+                        FishingLifeItemsRegistry.ARCTIC_SKATE.get()
+
                         );
     }
 }

@@ -64,6 +64,17 @@
   "item.fishinglife.sole_fish": "Sole Fish",
   "item.fishinglife.yellow_croaker": "Yellow Croaker",
 
+  "item.fishinglife.alaska_pollock": "Alaska Pollock",
+  "item.fishinglife.atlantic_cod": "Atlantic Cod",
+  "item.fishinglife.haddock": "Haddock",
+  "item.fishinglife.arctic_char": "Arctic Char",
+  "item.fishinglife.rainbow_trout": "Rainbow Trout",
+  "item.fishinglife.fourhorn_sculpin": "Fourhorn Sculpin",
+  "item.fishinglife.white_hake": "White Hake",
+  "item.fishinglife.capelin": "Capelin",
+  "item.fishinglife.arctic_skate": "Arctic Skate",
+
+
 
 
   "item.fishinglife.scallion_seeds": "Scallion Seeds",
@@ -123,6 +134,9 @@
   "item.fishinglife.arisquedo_coin": "Arisquedo Coin",
 
 
+  "item.fishinglife.plastic_trash": "Plastic Trash",
+  "item.fishinglife.general_fishing_line": "Fishing Line",
+  "item.fishinglife.reinforced_plastic": "Reinforced Plastic",
 
 
 

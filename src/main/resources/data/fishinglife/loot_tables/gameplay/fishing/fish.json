@@ -179,7 +179,7 @@
               "condition": "minecraft:match_tool",
               "predicate": {
                 "items": [
-                  "minecraft:fishing_rod"
+                  "fishinglife:professional_fishing_rod"
                 ]
               }
             },
@@ -461,7 +461,7 @@
               "condition": "minecraft:match_tool",
               "predicate": {
                 "items": [
-                  "fishinglife:professional_fishing_rod"
+                  "fishinglife:elite_fishing_rod"
                 ]
               }
             },
@@ -559,7 +559,7 @@
               "condition": "minecraft:match_tool",
               "predicate": {
                 "items": [
-                  "fishinglife:professional_fishing_rod"
+                  "fishinglife:elite_fishing_rod"
                 ]
               }
             },
@@ -708,7 +708,7 @@
               "condition": "minecraft:match_tool",
               "predicate": {
                 "items": [
-                  "fishinglife:professional_fishing_rod"
+                  "fishinglife:elite_fishing_rod"
                 ]
               }
             },

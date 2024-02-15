@@ -217,7 +217,44 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> STRIPED_BEAKFISH = ITEMS.register("striped_beakfish",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    //Cold Ocean
+    public static final RegistryObject<Item> WHITE_HAKE = ITEMS.register("white_hake",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
+    public static final RegistryObject<Item> CAPELIN = ITEMS.register("capelin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> ARCTIC_SKATE = ITEMS.register("arctic_skate",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> ALASKA_POLLOCK = ITEMS.register("alaska_pollock",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> FOURHORN_SCULPIN = ITEMS.register("fourhorn_sculpin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> RAINBOW_TROUT = ITEMS.register("rainbow_trout",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> ARCTIC_CHAR = ITEMS.register("arctic_char",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> HADDOCK = ITEMS.register("haddock",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> ATLANTIC_COD = ITEMS.register("atlantic_cod",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    //Trash in Water/ Chest
+    public static final RegistryObject<Item> PLASTIC_TRASH = ITEMS.register("plastic_trash",()->new Item(new Item.Properties()));
+
+    //Fishing Equipment
+
+    //Fishing line
+    public static final RegistryObject<Item> GENERAL_FISHING_LINE = ITEMS.register("general_fishing_line",()->new Item(new Item.Properties()));
+
+    //Reinforced materials
+    public static final RegistryObject<Item> REINFORCED_PLASTIC = ITEMS.register("reinforced_plastic",()->new Item(new Item.Properties()));
     //Fish Collection
 
     public static final RegistryObject<Item> DESERTFISH_COLLECTION = ITEMS.register("desertfish_collection",()->new Item(new Item.Properties()));

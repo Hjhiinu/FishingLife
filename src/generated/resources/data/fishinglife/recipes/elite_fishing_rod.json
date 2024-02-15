@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "item": "fishinglife:junglefish_collection"
+    },
+    "K": {
+      "item": "fishinglife:desertfish_collection"
+    },
+    "Q": {
+      "item": "minecraft:iron_bars"
+    },
+    "S": {
+      "item": "fishinglife:professional_fishing_rod"
+    },
+    "W": {
+      "item": "fishinglife:temperatefish_collection"
+    }
+  },
+  "pattern": [
+    " K ",
+    "QSQ",
+    "W D"
+  ],
+  "result": {
+    "item": "fishinglife:elite_fishing_rod"
+  },
+  "show_notification": true
+}

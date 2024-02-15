@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": {
+      "item": "minecraft:cod"
+    },
+    "S": {
+      "item": "minecraft:fishing_rod"
+    },
+    "W": {
+      "item": "minecraft:salmon"
+    }
+  },
+  "pattern": [
+    "K",
+    "S",
+    "W"
+  ],
+  "result": {
+    "item": "fishinglife:professional_fishing_rod"
+  },
+  "show_notification": true
+}

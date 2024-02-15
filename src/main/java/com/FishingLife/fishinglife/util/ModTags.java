@@ -23,6 +23,8 @@ public class ModTags {
 
         public static final TagKey<Item> WARM_OCEAN_FISHES = tag("warm_ocean_fishes");
 
+        public static final TagKey<Item> COLD_OCEAN_FISHES = tag("cold_ocean_fishes");
+
         public static final TagKey<Item> BIG_FISHES = tag("big_fishes");
 
         public static final TagKey<Item> MEDIUM_FISHES = tag("medium_fishes");

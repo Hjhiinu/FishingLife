@@ -35,6 +35,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
         //Shaped
+
+        //Fishing Rod
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())
+                .pattern("K")
+                .pattern("S")
+                .pattern("W")
+                .define('S', Items.FISHING_ROD)
+                .define('W', Items.SALMON)
+                .define('K', Items.COD)
+                .unlockedBy(getHasName(Items.FISHING_ROD), has(Items.FISHING_ROD))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())
+                .pattern(" K ")
+                .pattern("QSQ")
+                .pattern("W D")
+                .define('S', FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())
+                .define('W', FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION.get())
+                .define('K', FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get())
+                .define('D', FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get())
+                .define('Q', Items.IRON_BARS)
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get()), has(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get()))
+                .save(pWriter);
+
+
+
+        //Materials
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.CREAM.get())
                 .pattern("S")
                 .pattern("W")
@@ -44,6 +71,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.REINFORCED_PLASTIC.get())
+                .pattern("S S")
+                .pattern(" W ")
+                .pattern(" Q ")
+                .define('S', FishingLifeItemsRegistry.PLASTIC_TRASH.get())
+                .define('W', Items.QUARTZ)
+                .define('Q', Items.SAND)
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PLASTIC_TRASH.get()), has(FishingLifeItemsRegistry.PLASTIC_TRASH.get()))
+                .save(pWriter);
+
+
+
+
+        //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeBlocksRegistry.FERMENTER.get())
                 .pattern("SQS")
                 .pattern("SXS")

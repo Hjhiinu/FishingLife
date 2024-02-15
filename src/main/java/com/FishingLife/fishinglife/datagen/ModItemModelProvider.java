@@ -83,6 +83,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.SOLE_FISH); // Sole Fish
         simpleItem(FishingLifeItemsRegistry.YELLOW_CROAKER); // Yellow Croaker
 
+        simpleItem(FishingLifeItemsRegistry.WHITE_HAKE);
+        simpleItem(FishingLifeItemsRegistry.CAPELIN);
+        simpleItem(FishingLifeItemsRegistry.ARCTIC_SKATE);
+        simpleItem(FishingLifeItemsRegistry.ALASKA_POLLOCK);
+        simpleItem(FishingLifeItemsRegistry.RAINBOW_TROUT);
+        simpleItem(FishingLifeItemsRegistry.ARCTIC_CHAR);
+        simpleItem(FishingLifeItemsRegistry.HADDOCK);
+        simpleItem(FishingLifeItemsRegistry.ATLANTIC_COD);
+        simpleItem(FishingLifeItemsRegistry.FOURHORN_SCULPIN);
+
 
 
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
@@ -144,7 +154,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
 
+        simpleItem(FishingLifeItemsRegistry.GENERAL_FISHING_LINE);
 
+        simpleItem(FishingLifeItemsRegistry.PLASTIC_TRASH);
+        simpleItem(FishingLifeItemsRegistry.REINFORCED_PLASTIC);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

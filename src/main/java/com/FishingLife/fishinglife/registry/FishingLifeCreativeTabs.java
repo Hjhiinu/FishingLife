@@ -87,6 +87,17 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.PSETTA_MAXIMA.get()); // Psetta Maxima
                         pOutput.accept(FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()); // Striped Beakfish
 
+                        //Cold Ocean Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.WHITE_HAKE.get()); // White Hake
+                        pOutput.accept(FishingLifeItemsRegistry.CAPELIN.get()); // Capelin
+                        pOutput.accept(FishingLifeItemsRegistry.ARCTIC_SKATE.get()); // Arctic Skate
+                        pOutput.accept(FishingLifeItemsRegistry.ALASKA_POLLOCK.get()); // Alaska Pollock
+                        pOutput.accept(FishingLifeItemsRegistry.RAINBOW_TROUT.get()); // Rainbow Trout
+                        pOutput.accept(FishingLifeItemsRegistry.ARCTIC_CHAR.get()); // Arctic Char
+                        pOutput.accept(FishingLifeItemsRegistry.HADDOCK.get()); // Haddock
+                        pOutput.accept(FishingLifeItemsRegistry.ATLANTIC_COD.get()); // Atlantic Cod
+                        pOutput.accept(FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()); // Fourhorn Sculpin
+
 
 
                         //Fishes Collection
@@ -154,6 +165,12 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());
 
+                        //Trash
+                        pOutput.accept(FishingLifeItemsRegistry.PLASTIC_TRASH.get());
+                        //Fishing line
+                        pOutput.accept(FishingLifeItemsRegistry.GENERAL_FISHING_LINE.get());
+                        //Material
+                        pOutput.accept(FishingLifeItemsRegistry.REINFORCED_PLASTIC.get());
 
                     })
                     .build());
