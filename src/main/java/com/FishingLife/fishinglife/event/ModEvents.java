@@ -194,32 +194,32 @@ public class ModEvents {
             tagEuropeanPerch.putString("Quality", "Special");
 
             // European Grayling
-            ItemStack europeanGrayling = new ItemStack(FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get(), 5);
+            ItemStack europeanGrayling = new ItemStack(FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get(), 2);
             CompoundTag tagEuropeanGrayling = europeanGrayling.getOrCreateTag();
             tagEuropeanGrayling.putString("Quality", "1");
 
 // Koi
-            ItemStack koi = new ItemStack(FishingLifeItemsRegistry.KOI.get(), 5);
+            ItemStack koi = new ItemStack(FishingLifeItemsRegistry.KOI.get(), 2);
             CompoundTag tagKoi = koi.getOrCreateTag();
             tagKoi.putString("Quality", "1");
 
 // Muskellunge
-            ItemStack muskellunge = new ItemStack(FishingLifeItemsRegistry.MUSKELLUNGE.get(), 5);
+            ItemStack muskellunge = new ItemStack(FishingLifeItemsRegistry.MUSKELLUNGE.get(), 2);
             CompoundTag tagMuskellunge = muskellunge.getOrCreateTag();
             tagMuskellunge.putString("Quality", "1");
 
 // Pumpkinseed Sunfish
-            ItemStack pumpkinseedSunfish = new ItemStack(FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(), 5);
+            ItemStack pumpkinseedSunfish = new ItemStack(FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(), 2);
             CompoundTag tagPumpkinseedSunfish = pumpkinseedSunfish.getOrCreateTag();
             tagPumpkinseedSunfish.putString("Quality", "1");
 
 // Tench
-            ItemStack tench = new ItemStack(FishingLifeItemsRegistry.TENCH.get(), 5);
+            ItemStack tench = new ItemStack(FishingLifeItemsRegistry.TENCH.get(), 2);
             CompoundTag tagTench = tench.getOrCreateTag();
             tagTench.putString("Quality", "1");
 
 // Walleye
-            ItemStack walleye = new ItemStack(FishingLifeItemsRegistry.WALLEYE.get(), 5);
+            ItemStack walleye = new ItemStack(FishingLifeItemsRegistry.WALLEYE.get(), 2);
             CompoundTag tagWalleye = walleye.getOrCreateTag();
             tagWalleye.putString("Quality", "1");
 
@@ -260,8 +260,77 @@ public class ModEvents {
 
         }
 
+        if(event.getType() == ModVillagers.DESERT_FISHERMAN.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            // African Barb
+            ItemStack africanBarb = new ItemStack(FishingLifeItemsRegistry.AFRICAN_BARB.get(), 2);
+            CompoundTag tagAfricanBarb = africanBarb.getOrCreateTag();
+            tagAfricanBarb.putString("Quality", "Special");
+
+// African Desert Catfish
+            ItemStack africanDesertCatfish = new ItemStack(FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get(), 2);
+            CompoundTag tagAfricanDesertCatfish = africanDesertCatfish.getOrCreateTag();
+            tagAfricanDesertCatfish.putString("Quality", "Special");
+
+// African Lungfish
+            ItemStack africanLungfish = new ItemStack(FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get(), 2);
+            CompoundTag tagAfricanLungfish = africanLungfish.getOrCreateTag();
+            tagAfricanLungfish.putString("Quality", "Special");
+
+// Australian Desert Goby
+            ItemStack australianDesertGoby = new ItemStack(FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get(), 2);
+            CompoundTag tagAustralianDesertGoby = australianDesertGoby.getOrCreateTag();
+            tagAustralianDesertGoby.putString("Quality", "Special");
+
+// Desert Zebrafish
+            ItemStack desertZebrafish = new ItemStack(FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get(), 2);
+            CompoundTag tagDesertZebrafish = desertZebrafish.getOrCreateTag();
+            tagDesertZebrafish.putString("Quality", "Special");
+
+// Egyptian Mouthbrooder
+            ItemStack egyptianMouthbrooder = new ItemStack(FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get(), 2);
+            CompoundTag tagEgyptianMouthbrooder = egyptianMouthbrooder.getOrCreateTag();
+            tagEgyptianMouthbrooder.putString("Quality", "Special");
+
+// Highland Swordtail
+            ItemStack highlandSwordtail = new ItemStack(FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(), 2);
+            CompoundTag tagHighlandSwordtail = highlandSwordtail.getOrCreateTag();
+            tagHighlandSwordtail.putString("Quality", "Special");
+
+// Nile Perch
+            ItemStack nilePerch = new ItemStack(FishingLifeItemsRegistry.NILE_PERCH.get(), 2);
+            CompoundTag tagNilePerch = nilePerch.getOrCreateTag();
+            tagNilePerch.putString("Quality", "Special");
+
+// Nothobranchius Furzeri
+            ItemStack nothobranchiusFurzeri = new ItemStack(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get(), 2);
+            CompoundTag tagNothobranchiusFurzeri = nothobranchiusFurzeri.getOrCreateTag();
+            tagNothobranchiusFurzeri.putString("Quality", "Special");
+
+            ItemStack[] itemStackArray1 = new ItemStack[] {
+                    africanBarb, africanDesertCatfish, africanLungfish, australianDesertGoby,
+                    desertZebrafish, egyptianMouthbrooder, highlandSwordtail, nilePerch, nothobranchiusFurzeri
+            };
+
+            // Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    itemStackArray1[randomnum()],
+                    itemStackArray1[randomnum()],
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 8,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    itemStackArray1[randomnum()],
+                    itemStackArray1[randomnum()],
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 8,0));
+            // level 2
+
+
+        }
 
     }
+
 
     /*@SubscribeEvent
     public static void addCustomWanderingTrades(WandererTradesEvent event) {

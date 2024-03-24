@@ -1,6 +1,7 @@
 package com.FishingLife.fishinglife;
 
 import com.FishingLife.fishinglife.GUIscreen.FermenterScreen;
+import com.FishingLife.fishinglife.GUIscreen.FishingMachineScreen;
 import com.FishingLife.fishinglife.GUIscreen.ModMenuTypes;
 import com.FishingLife.fishinglife.ModVillager.ModVillagers;
 import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
@@ -9,24 +10,12 @@ import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
-//import com.FishingLife.fishinglife.util.ModEventBusEvents;
-//import com.FishingLife.fishinglife.util.CustomNBTRecipeSerializer;
-//import com.FishingLife.fishinglife.util.NBTIngredient;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
-import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.common.crafting.IIngredientSerializer;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -41,7 +30,6 @@ import net.minecraftforge.registries.*;
 
 import org.slf4j.Logger;
 
-import java.util.stream.Stream;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -132,6 +120,7 @@ public class fishinglife
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
             MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
+            MenuScreens.register(ModMenuTypes.FISHING_MACHINE_MENU.get(), FishingMachineScreen::new);
         }
     }
 

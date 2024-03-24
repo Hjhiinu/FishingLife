@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-14T18:09:17.5837198	Tags for minecraft:item mod id fishinglife
+// 1.20.1	2024-02-24T14:32:20.8590719	Tags for minecraft:item mod id fishinglife
 a67c96ef12af818af2d1e849c28871cfafa7bab0 data/fishinglife/tags/items/big_fishes.json
 9b526c3c9fce551d7433a28b2742d123f2448ebd data/fishinglife/tags/items/cold_ocean_fishes.json
 0b655cf29e7b688818e68c4f2198513ce5be2533 data/fishinglife/tags/items/crops.json
@@ -7,6 +7,7 @@ b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/fishinglife/tags/items/fruits.json
 75bb364ded85cc316b58564c388ae960c8735b54 data/fishinglife/tags/items/jungle_fishes.json
 cecd9e36ba839f0ffbc3630104bb648a643448b3 data/fishinglife/tags/items/medium_fishes.json
 0ae304c4eeb2860ab7a50dfb1eb0ffb02ed05950 data/fishinglife/tags/items/modfish.json
+d01e5a77dc554aa27550ae48c4035b3554c2d36e data/fishinglife/tags/items/raw_meat.json
 8bb86821eeb7348ef7afab59b8e9cf32a0a65631 data/fishinglife/tags/items/small_fishes.json
 f21418fc4f4f09b7a158927edd2782e3f16f5e27 data/fishinglife/tags/items/temperate_fishes.json
 02d7b89e82aeb191a4ca17f4e1f8e64c006d84e9 data/fishinglife/tags/items/warm_ocean_fishes.json

@@ -36,6 +36,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Shaped
 
+        //Fishing net
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.SMALL_FISHING_NET.get())
+                .pattern(" K ")
+                .pattern("KSK")
+                .pattern(" K ")
+                .define('S', Items.SLIME_BALL)
+                .define('K', Items.STRING)
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.MEDIUM_FISHING_NET.get())
+                .pattern("SK ")
+                .pattern("KWK")
+                .pattern(" KS")
+                .define('S', Items.SLIME_BALL)
+                .define('K', Items.STRING)
+                .define('W', FishingLifeItemsRegistry.SMALL_FISHING_NET.get())
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.LARGE_FISHING_NET.get())
+                .pattern("SYS")
+                .pattern("KWK")
+                .pattern("SYS")
+                .define('S', Items.IRON_BARS)
+                .define('K', Items.COBWEB)
+                .define('W', FishingLifeItemsRegistry.MEDIUM_FISHING_NET.get())
+                .define('Y', FishingLifeItemsRegistry.REINFORCED_PLASTIC.get())
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .save(pWriter);
+        //Baits
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.ULTIMATE_BAITS.get())
+                .pattern(" Y ")
+                .pattern("KWK")
+                .pattern(" Y ")
+                .define('K', ModTags.Items.RAW_MEAT)
+                .define('W', FishingLifeItemsRegistry.SEDUCTIVE_HAZARD_ZEST.get())
+                .define('Y', Items.COCOA_BEANS)
+                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
+        //SEDUCTIVE_HAZARD_ZEST
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.SEDUCTIVE_HAZARD_ZEST.get())
+                .pattern("KYK")
+                .pattern(" W ")
+                .pattern("SYS")
+                .define('K', Items.CHORUS_FLOWER)
+                .define('W', Items.WITHER_ROSE)
+                .define('Y', Items.SHROOMLIGHT)
+                .define('S',Items.SPORE_BLOSSOM)
+                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
+
         //Fishing Rod
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())
                 .pattern("K")
@@ -238,6 +289,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.POTATO)
                 .unlockedBy(getHasName(Items.POTATO), has(Items.POTATO))
                 .save(pWriter);
+        //Bait
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.BASIC_BAITS.get(), 2)
+                .requires(ModTags.Items.RAW_MEAT)
+                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.ADVANCED_BAITS.get(), 2)
+                .requires(ModTags.Items.RAW_MEAT)
+                .requires(ModTags.Items.RAW_MEAT)
+                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.PREMIUM_BAITS.get(), 2)
+                .requires(ModTags.Items.RAW_MEAT)
+                .requires(Items.COCOA_BEANS)
+                .requires(ModTags.Items.RAW_MEAT)
+                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
 
 
 
@@ -256,6 +323,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
+    private String getHasName(TagKey<Item> rawMeat) {
+        return "bait";
+    }
 
 
 }

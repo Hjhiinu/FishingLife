@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "fishinglife:raw_meat"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "tag": "fishinglife:raw_meat"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "fishinglife:premium_baits"
+  }
+}

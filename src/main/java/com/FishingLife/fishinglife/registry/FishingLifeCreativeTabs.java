@@ -172,6 +172,56 @@ public class FishingLifeCreativeTabs {
                         //Material
                         pOutput.accept(FishingLifeItemsRegistry.REINFORCED_PLASTIC.get());
 
+
+
+
+                        pOutput.accept(FishingLifeItemsRegistry.BASIC_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.ADVANCED_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PREMIUM_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.ULTIMATE_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SMALL_FISHING_NET.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MEDIUM_FISHING_NET.get());
+                        pOutput.accept(FishingLifeItemsRegistry.LARGE_FISHING_NET.get());
+
+                        //Net
+                        pOutput.accept(FishingLifeItemsRegistry.SMALL_NET_WITH_BASIC_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MEDIUM_NET_WITH_BASIC_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.LARGE_NET_WITH_BASIC_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SMALL_NET_WITH_ADVANCED_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MEDIUM_NET_WITH_ADVANCED_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.LARGE_NET_WITH_ADVANCED_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SMALL_NET_WITH_PREMIUM_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MEDIUM_NET_WITH_PREMIUM_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.LARGE_NET_WITH_PREMIUM_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SMALL_NET_WITH_ULTIMATE_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MEDIUM_NET_WITH_ULTIMATE_BAITS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.LARGE_NET_WITH_ULTIMATE_BAITS.get());
+
+                        //Fish machine
+                        //level1
+                        pOutput.accept(FishingLifeItemsRegistry.PURPLE_SEA_URCHIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SLATE_PENCIL_URCHIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.WHITE_SEA_URCHIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.GREEN_SEA_URCHIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.RED_SEA_URCHIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PINK_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BLUE_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SPOT_PRAWN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.NORTHERN_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.WHITE_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.TIGER_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PACIFIC_WHITE_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SWIMMING_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SOFT_SHELL_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.EUROPEAN_GREEN_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.STONE_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SNOW_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MUD_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.RED_ROCK_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.DUNGENESS_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BLUE_CRAB.get());
+
+
                     })
                     .build());
     public static void register(IEventBus eventBus){

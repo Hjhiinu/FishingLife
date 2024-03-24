@@ -18,6 +18,10 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = fishinglife.MOD_ID)
 public class ModFishLoot {
+
+    public static final ResourceLocation FISHING_NET = register("fishing_machine/fishing_net");
+
+    public static final ResourceLocation FISHING_TRASH = register("fishing_machine/fishing_trash");
     public static final ResourceLocation FISH = register("gameplay/fishing/fish");
     public static final ResourceLocation JUNK = register("gameplay/fishing/junk");
     private static ResourceLocation register(String path) {

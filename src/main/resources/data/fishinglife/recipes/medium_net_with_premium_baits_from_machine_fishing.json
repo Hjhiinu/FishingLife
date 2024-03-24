@@ -1,0 +1,18 @@
+{
+  "type": "fishinglife:machine_fishing",
+  "ingredients": [
+    {
+      "item": "fishinglife:premium_baits"
+    },
+    {
+      "item": "fishinglife:medium_fishing_net"
+    },
+    {
+      "item": "minecraft:redstone_dust"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "fishinglife:medium_net_with_premium_baits"
+  }
+}

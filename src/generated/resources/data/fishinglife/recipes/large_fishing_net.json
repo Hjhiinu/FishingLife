@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:cobweb"
+    },
+    "S": {
+      "item": "minecraft:iron_bars"
+    },
+    "W": {
+      "item": "fishinglife:medium_fishing_net"
+    },
+    "Y": {
+      "item": "fishinglife:reinforced_plastic"
+    }
+  },
+  "pattern": [
+    "SYS",
+    "KWK",
+    "SYS"
+  ],
+  "result": {
+    "item": "fishinglife:large_fishing_net"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "fishinglife:raw_meat"
+    },
+    {
+      "tag": "fishinglife:raw_meat"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "fishinglife:advanced_baits"
+  }
+}

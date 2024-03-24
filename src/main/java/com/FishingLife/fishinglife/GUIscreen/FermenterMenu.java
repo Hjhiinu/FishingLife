@@ -23,7 +23,7 @@ public class FermenterMenu extends AbstractContainerMenu {
 
     public FermenterMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.FERMENTER_MENU.get(), pContainerId);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, 3);
         blockEntity = ((FermenterBlockEntity)  entity);
         this.level = inv.player.level();
         this.data = data;

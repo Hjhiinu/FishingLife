@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:string"
+    },
+    "S": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "pattern": [
+    " K ",
+    "KSK",
+    " K "
+  ],
+  "result": {
+    "item": "fishinglife:small_fishing_net"
+  },
+  "show_notification": true
+}

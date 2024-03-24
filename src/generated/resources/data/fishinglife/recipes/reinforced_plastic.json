@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Q": {
+      "item": "minecraft:sand"
+    },
+    "S": {
+      "item": "fishinglife:plastic_trash"
+    },
+    "W": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "S S",
+    " W ",
+    " Q "
+  ],
+  "result": {
+    "item": "fishinglife:reinforced_plastic"
+  },
+  "show_notification": true
+}

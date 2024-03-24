@@ -133,7 +133,40 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(FishingLifeItemsRegistry.ARISQUEDO_COIN);
 
+        simpleItem(FishingLifeItemsRegistry.PURPLE_SEA_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.SLATE_PENCIL_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.WHITE_SEA_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.GREEN_SEA_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.RED_SEA_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.PINK_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.BLUE_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.SPOT_PRAWN);
+        simpleItem(FishingLifeItemsRegistry.NORTHERN_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.WHITE_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.TIGER_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.PACIFIC_WHITE_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.SWIMMING_CRAB);
+        simpleItem(FishingLifeItemsRegistry.SOFT_SHELL_CRAB);
+        simpleItem(FishingLifeItemsRegistry.EUROPEAN_GREEN_CRAB);
+        simpleItem(FishingLifeItemsRegistry.STONE_CRAB);
+        simpleItem(FishingLifeItemsRegistry.SNOW_CRAB);
+        simpleItem(FishingLifeItemsRegistry.MUD_CRAB);
+        simpleItem(FishingLifeItemsRegistry.RED_ROCK_CRAB);
+        simpleItem(FishingLifeItemsRegistry.DUNGENESS_CRAB);
+        simpleItem(FishingLifeItemsRegistry.BLUE_CRAB);
 
+        simpleItem(FishingLifeItemsRegistry.SMALL_NET_WITH_BASIC_BAITS);
+        simpleItem(FishingLifeItemsRegistry.MEDIUM_NET_WITH_BASIC_BAITS);
+        simpleItem(FishingLifeItemsRegistry.LARGE_NET_WITH_BASIC_BAITS);
+        simpleItem(FishingLifeItemsRegistry.SMALL_NET_WITH_ADVANCED_BAITS);
+        simpleItem(FishingLifeItemsRegistry.MEDIUM_NET_WITH_ADVANCED_BAITS);
+        simpleItem(FishingLifeItemsRegistry.LARGE_NET_WITH_ADVANCED_BAITS);
+        simpleItem(FishingLifeItemsRegistry.SMALL_NET_WITH_PREMIUM_BAITS);
+        simpleItem(FishingLifeItemsRegistry.MEDIUM_NET_WITH_PREMIUM_BAITS);
+        simpleItem(FishingLifeItemsRegistry.LARGE_NET_WITH_PREMIUM_BAITS);
+        simpleItem(FishingLifeItemsRegistry.SMALL_NET_WITH_ULTIMATE_BAITS);
+        simpleItem(FishingLifeItemsRegistry.MEDIUM_NET_WITH_ULTIMATE_BAITS);
+        simpleItem(FishingLifeItemsRegistry.LARGE_NET_WITH_ULTIMATE_BAITS);
 
 
 
@@ -152,12 +185,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(FishingLifeItemsRegistry.DIVINE_FISHING_ROD);
 
+        simpleItem(FishingLifeItemsRegistry.SEDUCTIVE_HAZARD_ZEST);
 
 
         simpleItem(FishingLifeItemsRegistry.GENERAL_FISHING_LINE);
 
         simpleItem(FishingLifeItemsRegistry.PLASTIC_TRASH);
         simpleItem(FishingLifeItemsRegistry.REINFORCED_PLASTIC);
+
+
+        simpleItem(FishingLifeItemsRegistry.BASIC_BAITS);
+        simpleItem(FishingLifeItemsRegistry.ADVANCED_BAITS);
+        simpleItem(FishingLifeItemsRegistry.PREMIUM_BAITS);
+        simpleItem(FishingLifeItemsRegistry.ULTIMATE_BAITS);
+        simpleItem(FishingLifeItemsRegistry.SMALL_FISHING_NET);
+        simpleItem(FishingLifeItemsRegistry.MEDIUM_FISHING_NET);
+        simpleItem(FishingLifeItemsRegistry.LARGE_FISHING_NET);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

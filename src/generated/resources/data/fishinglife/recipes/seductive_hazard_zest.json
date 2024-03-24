@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:chorus_flower"
+    },
+    "S": {
+      "item": "minecraft:spore_blossom"
+    },
+    "W": {
+      "item": "minecraft:wither_rose"
+    },
+    "Y": {
+      "item": "minecraft:shroomlight"
+    }
+  },
+  "pattern": [
+    "KYK",
+    " W ",
+    "SYS"
+  ],
+  "result": {
+    "item": "fishinglife:seductive_hazard_zest"
+  },
+  "show_notification": true
+}

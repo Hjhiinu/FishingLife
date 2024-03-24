@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class FermenterScreen extends AbstractContainerScreen<FermenterMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(fishinglife.MOD_ID, "textures/gui/fermenter.png");
+            new ResourceLocation(fishinglife.MOD_ID, "textures/gui/fermenter_gui.png");
 
     public FermenterScreen(FermenterMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

@@ -133,11 +133,56 @@
 
   "item.fishinglife.arisquedo_coin": "Arisquedo Coin",
 
+  "item.fishinglife.seductive_hazard_zest": "Seductive hazard Zest",
 
   "item.fishinglife.plastic_trash": "Plastic Trash",
   "item.fishinglife.general_fishing_line": "Fishing Line",
   "item.fishinglife.reinforced_plastic": "Reinforced Plastic",
 
+  "item.fishinglife.basic_baits": "Basic Baits",
+  "item.fishinglife.advanced_baits": "Advanced Baits",
+  "item.fishinglife.premium_baits": "Premium Baits",
+  "item.fishinglife.ultimate_baits": "Ultimate Baits",
+  "item.fishinglife.small_fishing_net": "Small Fishing Net",
+  "item.fishinglife.medium_fishing_net": "Medium Fishing Net",
+  "item.fishinglife.large_fishing_net": "Large Fishing Net",
+
+  "item.fishinglife.purple_sea_urchin": "Purple Sea Urchin",
+  "item.fishinglife.slate_pencil_urchin": "Slate Pencil Urchin",
+  "item.fishinglife.white_sea_urchin": "White Sea Urchin",
+  "item.fishinglife.green_sea_urchin": "Green Sea Urchin",
+  "item.fishinglife.red_sea_urchin": "Red Sea Urchin",
+  "item.fishinglife.pink_shrimp": "Pink Shrimp",
+  "item.fishinglife.blue_shrimp": "Blue Shrimp",
+  "item.fishinglife.spot_prawn": "Spot Prawn",
+  "item.fishinglife.northern_shrimp": "Northern Shrimp",
+  "item.fishinglife.white_shrimp": "White Shrimp",
+  "item.fishinglife.tiger_shrimp": "Tiger Shrimp",
+  "item.fishinglife.pacific_white_shrimp": "Pacific White Shrimp",
+
+  "item.fishinglife.swimming_crab": "Swimming Crab",
+  "item.fishinglife.soft_shell_crab": "Soft Shell Crab",
+  "item.fishinglife.european_green_crab": "European Green Crab",
+  "item.fishinglife.stone_crab": "Stone Crab",
+  "item.fishinglife.snow_crab": "Snow Crab",
+  "item.fishinglife.mud_crab": "Mud Crab",
+  "item.fishinglife.red_rock_crab": "Red Rock Crab",
+  "item.fishinglife.dungeness_crab": "Dungeness Crab",
+  "item.fishinglife.blue_crab": "Blue Crab",
+
+
+  "item.fishinglife.small_net_with_basic_baits": "A Small and Mediocre Catch of Fish",
+  "item.fishinglife.medium_net_with_basic_baits": "A Moderate and Mediocre Catch of Fish",
+  "item.fishinglife.large_net_with_basic_baits": "An Abundant yet Mediocre Catch of Fish",
+  "item.fishinglife.small_net_with_advanced_baits": "A Small and Somewhat Satisfactory Catch of Fish",
+  "item.fishinglife.medium_net_with_advanced_baits": "A Moderate and Somewhat Satisfactory Catch of Fish",
+  "item.fishinglife.large_net_with_advanced_baits": "An Abundant yet Somewhat Satisfactory Catch of Fish",
+  "item.fishinglife.small_net_with_premium_baits": "A Small yet Outstanding Catch of Fish",
+  "item.fishinglife.medium_net_with_premium_baits": "A Moderate yet Outstanding Catch of Fish",
+  "item.fishinglife.large_net_with_premium_baits": "An Abundant and Outstanding Catch of Fish",
+  "item.fishinglife.small_net_with_ultimate_baits": "A Small yet Exceptional Catch of Fish",
+  "item.fishinglife.medium_net_with_ultimate_baits": "A Moderate yet Exceptional Catch of Fish",
+  "item.fishinglife.large_net_with_ultimate_baits": "An Abundant and Exceptional Catch of Fish",
 
 
   "block.fishinglife.fermenter": "Fermenter",

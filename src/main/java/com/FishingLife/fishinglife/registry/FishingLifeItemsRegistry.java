@@ -1,15 +1,14 @@
 package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.item.LootNetItem;
+import com.FishingLife.fishinglife.util.ModFishLoot;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.loot.LootTableIdCondition;
 public class FishingLifeItemsRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
@@ -244,11 +243,26 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> ATLANTIC_COD = ITEMS.register("atlantic_cod",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    //Aroma
+    public static final RegistryObject<Item> SEDUCTIVE_HAZARD_ZEST = ITEMS.register("seductive_hazard_zest",()->new Item(new Item.Properties()));
 
     //Trash in Water/ Chest
     public static final RegistryObject<Item> PLASTIC_TRASH = ITEMS.register("plastic_trash",()->new Item(new Item.Properties()));
 
     //Fishing Equipment
+
+    //Bait
+    public static final RegistryObject<Item> BASIC_BAITS = ITEMS.register("basic_baits",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ADVANCED_BAITS = ITEMS.register("advanced_baits",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PREMIUM_BAITS = ITEMS.register("premium_baits",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ULTIMATE_BAITS = ITEMS.register("ultimate_baits",()->new Item(new Item.Properties()));
+
+    //Fishing net
+    public static final RegistryObject<Item> SMALL_FISHING_NET = ITEMS.register("small_fishing_net",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MEDIUM_FISHING_NET = ITEMS.register("medium_fishing_net",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LARGE_FISHING_NET = ITEMS.register("large_fishing_net",()->new Item(new Item.Properties()));
+
+
 
     //Fishing line
     public static final RegistryObject<Item> GENERAL_FISHING_LINE = ITEMS.register("general_fishing_line",()->new Item(new Item.Properties()));
@@ -262,6 +276,68 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> JUNGLEFISH_COLLECTION = ITEMS.register("junglefish_collection",()->new Item(new Item.Properties()));
 
+    //Fish Catch
+    public static final RegistryObject<Item> PURPLE_SEA_URCHIN = ITEMS.register("purple_sea_urchin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> SLATE_PENCIL_URCHIN = ITEMS.register("slate_pencil_urchin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> WHITE_SEA_URCHIN = ITEMS.register("white_sea_urchin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> GREEN_SEA_URCHIN = ITEMS.register("green_sea_urchin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> RED_SEA_URCHIN = ITEMS.register("red_sea_urchin",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> PINK_SHRIMP = ITEMS.register("pink_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> BLUE_SHRIMP = ITEMS.register("blue_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> SPOT_PRAWN = ITEMS.register("spot_prawn",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> NORTHERN_SHRIMP = ITEMS.register("northern_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> WHITE_SHRIMP = ITEMS.register("white_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> TIGER_SHRIMP = ITEMS.register("tiger_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> PACIFIC_WHITE_SHRIMP = ITEMS.register("pacific_white_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+    public static final RegistryObject<Item> SWIMMING_CRAB = ITEMS.register("swimming_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> SOFT_SHELL_CRAB = ITEMS.register("soft_shell_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> EUROPEAN_GREEN_CRAB = ITEMS.register("european_green_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> STONE_CRAB = ITEMS.register("stone_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> SNOW_CRAB = ITEMS.register("snow_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> MUD_CRAB = ITEMS.register("mud_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> RED_ROCK_CRAB = ITEMS.register("red_rock_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> DUNGENESS_CRAB = ITEMS.register("dungeness_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
+
+    public static final RegistryObject<Item> BLUE_CRAB = ITEMS.register("blue_crab",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
 
     //Other items
     public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties()));
@@ -270,6 +346,30 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> POTATO_STRIPS = ITEMS.register("potato_strips",()->new Item(new Item.Properties()));
 
+    //Net
+    public static final RegistryObject<Item> SMALL_NET_WITH_BASIC_BAITS = ITEMS.register("small_net_with_basic_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> MEDIUM_NET_WITH_BASIC_BAITS = ITEMS.register("medium_net_with_basic_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> LARGE_NET_WITH_BASIC_BAITS = ITEMS.register("large_net_with_basic_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> SMALL_NET_WITH_ADVANCED_BAITS = ITEMS.register("small_net_with_advanced_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> MEDIUM_NET_WITH_ADVANCED_BAITS = ITEMS.register("medium_net_with_advanced_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> LARGE_NET_WITH_ADVANCED_BAITS = ITEMS.register("large_net_with_advanced_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> SMALL_NET_WITH_PREMIUM_BAITS = ITEMS.register("small_net_with_premium_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> MEDIUM_NET_WITH_PREMIUM_BAITS = ITEMS.register("medium_net_with_premium_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> LARGE_NET_WITH_PREMIUM_BAITS = ITEMS.register("large_net_with_premium_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> SMALL_NET_WITH_ULTIMATE_BAITS = ITEMS.register("small_net_with_ultimate_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> MEDIUM_NET_WITH_ULTIMATE_BAITS = ITEMS.register("medium_net_with_ultimate_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
+
+    public static final RegistryObject<Item> LARGE_NET_WITH_ULTIMATE_BAITS = ITEMS.register("large_net_with_ultimate_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
 
     //Seeds
     public static final RegistryObject<Item> SCALLION_SEEDS = ITEMS.register("scallion_seeds",

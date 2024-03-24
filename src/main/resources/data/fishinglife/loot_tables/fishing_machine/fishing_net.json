@@ -1,0 +1,116 @@
+{
+  "pools": [
+    {
+      "name": "fishinglife:fishing_net_loot",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:purple_sea_urchin",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:slate_pencil_urchin",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:white_sea_urchin",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:green_sea_urchin",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_sea_urchin",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pink_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:blue_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:spot_prawn",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:northern_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:white_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:tiger_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:pacific_white_shrimp",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:swimming_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:soft_shell_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:european_green_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:stone_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:snow_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:mud_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_rock_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:dungeness_crab",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:blue_crab",
+          "weight": 25
+        }
+
+      ]
+    }
+  ]
+}

@@ -35,7 +35,7 @@ public class FishingLifeBlocksRegistry {
     public static final RegistryObject<Block> FERMENTER = registerBlock("fermenter",
             () -> new Fermenter(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> FISHINGMACHINE = registerBlock("fishingmachine",
-            () -> new FishingMachine(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new FishingMachine(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noOcclusion()));
     //CropBlock
     public static final RegistryObject<Block> SCALLION_CROP = BLOCKS.register("scallion_crop",
             () -> new ScallionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

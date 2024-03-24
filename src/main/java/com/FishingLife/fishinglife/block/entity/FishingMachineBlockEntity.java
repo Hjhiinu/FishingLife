@@ -1,12 +1,16 @@
 package com.FishingLife.fishinglife.block.entity;
 
 import com.FishingLife.fishinglife.GUIscreen.FermenterMenu;
+import com.FishingLife.fishinglife.GUIscreen.FishingMachineMenu;
 import com.FishingLife.fishinglife.Modrecipe.FermenterRecipe;
+import com.FishingLife.fishinglife.Modrecipe.FishingMachineRecipe;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.data.worldgen.biome.BiomeData;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -17,9 +21,11 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -31,7 +37,7 @@ import javax.annotation.Nullable;
 import java.util.Optional;
 
 public class FishingMachineBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3);
+    private final ItemStackHandler itemHandler = new ItemStackHandler(4);
 
     private static final int INPUT_SLOT_1 = 0;
     private static final int INPUT_SLOT_2 = 1;
@@ -44,10 +50,10 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 10000;
+    private int maxProgress = 200;
 
     public FishingMachineBlockEntity( BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.FERMENTATION_PROCESS_BE.get(), pPos, pBlockState);
+        super(ModBlockEntities.FISHINGMACHINE_PROCESS_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
@@ -109,7 +115,7 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        return new FermenterMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new FishingMachineMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
@@ -128,7 +134,11 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
+       if(isWaterBelow(pLevel,pPos,8)&&isInOcean(pLevel,pPos)){
+
+        //need position check
         if(hasRecipe()) {
+
             increaseCraftingProgress();
             setChanged(pLevel, pPos, pState);
 
@@ -140,12 +150,25 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
             resetProgress();
         }
     }
+    }
     private void resetProgress() {
         progress = 0;
     }
 
+    private boolean isWaterBelow(Level plevel, BlockPos pos, int depth) {
+        for (int i = 0; i < depth; i++) {
+            pos = pos.below();
+            if (plevel.getBlockState(pos).getBlock() != Blocks.WATER) {
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean isInOcean(Level level, BlockPos pos) {
+        return level.getBiome(pos).is(BiomeTags.IS_OCEAN);
+    }
     private void craftItem() {
-        Optional<FermenterRecipe> recipe = getCurrentRecipe();
+        Optional<FishingMachineRecipe> recipe = getCurrentRecipe();
         ItemStack result = recipe.get().getResultItem(null);
 
 
@@ -159,7 +182,7 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private boolean hasRecipe() {
-        Optional<FermenterRecipe> recipe = getCurrentRecipe();
+        Optional<FishingMachineRecipe> recipe = getCurrentRecipe();
 
         if(recipe.isEmpty()) {
             return false;
@@ -169,13 +192,13 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
         return  canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
-    private Optional<FermenterRecipe> getCurrentRecipe() {
+    private Optional<FishingMachineRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for(int i = 0; i < itemHandler.getSlots(); i++) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
 
-        return this.level.getRecipeManager().getRecipeFor(FermenterRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(FishingMachineRecipe.Type.INSTANCE, inventory, level);
     }
 
 

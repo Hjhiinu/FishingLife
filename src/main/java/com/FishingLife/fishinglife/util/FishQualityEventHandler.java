@@ -65,7 +65,28 @@ public class FishQualityEventHandler{
 
 
 
+    public static void assignCertainQuality(ItemStack object, int quality){
+        if (object.isEmpty()) {
+            return;
+        }
+        if (!object.hasTag()) {
+            object.setTag(new CompoundTag());
+        }
+        CompoundTag tag = object.getTag();
+        if(tag != null) {
+            if (quality == 1) {
 
+                tag.putString("Quality", "Common");
+            } else if (quality == 2) {
+                tag.putString("Quality", "Rare");
+            } else if (quality == 3) {
+                tag.putString("Quality", "Special");
+            }
+            else{
+                tag.putString("Quality", "Extraordinary");
+            }
+        }
+    }
 
     private static void assignRandomQuality(ItemStack fish,boolean isHoldingCustomRod) {
         if (fish.isEmpty()) {
