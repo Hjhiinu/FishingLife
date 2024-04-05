@@ -1,6 +1,5 @@
 package com.FishingLife.fishinglife.datagen;
 
-import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.FishingLife.fishinglife.util.ModTags;
@@ -11,10 +10,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -73,7 +69,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('K', ModTags.Items.RAW_MEAT)
                 .define('W', FishingLifeItemsRegistry.SEDUCTIVE_HAZARD_ZEST.get())
                 .define('Y', Items.COCOA_BEANS)
-                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .unlockedBy("has_raw_meat", has(ModTags.Items.RAW_MEAT))
                 .save(pWriter);
         //SEDUCTIVE_HAZARD_ZEST
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.SEDUCTIVE_HAZARD_ZEST.get())
@@ -84,7 +80,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('W', Items.WITHER_ROSE)
                 .define('Y', Items.SHROOMLIGHT)
                 .define('S',Items.SPORE_BLOSSOM)
-                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .unlockedBy(getHasName(Items.SHROOMLIGHT), has(Items.SHROOMLIGHT))
                 .save(pWriter);
 
         //Fishing Rod
@@ -146,36 +142,47 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('Q', Items.IRON_BARS)
                 .unlockedBy("has_cobblestone", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get())
                 .pattern("QQQ")
                 .pattern("SXS")
                 .pattern("RRR")
-                .define('X',  ModTags.Items.TEMPERATE_FISHES)
+                .define('X',  FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION.get())
                 .define('S',Items.IRON_BARS)
                 .define('Q',ItemTags.STONE_TOOL_MATERIALS)
                 .define('R',ItemTags.PLANKS)
                 .unlockedBy("has_cobblestone", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get())
                 .pattern("QQQ")
                 .pattern("SXS")
                 .pattern("RRR")
-                .define('X',  ModTags.Items.DESERT_FISHES)
+                .define('X',  FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get())
                 .define('S',Items.IRON_BARS)
                 .define('Q',ItemTags.STONE_TOOL_MATERIALS)
                 .define('R',ItemTags.PLANKS)
                 .unlockedBy("has_cobblestone", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get())
                 .pattern("QQQ")
                 .pattern("SXS")
                 .pattern("RRR")
-                .define('X',  ModTags.Items.JUNGLE_FISHES)
+                .define('X',  FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get())
                 .define('S',Items.IRON_BARS)
                 .define('Q',ItemTags.STONE_TOOL_MATERIALS)
                 .define('R',ItemTags.PLANKS)
                 .unlockedBy("has_cobblestone", has(ItemTags.STONE_TOOL_MATERIALS))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeBlocksRegistry.OCEAN_FISHERMAN_WORKBENCH.get())
+                .pattern("QQQ")
+                .pattern("SXS")
+                .pattern("RRR")
+                .define('X',  FishingLifeItemsRegistry.OCEAN_COLLECTION.get())
+                .define('S',Items.IRON_BARS)
+                .define('Q',ItemTags.STONE_TOOL_MATERIALS)
+                .define('R',ItemTags.PLANKS)
+                .unlockedBy("has_cobblestone", has(ItemTags.STONE_TOOL_MATERIALS))
+                .save(pWriter);
+
         //Food
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.BRAISED_FISH.get())
@@ -289,25 +296,95 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.POTATO)
                 .unlockedBy(getHasName(Items.POTATO), has(Items.POTATO))
                 .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 1)
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+                .requires(FishingLifeItemsRegistry.ARISQUEDO_COIN.get())
+
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.ARISQUEDO_COIN.get()), has(FishingLifeItemsRegistry.ARISQUEDO_COIN.get()))
+                .save(pWriter);
         //Bait
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.BASIC_BAITS.get(), 2)
                 .requires(ModTags.Items.RAW_MEAT)
-                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .unlockedBy("has_raw_meat", has(ModTags.Items.RAW_MEAT))
                 .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.ADVANCED_BAITS.get(), 2)
                 .requires(ModTags.Items.RAW_MEAT)
                 .requires(ModTags.Items.RAW_MEAT)
-                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .unlockedBy("has_raw_meat", has(ModTags.Items.RAW_MEAT))
                 .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.PREMIUM_BAITS.get(), 2)
                 .requires(ModTags.Items.RAW_MEAT)
                 .requires(Items.COCOA_BEANS)
                 .requires(ModTags.Items.RAW_MEAT)
-                .unlockedBy(getHasName(ModTags.Items.RAW_MEAT), has(ModTags.Items.RAW_MEAT))
+                .unlockedBy("has_raw_meat", has(ModTags.Items.RAW_MEAT))
+                .save(pWriter);
+        //Collection
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.OCEAN_COLLECTION.get())
+                .requires(Items.HORN_CORAL)
+                .requires(Items.FIRE_CORAL)
+                .requires(Items.TUBE_CORAL)
+                .requires(Items.BRAIN_CORAL)
+                .requires(Items.BUBBLE_CORAL)
+                .requires(ModTags.Items.COLD_OCEAN_FISHES)
+                .requires(ModTags.Items.WARM_OCEAN_FISHES)
+                .requires(ModTags.Items.GENERAL_OCEAN_FISHES)
+                .unlockedBy(getHasName(Items.HORN_CORAL), has(Items.HORN_CORAL))
+                .unlockedBy(getHasName(Items.FIRE_CORAL), has(Items.FIRE_CORAL))
+                .unlockedBy(getHasName(Items.TUBE_CORAL), has(Items.TUBE_CORAL))
+                .unlockedBy(getHasName(Items.BRAIN_CORAL), has(Items.BRAIN_CORAL))
+                .unlockedBy(getHasName(Items.BUBBLE_CORAL), has(Items.BUBBLE_CORAL))
+                .unlockedBy("has_general_ocean_fishes", has(ModTags.Items.GENERAL_OCEAN_FISHES))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get())
+                .requires(FishingLifeItemsRegistry.HYDROLYCUS_ARMATUS.get())
+                .requires(FishingLifeItemsRegistry.SALMINUS.get())
+                .requires(FishingLifeItemsRegistry.PIRANHA.get())
+                .requires(FishingLifeItemsRegistry.ACANTHODORAS.get())
+                .requires(FishingLifeItemsRegistry.CETOPSIDIUM.get())
+                .requires(FishingLifeItemsRegistry.PANCAKE_STINGRAYS.get())
+                .requires(FishingLifeItemsRegistry.PEACOCK_BASS.get())
+                .requires(FishingLifeItemsRegistry.DISCUS.get())
+                .requires(FishingLifeItemsRegistry.RAINBOW_FISH.get())
+                .unlockedBy("has_jungle_fishes", has(ModTags.Items.JUNGLE_FISHES))
+                .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get())
+                .requires(FishingLifeItemsRegistry.AFRICAN_BARB.get())
+                .requires(FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get())
+                .requires(FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get())
+                .requires(FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get())
+                .requires(FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get())
+                .requires(FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get())
+                .requires(FishingLifeItemsRegistry.NILE_PERCH.get())
+                .requires(FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get())
+                .requires(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get())
+                .unlockedBy("has_desert_fishes", has(ModTags.Items.DESERT_FISHES))
+                .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION.get())
+                .requires(FishingLifeItemsRegistry.COMMON_CARP.get())
+                .requires(FishingLifeItemsRegistry.LAKE_WHITEFISH.get())
+                .requires(FishingLifeItemsRegistry.AMERICAN_SHAD.get())
+                .requires(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get())
+                .requires(FishingLifeItemsRegistry.BLACK_CRAPPIE.get())
+                .requires(FishingLifeItemsRegistry.BROOK_TROUT.get())
+                .requires(FishingLifeItemsRegistry.LONGNOSE_GAR.get())
+                .requires(FishingLifeItemsRegistry.SHORTNOSE_GAR.get())
+                .requires(FishingLifeItemsRegistry.EUROPEAN_PERCH.get())
+                .unlockedBy("has_temperate_fishes", has(ModTags.Items.TEMPERATE_FISHES))
+                .save(pWriter);
+
+        cookRecipes(pWriter, "smoking", RecipeSerializer.SMOKING_RECIPE, 100);
+        cookRecipes(pWriter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING_RECIPE, 600);
         /*
 
 
@@ -323,8 +400,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
-    private String getHasName(TagKey<Item> rawMeat) {
-        return "bait";
+
+    protected static void cookRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer, String pCookingMethod, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, int pCookingTime) {
+        simpleCookingRecipe(pFinishedRecipeConsumer, pCookingMethod, pCookingSerializer, pCookingTime, FishingLifeItemsRegistry.FISH_MEAT.get(), FishingLifeItemsRegistry.COOKED_FISH_MEAT.get(), 0.35F);
+
     }
 
 

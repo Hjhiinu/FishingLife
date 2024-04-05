@@ -2,7 +2,6 @@ package com.FishingLife.fishinglife.block.entity;
 
 import com.FishingLife.fishinglife.GUIscreen.FermenterMenu;
 import com.FishingLife.fishinglife.Modrecipe.FermenterRecipe;
-import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -18,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -42,7 +40,7 @@ public class FermenterBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 10000;
+    private int maxProgress = 6000;
 
     public FermenterBlockEntity( BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.FERMENTATION_PROCESS_BE.get(), pPos, pBlockState);

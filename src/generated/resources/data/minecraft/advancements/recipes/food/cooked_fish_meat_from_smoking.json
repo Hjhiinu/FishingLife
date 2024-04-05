@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobblestone": {
+    "has_fish_meat": {
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:stone_tool_materials"
+            "items": [
+              "fishinglife:fish_meat"
+            ]
           }
         ]
       },
@@ -13,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fishinglife:desert_fisherman_workbench"
+        "recipe": "minecraft:cooked_fish_meat_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cobblestone",
+      "has_fish_meat",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fishinglife:desert_fisherman_workbench"
+      "minecraft:cooked_fish_meat_from_smoking"
     ]
   },
   "sends_telemetry_event": false

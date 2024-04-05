@@ -32,6 +32,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/desert_fisherman_workbench")));
         simpleBlockWithItem(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/general_fisherman_workbench")));
+        simpleBlockWithItem(FishingLifeBlocksRegistry.OCEAN_FISHERMAN_WORKBENCH.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/ocean_fisherman_workbench")));
         //Functional Blocks
         simpleBlockWithItem(FishingLifeBlocksRegistry.FERMENTER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/fermenter")));

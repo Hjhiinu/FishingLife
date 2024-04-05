@@ -105,7 +105,7 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.DESERTFISH_COLLECTION.get()); // Desertfish Collection
                         pOutput.accept(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION.get()); // Temperatefish Collection
                         pOutput.accept(FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get()); // Junglefish Collection
-
+                        pOutput.accept(FishingLifeItemsRegistry.OCEAN_COLLECTION.get());
 
                         // Seeds
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION_SEEDS.get());//Scallion seeds
@@ -130,10 +130,13 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.MISO_SAUCE.get()); // Miso Sauce
                         pOutput.accept(FishingLifeItemsRegistry.COOKING_WINE.get()); // Cooking Wine
 
-                        //Other items
+                        //Other Food
                         pOutput.accept(FishingLifeItemsRegistry.FISH_MEAT.get());//Fish meat
                         pOutput.accept(FishingLifeItemsRegistry.CREAM.get());//Cream
-
+                        pOutput.accept(FishingLifeItemsRegistry.COOKED_CRAB.get());
+                        pOutput.accept(FishingLifeItemsRegistry.COOKED_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.COOKED_FISH_MEAT.get());
+                        pOutput.accept(FishingLifeItemsRegistry.COOKED_SEA_URCHIN.get());
                         //Dishes
                         pOutput.accept(FishingLifeItemsRegistry.BRAISED_FISH.get());//Braised Fish
                         pOutput.accept(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES.get());//Sweet and Sour Fish Slices
@@ -157,6 +160,8 @@ public class FishingLifeCreativeTabs {
 
                         //Currency
                         pOutput.accept(FishingLifeItemsRegistry.ARISQUEDO_COIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get());
+
                         //Blocks
                         pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
                         pOutput.accept(FishingLifeBlocksRegistry.FISHINGMACHINE.get());//Fishing Machine
@@ -164,6 +169,7 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());
+                        pOutput.accept(FishingLifeBlocksRegistry.OCEAN_FISHERMAN_WORKBENCH.get());
 
                         //Trash
                         pOutput.accept(FishingLifeItemsRegistry.PLASTIC_TRASH.get());

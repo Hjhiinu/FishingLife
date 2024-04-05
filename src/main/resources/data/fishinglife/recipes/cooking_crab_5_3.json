@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "fishinglife:snow_crab"
+  },
+  "result": "fishinglife:cooked_crab",
+  "experience": 0.35,
+  "cookingtime": 600
+}

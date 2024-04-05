@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "bait": {
+    "has_shroomlight": {
       "conditions": {
         "items": [
           {
-            "tag": "fishinglife:raw_meat"
+            "items": [
+              "minecraft:shroomlight"
+            ]
           }
         ]
       },
@@ -20,7 +22,7 @@
   },
   "requirements": [
     [
-      "bait",
+      "has_shroomlight",
       "has_the_recipe"
     ]
   ],

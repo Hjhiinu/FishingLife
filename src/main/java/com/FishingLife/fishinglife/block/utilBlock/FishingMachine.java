@@ -1,6 +1,5 @@
 package com.FishingLife.fishinglife.block.utilBlock;
 
-import com.FishingLife.fishinglife.block.entity.FermenterBlockEntity;
 import com.FishingLife.fishinglife.block.entity.FishingMachineBlockEntity;
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;

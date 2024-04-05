@@ -4,6 +4,7 @@ import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.item.LootNetItem;
 import com.FishingLife.fishinglife.util.ModFishLoot;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -164,7 +165,7 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> NOTHOBRANCHIUS_FURZERI = ITEMS.register("nothobranchius_furzeri",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
-    //All Ocean
+    //General Ocean
     public static final RegistryObject<Item> BLACK_SCRAPER = ITEMS.register("black_scraper",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
 
@@ -273,8 +274,9 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> DESERTFISH_COLLECTION = ITEMS.register("desertfish_collection",()->new Item(new Item.Properties()));
     public static final RegistryObject<Item> TEMPERATEFISH_COLLECTION = ITEMS.register("temperatefish_collection",()->new Item(new Item.Properties()));
-
     public static final RegistryObject<Item> JUNGLEFISH_COLLECTION = ITEMS.register("junglefish_collection",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OCEAN_COLLECTION = ITEMS.register("ocean_collection",()->new Item(new Item.Properties()));
+
 
     //Fish Catch
     public static final RegistryObject<Item> PURPLE_SEA_URCHIN = ITEMS.register("purple_sea_urchin",
@@ -339,12 +341,21 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> BLUE_CRAB = ITEMS.register("blue_crab",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FOOD_OTHER_THAN_FISH)));
 
-    //Other items
-    public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties()));
+    //Other Food
+    public static final RegistryObject<Item> FISH_MEAT = ITEMS.register("fish_meat",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.3F).fast().build())));
 
-    public static final RegistryObject<Item> CREAM = ITEMS.register("cream",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CREAM = ITEMS.register("cream",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(0).saturationMod(0.1F).fast().build())));
 
-    public static final RegistryObject<Item> POTATO_STRIPS = ITEMS.register("potato_strips",()->new Item(new Item.Properties()));
+    public static final RegistryObject<Item> POTATO_STRIPS = ITEMS.register("potato_strips",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).fast().build())));
+
+    public static final RegistryObject<Item> COOKED_FISH_MEAT = ITEMS.register("cooked_fish_meat",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.5F).build())));
+
+    public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).build())));
+
+    public static final RegistryObject<Item> COOKED_SHRIMP = ITEMS.register("cooked_shrimp",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.4F).fast().build())));
+
+    public static final RegistryObject<Item> COOKED_SEA_URCHIN = ITEMS.register("cooked_sea_urchin",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.3F).fast().build())));
+
 
     //Net
     public static final RegistryObject<Item> SMALL_NET_WITH_BASIC_BAITS = ITEMS.register("small_net_with_basic_baits",()->new LootNetItem(ModFishLoot.FISHING_NET,ModFishLoot.FISHING_TRASH));
@@ -451,6 +462,8 @@ public class FishingLifeItemsRegistry {
 
     //Currency
     public static final RegistryObject<Item> ARISQUEDO_COIN = ITEMS.register("arisquedo_coin",()->new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> ARISQUEDO_GOLD_COIN = ITEMS.register("arisquedo_gold_coin",()->new Item(new Item.Properties()));
 
 
 

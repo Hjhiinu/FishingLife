@@ -1,330 +1,593 @@
 package com.FishingLife.fishinglife.event;
 
 import com.FishingLife.fishinglife.ModVillager.ModVillagers;
+import com.FishingLife.fishinglife.fishingexperience.fishingexperience;
+import com.FishingLife.fishinglife.fishingexperience.fishingexperienceProvider;
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerTrades;
-import net.minecraft.world.item.EnchantedBookItem;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.player.ItemFishedEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
+import static com.FishingLife.fishinglife.ModVillager.ModVillagerTradeProvider.randomfunction;
 
 @Mod.EventBusSubscriber(modid = fishinglife.MOD_ID)
 public class ModEvents {
+   /* public static String getRandomRarity() {
+        Random random = new Random();
+        int rarityValue = random.nextInt(4); // Generates a number from 0 to 3
 
-
-    public static int randomnum(){
-        return (int) (Math.random() * 9);
+        switch (rarityValue) {
+            case 0:
+                return "Common";
+            case 1:
+                return "Rare";
+            case 2:
+                return "Special";
+            case 3:
+                return "Extraordinary";
+            default:
+                return "Unknown"; // Fallback, should never occur
+        }
     }
 
+    */
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
+        if (event.getType()== ModVillagers.OCEAN_FISHERMAN.get()){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 32),
+                    new ItemStack(Items.NAUTILUS_SHELL,2),
+                    15, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.GLOW_INK_SAC,8),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 20),
+                    20, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 30),
+                    new ItemStack(Items.PRISMARINE_SHARD,3),
+                    20, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 64),
+                    new ItemStack(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE,1),
+                    5, 4,0));
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 5,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 5,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 5,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 6,0));
+            //Level 3
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 7,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 13),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 7,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 13),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 7,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 13),
+                    50, 8,0));
+            //Level 4
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 15),
+                    50, 7,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 15),
+                    50, 7,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",6),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 15),
+                    50, 7,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",7),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+            //Level 5
+            //TODO Still in Plan
+        }
+        if (event.getType()== ModVillagers.COLLECTOR.get()){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 32),
+                    new ItemStack(Items.TURTLE_EGG,2),
+                    10, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 30),
+                    new ItemStack(Items.ICE,5),
+                    20, 5,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 34),
+                    new ItemStack(Items.NETHER_STAR,1),
+                    5, 20,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 23),
+                    new ItemStack(Items.HEART_OF_THE_SEA,1),
+                    8, 10,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.AMETHYST_SHARD,5),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 20),
+                    15, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.CHISELED_BOOKSHELF,4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 15),
+                    15, 4,0));
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 42),
+                    new ItemStack(Items.SNIFFER_EGG,2),
+                    10, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 23),
+                    new ItemStack(Items.MYCELIUM,5),
+                    15, 6,0));
+            //Level 3
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 24),
+                    new ItemStack(Items.EXPERIENCE_BOTTLE,10),
+                    15, 10,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN.get(), 40),
+                    new ItemStack(Items.ELYTRA,1),
+                    3, 22,0));
+
+            /*//Level 4
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 640),
+                    new ItemStack(Items.ENCHANTED_GOLDEN_APPLE,1),
+                    3, 100,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 640),
+                    new ItemStack(Items.PLAYER_HEAD,1),
+                    3, 100,0));
+
+             */
+        }
+        if(event.getType() == ModVillagers.SEAEFOOD_WHOLESALE_MERCHANT.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            // Level 1
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 5),
+                    50, 5,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 5),
+                    50, 5,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 7),
+                    50, 5,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 7),
+                    50, 5,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 7,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 11),
+                    50, 8,0));
+
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 7),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 7),
+                    50, 6,0));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 9),
+                    50, 6,0));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 8,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 10,0));
+
+            //Level 3
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 25),
+                    new ItemStack(FishingLifeBlocksRegistry.FISHINGMACHINE.get(), 1),
+                    50, 6,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 7,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 10,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 10,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 11,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 11,0));
+            //Level 4
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 14,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 14,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 20),
+                    50, 15,0));
+            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4,2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 20),
+                    50, 15,0));
+            //Level 5
+            //TODO Still in Plan
+
+        }
+
         if(event.getType() == ModVillagers.JUNGLE_FISHERMAN.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-           ItemStack jungle1 =new ItemStack(FishingLifeItemsRegistry.HYDROLYCUS_ARMATUS.get(),2);
-           CompoundTag a1=jungle1.getOrCreateTag();
-            a1.putString("Quality","Special");
-
-            ItemStack jungle2 =new ItemStack(FishingLifeItemsRegistry.SALMINUS.get(),2);
-            CompoundTag a2=jungle2.getOrCreateTag();
-            a2.putString("Quality","Special");
-
-            ItemStack jungle3 =new ItemStack(FishingLifeItemsRegistry.PIRANHA.get(),2);
-            CompoundTag a3=jungle3.getOrCreateTag();
-            a3.putString("Quality","Special");
-
-            ItemStack jungle4 =new ItemStack(FishingLifeItemsRegistry.ACANTHODORAS.get(),2);
-            CompoundTag a4=jungle4.getOrCreateTag();
-            a4.putString("Quality","Special");
-
-            ItemStack jungle5 =new ItemStack(FishingLifeItemsRegistry.CETOPSIDIUM.get(),2);
-            CompoundTag a5=jungle5.getOrCreateTag();
-            a5.putString("Quality","Special");
-
-            ItemStack jungle6 =new ItemStack(FishingLifeItemsRegistry.PANCAKE_STINGRAYS.get(),2);
-            CompoundTag a6=jungle6.getOrCreateTag();
-            a6.putString("Quality","Special");
-
-            ItemStack jungle7 =new ItemStack(FishingLifeItemsRegistry.DISCUS.get(),2);
-            CompoundTag a7=jungle7.getOrCreateTag();
-            a7.putString("Quality","Special");
-
-            ItemStack jungle8 =new ItemStack(FishingLifeItemsRegistry.RAINBOW_FISH.get(),2);
-            CompoundTag a8=jungle8.getOrCreateTag();
-            a8.putString("Quality","Special");
-
-            ItemStack jungle9 =new ItemStack(FishingLifeItemsRegistry.PEACOCK_BASS.get(),2);
-            CompoundTag a9=jungle9.getOrCreateTag();
-            a9.putString("Quality","Special");
-
-
-
-
-
-
-
-            ItemStack jungle10 =new ItemStack(FishingLifeItemsRegistry.ELEPHANT_FISH.get(),2);
-            CompoundTag a10=jungle10.getOrCreateTag();
-            a10.putString("Quality","Special");
-
-            ItemStack jungle11 =new ItemStack(FishingLifeItemsRegistry.ELECTRIC_EEL.get(),2);
-            CompoundTag a11=jungle11.getOrCreateTag();
-            a11.putString("Quality","Special");
-
-            ItemStack jungle12 =new ItemStack(FishingLifeItemsRegistry.PANAQUE.get(),2);
-            CompoundTag a12=jungle12.getOrCreateTag();
-            a12.putString("Quality","Special");
-
-            ItemStack jungle13 =new ItemStack(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get(),2);
-            CompoundTag a13=jungle13.getOrCreateTag();
-            a13.putString("Quality","Special");
-
-            ItemStack jungle14 =new ItemStack(FishingLifeItemsRegistry.SILVER_AROWANA.get(),2);
-            CompoundTag a14=jungle14.getOrCreateTag();
-            a14.putString("Quality","Special");
-
-            ItemStack jungle15 =new ItemStack(FishingLifeItemsRegistry.BRYCON_HILARII.get(),2);
-            CompoundTag a15=jungle15.getOrCreateTag();
-            a15.putString("Quality","Special");
-
-
-
-            ItemStack[] itemStackArray1 = new ItemStack[] {
-                    jungle1,jungle2,jungle3,jungle4,jungle5,jungle6,jungle7,jungle8,jungle9
-
-            };
-
-            ItemStack[] itemStackArray2 = new ItemStack[] {
-                    jungle10,jungle11,jungle12,jungle13,jungle14,jungle15
-
-            };
-
-
             // Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
-                    50, 8,0));
+                    randomfunction("Common",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
+                    randomfunction("Common",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 4,0));
+
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 6,0));
+
+            //Level 3
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",3),
                     new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
                     50, 8,0));
 
-            // Level 2
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray2[randomnum()],
-                    itemStackArray2[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 22),
-                    50, 8,0));
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray2[randomnum()],
-                    itemStackArray2[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 22),
-                    50, 8,0));
-
-/*
-
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5),
-                    new ItemStack(ModItems.CORN.get(), 6),
-                    5, 9, 0.035f));
-
-            // Level 3
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.GOLD_INGOT, 8),
-                    new ItemStack(ModItems.CORN_SEEDS.get(), 2),
-                    2, 12, 0.075f));
+                    randomfunction("Special",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 8,0));
 
-             */
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+            //Level 4
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",3),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",4),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            //Level 5
+            //TODO     Still in Plan
+
         }
 
         if(event.getType() == ModVillagers.GENERAL_FISHERMAN.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-            ItemStack commonCarp = new ItemStack(FishingLifeItemsRegistry.COMMON_CARP.get(), 2);
-            CompoundTag tagCommonCarp = commonCarp.getOrCreateTag();
-            tagCommonCarp.putString("Quality", "Special");
-
-            ItemStack lakeWhitefish = new ItemStack(FishingLifeItemsRegistry.LAKE_WHITEFISH.get(), 2);
-            CompoundTag tagLakeWhitefish = lakeWhitefish.getOrCreateTag();
-            tagLakeWhitefish.putString("Quality", "Special");
-
-            ItemStack orangespottedSunfish = new ItemStack(FishingLifeItemsRegistry.ORANGESPOTTED_SUNFISH.get(), 2);
-            CompoundTag tagOrangespottedSunfish = orangespottedSunfish.getOrCreateTag();
-            tagOrangespottedSunfish.putString("Quality", "Special");
-
-            ItemStack americanShad = new ItemStack(FishingLifeItemsRegistry.AMERICAN_SHAD.get(), 2);
-            CompoundTag tagAmericanShad = americanShad.getOrCreateTag();
-            tagAmericanShad.putString("Quality", "Special");
-
-            ItemStack blackCrappie = new ItemStack(FishingLifeItemsRegistry.BLACK_CRAPPIE.get(), 2);
-            CompoundTag tagBlackCrappie = blackCrappie.getOrCreateTag();
-            tagBlackCrappie.putString("Quality", "Special");
-
-            ItemStack brookTrout = new ItemStack(FishingLifeItemsRegistry.BROOK_TROUT.get(), 2);
-            CompoundTag tagBrookTrout = brookTrout.getOrCreateTag();
-            tagBrookTrout.putString("Quality", "Special");
-
-            ItemStack longnoseGar = new ItemStack(FishingLifeItemsRegistry.LONGNOSE_GAR.get(), 2);
-            CompoundTag tagLongnoseGar = longnoseGar.getOrCreateTag();
-            tagLongnoseGar.putString("Quality", "Special");
-
-            ItemStack shortnoseGar = new ItemStack(FishingLifeItemsRegistry.SHORTNOSE_GAR.get(), 2);
-            CompoundTag tagShortnoseGar = shortnoseGar.getOrCreateTag();
-            tagShortnoseGar.putString("Quality", "Special");
-
-            ItemStack europeanPerch = new ItemStack(FishingLifeItemsRegistry.EUROPEAN_PERCH.get(), 2);
-            CompoundTag tagEuropeanPerch = europeanPerch.getOrCreateTag();
-            tagEuropeanPerch.putString("Quality", "Special");
-
-            // European Grayling
-            ItemStack europeanGrayling = new ItemStack(FishingLifeItemsRegistry.EUROPEAN_GRAYLING.get(), 2);
-            CompoundTag tagEuropeanGrayling = europeanGrayling.getOrCreateTag();
-            tagEuropeanGrayling.putString("Quality", "1");
-
-// Koi
-            ItemStack koi = new ItemStack(FishingLifeItemsRegistry.KOI.get(), 2);
-            CompoundTag tagKoi = koi.getOrCreateTag();
-            tagKoi.putString("Quality", "1");
-
-// Muskellunge
-            ItemStack muskellunge = new ItemStack(FishingLifeItemsRegistry.MUSKELLUNGE.get(), 2);
-            CompoundTag tagMuskellunge = muskellunge.getOrCreateTag();
-            tagMuskellunge.putString("Quality", "1");
-
-// Pumpkinseed Sunfish
-            ItemStack pumpkinseedSunfish = new ItemStack(FishingLifeItemsRegistry.PUMPKINSEED_SUNFISH.get(), 2);
-            CompoundTag tagPumpkinseedSunfish = pumpkinseedSunfish.getOrCreateTag();
-            tagPumpkinseedSunfish.putString("Quality", "1");
-
-// Tench
-            ItemStack tench = new ItemStack(FishingLifeItemsRegistry.TENCH.get(), 2);
-            CompoundTag tagTench = tench.getOrCreateTag();
-            tagTench.putString("Quality", "1");
-
-// Walleye
-            ItemStack walleye = new ItemStack(FishingLifeItemsRegistry.WALLEYE.get(), 2);
-            CompoundTag tagWalleye = walleye.getOrCreateTag();
-            tagWalleye.putString("Quality", "1");
-
-
-// Array of all the items
-            ItemStack[] itemStackArray1 = new ItemStack[] {
-                    commonCarp, lakeWhitefish, orangespottedSunfish, americanShad, blackCrappie,
-                    brookTrout, longnoseGar, shortnoseGar, europeanPerch
-            };
-            ItemStack[] itemStackArray2 = new ItemStack[] {
-                    europeanGrayling, koi, muskellunge, pumpkinseedSunfish, tench, walleye
-            };
-
-
-
             // Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
-                    50, 8,0));
+                    randomfunction("Common",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
+                    randomfunction("Common",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 4,0));
+
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Common",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 6,0));
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 6,0));
+
+            //Level 3
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",1),
                     new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
                     50, 8,0));
-            // level 2
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray2[randomnum()],
-                    itemStackArray2[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 22),
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
                     50, 8,0));
-            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray2[randomnum()],
-                    itemStackArray2[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 22),
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
                     50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 14),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+            //Level 4
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",1),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",2),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+            //Level 5
+            //TODO     Still in Plan
 
         }
 
         if(event.getType() == ModVillagers.DESERT_FISHERMAN.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-
-            // African Barb
-            ItemStack africanBarb = new ItemStack(FishingLifeItemsRegistry.AFRICAN_BARB.get(), 2);
-            CompoundTag tagAfricanBarb = africanBarb.getOrCreateTag();
-            tagAfricanBarb.putString("Quality", "Special");
-
-// African Desert Catfish
-            ItemStack africanDesertCatfish = new ItemStack(FishingLifeItemsRegistry.AFRICAN_DESERT_CATFISH.get(), 2);
-            CompoundTag tagAfricanDesertCatfish = africanDesertCatfish.getOrCreateTag();
-            tagAfricanDesertCatfish.putString("Quality", "Special");
-
-// African Lungfish
-            ItemStack africanLungfish = new ItemStack(FishingLifeItemsRegistry.AFRICAN_LUNGFISH.get(), 2);
-            CompoundTag tagAfricanLungfish = africanLungfish.getOrCreateTag();
-            tagAfricanLungfish.putString("Quality", "Special");
-
-// Australian Desert Goby
-            ItemStack australianDesertGoby = new ItemStack(FishingLifeItemsRegistry.AUSTRALIAN_DESERT_GOBY.get(), 2);
-            CompoundTag tagAustralianDesertGoby = australianDesertGoby.getOrCreateTag();
-            tagAustralianDesertGoby.putString("Quality", "Special");
-
-// Desert Zebrafish
-            ItemStack desertZebrafish = new ItemStack(FishingLifeItemsRegistry.DESERT_ZEBRAFISH.get(), 2);
-            CompoundTag tagDesertZebrafish = desertZebrafish.getOrCreateTag();
-            tagDesertZebrafish.putString("Quality", "Special");
-
-// Egyptian Mouthbrooder
-            ItemStack egyptianMouthbrooder = new ItemStack(FishingLifeItemsRegistry.EGYPTIAN_MOUTHBROODER.get(), 2);
-            CompoundTag tagEgyptianMouthbrooder = egyptianMouthbrooder.getOrCreateTag();
-            tagEgyptianMouthbrooder.putString("Quality", "Special");
-
-// Highland Swordtail
-            ItemStack highlandSwordtail = new ItemStack(FishingLifeItemsRegistry.HIGHLAND_SWORDTAIL.get(), 2);
-            CompoundTag tagHighlandSwordtail = highlandSwordtail.getOrCreateTag();
-            tagHighlandSwordtail.putString("Quality", "Special");
-
-// Nile Perch
-            ItemStack nilePerch = new ItemStack(FishingLifeItemsRegistry.NILE_PERCH.get(), 2);
-            CompoundTag tagNilePerch = nilePerch.getOrCreateTag();
-            tagNilePerch.putString("Quality", "Special");
-
-// Nothobranchius Furzeri
-            ItemStack nothobranchiusFurzeri = new ItemStack(FishingLifeItemsRegistry.NOTHOBRANCHIUS_FURZERI.get(), 2);
-            CompoundTag tagNothobranchiusFurzeri = nothobranchiusFurzeri.getOrCreateTag();
-            tagNothobranchiusFurzeri.putString("Quality", "Special");
-
-            ItemStack[] itemStackArray1 = new ItemStack[] {
-                    africanBarb, africanDesertCatfish, africanLungfish, australianDesertGoby,
-                    desertZebrafish, egyptianMouthbrooder, highlandSwordtail, nilePerch, nothobranchiusFurzeri
-            };
-
             // Level 1
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
-                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
-                    50, 8,0));
+                    randomfunction("Common",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    itemStackArray1[randomnum()],
-                    itemStackArray1[randomnum()],
+                    randomfunction("Common",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 4),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Rare",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 6),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 8),
+                    50, 4,0));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 10),
+                    50, 4,0));
+            //Level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Special",0),
                     new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
                     50, 8,0));
-            // level 2
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                   randomfunction("Special",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 12),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 16),
+                    50, 8,0));
+            //Level 3
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    randomfunction("Extraordinary",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                   randomfunction("Extraordinary",0),
+                    new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), 18),
+                    50, 8,0));
+                //TODO     Still in Plan
+
+
 
 
         }
@@ -332,23 +595,75 @@ public class ModEvents {
     }
 
 
-    /*@SubscribeEvent
-    public static void addCustomWanderingTrades(WandererTradesEvent event) {
-        List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
-        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemStack(Items.EMERALD, 12),
-                new ItemStack(ModItems.SAPPHIRE_BOOTS.get(), 1),
-                3, 2, 0.2f));
-
-        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemStack(Items.EMERALD, 24),
-                new ItemStack(ModItems.METAL_DETECTOR.get(), 1),
-                2, 12, 0.15f));
+    @SubscribeEvent
+    public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
+        if(event.getObject() instanceof Player) {
+            if(!event.getObject().getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).isPresent()) {
+                event.addCapability(new ResourceLocation(fishinglife.MOD_ID, "properties"), new fishingexperienceProvider());
+            }
+        }
     }
 
-     */
+    @SubscribeEvent
+    public static void onPlayerCloned(PlayerEvent.Clone event) {
+        if(event.isWasDeath()) {
+            event.getOriginal().getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(oldStore -> {
+                event.getOriginal().getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(newStore -> {
+                    newStore.copyFrom(oldStore);
+                });
+            });
+        }
+    }
+
+    @SubscribeEvent
+    public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
+        event.register(fishingexperience.class);
+    }
+    @SubscribeEvent
+    public static void onItemFished(ItemFishedEvent event) {
+        Player player = event.getEntity();
+        player.sendSystemMessage(Component.literal( " You fished" +event.getDrops().get(0)));
+        }
+
+
+
+    @SubscribeEvent
+    public static void addCustomWanderingTrades(WandererTradesEvent event) {
+        List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+        //List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();   TODO STILL IN PLAN
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.BOK_CHOY_SEEDS.get(), 10),
+                3, 3, 0.2f));
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.SCALLION_SEEDS.get(), 10),
+                3, 3, 0.2f));
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.SOYBEAN_SEEDS.get(), 10),
+                3, 3, 0.2f));
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get(), 10),
+                3, 3, 0.2f));
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.PADDY_SEEDS.get(), 10),
+                3, 3, 0.2f));
+
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemStack(Items.EMERALD, 2),
+                new ItemStack(FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get(), 10),
+                3, 3, 0.2f));
+    }
 }
+
 
 

@@ -7,13 +7,17 @@ import com.FishingLife.fishinglife.ModVillager.ModVillagers;
 import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
 
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
+import com.FishingLife.fishinglife.entity.ModEntity;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.VillagerRenderer;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -42,6 +46,8 @@ public class fishinglife
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
+    public static LootItemConditionType BIOME_TAG_CHECK;
+
 
 
 
@@ -64,7 +70,7 @@ public class fishinglife
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModVillagers.register(modEventBus);
-
+        ModEntity.register(modEventBus);
 
 
 
@@ -119,6 +125,7 @@ public class fishinglife
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
+            EntityRenderers.register(ModEntity.NEWVILLAGER.get(), VillagerRenderer::new);
             MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
             MenuScreens.register(ModMenuTypes.FISHING_MACHINE_MENU.get(), FishingMachineScreen::new);
         }

@@ -1,0 +1,22 @@
+{
+  "values": [
+    "minecraft:leather_boots",
+    "minecraft:leather",
+    "minecraft:bone",
+    "minecraft:string",
+    "minecraft:rotten_flesh",
+    "minecraft:stick",
+    "minecraft:bowl",
+    "minecraft:potion",
+    "minecraft:ink_sac",
+    "minecraft:tripwire_hook",
+    "minecraft:lily_pad",
+    "fishinglife:scallion_seeds",
+    "fishinglife:green_pepper_seeds",
+    "fishinglife:chili_pepper_seeds",
+    "fishinglife:soybean_seeds",
+    "fishinglife:bok_choy_seeds",
+    "fishinglife:paddy_seeds",
+    "fishinglife:plastic_trash"
+  ]
+}

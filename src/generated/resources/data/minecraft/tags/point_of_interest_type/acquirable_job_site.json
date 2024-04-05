@@ -11,6 +11,18 @@
     {
       "id": "fishinglife:desert_fisherman_poi",
       "required": false
+    },
+    {
+      "id": "fishinglife:collector_poi",
+      "required": false
+    },
+    {
+      "id": "fishinglife:seafood_wholesale_merchant_poi",
+      "required": false
+    },
+    {
+      "id": "fishinglife:ocean_fisherman_poi",
+      "required": false
     }
   ]
 }

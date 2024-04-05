@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "ingredient": {
+    "item": "fishinglife:spot_prawn"
+  },
+  "result": "fishinglife:cooked_shrimp",
+  "experience": 0.3,
+  "cookingtime": 100
+}

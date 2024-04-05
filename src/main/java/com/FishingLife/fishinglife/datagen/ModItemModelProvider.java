@@ -126,12 +126,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.FISH_SANDWICH);
         simpleItem(FishingLifeItemsRegistry.FISH_SUSHI);
         simpleItem(FishingLifeItemsRegistry.FISH_RICE_ROLL);
+        simpleItem(FishingLifeItemsRegistry.COOKED_CRAB);
+        simpleItem(FishingLifeItemsRegistry.COOKED_FISH_MEAT);
+        simpleItem(FishingLifeItemsRegistry.COOKED_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.COOKED_SEA_URCHIN);
 
         simpleItem(FishingLifeItemsRegistry.DESERTFISH_COLLECTION); // Desertfish Collection
         simpleItem(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION); // Temperatefish Collection
         simpleItem(FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION); // Junglefish Collection
+        simpleItem(FishingLifeItemsRegistry.OCEAN_COLLECTION);
 
         simpleItem(FishingLifeItemsRegistry.ARISQUEDO_COIN);
+        simpleItem(FishingLifeItemsRegistry.ARISQUEDO_GOLD_COIN);
+
 
         simpleItem(FishingLifeItemsRegistry.PURPLE_SEA_URCHIN);
         simpleItem(FishingLifeItemsRegistry.SLATE_PENCIL_URCHIN);

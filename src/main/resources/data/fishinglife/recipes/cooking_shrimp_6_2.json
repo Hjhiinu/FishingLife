@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": {
+    "item": "fishinglife:white_shrimp"
+  },
+  "result": "fishinglife:cooked_shrimp",
+  "experience": 0.3,
+  "cookingtime": 200
+}

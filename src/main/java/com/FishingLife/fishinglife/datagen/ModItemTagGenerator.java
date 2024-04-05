@@ -7,7 +7,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -22,6 +21,26 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ModTags.Items.FISHING_TRASH)
+                .add(Items.LEATHER_BOOTS,
+                        Items.LEATHER,
+                        Items.BONE,
+                        Items.STRING,
+                        Items.ROTTEN_FLESH,
+                        Items.STICK,
+                        Items.BOWL,
+                        Items.POTION,
+                        Items.INK_SAC,
+                        Items.TRIPWIRE_HOOK,
+                        Items.LILY_PAD,
+                        FishingLifeItemsRegistry.SCALLION_SEEDS.get(),
+                        FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get(),
+                        FishingLifeItemsRegistry.CHILI_PEPPER_SEEDS.get(),
+                        FishingLifeItemsRegistry.SOYBEAN_SEEDS.get(),
+                        FishingLifeItemsRegistry.BOK_CHOY_SEEDS.get(),
+                        FishingLifeItemsRegistry.PADDY_SEEDS.get(),
+                        FishingLifeItemsRegistry.PLASTIC_TRASH.get());
+
         this.tag(ModTags.Items.JUNGLE_FISHES)
                 .add(FishingLifeItemsRegistry.ARAPAIMA_GIGAS.get(),
                         FishingLifeItemsRegistry.ACANTHODORAS.get(),
@@ -41,7 +60,36 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
                 );
+        this.tag(ModTags.Items.CRAB).add(
+            FishingLifeItemsRegistry.SWIMMING_CRAB.get(),
+            FishingLifeItemsRegistry.SOFT_SHELL_CRAB.get(),
+            FishingLifeItemsRegistry.EUROPEAN_GREEN_CRAB.get(),
+            FishingLifeItemsRegistry.STONE_CRAB.get(),
+            FishingLifeItemsRegistry.SNOW_CRAB.get(),
+            FishingLifeItemsRegistry.MUD_CRAB.get(),
+            FishingLifeItemsRegistry.RED_ROCK_CRAB.get(),
+            FishingLifeItemsRegistry.DUNGENESS_CRAB.get(),
+            FishingLifeItemsRegistry.BLUE_CRAB.get()
+        );
 
+        this.tag(ModTags.Items.SEA_URCHIN).add(
+            FishingLifeItemsRegistry.PURPLE_SEA_URCHIN.get(),
+            FishingLifeItemsRegistry.SLATE_PENCIL_URCHIN.get(),
+            FishingLifeItemsRegistry.WHITE_SEA_URCHIN.get(),
+            FishingLifeItemsRegistry.GREEN_SEA_URCHIN.get(),
+            FishingLifeItemsRegistry.RED_SEA_URCHIN.get()
+        );
+
+        this.tag(ModTags.Items.SEA_URCHIN).add(
+            FishingLifeItemsRegistry.PINK_SHRIMP.get(),
+            FishingLifeItemsRegistry.BLUE_SHRIMP.get(),
+        FishingLifeItemsRegistry.SPOT_PRAWN.get(),
+        FishingLifeItemsRegistry.NORTHERN_SHRIMP.get(),
+        FishingLifeItemsRegistry.WHITE_SHRIMP.get(),
+        FishingLifeItemsRegistry.TIGER_SHRIMP.get(),
+        FishingLifeItemsRegistry.PACIFIC_WHITE_SHRIMP.get()
+
+        );
         this.tag(ModTags.Items.RAW_MEAT)
                 .add(Items.BEEF,
                         Items.PORKCHOP,
@@ -264,6 +312,18 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.PSETTA_MAXIMA.get(),
                         FishingLifeItemsRegistry.STRIPED_BEAKFISH.get()
                         );
+        this.tag(ModTags.Items.GENERAL_OCEAN_FISHES)
+                .add(FishingLifeItemsRegistry.BLACK_SCRAPER.get(),
+                        FishingLifeItemsRegistry.HAIRTAIL.get(),
+                        FishingLifeItemsRegistry.MACKEREL.get(),
+                        FishingLifeItemsRegistry.PACIFIC_SAURY.get(),
+                        FishingLifeItemsRegistry.POMFRET.get(),
+                        FishingLifeItemsRegistry.RED_HORSEHEAD_FISH.get(),
+                        FishingLifeItemsRegistry.RED_SNAPPER.get(),
+                        FishingLifeItemsRegistry.SARDINE.get(),
+                        FishingLifeItemsRegistry.SOLE_FISH.get(),
+                        FishingLifeItemsRegistry.YELLOW_CROAKER.get());
+
         this.tag(ModTags.Items.COLD_OCEAN_FISHES)
                 .add(FishingLifeItemsRegistry.WHITE_HAKE.get(),
                         FishingLifeItemsRegistry.CAPELIN.get(),

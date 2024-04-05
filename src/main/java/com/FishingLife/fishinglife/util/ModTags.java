@@ -23,6 +23,8 @@ public class ModTags {
 
         public static final TagKey<Item> DESERT_FISHES = tag("desert_fishes");
 
+        public static final TagKey<Item> GENERAL_OCEAN_FISHES = tag("general_ocean_fishes");
+
         public static final TagKey<Item> WARM_OCEAN_FISHES = tag("warm_ocean_fishes");
 
         public static final TagKey<Item> COLD_OCEAN_FISHES = tag("cold_ocean_fishes");
@@ -32,6 +34,14 @@ public class ModTags {
         public static final TagKey<Item> MEDIUM_FISHES = tag("medium_fishes");
 
         public static final TagKey<Item> SMALL_FISHES = tag("small_fishes");
+
+        public static final TagKey<Item> CRAB=tag("crab");
+
+        public static final TagKey<Item> SEA_URCHIN=tag("sea_urchin");
+
+        public static final TagKey<Item> SHRIMP=tag("shrimp");
+
+            public static final TagKey<Item> FISHING_TRASH = tag("fishing_trash");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(fishinglife.MOD_ID, name));

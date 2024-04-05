@@ -1,8 +1,6 @@
 package com.FishingLife.fishinglife.item;
 
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

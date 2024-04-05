@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T18:36:39.6426519	Item Models: fishinglife
+// 1.20.1	2024-04-04T23:35:20.5845954	Item Models: fishinglife
 0c54fff685325216973a8c231f558811cd237943 assets/fishinglife/models/item/acanthodoras.json
 110c2515e1633486f50de6ba68a9a7e0547819ad assets/fishinglife/models/item/advanced_baits.json
 55a172a8531f52dde38e13d5d00eb57a5e395f3c assets/fishinglife/models/item/african_barb.json
@@ -11,6 +11,7 @@ ed27e1ce3a338cc8e8ef8fc7bd3fafcd476cee52 assets/fishinglife/models/item/african_
 fa7b3de846eab1c9685b30f4e7c9e1cb616f5bef assets/fishinglife/models/item/arctic_char.json
 d7ea1c7b4641f96e5fba3c212e107e5e6339bcbc assets/fishinglife/models/item/arctic_skate.json
 a69c407906fdd74cc23b5f144f9c4f3b39199da8 assets/fishinglife/models/item/arisquedo_coin.json
+5ad60a7ebcf3122797b09196f2da8c6326944444 assets/fishinglife/models/item/arisquedo_gold_coin.json
 c9a5c92c0b9d0a1972f056a77e03e1c4b7b47f68 assets/fishinglife/models/item/atlantic_cod.json
 f267eab510b42774a5b42fdf5dc0c39bde8540ed assets/fishinglife/models/item/australian_desert_goby.json
 514d741a784b0f6a204c6826f3d5e3768de06578 assets/fishinglife/models/item/basic_baits.json
@@ -28,6 +29,10 @@ a0bc73df841505fbf927b4e0a0043d0e86f99899 assets/fishinglife/models/item/braised_
 2790f3b8730025bbbf1c6e403637246837112f7b assets/fishinglife/models/item/chili_pepper.json
 476bda6755bac3c259ea09b2b7e0858b76096bba assets/fishinglife/models/item/chili_pepper_seeds.json
 b9b49f36f4edca96e3f16de193a8a3ef0ebd989a assets/fishinglife/models/item/common_carp.json
+bae3a2b064aa619645615a7cf794dc4f2f568fb1 assets/fishinglife/models/item/cooked_crab.json
+430bcb10953c492b65652c05fb543ddf1dde52bb assets/fishinglife/models/item/cooked_fish_meat.json
+eef4d45b7c3dda2a49f402ff3b3c8dd9a07c4fc1 assets/fishinglife/models/item/cooked_sea_urchin.json
+1e26c79ffef6d90e4424f4d8a3d29e029f4b197c assets/fishinglife/models/item/cooked_shrimp.json
 688a8c5e75d7fe73c0110d693a64bc722e9aef81 assets/fishinglife/models/item/cooking_wine.json
 9cbf1f5432e1cabb034c201a3f9e0f87121c1d6f assets/fishinglife/models/item/cream.json
 e07d0a22367b59d179910bd6fed7f3d358b8c47d assets/fishinglife/models/item/crimson_snapper.json
@@ -84,6 +89,7 @@ f0a8c2a52fd770cf1347a967fe8779558bfec1cb assets/fishinglife/models/item/medium_n
 a00ad4ff2114b0f04c7805e0b5992a3fdfd1cf8a assets/fishinglife/models/item/nile_perch.json
 136db550e661c0894e2367044834de9bafb5b655 assets/fishinglife/models/item/northern_shrimp.json
 ef7b0854510bc64b99414a04371b93758ba0408d assets/fishinglife/models/item/nothobranchius_furzeri.json
+2738d4ce12916b6bfb6371554865ffffd44762a3 assets/fishinglife/models/item/ocean_collection.json
 fdc3d3f06af82ef73affc9af68cc4aa179146b79 assets/fishinglife/models/item/orangespotted_sunfish.json
 b532d783ca62687cb3abf5df1d5732059dd393c5 assets/fishinglife/models/item/pacific_saury.json
 3a8093a750e57db96f396114f73c3276c0eac2ce assets/fishinglife/models/item/pacific_white_shrimp.json

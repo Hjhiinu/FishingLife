@@ -99,7 +99,10 @@
 
   "item.fishinglife.fish_meat": "Fish Meat",
   "item.fishinglife.cream": "Cream",
-
+  "item.fishinglife.cooked_crab": "Cooked Crab",
+  "item.fishinglife.cooked_shrimp": "Cooked Shrimp",
+  "item.fishinglife.cooked_sea_urchin": "Cooked Sea Urchin",
+  "item.fishinglife.cooked_fish_meat": "Cooked Fish Meat",
 
   "item.fishinglife.soy_sauce": "Soy Sauce",
   "item.fishinglife.yeast_powder": "Yeast Powder",
@@ -129,9 +132,12 @@
   "item.fishinglife.desertfish_collection": "Desertfish Collection",
   "item.fishinglife.temperatefish_collection": "Temperatefish Collection",
   "item.fishinglife.junglefish_collection": "Junglefish Collection",
+  "item.fishinglife.ocean_collection": "Ocean Collection",
 
 
   "item.fishinglife.arisquedo_coin": "Arisquedo Coin",
+  "item.fishinglife.arisquedo_gold_coin": "Arisquedo Gold Coin",
+
 
   "item.fishinglife.seductive_hazard_zest": "Seductive hazard Zest",
 
@@ -191,10 +197,23 @@
   "block.fishinglife.jungle_fisherman_workbench": "Jungle Fisherman Workbench",
   "block.fishinglife.general_fisherman_workbench": "General Fisherman Workbench",
   "block.fishinglife.desert_fisherman_workbench": "Desert Fisherman Workbench",
+  "block.fishinglife.ocean_fisherman_workbench": "Ocean Fisherman Workbench",
 
   "entity.minecraft.villager.fishinglife.jungle_fisherman": "Jungle Fisherman",
   "entity.minecraft.villager.fishinglife.desert_fisherman": "Desert Fisherman",
   "entity.minecraft.villager.fishinglife.general_fisherman": "General Fisherman",
+  "entity.minecraft.villager.fishinglife.collector": "Collector",
+  "entity.minecraft.villager.fishinglife.ocean_fisherman": "Ocean Fisherman",
+  "entity.minecraft.villager.fishinglife.seafood_wholesale_merchant": "Seafood Wholesale Merchant",
+
+  "entity.fishinglife.new_villager": "Villager",
+
+  "entity.fishinglife.new_villager.fishinglife.jungle_fisherman": "Jungle Fisherman",
+  "entity.fishinglife.new_villager.fishinglife.desert_fisherman": "Desert Fisherman",
+  "entity.fishinglife.new_villager.fishinglife.general_fisherman": "General Fisherman",
+  "entity.fishinglife.new_villager.fishinglife.collector": "Collector",
+  "entity.fishinglife.new_villager.fishinglife.ocean_fisherman": "Ocean Fisherman",
+  "entity.fishinglife.new_villager.fishinglife.seafood_wholesale_merchant": "Seafood Wholesale Merchant",
 
 
   "fishinglife.Quality.quality": "Quality: %s",

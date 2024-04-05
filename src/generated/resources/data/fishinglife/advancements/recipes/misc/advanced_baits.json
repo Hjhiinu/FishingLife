@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "bait": {
+    "has_raw_meat": {
       "conditions": {
         "items": [
           {
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "bait",
+      "has_raw_meat",
       "has_the_recipe"
     ]
   ],

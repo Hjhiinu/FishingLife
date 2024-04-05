@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "fishinglife:purple_sea_urchin"
+  },
+  "result": "fishinglife:cooked_sea_urchin",
+  "experience": 0.3,
+  "cookingtime": 600
+}

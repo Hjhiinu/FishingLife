@@ -22,7 +22,10 @@ public class ModPoiTypeTagsProvider extends PoiTypeTagsProvider {
         tag(PoiTypeTags.ACQUIRABLE_JOB_SITE)
                 .addOptional(new ResourceLocation(fishinglife.MOD_ID, "jungle_fisherman_poi"))
                 .addOptional(new ResourceLocation(fishinglife.MOD_ID, "general_fisherman_poi"))
-         .addOptional(new ResourceLocation(fishinglife.MOD_ID, "desert_fisherman_poi"));;
+         .addOptional(new ResourceLocation(fishinglife.MOD_ID, "desert_fisherman_poi"))
+         .addOptional(new ResourceLocation(fishinglife.MOD_ID, "collector_poi"))
+         .addOptional(new ResourceLocation(fishinglife.MOD_ID, "seafood_wholesale_merchant_poi"))
+        .addOptional(new ResourceLocation(fishinglife.MOD_ID, "ocean_fisherman_poi"));
 
 
     }

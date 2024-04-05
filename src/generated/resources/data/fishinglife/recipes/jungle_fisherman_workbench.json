@@ -12,7 +12,7 @@
       "item": "minecraft:iron_bars"
     },
     "X": {
-      "tag": "fishinglife:jungle_fishes"
+      "item": "fishinglife:junglefish_collection"
     }
   },
   "pattern": [

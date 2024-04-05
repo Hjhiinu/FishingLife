@@ -1,13 +1,9 @@
 package com.FishingLife.fishinglife.block.entity;
 
-import com.FishingLife.fishinglife.GUIscreen.FermenterMenu;
 import com.FishingLife.fishinglife.GUIscreen.FishingMachineMenu;
-import com.FishingLife.fishinglife.Modrecipe.FermenterRecipe;
 import com.FishingLife.fishinglife.Modrecipe.FishingMachineRecipe;
-import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.data.worldgen.biome.BiomeData;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BiomeTags;
@@ -23,9 +19,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -50,7 +44,7 @@ public class FishingMachineBlockEntity extends BlockEntity implements MenuProvid
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 200;
+    private int maxProgress = 5000;
 
     public FishingMachineBlockEntity( BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.FISHINGMACHINE_PROCESS_BE.get(), pPos, pBlockState);
