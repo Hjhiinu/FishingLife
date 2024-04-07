@@ -1,0 +1,98 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brain_coral": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:brain_coral"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_bubble_coral": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bubble_coral"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fire_coral": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:fire_coral"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_general_ocean_fishes": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "fishinglife:general_ocean_fishes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_horn_coral": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:horn_coral"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:ocean_collection"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tube_coral": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tube_coral"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_horn_coral",
+      "has_fire_coral",
+      "has_tube_coral",
+      "has_brain_coral",
+      "has_bubble_coral",
+      "has_general_ocean_fishes",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:ocean_collection"
+    ]
+  },
+  "sends_telemetry_event": false
+}

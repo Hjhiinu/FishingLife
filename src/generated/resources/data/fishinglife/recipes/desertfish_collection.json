@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishinglife:african_barb"
+    },
+    {
+      "item": "fishinglife:african_desert_catfish"
+    },
+    {
+      "item": "fishinglife:african_lungfish"
+    },
+    {
+      "item": "fishinglife:australian_desert_goby"
+    },
+    {
+      "item": "fishinglife:desert_zebrafish"
+    },
+    {
+      "item": "fishinglife:highland_swordtail"
+    },
+    {
+      "item": "fishinglife:nile_perch"
+    },
+    {
+      "item": "fishinglife:egyptian_mouthbrooder"
+    },
+    {
+      "item": "fishinglife:nothobranchius_furzeri"
+    }
+  ],
+  "result": {
+    "item": "fishinglife:desertfish_collection"
+  }
+}

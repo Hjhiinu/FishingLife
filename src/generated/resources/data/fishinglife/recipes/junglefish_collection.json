@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishinglife:hydrolycus_armatus"
+    },
+    {
+      "item": "fishinglife:salminus"
+    },
+    {
+      "item": "fishinglife:piranha"
+    },
+    {
+      "item": "fishinglife:acanthodoras"
+    },
+    {
+      "item": "fishinglife:cetopsidium"
+    },
+    {
+      "item": "fishinglife:pancake_stingrays"
+    },
+    {
+      "item": "fishinglife:peacock_bass"
+    },
+    {
+      "item": "fishinglife:discus"
+    },
+    {
+      "item": "fishinglife:rainbow_fish"
+    }
+  ],
+  "result": {
+    "item": "fishinglife:junglefish_collection"
+  }
+}

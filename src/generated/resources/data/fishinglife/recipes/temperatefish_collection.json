@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishinglife:common_carp"
+    },
+    {
+      "item": "fishinglife:lake_whitefish"
+    },
+    {
+      "item": "fishinglife:american_shad"
+    },
+    {
+      "item": "fishinglife:orangespotted_sunfish"
+    },
+    {
+      "item": "fishinglife:black_crappie"
+    },
+    {
+      "item": "fishinglife:brook_trout"
+    },
+    {
+      "item": "fishinglife:longnose_gar"
+    },
+    {
+      "item": "fishinglife:shortnose_gar"
+    },
+    {
+      "item": "fishinglife:european_perch"
+    }
+  ],
+  "result": {
+    "item": "fishinglife:temperatefish_collection"
+  }
+}

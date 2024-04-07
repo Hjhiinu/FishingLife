@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:horn_coral"
+    },
+    {
+      "item": "minecraft:fire_coral"
+    },
+    {
+      "item": "minecraft:tube_coral"
+    },
+    {
+      "item": "minecraft:brain_coral"
+    },
+    {
+      "item": "minecraft:bubble_coral"
+    },
+    {
+      "tag": "fishinglife:cold_ocean_fishes"
+    },
+    {
+      "tag": "fishinglife:warm_ocean_fishes"
+    },
+    {
+      "tag": "fishinglife:general_ocean_fishes"
+    }
+  ],
+  "result": {
+    "item": "fishinglife:ocean_collection"
+  }
+}
