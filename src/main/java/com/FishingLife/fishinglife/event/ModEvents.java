@@ -24,11 +24,7 @@ import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import static com.FishingLife.fishinglife.ModVillager.ModVillagerTradeProvider.randomfunction;
 
@@ -623,7 +619,7 @@ public class ModEvents {
     @SubscribeEvent
     public static void onItemFished(ItemFishedEvent event) {
         Player player = event.getEntity();
-        player.sendSystemMessage(Component.literal( " You fished" +event.getDrops().get(0)));
+        player.sendSystemMessage(Component.literal( " You fished " +event.getDrops().get(0)));
         }
 
 

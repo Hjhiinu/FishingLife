@@ -139,6 +139,7 @@ public class FishQualityEventHandler{
                         player.sendSystemMessage(Component.literal("You got 20xp!")
                                 .withStyle(ChatFormatting.LIGHT_PURPLE));
                     });
+                    tag.putString("Quality", "Special");
                 } else if (random > 4.5 && random <= 7) {
                     player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
                         fishingexperience.addfishingexperience(15,player);
@@ -147,7 +148,7 @@ public class FishQualityEventHandler{
                     });
                     tag.putString("Quality", "Rare");
 
-                } else if (random > 7) {
+                } else  {
                     player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
                         fishingexperience.addfishingexperience(10,player);
                         player.sendSystemMessage(Component.literal("You got 10xp!")
@@ -174,7 +175,7 @@ public class FishQualityEventHandler{
                     });
                     tag.putString("Quality", "Rare");
 
-                } else if (random > 6 && random <= 10) {
+                } else  {
                     player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
                         fishingexperience.addfishingexperience(10,player);
                         player.sendSystemMessage(Component.literal("You got 10xp!")

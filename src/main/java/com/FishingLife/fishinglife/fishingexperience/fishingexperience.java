@@ -24,6 +24,13 @@ public class fishingexperience {
         reset_experience_needed_to_level_up(this.fishingexperience_level);
 
     }
+
+    public void setFishingexperience(int a) {
+         this.fishingexperience = a;
+    }
+    public void setFishinglevel(int a) {
+        this.fishingexperience_level = a;
+    }
     public void init_fishingexperiencelevel(){
         this.fishingexperience_level=1;
     }
@@ -75,13 +82,16 @@ public class fishingexperience {
 
     public void copyFrom(fishingexperience source) {
         this.fishingexperience = source.fishingexperience;
+        this.fishingexperience_level = source.fishingexperience_level;
     }
 
     public void saveNBTData(CompoundTag nbt) {
         nbt.putInt("fishing_experience", fishingexperience);
+        nbt.putInt("fishing_experience_level", fishingexperience_level);
     }
 
     public void loadNBTData(CompoundTag nbt) {
         fishingexperience = nbt.getInt("fishing_experience");
+        fishingexperience_level = nbt.getInt("fishing_experience_level");
     }
 }

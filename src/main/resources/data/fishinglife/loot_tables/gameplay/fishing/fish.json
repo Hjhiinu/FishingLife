@@ -67,14 +67,10 @@
               "condition": "fishinglife:biome_tag_check",
               "predicate": {
                 "include": [
-                  "forge:is_hot/overworld"
+                  "forge:is_desert",
+                  "minecraft:is_badlands"
                 ],
-                "exclude": [
-                  "minecraft:is_ocean",
-                  "minecraft:is_jungle",
-                  "forge:is_swamp"
-                ],
-                "and": true
+                "and": false
               }
             },
             {
@@ -175,7 +171,8 @@
                   "forge:is_cold/overworld",
                   "forge:is_hot/overworld",
                   "forge:is_mushroom",
-                  "forge:is_underground"
+                  "forge:is_underground",
+                  "minecraft:is_ocean"
                 ],
                 "and": true
               }
@@ -306,7 +303,8 @@
                   "forge:is_cold/overworld",
                   "forge:is_hot/overworld",
                   "forge:is_mushroom",
-                  "forge:is_underground"
+                  "forge:is_underground",
+                  "minecraft:is_ocean"
                 ],
                 "and": true
               }
