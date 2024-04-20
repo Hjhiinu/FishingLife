@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-04T23:35:20.5845954	Item Models: fishinglife
+// 1.20.1	2024-04-19T23:13:26.7420901	Item Models: fishinglife
 0c54fff685325216973a8c231f558811cd237943 assets/fishinglife/models/item/acanthodoras.json
 110c2515e1633486f50de6ba68a9a7e0547819ad assets/fishinglife/models/item/advanced_baits.json
 55a172a8531f52dde38e13d5d00eb57a5e395f3c assets/fishinglife/models/item/african_barb.json
@@ -17,6 +17,7 @@ f267eab510b42774a5b42fdf5dc0c39bde8540ed assets/fishinglife/models/item/australi
 514d741a784b0f6a204c6826f3d5e3768de06578 assets/fishinglife/models/item/basic_baits.json
 d93e65b2256f22d1521952a8d7bd833f66ccf9a3 assets/fishinglife/models/item/black_crappie.json
 f86fc0b3ea6a3f7d7749edf8cf27cfda43bb64b7 assets/fishinglife/models/item/black_scraper.json
+45265ae1bc0cc7d9760746677d46e34bf6d6d5da assets/fishinglife/models/item/blind_cave_fish.json
 fcaddcf58cfe4d7ea84ed2f7a640582c29f299e7 assets/fishinglife/models/item/blue_crab.json
 d9807f49fec0f3e898e11d064cd203bf72c804cb assets/fishinglife/models/item/blue_shrimp.json
 a86814d1dca45d281a9a12c36d5bfd42d24ce779 assets/fishinglife/models/item/bok_choy.json
@@ -75,6 +76,7 @@ d5d6859e31ee3fd0ddb074f9f6381586d1009987 assets/fishinglife/models/item/junglefi
 7d36a82697a634d69512d9df9e46563e46db0c46 assets/fishinglife/models/item/longnose_gar.json
 599f3e28eb22ba9299467e46cf310f207a80e7f2 assets/fishinglife/models/item/lutjanus_sebae.json
 ed1f63808a14d8c7166078cb3d2ab4e5bd5be612 assets/fishinglife/models/item/mackerel.json
+9eea8ba654567ccac9040d37f19cd36e44737dae assets/fishinglife/models/item/madagascar_blind_cave_fish.json
 dd252379c1d66010a9e6506a517de42b0f436de8 assets/fishinglife/models/item/mahi_mahi.json
 bf3044ed9d2d685928fe39859f27a8a9a6fd5b8f assets/fishinglife/models/item/master_fishing_rod.json
 873e42f865087dcadd9b35f05310264d2ae0e2fd assets/fishinglife/models/item/medium_fishing_net.json
@@ -82,6 +84,7 @@ d8c809547a14c5bb735b5e47683d733b5d7fadc8 assets/fishinglife/models/item/medium_n
 b5ff64abf3cff6fc6155983f0bc43aada188cfb8 assets/fishinglife/models/item/medium_net_with_basic_baits.json
 40c42545346548da60220cea68d8c7f65f5a63a5 assets/fishinglife/models/item/medium_net_with_premium_baits.json
 f0a8c2a52fd770cf1347a967fe8779558bfec1cb assets/fishinglife/models/item/medium_net_with_ultimate_baits.json
+3f1093ff187b7772d3cff08eb870211d6232d3f3 assets/fishinglife/models/item/mexican_tetra.json
 7b01755986a8f53161fef99476219c34653b4c5b assets/fishinglife/models/item/miso_grilled_fish.json
 562083782f9e8dbfa303ec47b61d71249cddc202 assets/fishinglife/models/item/miso_sauce.json
 1250b8086293f2fff0bb6894dacffa54a181eb6b assets/fishinglife/models/item/mud_crab.json
@@ -144,6 +147,8 @@ a9f38d33a1c93eb0f3539898c88341b67fb3bc2c assets/fishinglife/models/item/swimming
 d67d42cc7850dbfa025dd3dd9e53b978bdec2dd3 assets/fishinglife/models/item/temperatefish_collection.json
 a50d5e0966771859c2a5eb913d30232ae060b511 assets/fishinglife/models/item/tench.json
 be979035332ff70bae99021eefc3362356b96847 assets/fishinglife/models/item/tiger_shrimp.json
+d840d4e7042ffb574ce41e9c0afd3a0b5794d54f assets/fishinglife/models/item/toothless_blind_cat.json
+e57c7cebef6293017da5db3ee1ff06edc2e1e71b assets/fishinglife/models/item/trogloglanis_pattersoni.json
 0d811503ea1d8b179ead85974529829c5dee408f assets/fishinglife/models/item/ultimate_baits.json
 557afe5150b336c4c90e881d1a2e74a2516fbaf1 assets/fishinglife/models/item/vinegar.json
 365fa12aae53d72e9c418ad1ac8fe7187e35e89e assets/fishinglife/models/item/walleye.json

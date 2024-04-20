@@ -60,6 +60,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
 
                 );
+        this.tag(ModTags.Items.CAVE_FISHES).add(
+                FishingLifeItemsRegistry.MEXICAN_TETRA.get(),
+                FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
+                FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
+                FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
+                FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
+
+                );
         this.tag(ModTags.Items.CRAB).add(
             FishingLifeItemsRegistry.SWIMMING_CRAB.get(),
             FishingLifeItemsRegistry.SOFT_SHELL_CRAB.get(),
@@ -80,7 +88,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
             FishingLifeItemsRegistry.RED_SEA_URCHIN.get()
         );
 
-        this.tag(ModTags.Items.SEA_URCHIN).add(
+        this.tag(ModTags.Items.SHRIMP).add(
             FishingLifeItemsRegistry.PINK_SHRIMP.get(),
             FishingLifeItemsRegistry.BLUE_SHRIMP.get(),
         FishingLifeItemsRegistry.SPOT_PRAWN.get(),
@@ -169,7 +177,14 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
                         FishingLifeItemsRegistry.HADDOCK.get(),
                         FishingLifeItemsRegistry.ATLANTIC_COD.get(),
-                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get(),
+
+                        FishingLifeItemsRegistry.MEXICAN_TETRA.get(),
+                        FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
+                        FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
+                        FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
+
                         );
 
 
@@ -257,7 +272,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
                         FishingLifeItemsRegistry.HADDOCK.get(),
                         FishingLifeItemsRegistry.ATLANTIC_COD.get(),
-                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get(),
+
+                        FishingLifeItemsRegistry.MEXICAN_TETRA.get(),
+                        FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
+                        FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
+                        FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
 
 
 
@@ -355,7 +376,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.RED_SNAPPER.get(),
                         FishingLifeItemsRegistry.ALASKA_POLLOCK.get(),
                         FishingLifeItemsRegistry.ATLANTIC_COD.get(),
-                        FishingLifeItemsRegistry.HADDOCK.get()
+                        FishingLifeItemsRegistry.HADDOCK.get(),
+                        FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get()
 
                         );
         this.tag(ModTags.Items.MEDIUM_FISHES)
@@ -391,8 +413,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.YELLOW_CROAKER.get(),
                         FishingLifeItemsRegistry.ARCTIC_CHAR.get(),
                         FishingLifeItemsRegistry.RAINBOW_TROUT.get(),
-                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()
-
+                        FishingLifeItemsRegistry.FOURHORN_SCULPIN.get(),
+                        FishingLifeItemsRegistry.MEXICAN_TETRA.get(),
+                        FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
+                        FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get()
                         );
         this.tag(ModTags.Items.SMALL_FISHES)
                 .add(FishingLifeItemsRegistry.CETOPSIDIUM.get(),
@@ -408,8 +432,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.SOLE_FISH.get(),
                         FishingLifeItemsRegistry.WHITE_HAKE.get(),
                         FishingLifeItemsRegistry.CAPELIN.get(),
-                        FishingLifeItemsRegistry.ARCTIC_SKATE.get()
-
+                        FishingLifeItemsRegistry.ARCTIC_SKATE.get(),
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
                         );
     }
 }

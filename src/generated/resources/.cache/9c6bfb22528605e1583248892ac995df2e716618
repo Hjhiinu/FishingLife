@@ -1,5 +1,6 @@
-// 1.20.1	2024-04-04T17:57:53.4152379	Tags for minecraft:item mod id fishinglife
-a67c96ef12af818af2d1e849c28871cfafa7bab0 data/fishinglife/tags/items/big_fishes.json
+// 1.20.1	2024-04-19T23:13:26.7468248	Tags for minecraft:item mod id fishinglife
+070ba3d6bd121f863cf64612bfa5ddf560fcfbc5 data/fishinglife/tags/items/big_fishes.json
+047229c8aee91d7b22d4b1bd690bbf3bbb4123fb data/fishinglife/tags/items/cave_fishes.json
 9b526c3c9fce551d7433a28b2742d123f2448ebd data/fishinglife/tags/items/cold_ocean_fishes.json
 e39292eb950656ad05a9dbe4544659a933fe2b83 data/fishinglife/tags/items/crab.json
 0b655cf29e7b688818e68c4f2198513ce5be2533 data/fishinglife/tags/items/crops.json
@@ -8,10 +9,11 @@ f080ba61d8f8e50b3e11d84beb5781a8b470dd52 data/fishinglife/tags/items/desert_fish
 b33dde3cf95c3f821d49bc84b8c46f9fd65289e8 data/fishinglife/tags/items/fruits.json
 29b5a2e25039a2ce100e5e1dbcf72599a559daa1 data/fishinglife/tags/items/general_ocean_fishes.json
 75bb364ded85cc316b58564c388ae960c8735b54 data/fishinglife/tags/items/jungle_fishes.json
-cecd9e36ba839f0ffbc3630104bb648a643448b3 data/fishinglife/tags/items/medium_fishes.json
-0ae304c4eeb2860ab7a50dfb1eb0ffb02ed05950 data/fishinglife/tags/items/modfish.json
-d01e5a77dc554aa27550ae48c4035b3554c2d36e data/fishinglife/tags/items/raw_meat.json
-e51b3a1ec49cabc0ac7de83b86c49d87b0163b91 data/fishinglife/tags/items/sea_urchin.json
-8bb86821eeb7348ef7afab59b8e9cf32a0a65631 data/fishinglife/tags/items/small_fishes.json
+5f1b8748bd98a8228d3dc5119c3f26d8e12342e3 data/fishinglife/tags/items/medium_fishes.json
+938f8e458a03a3e2262769d57e96c9ba9658d3cc data/fishinglife/tags/items/modfish.json
+c5fd64ce4c6efff1613d686fb9292fa1d7e78db9 data/fishinglife/tags/items/raw_meat.json
+cc422da1b39fde4a956fde799a1c7d900a7b0cdc data/fishinglife/tags/items/sea_urchin.json
+621087fbf41608c3c0a3f37842c88c855058a44e data/fishinglife/tags/items/shrimp.json
+f5073c8ff87deade3c7486d640abf7bd855429a4 data/fishinglife/tags/items/small_fishes.json
 f21418fc4f4f09b7a158927edd2782e3f16f5e27 data/fishinglife/tags/items/temperate_fishes.json
 02d7b89e82aeb191a4ca17f4e1f8e64c006d84e9 data/fishinglife/tags/items/warm_ocean_fishes.json

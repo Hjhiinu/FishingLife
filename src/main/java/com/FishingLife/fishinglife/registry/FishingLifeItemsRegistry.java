@@ -245,6 +245,22 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> ATLANTIC_COD = ITEMS.register("atlantic_cod",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    //Cave Fish
+    public static final RegistryObject<Item> MEXICAN_TETRA = ITEMS.register("mexican_tetra",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> MADAGASCAR_BLIND_CAVE_FISH = ITEMS.register("madagascar_blind_cave_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> TROGLOGLANIS_PATTERSONI = ITEMS.register("trogloglanis_pattersoni",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> TOOTHLESS_BLIND_CAT = ITEMS.register("toothless_blind_cat",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> BLIND_CAVE_FISH = ITEMS.register("blind_cave_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
     //Aroma
     public static final RegistryObject<Item> SEDUCTIVE_HAZARD_ZEST = ITEMS.register("seductive_hazard_zest",()->new Item(new Item.Properties()));
 

@@ -118,6 +118,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.YEAST_POWDER);
         simpleItem(FishingLifeItemsRegistry.MISO_SAUCE);
 
+        simpleItem(FishingLifeItemsRegistry.MEXICAN_TETRA);
+        simpleItem(FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH);
+        simpleItem(FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI);
+        simpleItem(FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT);
+        simpleItem(FishingLifeItemsRegistry.BLIND_CAVE_FISH);
+
 
         simpleItem(FishingLifeItemsRegistry.BRAISED_FISH);
         simpleItem(FishingLifeItemsRegistry.SWEET_AND_SOUR_FISH_SLICES);

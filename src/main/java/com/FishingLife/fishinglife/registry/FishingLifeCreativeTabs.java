@@ -98,6 +98,13 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.ATLANTIC_COD.get()); // Atlantic Cod
                         pOutput.accept(FishingLifeItemsRegistry.FOURHORN_SCULPIN.get()); // Fourhorn Sculpin
 
+                        //Cave Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.MEXICAN_TETRA.get());
+                        pOutput.accept(FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get());
+                        pOutput.accept(FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get());
+                        pOutput.accept(FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BLIND_CAVE_FISH.get());
+
 
 
                         //Fishes Collection
