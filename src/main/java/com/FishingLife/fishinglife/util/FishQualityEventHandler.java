@@ -1,15 +1,18 @@
 package com.FishingLife.fishinglife.util;
 
-import com.FishingLife.fishinglife.fishingexperience.fishingexperienceProvider;
+import com.FishingLife.fishinglife.capability.fishingexperience.fishingexperienceProvider;
 import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
@@ -19,9 +22,13 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = fishinglife.MOD_ID)
 public class FishQualityEventHandler{
+
+
     @SubscribeEvent
     public static void onItemFished(ItemFishedEvent event) {
         Player player=event.getEntity();
+        //FishingLineLength.changeshow(true);
+        //player.sendSystemMessage(Component.literal( " You fished " +event.getDrops().get(0)));
         boolean k=player.getMainHandItem().getItem().equals(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get());
 
 
@@ -55,6 +62,7 @@ public class FishQualityEventHandler{
                 });
             }
         }
+
     }
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)

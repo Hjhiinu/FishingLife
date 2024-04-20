@@ -2,6 +2,7 @@ package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.item.LootNetItem;
+import com.FishingLife.fishinglife.item.ModFishingRodItem;
 import com.FishingLife.fishinglife.util.ModFishLoot;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.food.FoodProperties;
@@ -17,7 +18,7 @@ public class FishingLifeItemsRegistry {
     //Fishing Rods
 
 
-    public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> ELITE_FISHING_ROD = ITEMS.register("elite_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));

@@ -1,4 +1,4 @@
-package com.FishingLife.fishinglife.fishingexperience;
+package com.FishingLife.fishinglife.capability.fishingexperience;
 
 public class fishingexperienceMath {
     private final int maxLevel = 200;    // Maximum level

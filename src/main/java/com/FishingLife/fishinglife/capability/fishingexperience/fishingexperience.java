@@ -1,13 +1,10 @@
-package com.FishingLife.fishinglife.fishingexperience;
+package com.FishingLife.fishinglife.capability.fishingexperience;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-
-import static com.FishingLife.fishinglife.fishingexperience.fishingexperienceMath.calculateXPForLevelingUp;
-import static com.FishingLife.fishinglife.fishingexperience.fishinglifeLevelUpAward.Award;
 
 public class fishingexperience {
     private int fishingexperience;
@@ -60,16 +57,13 @@ public class fishingexperience {
                     player.sendSystemMessage(Component.literal("You need "+ getMAX_fishingexperience_for_current_level()+"xp to level up")
                             .withStyle(ChatFormatting.DARK_AQUA));
 
-                        ItemStack stack=Award(this.fishingexperience_level,player);
-                        player.sendSystemMessage(Component.literal("You were awarded "+stack+"!")
-                                .withStyle(ChatFormatting.DARK_AQUA));
-
+                       fishinglifeLevelUpAward.Award(this.fishingexperience_level,player);
                 });
         }
         else{
             this.fishingexperience=fishingexperience+add;
             player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
-                player.sendSystemMessage(Component.literal("You still need "+ calculateXPForLevelingUp(this.fishingexperience_level, this.fishingexperience)+"xp to level up to level "+this.fishingexperience_level+"!")
+                player.sendSystemMessage(Component.literal("You still need "+ fishingexperienceMath.calculateXPForLevelingUp(this.fishingexperience_level, this.fishingexperience)+"xp to level up to level "+this.fishingexperience_level+"!")
                         .withStyle(ChatFormatting.DARK_AQUA));
             });
 

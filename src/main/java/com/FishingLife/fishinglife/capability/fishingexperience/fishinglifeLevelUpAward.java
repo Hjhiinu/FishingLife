@@ -1,7 +1,9 @@
-package com.FishingLife.fishinglife.fishingexperience;
+package com.FishingLife.fishinglife.capability.fishingexperience;
 
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -23,21 +25,32 @@ public class fishinglifeLevelUpAward {
         return false;
     }
 
-    public static ItemStack Award(int level, Player player){
+    public static void Award(int level, Player player){
         if (level==3){
-            return giveItem(player,new ItemStack(Items.DIAMOND,2));
+            ItemStack a=new ItemStack(Items.DIAMOND,2);
+            giveItem(player,a);
+
+
         }
         else if (level==5){
-            return giveItem(player,new ItemStack(Items.DIAMOND,2));
+            ItemStack a=new ItemStack(Items.DIAMOND,2);
+            giveItem(player,a);
+
         }
         else if(level==10){
-            return giveItem(player,new ItemStack(FishingLifeBlocksRegistry.FISHINGMACHINE.get(),1));
+            ItemStack a=new ItemStack(FishingLifeBlocksRegistry.FISHINGMACHINE.get(),1);
+             giveItem(player,a);
+
         }
         else if(level==15){
-            return giveItem(player,new ItemStack(Items.CRYING_OBSIDIAN,3));
+            ItemStack a=new ItemStack(Items.CRYING_OBSIDIAN,3);
+            giveItem(player,a);
+
         }
         else if(level==20){
-            return giveItem(player,new ItemStack(Items.NETHERITE_INGOT,1));
+            ItemStack a=new ItemStack(Items.NETHERITE_INGOT,1);
+            giveItem(player,a);
+
         }
         else if(level==25){
             ItemStack enchantedBook = new ItemStack(Items.ENCHANTED_BOOK,1);
@@ -45,30 +58,42 @@ public class fishinglifeLevelUpAward {
             // Add the Mending enchantment to the book
             EnchantmentHelper.setEnchantments(Collections.singletonMap(Enchantments.MENDING, 1), enchantedBook);
 
-            return giveItem(player, enchantedBook);
+            giveItem(player, enchantedBook);
+
         }
         else if(level==30){
-            return giveItem(player,new ItemStack(Items.EMERALD,15));
+            ItemStack a=new ItemStack(Items.EMERALD,15);
+            giveItem(player,a);
+
         }
         else if(level==35){
-            return giveItem(player,new ItemStack(Items.ELYTRA,1));
+            ItemStack a=new ItemStack(Items.ELYTRA,1);
+            giveItem(player,a);
+
         }
         else if(level==40){
-            return giveItem(player,new ItemStack(Items.PLAYER_HEAD,1));
+            ItemStack a=new ItemStack(Items.PLAYER_HEAD,1);
+            giveItem(player,a);
+
         }
         else{
             int coinNum= (int) Math.ceil(level/10.0)*10;
-            return giveItem(player, new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), coinNum));
+            ItemStack a=new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), coinNum);
+            giveItem(player, a);
+
         }
     }
 
-    private static ItemStack giveItem(Player player, @Nonnull ItemStack stack) {
+    private static void giveItem(Player player, @Nonnull ItemStack stack) {
+        player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
+            player.sendSystemMessage(Component.literal("You were awarded "+stack+"!")
+                    .withStyle(ChatFormatting.DARK_AQUA));
+        });
         if (!player.getInventory().add(stack)) {
             player.drop(stack, false);
         } else if (player instanceof ServerPlayer) {
             player.inventoryMenu.sendAllDataToRemote();
         }
-        return stack;
     }
 }
 

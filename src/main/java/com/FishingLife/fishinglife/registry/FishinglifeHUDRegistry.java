@@ -2,6 +2,7 @@ package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishVitalityValue;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingLineLength;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingProcess;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingRodStrength;
 import com.FishingLife.fishinglife.fishinglife;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,6 +19,7 @@ public class FishinglifeHUDRegistry {
             event.registerAboveAll("fish_vitality", FishVitalityValue.HUD_Fish_Vitality);
             event.registerAboveAll("fishingrod_strength", FishingRodStrength.HUD_FISHINGROD_STRENGTH);
             event.registerAboveAll("fishingline_length", FishingLineLength.HUD_FISHINGLINE_LENGTH);
+            event.registerAboveAll("fishing_time", FishingProcess.HUD_TIME);
         }
     }
 }
