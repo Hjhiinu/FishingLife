@@ -1,5 +1,8 @@
 package com.FishingLife.fishinglife.item;
+import com.FishingLife.fishinglife.capability.fishingMechanism.Integration;
+import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingProcess;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -37,7 +40,7 @@ import java.util.List;
 
 @Mod.EventBusSubscriber
 public class ModFishingRodItem extends FishingRodItem {
-    protected static final RandomSource random = RandomSource.create();
+   // protected static final RandomSource random = RandomSource.create();
     private static final Logger LOGGER = LogManager.getLogger();
     private static Player player;
 
@@ -49,13 +52,9 @@ public class ModFishingRodItem extends FishingRodItem {
 
     private static boolean gameflag=false;
 
-    private static boolean checkitem=false;
-
-    private static boolean is_fishing=false;
-
     private static int tickcount=0;
 
-    private final int totalcount=600;
+    private static final int totalcount=200;
 
     private static int luck;
 
@@ -80,7 +79,14 @@ public class ModFishingRodItem extends FishingRodItem {
                 hand = pHand;
 
                 if (!player.fishing.level().isClientSide && player != null && !shouldStopFishing(player,player.fishing)) {
+                    if(gameflag){
+                        HUDIntegration.setInvisible();
+                        gameflag=false;
+                        player.fishing.discard();
+                        tickcount=0;
+                    }
                     LOGGER.info("Nibble "+player.fishing.nibble);
+
                     int i = 0;
                     net.minecraftforge.event.entity.player.ItemFishedEvent event = null;
                     if (player.fishing.getHookedIn() != null) {
@@ -92,6 +98,7 @@ public class ModFishingRodItem extends FishingRodItem {
                     } else if (player.fishing.nibble > 0) {
                         gameflag = true;
                     }
+
                     if (player.fishing.onGround()) {
                         i = 2;
                         player.fishing.discard();
@@ -115,7 +122,6 @@ public class ModFishingRodItem extends FishingRodItem {
             if (!pLevel.isClientSide) {
                 int k = EnchantmentHelper.getFishingSpeedBonus(itemstack);
                 int j = EnchantmentHelper.getFishingLuckBonus(itemstack);
-                is_fishing=false;
                 damage=0;
                 LOGGER.info("Starting trigger from empty");
                 FishingHook fishingHook=new FishingHook(pPlayer, pLevel, j, k);
@@ -130,51 +136,6 @@ public class ModFishingRodItem extends FishingRodItem {
 
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }
- /*   @SubscribeEvent
-    public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
-        if(gameflag){
-            if(is_fishing){
-                gameflag=
-            }
-        }else{
-            LOGGER.info("NO FISHINGROD interaction");
-        }
-    }
-
-
-
-
-    public void setFlag(boolean a){
-        gameflag=a;
-    }
-    public void resetCount(){
-        tickcount=0;
-    }
-
-    @SubscribeEvent
-    public static void onPlayerHurt(LivingHurtEvent event) {
-        if (event.getEntity().level().isClientSide) {
-            if (gameflag) {          //If player gets hurt, game ends
-                gameflag = false;
-            }
-        }
-
-    @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            if (event.player.level().isClientSide) {
-                if (checkitem) {          //Check if player is still using the fishing rod (if game starts)
-                    Player player1 = event.player;
-                    if (shouldStopFishing(player1, player1.fishing)) {
-                        gameflag = false;
-                        checkitem = false;
-                    }
-
-                }
-            }
-        }
-    }
-}*/
 
     @SubscribeEvent
     public static void onClientTick(TickEvent.ClientTickEvent event) {
@@ -182,11 +143,24 @@ public class ModFishingRodItem extends FishingRodItem {
             if (gameflag) {
                 HUDIntegration.allinit();
                 tickcount++;
-                if (player.fishing == null) {
+
+                player.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                    int phase=tickcount*10/totalcount;   //total 10 phase
+                   // LOGGER.info("phase-TEST "+phase);  //TEST
+                    FishingProcess.set(phase);
+                        if(fishing.getTime()>0) {
+                            fishing.timeDecreasing();
+                        }
+                    });
+
+
+                if (player.fishing == null) {    //use other item
                     gameflag = false;
+                    HUDIntegration.setInvisible();
+                    tickcount = 0;
                     LOGGER.info("Cancel the fishing");
                 } else {
-                    if (tickcount == 60) {
+                    if (tickcount == totalcount) {
                         LOGGER.info("This is an TICK log message for end of fishing");
                         gameflag = false;
                         tickcount = 0;
@@ -203,7 +177,6 @@ public class ModFishingRodItem extends FishingRodItem {
                                 LOGGER.info("HOOKED IN -------"+temp.getHookedIn());
 
                                 LOGGER.info("I IS 0, IS FISHING");
-                                is_fishing=true;
 
                                 if (!temp.level().isClientSide && temp_player != null && !shouldStopFishing(temp_player, temp)) {
                                     LOGGER.info("PROCEED TO CUSTOM FISHING");
@@ -226,7 +199,7 @@ public class ModFishingRodItem extends FishingRodItem {
                                         double d3 = 0.1D;
                                         itementity.setDeltaMovement(d0 * 0.1D, d1 * 0.1D + Math.sqrt(Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2)) * 0.08D, d2 * 0.1D);
                                         temp.level().addFreshEntity(itementity);
-                                        temp_player.level().addFreshEntity(new ExperienceOrb(temp_player.level(), temp_player.getX(), temp_player.getY() + 0.5D, temp_player.getZ() + 0.5D, random.nextInt(6) + 1));   //same random
+                                        temp_player.level().addFreshEntity(new ExperienceOrb(temp_player.level(), temp_player.getX(), temp_player.getY() + 0.5D, temp_player.getZ() + 0.5D, temp_player.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
                                         if (itemstack.is(ItemTags.FISHES)) {
                                             temp_player.awardStat(Stats.FISH_CAUGHT, 1);
                                         }
@@ -276,6 +249,10 @@ public class ModFishingRodItem extends FishingRodItem {
             Vec3 vec3 = (new Vec3(entity.getX() - hook.getX(), entity.getY() - hook.getY(), entity.getZ() - hook.getZ())).scale(0.1D);
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().add(vec3));
         }
+    }
+
+    public int getTickcount(){
+        return tickcount;
     }
 }
 

@@ -27,27 +27,23 @@ public class FishQualityEventHandler{
     @SubscribeEvent
     public static void onItemFished(ItemFishedEvent event) {
         Player player=event.getEntity();
-        //FishingLineLength.changeshow(true);
-        //player.sendSystemMessage(Component.literal( " You fished " +event.getDrops().get(0)));
         boolean k=player.getMainHandItem().getItem().equals(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get());
 
 
         if (!event.getDrops().isEmpty()) {
-            if(event.getDrops().get(0).is(ModTags.Items.MODFISH)) {
-                ItemStack fish = event.getDrops().get(0);
-
-
+            ItemStack fish = event.getDrops().get(0);
+            player.sendSystemMessage(Component.literal("You got "+ fish.getDisplayName().getString()+" !"));
+            if(fish.is(ModTags.Items.MODFISH)) {
                 assignRandomQuality(fish,k,player);
-
             }
-            else if(event.getDrops().get(0).is(ItemTags.FISHES)){
+            else if(fish.is(ItemTags.FISHES)){
                 player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
                     fishingexperience.addfishingexperience(10,player);
                     player.sendSystemMessage(Component.literal("You got 10xp!")
                             .withStyle(ChatFormatting.AQUA));
                 });
             }
-            else if(event.getDrops().get(0).is(ModTags.Items.FISHING_TRASH)){
+            else if(fish.is(ModTags.Items.FISHING_TRASH)){
                 player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
                     fishingexperience.addfishingexperience(5,player);
                     player.sendSystemMessage(Component.literal("You got 5xp!")
