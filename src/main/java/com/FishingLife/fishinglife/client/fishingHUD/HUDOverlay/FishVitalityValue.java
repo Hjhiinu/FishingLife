@@ -18,10 +18,10 @@ public class FishVitalityValue {
             "textures/fishinghud/energy_icon.png");
 
     public static void changeshow(boolean now){
-        show=now;
+        FishVitalityValue.show=now;
     }
     public static void init(){
-        show=true;
+        FishVitalityValue.show=true;
     }
     public static final IGuiOverlay HUD_Fish_Vitality = ((gui, poseStack, partialTick, width, height) -> {
         if(show) {

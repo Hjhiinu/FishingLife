@@ -17,10 +17,10 @@ public class FishingLineLength {
             "textures/fishinghud/fishing_line_icon.png");
 
     public static void changeshow(boolean now){
-        show=now;
+        FishingLineLength.show=now;
     }
     public static void init(){
-        show=true;
+        FishingLineLength.show=true;
     }
 
     public static final IGuiOverlay HUD_FISHINGLINE_LENGTH = ((gui, poseStack, partialTick, width, height) -> {

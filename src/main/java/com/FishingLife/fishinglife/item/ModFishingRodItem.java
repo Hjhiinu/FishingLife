@@ -1,20 +1,14 @@
 package com.FishingLife.fishinglife.item;
-import com.FishingLife.fishinglife.capability.fishingMechanism.Integration;
-import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
-import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingProcess;
+import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FishingHook;
@@ -23,98 +17,57 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.storage.loot.BuiltInLootTables;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.ItemFishedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Collections;
-import java.util.List;
-
-@Mod.EventBusSubscriber
 public class ModFishingRodItem extends FishingRodItem {
-   // protected static final RandomSource random = RandomSource.create();
     private static final Logger LOGGER = LogManager.getLogger();
-    private static Player player;
-
-    private static Level level;
-
-    private static ItemStack Itemstack;
-
-    private static InteractionHand hand;
-
-    private static boolean gameflag=false;
-
-    private static int tickcount=0;
-
-    private static final int totalcount=200;
-
-    private static int luck;
-
-    private static int damage;
-
     public ModFishingRodItem(Properties pProperties) {
         super(pProperties);
-        gameflag=false;
     }
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pHand) {
 
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
 
-        //LOGGER.info(pPlayer);
-
         if (pPlayer.fishing != null) {
             if (!pLevel.isClientSide) {
-                player = pPlayer;
-                level = pLevel;
-                Itemstack = itemstack;
-                hand = pHand;
-
-                if (!player.fishing.level().isClientSide && player != null && !shouldStopFishing(player,player.fishing)) {
-                    if(gameflag){
+                fishingrodPlayerDataUtil.setplayer(pPlayer) ;
+                fishingrodPlayerDataUtil.setlevel(pLevel) ;
+                fishingrodPlayerDataUtil.setitemstack(itemstack);
+               fishingrodPlayerDataUtil.setHand(pHand);
+                int i = 0;
+                if (!pPlayer.fishing.level().isClientSide && pPlayer != null && !shouldStopFishing(pPlayer,pPlayer.fishing)) {
+                    if(fishingrodPlayerDataUtil.isGameflag()){
                         HUDIntegration.setInvisible();
-                        gameflag=false;
-                        player.fishing.discard();
-                        tickcount=0;
+                        fishingrodPlayerDataUtil.setGameflag(false);
+                        pPlayer.fishing.discard();
+                        fishingrodPlayerDataUtil.setTickcount(0);
                     }
-                    LOGGER.info("Nibble "+player.fishing.nibble);
-
-                    int i = 0;
                     net.minecraftforge.event.entity.player.ItemFishedEvent event = null;
-                    if (player.fishing.getHookedIn() != null) {
-                        pullEntity(player.fishing.getHookedIn(),player.fishing);
-                        CriteriaTriggers.FISHING_ROD_HOOKED.trigger((ServerPlayer)player, itemstack, player.fishing, Collections.emptyList());
-                        player.fishing.level().broadcastEntityEvent(player.fishing, (byte)31);
-                        i = player.fishing.getHookedIn() instanceof ItemEntity ? 3 : 5;
-                        player.fishing.discard();
-                    } else if (player.fishing.nibble > 0) {
-                        gameflag = true;
+                    if (pPlayer.fishing.getHookedIn() != null) {
+                        pullEntity(pPlayer.fishing.getHookedIn(),pPlayer.fishing);
+                        CriteriaTriggers.FISHING_ROD_HOOKED.trigger((ServerPlayer)pPlayer, itemstack, pPlayer.fishing, Collections.emptyList());
+                        pPlayer.fishing.level().broadcastEntityEvent(pPlayer.fishing, (byte)31);
+                        i = pPlayer.fishing.getHookedIn() instanceof ItemEntity ? 3 : 5;
+                        pPlayer.fishing.discard();
+                    } else if (pPlayer.fishing.nibble > 0) {
+                        fishingrodPlayerDataUtil.setGameflag(true);
                     }
-
-                    if (player.fishing.onGround()) {
+                    if (pPlayer.fishing.onGround()) {
                         i = 2;
-                        player.fishing.discard();
+                        pPlayer.fishing.discard();
                     }
-                    if(player.fishing.nibble == 0) {
-                        player.fishing.discard();
+                    if(pPlayer.fishing.nibble == 0) {
+                        pPlayer.fishing.discard();
                     }
-                    damage=i;
-                } else {
-                    damage=0;
                 }
-                itemstack.hurtAndBreak(damage, pPlayer, (p_41288_) -> {
+                itemstack.hurtAndBreak(i, pPlayer, (p_41288_) -> {
                     p_41288_.broadcastBreakEvent(pHand);
                 });
-                level.playSound((Player) null, player.getX(), player.getY(), player.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
-                player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                pLevel.playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
+                pPlayer.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
             }
                 }
         else {
@@ -122,109 +75,24 @@ public class ModFishingRodItem extends FishingRodItem {
             if (!pLevel.isClientSide) {
                 int k = EnchantmentHelper.getFishingSpeedBonus(itemstack);
                 int j = EnchantmentHelper.getFishingLuckBonus(itemstack);
-                damage=0;
+
+                fishingrodPlayerDataUtil.setplayer(null) ;
+                fishingrodPlayerDataUtil.setlevel(null) ;
+                fishingrodPlayerDataUtil.setitemstack(null);
+                fishingrodPlayerDataUtil.setHand(null);
+                fishingrodPlayerDataUtil.setLuck(0);
+
                 LOGGER.info("Starting trigger from empty");
                 FishingHook fishingHook=new FishingHook(pPlayer, pLevel, j, k);
                  pLevel.addFreshEntity(fishingHook);
-
-                 luck = Math.max(0, j);
+                 fishingrodPlayerDataUtil.setLuck(Math.max(0, j))  ;
             }
 
             pPlayer.awardStat(Stats.ITEM_USED.get(this));
             pPlayer.gameEvent(GameEvent.ITEM_INTERACT_START);
         }
-
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }
-
-    @SubscribeEvent
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase == TickEvent.Phase.START) {
-            if (gameflag) {
-                HUDIntegration.allinit();
-                tickcount++;
-
-                player.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
-                    int phase=tickcount*10/totalcount;   //total 10 phase
-                   // LOGGER.info("phase-TEST "+phase);  //TEST
-                    FishingProcess.set(phase);
-                        if(fishing.getTime()>0) {
-                            fishing.timeDecreasing();
-                        }
-                    });
-
-
-                if (player.fishing == null) {    //use other item
-                    gameflag = false;
-                    HUDIntegration.setInvisible();
-                    tickcount = 0;
-                    LOGGER.info("Cancel the fishing");
-                } else {
-                    if (tickcount == totalcount) {
-                        LOGGER.info("This is an TICK log message for end of fishing");
-                        gameflag = false;
-                        tickcount = 0;
-                        HUDIntegration.setInvisible();
-                        if (!level.isClientSide) {
-                            //LOGGER.info("???????? " + player.fishing.level());
-                            //LOGGER.info("Determine ????? " + !player.fishing.level().isClientSide);
-
-                            FishingHook temp = player.fishing;
-                            Player temp_player = player;
-
-                                //TEST:
-                                //TEST hookedIn
-                                LOGGER.info("HOOKED IN -------"+temp.getHookedIn());
-
-                                LOGGER.info("I IS 0, IS FISHING");
-
-                                if (!temp.level().isClientSide && temp_player != null && !shouldStopFishing(temp_player, temp)) {
-                                    LOGGER.info("PROCEED TO CUSTOM FISHING");
-                                    LootParams lootparams = (new LootParams.Builder((ServerLevel) temp.level())).withParameter(LootContextParams.ORIGIN, temp.position()).withParameter(LootContextParams.TOOL, Itemstack).withParameter(LootContextParams.THIS_ENTITY, temp).withParameter(LootContextParams.KILLER_ENTITY, temp.getOwner()).withParameter(LootContextParams.THIS_ENTITY, temp).withLuck((float) luck + temp_player.getLuck()).create(LootContextParamSets.FISHING);   //luck should also be localized
-                                    LootTable loottable = temp.level().getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
-                                    List<ItemStack> list = loottable.getRandomItems(lootparams);
-                                    net.minecraftforge.event.entity.player.ItemFishedEvent new_event = new ItemFishedEvent(list, temp.onGround() ? 2 : 1, temp);
-                                    net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new_event);
-                                    if (new_event.isCanceled()) {
-                                        temp.discard();
-                                        damage = new_event.getRodDamage();
-                                    }
-                                    CriteriaTriggers.FISHING_ROD_HOOKED.trigger((ServerPlayer) temp_player, Itemstack, temp, list);
-
-                                    for (ItemStack itemstack : list) {
-                                        ItemEntity itementity = new ItemEntity(temp.level(), temp.getX(), temp.getY(), temp.getZ(), itemstack);
-                                        double d0 = temp_player.getX() - temp.getX();
-                                        double d1 = temp_player.getY() - temp.getY();
-                                        double d2 = temp_player.getZ() - temp.getZ();
-                                        double d3 = 0.1D;
-                                        itementity.setDeltaMovement(d0 * 0.1D, d1 * 0.1D + Math.sqrt(Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2)) * 0.08D, d2 * 0.1D);
-                                        temp.level().addFreshEntity(itementity);
-                                        temp_player.level().addFreshEntity(new ExperienceOrb(temp_player.level(), temp_player.getX(), temp_player.getY() + 0.5D, temp_player.getZ() + 0.5D, temp_player.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
-                                        if (itemstack.is(ItemTags.FISHES)) {
-                                            temp_player.awardStat(Stats.FISH_CAUGHT, 1);
-                                        }
-                                    }
-
-                                    damage = 1;
-                                }
-                            }
-
-                            LOGGER.info("THE DAMAGE IS " + damage);
-
-                            player.fishing.discard();
-                            Itemstack.hurtAndBreak(damage, player, (p_41288_) -> {
-                                p_41288_.broadcastBreakEvent(hand);
-                            });
-                        }
-
-                        level.playSound((Player) null, player.getX(), player.getY(), player.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
-                        player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-
-                    }
-                }
-            }
-        }
-
     private static boolean shouldStopFishing(Player pPlayer, FishingHook hook) {
         LOGGER.info("SHOULD STOP- "+hook);
         ItemStack itemstack = pPlayer.getMainHandItem();
@@ -249,10 +117,6 @@ public class ModFishingRodItem extends FishingRodItem {
             Vec3 vec3 = (new Vec3(entity.getX() - hook.getX(), entity.getY() - hook.getY(), entity.getZ() - hook.getZ())).scale(0.1D);
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().add(vec3));
         }
-    }
-
-    public int getTickcount(){
-        return tickcount;
     }
 }
 

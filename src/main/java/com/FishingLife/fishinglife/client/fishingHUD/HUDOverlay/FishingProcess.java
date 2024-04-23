@@ -24,14 +24,14 @@ public class FishingProcess {
             "textures/fishinghud/clock_icon.png");
 
     public static void changeshow(boolean now){
-        show=now;
+        FishingProcess.show=now;
     }
     public static void init(){
-        show=true;
+        FishingProcess.show=true;
     }
 
     public static void set( int p) {
-        processphase= p;
+        FishingProcess.processphase= p;
     }
 
     public static final IGuiOverlay HUD_TIME = ((gui, poseStack, partialTick, width, height) -> {

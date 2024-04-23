@@ -16,10 +16,10 @@ public class FishingRodStrength{
     private static final ResourceLocation ICON = new ResourceLocation(fishinglife.MOD_ID,
             "textures/fishinghud/fishingrod_strength_icon.png");
     public static void changeshow(boolean now){
-        show=now;
+        FishingRodStrength.show=now;
     }
     public static void init(){
-        show=true;
+        FishingRodStrength.show=true;
     }
     public static final IGuiOverlay HUD_FISHINGROD_STRENGTH = ((gui, poseStack, partialTick, width, height) -> {
         if(show) {
