@@ -11,6 +11,7 @@ import com.FishingLife.fishinglife.entity.ModEntity;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
+import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -128,6 +129,8 @@ public class fishinglife
             EntityRenderers.register(ModEntity.NEWVILLAGER.get(), VillagerRenderer::new);
             MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
             MenuScreens.register(ModMenuTypes.FISHING_MACHINE_MENU.get(), FishingMachineScreen::new);
+
+            FishingGameFishLogicHandler.Init_randomNumberDivisibleByFour();
         }
     }
 

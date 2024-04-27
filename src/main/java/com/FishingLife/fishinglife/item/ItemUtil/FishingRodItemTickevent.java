@@ -30,7 +30,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 @Mod.EventBusSubscriber
-public class FishingRodItemTickevemt {
+public class FishingRodItemTickevent {
     private static final Logger LOGGER = LogManager.getLogger();
     @SubscribeEvent
     public static void onClientTick(TickEvent.ClientTickEvent event) {
@@ -97,10 +97,10 @@ public class FishingRodItemTickevemt {
                         fishingrodPlayerDataUtil.getitemstack().hurtAndBreak(i, pPlayer, (p_41288_) -> {
                             p_41288_.broadcastBreakEvent(fishingrodPlayerDataUtil.getHand());
                         });
+                        fishingrodPlayerDataUtil.getlevel().playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (fishingrodPlayerDataUtil.getlevel().getRandom().nextFloat() * 0.4F + 0.8F));
+                        pPlayer.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                        LOGGER.info("ITEM INTERACT FINISH");
                     }
-                    fishingrodPlayerDataUtil.getlevel().playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (fishingrodPlayerDataUtil.getlevel().getRandom().nextFloat() * 0.4F + 0.8F));
-                    pPlayer.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-                    LOGGER.info("ITEM INTERACT FINISH");
                 }
             }
         }

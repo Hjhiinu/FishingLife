@@ -2,7 +2,7 @@
   "type": "minecraft:campfire_cooking",
   "category": "food",
   "ingredient": {
-    "item": "fishinglife:slate_pencil_sea_urchin"
+    "item": "fishinglife:slate_pencil_urchin"
   },
   "result": "fishinglife:cooked_sea_urchin",
   "experience": 0.3,

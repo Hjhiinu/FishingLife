@@ -37,7 +37,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:bottle",
+          "name": "minecraft:glass_bottle",
           "weight": 10
         },
         {

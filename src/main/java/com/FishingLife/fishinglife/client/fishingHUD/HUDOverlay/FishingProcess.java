@@ -49,9 +49,9 @@ public class FishingProcess {
             }
             for (int i = 0; i < 10; i++) {
 
-                LOGGER.info("phase-TEST "+processphase);//Test
+                //LOGGER.info("phase-TEST "+processphase);//Test
                 if(processphase>i) {
-                    LOGGER.info("HUD EMPTY PROCEED");//Test
+                   // LOGGER.info("HUD EMPTY PROCEED");//Test
                     poseStack.blit(EMPTY_time, x - 11 - (i * 9), y - 54 - y_temp - 53, 0, 0, 12, 12,
                             12, 12);
                 }
