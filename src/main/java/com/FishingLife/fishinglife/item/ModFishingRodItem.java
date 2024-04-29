@@ -1,4 +1,5 @@
 package com.FishingLife.fishinglife.item;
+import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -81,6 +82,10 @@ public class ModFishingRodItem extends FishingRodItem {
                 fishingrodPlayerDataUtil.setitemstack(null);
                 fishingrodPlayerDataUtil.setHand(null);
                 fishingrodPlayerDataUtil.setLuck(0);
+                fishingrodPlayerDataUtil.setGameSuccess(false);
+                pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                    fishing.resetALL();
+                });
 
                 LOGGER.info("Starting trigger from empty");
                 FishingHook fishingHook=new FishingHook(pPlayer, pLevel, j, k);

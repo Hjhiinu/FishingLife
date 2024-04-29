@@ -10,7 +10,7 @@ import java.util.Random;
 public class FishingGameFishLogicHandler {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    private static ArrayList<Integer> divisibleByFour = new ArrayList<>();
+    private static final ArrayList<Integer> divisibleByThree = new ArrayList<>();
 
     private static final int min_moving_distance=10; //10 pixels per move
 
@@ -18,7 +18,7 @@ public class FishingGameFishLogicHandler {
 
     private static int counter_for_position; //counter for each stage, reset in each movement
 
-    private static final int[] speed= {3, 2, 1};  //unit: tick/pixel
+    private static final int[] speed= {5,4,3};  //unit: tick/pixel
 
     private static int starting_position;  //Not the starting point for the game, the starting point for each movement
 
@@ -35,7 +35,7 @@ public class FishingGameFishLogicHandler {
 
     public static void game_start_init(){
         setDirection(random.nextBoolean());
-        setMoving_distance(divisibleByFour.get(random.nextInt(divisibleByFour.size())));
+        setMoving_distance(divisibleByThree.get(random.nextInt(divisibleByThree.size())));
         setMoving_speed(speed[random.nextInt(speed.length)]);
         setCounter_for_speed(0);
         setCounter_for_position(0);
@@ -44,40 +44,42 @@ public class FishingGameFishLogicHandler {
 
     public static int change_to_next_position(int pre_position){  //change next position every tick
         counter_for_speed++;
-        counter_for_position=counter_for_position+4;
+        counter_for_position=counter_for_position+3;
 
         if(counter_for_speed==moving_speed){
             setCounter_for_speed(0);
             if(direction){
-                if(pre_position+4>=x_right_boundary){
+                if(pre_position+3>=x_right_boundary){
                     LOGGER.info("Pre_position "+pre_position);
                     setDirection(false);
-                    return pre_position-4;
+                    return pre_position-3;
                 }
                 else{
-                    return pre_position+4;
+                    return pre_position+3;
                 }
             }
             else{
-                if(pre_position-4<=x_left_boundary){
+                if(pre_position-3<=x_left_boundary){
                     LOGGER.info("Pre_position "+pre_position);
                     setDirection(true);
-                    return pre_position+4;
+                    return pre_position+3;
                 }
                 else{
-                    return pre_position-4;
+                    return pre_position-3;
                 }
             }
-
         }
         return pre_position;
     }
-    public static void Init_randomNumberDivisibleByFour() {
+    public static void Init_randomNumberDivisibleByThree() {
         for (int i = 10; i <= 175; i++) {
-            if (i % 4 == 0) {
-                divisibleByFour.add(i);
+            if (i % 3 == 0) {
+                divisibleByThree.add(i);
             }
         }
+    }
+    public static boolean getSuccess_each_tick(int left, int right, int pos){
+        return pos>=left&&pos<=right;
     }
     public static void setDirection(boolean direction) {
         FishingGameFishLogicHandler.direction = direction;

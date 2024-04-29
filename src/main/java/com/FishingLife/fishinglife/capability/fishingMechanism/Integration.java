@@ -7,15 +7,11 @@ public class Integration {
 
     private double fishingrod_strength;
 
-    private double fish_vitality;
+    private int fish_vitality;
 
     private double time;
-
-    //private double game_process;
-
-   // private double
-    private final double MIN = 0;
-    private final double MAX = 100;
+    private final int MIN = 0;
+    private final int MAX = 100;
     public Integration(){
         this.fishingline_strength=100;
         this.fishingrod_strength=100;
@@ -34,7 +30,7 @@ public class Integration {
         return this.time;
     }
 
-    public double getFish_vitality() {
+    public int getFish_vitality() {
         return this.fish_vitality;
     }
 
@@ -49,6 +45,10 @@ public class Integration {
     public void timeDecreasing() {
         this.time = Math.max(time -1, MIN);
     }
+
+    public void vitalityDecreasing(){subFish_vitality(1);}
+
+    public void vitalityincreasing(){addFish_vitality(1);}
     public void addFishingline_strength(int add) {
         this.fishingline_strength = Math.min(fishingline_strength + add, MAX);
     }
@@ -86,7 +86,7 @@ public class Integration {
 
     public void loadNBTData(CompoundTag nbt) {
         fishingline_strength = nbt.getDouble("fishingline_strength");
-        fish_vitality=nbt.getDouble("fish_vitality");
+        fish_vitality=nbt.getInt("fish_vitality");
         fishingrod_strength=nbt.getDouble("fishingrod_strength");
 
     }

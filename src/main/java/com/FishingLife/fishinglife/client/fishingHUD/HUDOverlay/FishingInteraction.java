@@ -18,7 +18,7 @@ public class FishingInteraction {
     private static final Logger LOGGER = LogManager.getLogger();
     private static boolean show=false;
 
-    private static int startingpoint;
+    private static int player_boundary_position;
 
     private static int fish_position;
 
@@ -28,13 +28,11 @@ public class FishingInteraction {
 
     private static int gamerightboundary;
 
-    private static int fish_left_boundary;
+    private static int successful_left;
 
-    private static int fish_right_boundary;
+    private static int successful_right;
 
-    private static int player_right_boundary;
-
-    private static int player_left_boundary;
+    private static boolean successful;
     private static final ResourceLocation FISH = new ResourceLocation(fishinglife.MOD_ID,
             "textures/fishinghud/fish.png");
     private static final ResourceLocation BOUNDARY = new ResourceLocation(fishinglife.MOD_ID,
@@ -48,16 +46,6 @@ public class FishingInteraction {
     }
     public static void init(){
         FishingInteraction.show=true;
-    }
-
-    public static void resetFishBoundary(){
-        FishingInteraction.fish_left_boundary=0;
-        FishingInteraction.fish_right_boundary=0;
-    }
-
-    public static void resetPlayerBoundary(){
-        FishingInteraction.player_left_boundary=0;
-        FishingInteraction.player_right_boundary=0;
     }
 
     public static int getFish_position() {
@@ -80,6 +68,10 @@ public class FishingInteraction {
         return gameYlevel;
     }
 
+    public static boolean isSuccessful() {
+        return successful;
+    }
+
     public static void setGameYlevel(int gameYlevel) {
         FishingInteraction.gameYlevel = gameYlevel;
     }
@@ -94,37 +86,14 @@ public class FishingInteraction {
         FishingInteraction.gamerightboundary = gamerightboundary;
         LOGGER.info("FishingGame setrightboundary "+FishingInteraction.gamerightboundary);
     }
-
-    public static void setFish_right_boundary(int fish_right_boundary) {
-        FishingInteraction.fish_right_boundary = fish_right_boundary;
+    public static void setPlayer_boundary_position_left() {
+        FishingInteraction.player_boundary_position = FishingInteraction.player_boundary_position-15;
     }
-
-    public static void setFish_left_boundary(int fish_left_boundary) {
-        FishingInteraction.fish_left_boundary = fish_left_boundary;
+    public static void setPlayer_boundary_position_right() {
+        FishingInteraction.player_boundary_position = FishingInteraction.player_boundary_position+15;
     }
-
-    public static void setPlayer_left_boundary(int player_left_boundary) {
-        FishingInteraction.player_left_boundary = player_left_boundary;
-    }
-
-    public static void setPlayer_right_boundary(int player_right_boundary) {
-        FishingInteraction.player_right_boundary = player_right_boundary;
-    }
-
-    public static int getFish_left_boundary() {
-        return fish_left_boundary;
-    }
-
-    public static int getFish_right_boundary() {
-        return fish_right_boundary;
-    }
-
-    public static int getPlayer_left_boundary() {
-        return player_left_boundary;
-    }
-
-    public static int getPlayer_right_boundary() {
-        return player_right_boundary;
+    public static void setPlayer_boundary_position(int p) {
+        FishingInteraction.player_boundary_position =p;
     }
 
     public static final IGuiOverlay HUD_FISHING_CORE = ((gui, poseStack, partialTick, width, height) -> {
@@ -143,14 +112,18 @@ public class FishingInteraction {
 
                 setGameleftboundary(left);//make the system more dynamic
                 setGamerightboundary(right);
-                //LOGGER.info("FishingScreen X Left is"+left);
-               // LOGGER.info("FishingScreen X right is"+right);
+
                 FishingGameFishLogicHandler.setX_left_boundary(left);
                 FishingGameFishLogicHandler.setX_right_boundary(right);
                 fish_position = left + random.nextInt(right - left + 1);// point here is the starting point of the game
+                setPlayer_boundary_position(fish_position);
                 //Reset Starting point
                 FishingGameFishLogicHandler.setStarting_position(fish_position);
                 HUDIntegration.gamePre_init();
+
+                successful_left=0;
+                successful_right=0;
+                successful=false;
             }
             else{
                 //LOGGER.info("Tick is not 1!");
@@ -158,6 +131,10 @@ public class FishingInteraction {
                 if (FishingGameFishLogicHandler.getCounter_for_position()==FishingGameFishLogicHandler.getMoving_distance()){
                     FishingGameFishLogicHandler.game_start_init();
                 }
+                //Define the icon boundary and compare the values in each tick.
+                successful_left=fish_position;
+                successful_right=fish_position+18;
+                successful=FishingGameFishLogicHandler.getSuccess_each_tick(successful_left,successful_right, player_boundary_position);
             }
 
 
@@ -166,8 +143,8 @@ public class FishingInteraction {
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
-            poseStack.blit(BOUNDARY, x +100, y - 54 - y_temp +20 , 0, 0, 16, 16,      //delta x= +13 or -14 to be the boundary condition, which x_actual is the center of image
-                    16, 16);
+            poseStack.blit(BOUNDARY,player_boundary_position , y - 54 - y_temp +20 , 0, 0, 33, 16,      //delta x= +18
+                    33, 16);
             poseStack.blit(FISH, fish_position , y - 54 - y_temp +20, 0, 0, 16, 16,
                     16, 16);
             poseStack.blit(ICON, x - 94 - 18, y - 54 - y_temp +10, 0, 0, 32, 32,

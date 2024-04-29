@@ -202,6 +202,9 @@
 
   "fishinglife.Quality.quality": "品质：%s",
   "fishinglife.Age.age": "年龄：%s年",
+  "key.category.fishinglife.fishing": "钓鱼生活 钓鱼游戏",
+  "key.fishinglife.fishing_left": "钓鱼生活 钓鱼游戏控制往左",
+  "key.fishinglife.fishing_right": "钓鱼生活 钓鱼游戏控制往右",
 
   "creativetab.fishinglife_tab": "渔夫生活"
 }

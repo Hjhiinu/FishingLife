@@ -18,9 +18,11 @@ public class fishingrodPlayerDataUtil {
 
     private static int tickcount=0;
 
-    private static final int totalcount=200;
+    private static final int totalcount=500;
 
     private static int luck;
+
+    private static boolean gameSuccess;
 
 
     public static Player getplayer() {
@@ -78,8 +80,16 @@ public class fishingrodPlayerDataUtil {
     public static void setTickcount(int ptickcount) {
         fishingrodPlayerDataUtil.tickcount = ptickcount;
     }
+
+    public static void setGameSuccess(boolean gameSuccess) {
+        fishingrodPlayerDataUtil.gameSuccess = gameSuccess;
+    }
+
     public static void addTickcount(){
         fishingrodPlayerDataUtil.tickcount++;
     }
 
+    public static boolean isGameSuccess() {
+        return gameSuccess;
+    }
 }

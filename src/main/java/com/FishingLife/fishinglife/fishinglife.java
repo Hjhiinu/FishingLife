@@ -130,7 +130,7 @@ public class fishinglife
             MenuScreens.register(ModMenuTypes.FERMENTER_MENU.get(), FermenterScreen::new);
             MenuScreens.register(ModMenuTypes.FISHING_MACHINE_MENU.get(), FishingMachineScreen::new);
 
-            FishingGameFishLogicHandler.Init_randomNumberDivisibleByFour();
+            FishingGameFishLogicHandler.Init_randomNumberDivisibleByThree();
         }
     }
 

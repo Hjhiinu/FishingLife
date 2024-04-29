@@ -2,6 +2,8 @@ package com.FishingLife.fishinglife.item.ItemUtil;
 
 import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishVitalityValue;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingInteraction;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingProcess;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerLevel;
@@ -42,9 +44,28 @@ public class FishingRodItemTickevent {
                 pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                     //total 10 phase
                     FishingProcess.set(fishingrodPlayerDataUtil.getTickcount()*10/fishingrodPlayerDataUtil.getTotalcount());
+                    if(fishing.getFish_vitality()!=0){//Vitality
+                        FishVitalityValue.set(fishing.getFish_vitality()/10+1);
+                    }
+                    else{
+                        FishVitalityValue.set(0);
+                    }
                     if(fishing.getTime()>0) {
                         fishing.timeDecreasing();
                     }
+                    if(FishingInteraction.isSuccessful()){
+                        fishing.vitalityDecreasing();//determine if it is Successful for each tick
+                        if(fishing.getFish_vitality()==0){
+                            fishingrodPlayerDataUtil.setGameSuccess(true);
+                        }
+                    }
+                    /*
+                    else{
+                        fishing.vitalityincreasing();      //This value should be tested
+                    }
+
+                     */
+                    LOGGER.info("Vitality is "+fishing.getFish_vitality());
                 });
                 if (pPlayer.fishing == null) {    //use other item
                     fishingrodPlayerDataUtil.setGameflag(false) ;
@@ -52,7 +73,7 @@ public class FishingRodItemTickevent {
                     fishingrodPlayerDataUtil.setTickcount(0);
                     LOGGER.info("Cancel the fishing");
                 } else {
-                    if (fishingrodPlayerDataUtil.getTickcount() == fishingrodPlayerDataUtil.getTotalcount()) {
+                    if (fishingrodPlayerDataUtil.getTickcount() <= fishingrodPlayerDataUtil.getTotalcount()&&fishingrodPlayerDataUtil.isGameSuccess()) {
                         LOGGER.info("This is an TICK log message for end of fishing");
                         fishingrodPlayerDataUtil.setGameflag(false) ;
                         fishingrodPlayerDataUtil.setTickcount(0);
@@ -92,6 +113,20 @@ public class FishingRodItemTickevent {
                                 i = 1;
                             }
                         }
+                        LOGGER.info("THE DAMAGE IS " + i);
+                        pPlayer.fishing.discard();
+                        fishingrodPlayerDataUtil.getitemstack().hurtAndBreak(i, pPlayer, (p_41288_) -> {
+                            p_41288_.broadcastBreakEvent(fishingrodPlayerDataUtil.getHand());
+                        });
+                        fishingrodPlayerDataUtil.getlevel().playSound((Player) null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.NEUTRAL, 1.0F, 0.4F / (fishingrodPlayerDataUtil.getlevel().getRandom().nextFloat() * 0.4F + 0.8F));
+                        pPlayer.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                        LOGGER.info("ITEM INTERACT FINISH");
+                    }
+                    else if (fishingrodPlayerDataUtil.getTickcount() == fishingrodPlayerDataUtil.getTotalcount()){
+                        fishingrodPlayerDataUtil.setGameflag(false) ;
+                        fishingrodPlayerDataUtil.setTickcount(0);
+                        HUDIntegration.setInvisible();
+                        int i=0;
                         LOGGER.info("THE DAMAGE IS " + i);
                         pPlayer.fishing.discard();
                         fishingrodPlayerDataUtil.getitemstack().hurtAndBreak(i, pPlayer, (p_41288_) -> {
