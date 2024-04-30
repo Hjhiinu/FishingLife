@@ -19,7 +19,7 @@ public class FishingLifeItemsRegistry {
 
 
     public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
-    public static final RegistryObject<Item> ELITE_FISHING_ROD = ITEMS.register("elite_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> ELITE_FISHING_ROD = ITEMS.register("elite_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> LEGENDARY_FISHING_ROD = ITEMS.register("legendary_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(200).rarity(Rarity.RARE)));

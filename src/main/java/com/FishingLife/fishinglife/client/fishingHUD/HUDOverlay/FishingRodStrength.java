@@ -9,6 +9,8 @@ import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 public class FishingRodStrength{
 
     private static boolean show=false;
+
+    private static boolean False=false;
     private static final ResourceLocation FILLED_STRENGTH_Value = new ResourceLocation(fishinglife.MOD_ID,
             "textures/fishinghud/processbar_full.png");
     private static final ResourceLocation EMPTY_STRENGTH_Value = new ResourceLocation(fishinglife.MOD_ID,
@@ -22,7 +24,7 @@ public class FishingRodStrength{
         FishingRodStrength.show=true;
     }
     public static final IGuiOverlay HUD_FISHINGROD_STRENGTH = ((gui, poseStack, partialTick, width, height) -> {
-        if(show) {
+        if(False) {
             int x = width / 2;
             int y = height;
             int y_temp = height / 2;

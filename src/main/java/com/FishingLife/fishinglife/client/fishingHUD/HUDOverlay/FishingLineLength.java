@@ -8,6 +8,8 @@ import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 
 public class FishingLineLength {
     private static boolean show=false;
+
+    private static boolean False=false;
     private static final ResourceLocation FILLED_LENGTH_Value = new ResourceLocation(fishinglife.MOD_ID,
             "textures/fishinghud/string_length_full.png");
     private static final ResourceLocation EMPTY_LENGTH_Value = new ResourceLocation(fishinglife.MOD_ID,
@@ -24,7 +26,7 @@ public class FishingLineLength {
     }
 
     public static final IGuiOverlay HUD_FISHINGLINE_LENGTH = ((gui, poseStack, partialTick, width, height) -> {
-        if(show) {
+        if(False) {
             int x = width / 2;
             int y = height;
             int y_temp = height / 2;

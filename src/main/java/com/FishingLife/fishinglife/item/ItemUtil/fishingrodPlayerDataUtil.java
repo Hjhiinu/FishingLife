@@ -16,6 +16,8 @@ public class fishingrodPlayerDataUtil {
 
     private static boolean gameflag=false;
 
+    private static int tick_for_vitality;
+
     private static int tickcount=0;
 
     private static final int totalcount=500;
@@ -85,8 +87,19 @@ public class fishingrodPlayerDataUtil {
         fishingrodPlayerDataUtil.gameSuccess = gameSuccess;
     }
 
+    public static int getTick_for_vitality() {
+        return tick_for_vitality;
+    }
+
+    public static void setTick_for_vitality(int tick_for_vitality) {
+        fishingrodPlayerDataUtil.tick_for_vitality = tick_for_vitality;
+    }
+
     public static void addTickcount(){
         fishingrodPlayerDataUtil.tickcount++;
+    }
+    public static void addTickcount_Vitality(){
+        fishingrodPlayerDataUtil.tick_for_vitality++;
     }
 
     public static boolean isGameSuccess() {

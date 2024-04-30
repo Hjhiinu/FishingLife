@@ -59,12 +59,15 @@ public class FishingRodItemTickevent {
                             fishingrodPlayerDataUtil.setGameSuccess(true);
                         }
                     }
-                    /*
                     else{
-                        fishing.vitalityincreasing();      //This value should be tested
+                        if(fishingrodPlayerDataUtil.getTick_for_vitality()!=5) {//penalty for vitality
+                            fishingrodPlayerDataUtil.addTickcount_Vitality();
+                        }
+                        else{
+                            fishing.vitalityincreasing();
+                            fishingrodPlayerDataUtil.setTick_for_vitality(0);
+                        }
                     }
-
-                     */
                     LOGGER.info("Vitality is "+fishing.getFish_vitality());
                 });
                 if (pPlayer.fishing == null) {    //use other item
@@ -126,7 +129,7 @@ public class FishingRodItemTickevent {
                         fishingrodPlayerDataUtil.setGameflag(false) ;
                         fishingrodPlayerDataUtil.setTickcount(0);
                         HUDIntegration.setInvisible();
-                        int i=0;
+                        int i=3;    //Damage is a part of penalty
                         LOGGER.info("THE DAMAGE IS " + i);
                         pPlayer.fishing.discard();
                         fishingrodPlayerDataUtil.getitemstack().hurtAndBreak(i, pPlayer, (p_41288_) -> {

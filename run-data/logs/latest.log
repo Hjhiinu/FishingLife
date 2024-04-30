@@ -1,31 +1,31 @@
-[294月2024 14:32:10.316] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\dingy\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.40, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, fishinglife, --all, --output, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\generated\resources, --existing, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\main\resources]
-[294月2024 14:32:10.323] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[294月2024 14:32:10.473] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[294月2024 14:32:10.529] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/dingy/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[294月2024 14:32:10.856] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.40\f692ce735ae82c7d67a622f7c16b39d6791438b2\javafmllanguage-1.20.1-47.1.40.jar is missing mods.toml file
-[294月2024 14:32:10.862] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.40\b5c50f31d2063274dde480c279f69ea4823e9271\lowcodelanguage-1.20.1-47.1.40.jar is missing mods.toml file
-[294月2024 14:32:10.869] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.40\962a7a60b0ebc9b49f9d34c5a1586ec38df6113f\mclanguage-1.20.1-47.1.40.jar is missing mods.toml file
-[294月2024 14:32:10.877] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.40\4ce019324cdf918c4854d7775fc09c1d2572c6f\fmlcore-1.20.1-47.1.40.jar is missing mods.toml file
-[294月2024 14:32:10.957] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[294月2024 14:32:12.483] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\dingy\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, fishinglife, --all, --output, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\generated\resources, --existing, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\main\resources]
-[294月2024 14:32:13.047] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [fishinglife]
-[294月2024 14:32:17.785] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.40, for MC 1.20.1 with MCP 20230612.114412
-[294月2024 14:32:17.791] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.40 Initialized
-[294月2024 14:32:18.555] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Undergraduate/sophmere-year/IDEA/FishingLife/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[294月2024 14:32:18.557] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Undergraduate/sophmere-year/IDEA/FishingLife/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[294月2024 14:32:18.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[294月2024 14:32:18.972] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 80 ms
-[294月2024 14:32:18.972] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[294月2024 14:32:19.052] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 79 ms
-[294月2024 14:32:19.052] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: fishinglife
-[294月2024 14:32:19.247] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: fishinglife finished after 193 ms
-[294月2024 14:32:19.247] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: fishinglife
-[294月2024 14:32:19.339] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: fishinglife finished after 91 ms
-[294月2024 14:32:19.339] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id fishinglife
-[294月2024 14:32:19.342] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id fishinglife finished after 2 ms
-[294月2024 14:32:19.342] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id fishinglife
-[294月2024 14:32:19.356] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id fishinglife finished after 13 ms
-[294月2024 14:32:19.356] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id fishinglife
-[294月2024 14:32:19.359] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id fishinglife finished after 2 ms
-[294月2024 14:32:19.359] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 469 ms
-[294月2024 14:32:19.372] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 309, old count: 309, new count: 310, removed stale: 0, written: 0
+[294月2024 20:39:00.497] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\dingy\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.40, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, fishinglife, --all, --output, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\generated\resources, --existing, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\main\resources]
+[294月2024 20:39:00.508] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[294月2024 20:39:00.702] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[294月2024 20:39:00.771] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/dingy/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[294月2024 20:39:01.127] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.40\f692ce735ae82c7d67a622f7c16b39d6791438b2\javafmllanguage-1.20.1-47.1.40.jar is missing mods.toml file
+[294月2024 20:39:01.138] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.40\b5c50f31d2063274dde480c279f69ea4823e9271\lowcodelanguage-1.20.1-47.1.40.jar is missing mods.toml file
+[294月2024 20:39:01.146] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.40\962a7a60b0ebc9b49f9d34c5a1586ec38df6113f\mclanguage-1.20.1-47.1.40.jar is missing mods.toml file
+[294月2024 20:39:01.155] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\dingy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.40\4ce019324cdf918c4854d7775fc09c1d2572c6f\fmlcore-1.20.1-47.1.40.jar is missing mods.toml file
+[294月2024 20:39:01.237] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[294月2024 20:39:03.050] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\dingy\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, fishinglife, --all, --output, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\generated\resources, --existing, D:\Undergraduate\sophmere-year\IDEA\FishingLife\src\main\resources]
+[294月2024 20:39:03.778] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [fishinglife]
+[294月2024 20:39:08.666] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.40, for MC 1.20.1 with MCP 20230612.114412
+[294月2024 20:39:08.671] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.40 Initialized
+[294月2024 20:39:09.363] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Undergraduate/sophmere-year/IDEA/FishingLife/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[294月2024 20:39:09.364] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Undergraduate/sophmere-year/IDEA/FishingLife/build/fg_cache/net/minecraftforge/forge/1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1/forge-1.20.1-47.1.40_mapped_parchment_2023.06.26-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[294月2024 20:39:09.661] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[294月2024 20:39:09.747] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 85 ms
+[294月2024 20:39:09.748] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[294月2024 20:39:09.828] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 80 ms
+[294月2024 20:39:09.828] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: fishinglife
+[294月2024 20:39:10.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: fishinglife finished after 175 ms
+[294月2024 20:39:10.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: fishinglife
+[294月2024 20:39:10.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: fishinglife finished after 90 ms
+[294月2024 20:39:10.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id fishinglife
+[294月2024 20:39:10.099] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id fishinglife finished after 2 ms
+[294月2024 20:39:10.099] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id fishinglife
+[294月2024 20:39:10.112] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id fishinglife finished after 13 ms
+[294月2024 20:39:10.112] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id fishinglife
+[294月2024 20:39:10.115] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id fishinglife finished after 3 ms
+[294月2024 20:39:10.116] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 455 ms
+[294月2024 20:39:10.132] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 309, old count: 309, new count: 310, removed stale: 0, written: 0

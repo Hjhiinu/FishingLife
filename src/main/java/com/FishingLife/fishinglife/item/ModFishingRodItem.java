@@ -76,13 +76,7 @@ public class ModFishingRodItem extends FishingRodItem {
             if (!pLevel.isClientSide) {
                 int k = EnchantmentHelper.getFishingSpeedBonus(itemstack);
                 int j = EnchantmentHelper.getFishingLuckBonus(itemstack);
-
-                fishingrodPlayerDataUtil.setplayer(null) ;
-                fishingrodPlayerDataUtil.setlevel(null) ;
-                fishingrodPlayerDataUtil.setitemstack(null);
-                fishingrodPlayerDataUtil.setHand(null);
-                fishingrodPlayerDataUtil.setLuck(0);
-                fishingrodPlayerDataUtil.setGameSuccess(false);
+                reset();
                 pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                     fishing.resetALL();
                 });
@@ -122,6 +116,15 @@ public class ModFishingRodItem extends FishingRodItem {
             Vec3 vec3 = (new Vec3(entity.getX() - hook.getX(), entity.getY() - hook.getY(), entity.getZ() - hook.getZ())).scale(0.1D);
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().add(vec3));
         }
+    }
+    private void reset(){
+        fishingrodPlayerDataUtil.setplayer(null) ;
+        fishingrodPlayerDataUtil.setlevel(null) ;
+        fishingrodPlayerDataUtil.setitemstack(null);
+        fishingrodPlayerDataUtil.setHand(null);
+        fishingrodPlayerDataUtil.setLuck(0);
+        fishingrodPlayerDataUtil.setGameSuccess(false);
+        fishingrodPlayerDataUtil.setTick_for_vitality(0);
     }
 }
 

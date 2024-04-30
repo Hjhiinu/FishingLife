@@ -46,7 +46,7 @@ public class Integration {
         this.time = Math.max(time -1, MIN);
     }
 
-    public void vitalityDecreasing(){subFish_vitality(1);}
+    public void vitalityDecreasing(){subFish_vitality(2);}
 
     public void vitalityincreasing(){addFish_vitality(1);}
     public void addFishingline_strength(int add) {
