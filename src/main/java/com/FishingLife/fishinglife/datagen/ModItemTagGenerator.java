@@ -68,6 +68,21 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
 
                 );
+        this.tag(ModTags.Items.SWAMP_FISHES).add(
+                FishingLifeItemsRegistry.SPLASH_TETRA.get(),
+                FishingLifeItemsRegistry.CONGO_TETRA.get(),
+                FishingLifeItemsRegistry.CENTRAL_MUDMINNOW.get(),
+                FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH.get(),
+                FishingLifeItemsRegistry.FLORIDA_GAR.get(),
+                FishingLifeItemsRegistry.BLUENOSE_SHINER.get(),
+                FishingLifeItemsRegistry.BARRENS_TOPMINNOW.get(),
+                FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH.get()
+
+                );
+        this.tag(ModTags.Items.MUSHROOM_ISLAND_FISHES).add(
+                FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH.get(),
+                FishingLifeItemsRegistry.RED_MUSHROOM_FISH.get()
+        );
         this.tag(ModTags.Items.CRAB).add(
             FishingLifeItemsRegistry.SWIMMING_CRAB.get(),
             FishingLifeItemsRegistry.SOFT_SHELL_CRAB.get(),
@@ -183,7 +198,17 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
                         FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
                         FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
-                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get(),
+                        FishingLifeItemsRegistry.SPLASH_TETRA.get(),
+                        FishingLifeItemsRegistry.CONGO_TETRA.get(),
+                        FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.BLUENOSE_SHINER.get(),
+                        FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.RED_MUSHROOM_FISH.get(),
+                        FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH.get(),
+                        FishingLifeItemsRegistry.FLORIDA_GAR.get(),
+                        FishingLifeItemsRegistry.CENTRAL_MUDMINNOW.get(),
+                        FishingLifeItemsRegistry.BARRENS_TOPMINNOW.get()
 
                         );
 
@@ -278,8 +303,18 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
                         FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
                         FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
-                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get(),
 
+                        FishingLifeItemsRegistry.SPLASH_TETRA.get(),
+                        FishingLifeItemsRegistry.CONGO_TETRA.get(),
+                        FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.BLUENOSE_SHINER.get(),
+                        FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.RED_MUSHROOM_FISH.get(),
+                        FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH.get(),
+                        FishingLifeItemsRegistry.FLORIDA_GAR.get(),
+                        FishingLifeItemsRegistry.CENTRAL_MUDMINNOW.get(),
+                        FishingLifeItemsRegistry.BARRENS_TOPMINNOW.get()
 
 
 
@@ -377,7 +412,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.ALASKA_POLLOCK.get(),
                         FishingLifeItemsRegistry.ATLANTIC_COD.get(),
                         FishingLifeItemsRegistry.HADDOCK.get(),
-                        FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get()
+                        FishingLifeItemsRegistry.TROGLOGLANIS_PATTERSONI.get(),
+                        FishingLifeItemsRegistry.FLORIDA_GAR.get()
 
                         );
         this.tag(ModTags.Items.MEDIUM_FISHES)
@@ -416,7 +452,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.FOURHORN_SCULPIN.get(),
                         FishingLifeItemsRegistry.MEXICAN_TETRA.get(),
                         FishingLifeItemsRegistry.MADAGASCAR_BLIND_CAVE_FISH.get(),
-                        FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get()
+                        FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get(),
+                        FishingLifeItemsRegistry.CENTRAL_MUDMINNOW.get(),
+                        FishingLifeItemsRegistry.BARRENS_TOPMINNOW.get()
                         );
         this.tag(ModTags.Items.SMALL_FISHES)
                 .add(FishingLifeItemsRegistry.CETOPSIDIUM.get(),
@@ -433,7 +471,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         FishingLifeItemsRegistry.WHITE_HAKE.get(),
                         FishingLifeItemsRegistry.CAPELIN.get(),
                         FishingLifeItemsRegistry.ARCTIC_SKATE.get(),
-                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get()
+                        FishingLifeItemsRegistry.BLIND_CAVE_FISH.get(),
+                        FishingLifeItemsRegistry.SPLASH_TETRA.get(),
+                        FishingLifeItemsRegistry.CONGO_TETRA.get(),
+                        FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.BLUENOSE_SHINER.get(),
+                        FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH.get(),
+                        FishingLifeItemsRegistry.RED_MUSHROOM_FISH.get(),
+                        FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH.get()
+
                         );
     }
 }

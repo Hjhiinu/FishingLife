@@ -93,7 +93,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.ATLANTIC_COD);
         simpleItem(FishingLifeItemsRegistry.FOURHORN_SCULPIN);
 
+        simpleItem(FishingLifeItemsRegistry.SPLASH_TETRA);
+        simpleItem(FishingLifeItemsRegistry.CONGO_TETRA);
+        simpleItem(FishingLifeItemsRegistry.CENTRAL_MUDMINNOW);
+        simpleItem(FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH);
+        simpleItem(FishingLifeItemsRegistry.FLORIDA_GAR);
+        simpleItem(FishingLifeItemsRegistry.BLUENOSE_SHINER);
+        simpleItem(FishingLifeItemsRegistry.BARRENS_TOPMINNOW);
+        simpleItem(FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH);
 
+        simpleItem(FishingLifeItemsRegistry.RED_MUSHROOM_FISH);
+        simpleItem(FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH);
 
         simpleItem(FishingLifeItemsRegistry.SCALLION_SEEDS);
         simpleItem(FishingLifeItemsRegistry.SCALLION);

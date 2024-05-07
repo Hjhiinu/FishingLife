@@ -21,7 +21,7 @@ public class FishingLifeItemsRegistry {
     public static final RegistryObject<Item> PROFESSIONAL_FISHING_ROD = ITEMS.register("professional_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> ELITE_FISHING_ROD = ITEMS.register("elite_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.UNCOMMON)));
 
-    public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> MASTER_FISHING_ROD = ITEMS.register("master_fishing_rod", () -> new ModFishingRodItem(new Item.Properties().defaultDurability(125).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> LEGENDARY_FISHING_ROD = ITEMS.register("legendary_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(200).rarity(Rarity.RARE)));
 
     public static final RegistryObject<Item> PRIMEVAL_FISHING_ROD = ITEMS.register("primeval_fishing_rod", () -> new FishingRodItem(new Item.Properties().defaultDurability(200).rarity(Rarity.EPIC)));
@@ -260,6 +260,40 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> BLIND_CAVE_FISH = ITEMS.register("blind_cave_fish",
             () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    //Mushroom Island
+
+    public static final RegistryObject<Item> BROWN_MUSHROOM_FISH = ITEMS.register("brown_mushroom_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+    public static final RegistryObject<Item> RED_MUSHROOM_FISH = ITEMS.register("red_mushroom_fish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    //Swamp Fish
+
+    public static final RegistryObject<Item> SPLASH_TETRA = ITEMS.register("splash_tetra",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> CONGO_TETRA = ITEMS.register("congo_tetra",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> CENTRAL_MUDMINNOW = ITEMS.register("central_mudminnow",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> BANDED_PYGMY_SUNFISH = ITEMS.register("banded_pygmy_sunfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> FLORIDA_GAR = ITEMS.register("florida_gar",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> BLUENOSE_SHINER = ITEMS.register("bluenose_shiner",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> BARRENS_TOPMINNOW = ITEMS.register("barrens_topminnow",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
+    public static final RegistryObject<Item> EVERGLADES_PYGMY_SUNFISH = ITEMS.register("everglades_pygmy_sunfish",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.RAW_FISH)));
+
 
     //Aroma
     public static final RegistryObject<Item> SEDUCTIVE_HAZARD_ZEST = ITEMS.register("seductive_hazard_zest",()->new Item(new Item.Properties()));

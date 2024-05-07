@@ -91,6 +91,14 @@
                       "fishinglife:elite_fishing_rod"
                     ]
                   }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
+                  }
                 }
               ]
             }
@@ -169,7 +177,8 @@
                 "exclude": [
                   "forge:is_dry/overworld",
                   "forge:is_cold/overworld",
-                  "forge:is_hot/overworld",
+                  "minecraft:is_jungle",
+                  "forge:is_swamp",
                   "forge:is_mushroom",
                   "forge:is_underground",
                   "minecraft:is_ocean"
@@ -301,10 +310,11 @@
                 "exclude": [
                   "forge:is_dry/overworld",
                   "forge:is_cold/overworld",
-                  "forge:is_hot/overworld",
+                  "minecraft:is_jungle",
                   "forge:is_mushroom",
                   "forge:is_underground",
-                  "minecraft:is_ocean"
+                  "minecraft:is_ocean",
+                  "forge:is_swamp"
                 ],
                 "and": true
               }
@@ -317,6 +327,14 @@
                   "predicate": {
                     "items": [
                       "fishinglife:elite_fishing_rod"
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
                     ]
                   }
                 }
@@ -531,6 +549,14 @@
                       "fishinglife:elite_fishing_rod"
                     ]
                   }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
+                  }
                 }
               ]
             }
@@ -608,14 +634,6 @@
           "condition": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": [
-                  "fishinglife:elite_fishing_rod"
-                ]
-              }
-            },
-            {
               "condition": "minecraft:any_of",
               "terms": [
                 {
@@ -628,6 +646,27 @@
                   "condition": "minecraft:location_check",
                   "predicate": {
                     "biome": "minecraft:deep_ocean"
+                  }
+                }
+              ]
+            },
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:elite_fishing_rod"
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
                   }
                 }
               ]
@@ -699,14 +738,6 @@
           "condition": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": [
-                  "fishinglife:elite_fishing_rod"
-                ]
-              }
-            },
-            {
               "condition": "minecraft:any_of",
               "terms": [
                 {
@@ -725,6 +756,27 @@
                   "condition": "minecraft:location_check",
                   "predicate": {
                     "biome": "minecraft:deep_lukewarm_ocean"
+                  }
+                }
+              ]
+            },
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:elite_fishing_rod"
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
                   }
                 }
               ]
@@ -796,14 +848,6 @@
           "condition": "minecraft:all_of",
           "terms": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": [
-                  "fishinglife:elite_fishing_rod"
-                ]
-              }
-            },
-            {
               "condition": "fishinglife:biome_tag_check",
               "predicate": {
                 "include": [
@@ -812,6 +856,155 @@
                 ],
                 "and": true
               }
+            },
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:elite_fishing_rod"
+                    ]
+                  }
+                },
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:splash_tetra",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:congo_tetra",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:central_mudminnow",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:banded_pygmy_sunfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:florida_gar",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:bluenose_shiner",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:barrens_topminnow",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:everglades_pygmy_sunfish",
+          "weight": 5,
+          "quality": 1
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "fishinglife:biome_tag_check",
+              "predicate": {
+                "include": [
+                  "forge:is_swamp"
+                ],
+                "and": true
+              }
+            },
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:brown_mushroom_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_mushroom_fish",
+          "weight": 5,
+          "quality": 1
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "fishinglife:biome_tag_check",
+              "predicate": {
+                "include": [
+                  "forge:is_mushroom"
+                ],
+                "and": true
+              }
+            },
+            {
+              "condition": "minecraft:any_of",
+              "terms": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "fishinglife:master_fishing_rod"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         }

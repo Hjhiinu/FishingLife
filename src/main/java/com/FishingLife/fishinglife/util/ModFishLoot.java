@@ -35,7 +35,7 @@ public class ModFishLoot {
         if (name.equals(BuiltInLootTables.FISHING)) {
             LootPool pool = event.getTable().getPool("main");
             if (pool != null) {
-                addEntry(pool, getInjectEntry(FISH, 80, 1));
+                addEntry(pool, getInjectEntry(FISH, 95, -1));
                 addEntry(pool, getInjectEntry(JUNK, 20, 0));
 
             }

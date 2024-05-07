@@ -5,6 +5,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import java.util.List;
+
 public class fishingrodPlayerDataUtil {
     private static Player player;
 
@@ -25,6 +27,8 @@ public class fishingrodPlayerDataUtil {
     private static int luck;
 
     private static boolean gameSuccess;
+
+    private static List<ItemStack> fishedItemList;
 
 
     public static Player getplayer() {
@@ -89,6 +93,14 @@ public class fishingrodPlayerDataUtil {
 
     public static int getTick_for_vitality() {
         return tick_for_vitality;
+    }
+
+    public static List<ItemStack> getFishedItemList() {
+        return fishedItemList;
+    }
+
+    public static void setFishedItemList(List<ItemStack> fishedItemList) {
+        fishingrodPlayerDataUtil.fishedItemList = fishedItemList;
     }
 
     public static void setTick_for_vitality(int tick_for_vitality) {

@@ -105,6 +105,19 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.TOOTHLESS_BLIND_CAT.get());
                         pOutput.accept(FishingLifeItemsRegistry.BLIND_CAVE_FISH.get());
 
+                        //Swamp Fishes
+                        pOutput.accept(FishingLifeItemsRegistry.SPLASH_TETRA.get());
+                        pOutput.accept(FishingLifeItemsRegistry.CONGO_TETRA.get());
+                        pOutput.accept(FishingLifeItemsRegistry.CENTRAL_MUDMINNOW.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BANDED_PYGMY_SUNFISH.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FLORIDA_GAR.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BLUENOSE_SHINER.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BARRENS_TOPMINNOW.get());
+                        pOutput.accept(FishingLifeItemsRegistry.EVERGLADES_PYGMY_SUNFISH.get());
+
+                        //Mushroom Island
+                        pOutput.accept(FishingLifeItemsRegistry.BROWN_MUSHROOM_FISH.get());
+                        pOutput.accept(FishingLifeItemsRegistry.RED_MUSHROOM_FISH.get());
 
 
                         //Fishes Collection

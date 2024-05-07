@@ -45,6 +45,10 @@ public class ModTags {
 
         public static final TagKey<Item> CAVE_FISHES = tag("cave_fishes");
 
+        public static final TagKey<Item> SWAMP_FISHES = tag("swamp_fishes");
+
+        public static final TagKey<Item> MUSHROOM_ISLAND_FISHES = tag("mushroom_island_fishes");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(fishinglife.MOD_ID, name));
         }

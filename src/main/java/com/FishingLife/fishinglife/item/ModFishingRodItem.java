@@ -3,6 +3,8 @@ import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvid
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -18,10 +20,17 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Collections;
+import java.util.List;
+
 public class ModFishingRodItem extends FishingRodItem {
     private static final Logger LOGGER = LogManager.getLogger();
     public ModFishingRodItem(Properties pProperties) {
@@ -54,7 +63,20 @@ public class ModFishingRodItem extends FishingRodItem {
                         i = pPlayer.fishing.getHookedIn() instanceof ItemEntity ? 3 : 5;
                         pPlayer.fishing.discard();
                     } else if (pPlayer.fishing.nibble > 0) {
-                        fishingrodPlayerDataUtil.setGameflag(true);
+                        //Generate the fished item before the game. (It is a little bit unrealistic)
+                        LootParams lootparams = (new LootParams.Builder((ServerLevel) pPlayer.fishing.level())).withParameter(LootContextParams.ORIGIN, pPlayer.fishing.position()).withParameter(LootContextParams.TOOL, fishingrodPlayerDataUtil.getitemstack()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withParameter(LootContextParams.KILLER_ENTITY, pPlayer.fishing.getOwner()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withLuck((float) fishingrodPlayerDataUtil.getluck() + pPlayer.getLuck()).create(LootContextParamSets.FISHING);   //luck should also be localized
+                        LootTable loottable = pPlayer.fishing.level().getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
+                        List<ItemStack> list = loottable.getRandomItems(lootparams);
+                        LOGGER.info("LIST:" + list);
+                        fishingrodPlayerDataUtil.setFishedItemList(list);
+                        if(list.isEmpty()) {
+                            pPlayer.sendSystemMessage(Component.literal("You need a more advanced fishing rod to catch it")); //List maybe empty because the limitation of fishing rod
+                            i=4;
+                            pPlayer.fishing.discard();
+                        }
+                        else {
+                            fishingrodPlayerDataUtil.setGameflag(true);
+                        }
                     }
                     if (pPlayer.fishing.onGround()) {
                         i = 2;
@@ -80,7 +102,6 @@ public class ModFishingRodItem extends FishingRodItem {
                 pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                     fishing.resetALL();
                 });
-
                 LOGGER.info("Starting trigger from empty");
                 FishingHook fishingHook=new FishingHook(pPlayer, pLevel, j, k);
                  pLevel.addFreshEntity(fishingHook);
@@ -125,6 +146,7 @@ public class ModFishingRodItem extends FishingRodItem {
         fishingrodPlayerDataUtil.setLuck(0);
         fishingrodPlayerDataUtil.setGameSuccess(false);
         fishingrodPlayerDataUtil.setTick_for_vitality(0);
+        fishingrodPlayerDataUtil.setFishedItemList(null);
     }
 }
 

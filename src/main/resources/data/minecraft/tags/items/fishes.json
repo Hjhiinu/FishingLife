@@ -80,6 +80,18 @@
     "fishinglife:fourhorn_sculpin",
     "fishinglife:white_hake",
     "fishinglife:capelin",
-    "fishinglife:arctic_skate"
+    "fishinglife:arctic_skate",
+
+    "fishinglife:splash_tetra",
+    "fishinglife:congo_tetra",
+    "fishinglife:central_mudminnow",
+    "fishinglife:banded_pygmy_sunfish",
+    "fishinglife:florida_gar",
+    "fishinglife:bluenose_shiner",
+    "fishinglife:barrens_topminnow",
+    "fishinglife:everglades_pygmy_sunfish",
+
+    "fishinglife:brown_mushroom_fish",
+    "fishinglife:red_mushroom_fish"
   ]
 }

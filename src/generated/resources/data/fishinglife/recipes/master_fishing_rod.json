@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "fishinglife:reinforced_plastic"
+    },
+    "D": {
+      "item": "minecraft:lava_bucket"
+    },
+    "K": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "P": {
+      "item": "minecraft:warped_fungus"
+    },
+    "Q": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "S": {
+      "item": "fishinglife:elite_fishing_rod"
+    },
+    "W": {
+      "item": "minecraft:crimson_fungus"
+    }
+  },
+  "pattern": [
+    "AKA",
+    "QSQ",
+    "WDP"
+  ],
+  "result": {
+    "item": "fishinglife:master_fishing_rod"
+  },
+  "show_notification": true
+}

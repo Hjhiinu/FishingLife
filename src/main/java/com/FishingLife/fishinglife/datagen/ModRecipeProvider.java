@@ -106,7 +106,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get()), has(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get()))
                 .save(pWriter);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, FishingLifeItemsRegistry.MASTER_FISHING_ROD.get())
+                .pattern("AKA")
+                .pattern("QSQ")
+                .pattern("WDP")
+                .define('S', FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())
+                .define('W', Items.CRIMSON_FUNGUS)
+                .define('P', Items.WARPED_FUNGUS)
+                .define('K', Items.AMETHYST_SHARD)
+                .define('D', Items.LAVA_BUCKET)
+                .define('A', FishingLifeItemsRegistry.REINFORCED_PLASTIC.get())
+                .define('Q', Items.NETHERITE_SCRAP)
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get()), has(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get()))
+                .save(pWriter);
 
         //Materials
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.CREAM.get())
