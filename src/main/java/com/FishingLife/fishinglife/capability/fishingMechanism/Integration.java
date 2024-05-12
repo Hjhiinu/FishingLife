@@ -1,28 +1,30 @@
 package com.FishingLife.fishinglife.capability.fishingMechanism;
 
 import net.minecraft.nbt.CompoundTag;
+import java.util.Random;
 
 public class Integration {
-    private double fishingline_strength;
-
-    private double fishingrod_strength;
+    private int fishingline_strength;
 
     private int fish_vitality;
 
     private double time;
     private final int MIN = 0;
     private final int MAX = 100;
+
+    private final int fishingline_strength_MAX=130;
+    private final int viatlity_MAX = 500;
+    private static final Random random = new Random();
+
     public Integration(){
-        this.fishingline_strength=100;
-        this.fishingrod_strength=100;
-        this.fish_vitality=100;
+        this.fishingline_strength=130;
+        this.fish_vitality=500;
         this.time=100;
     }
 
     public void resetALL(){
-        this.fishingline_strength=100;
-        this.fishingrod_strength=100;
-        this.fish_vitality=100;
+        this.fishingline_strength=130;
+        this.fish_vitality=500;
         this.time=100;
     }
 
@@ -34,31 +36,23 @@ public class Integration {
         return this.fish_vitality;
     }
 
-    public double getFishingline_strength() {
+    public int getFishingline_strength() {
         return this.fishingline_strength;
-    }
-
-    public double getFishingrod_strength() {
-        return this.fishingrod_strength;
     }
 
     public void timeDecreasing() {
         this.time = Math.max(time -1, MIN);
     }
 
-    public void vitalityDecreasing(){subFish_vitality(2);}
+    public void vitalityDecreasing(){subFish_vitality(5);}
 
-    public void vitalityincreasing(){addFish_vitality(1);}
+    public void vitalityincreasing(){addFish_vitality(2);}
     public void addFishingline_strength(int add) {
-        this.fishingline_strength = Math.min(fishingline_strength + add, MAX);
-    }
-
-    public void addFishingrod_strength(int add) {
-        this.fishingrod_strength = Math.min(fishingrod_strength + add, MAX);
+        this.fishingline_strength = Math.min(fishingline_strength + add, fishingline_strength_MAX);
     }
 
     public void addFish_vitality(int add) {
-        this.fish_vitality = Math.min(fish_vitality + add, MAX);
+        this.fish_vitality = Math.min(fish_vitality + add, viatlity_MAX);
     }
 
     public void subFishingline_strength(int sub) {
@@ -71,23 +65,33 @@ public class Integration {
         this.fish_vitality = Math.max(fish_vitality - sub, MIN);
     }
 
+    public void generateRandomTension(){
+        this.fishingline_strength=random.nextInt(21) + 60;
+    }
+    public void setFishingline_strength(int strength){
+        if(strength<=MIN){
+            this.fishingline_strength=MIN;
+        }
+        else if(strength>=fishingline_strength_MAX){
+            this.fishingline_strength=fishingline_strength_MAX;
+        }
+        else{
+            this.fishingline_strength=strength;
+        }
+
+    }
 
         public void copyFrom(Integration source) {
         this.fish_vitality = source.fish_vitality;
-        this.fishingline_strength= source.fishingline_strength;
-        this.fishingrod_strength=source.fishingrod_strength;
-    }
+        this.fishingline_strength= source.fishingline_strength;}
 
     public void saveNBTData(CompoundTag nbt) {
-        nbt.putDouble("fishingline_strength", fishingline_strength);
-        nbt.putDouble("fishingrod_strength", fishingrod_strength);
-        nbt.putDouble("fish_vitality", fish_vitality);
+        nbt.putInt("fishingline_strength", fishingline_strength);
+        nbt.putInt("fish_vitality", fish_vitality);
     }
 
     public void loadNBTData(CompoundTag nbt) {
-        fishingline_strength = nbt.getDouble("fishingline_strength");
+        fishingline_strength = nbt.getInt("fishingline_strength");
         fish_vitality=nbt.getInt("fish_vitality");
-        fishingrod_strength=nbt.getDouble("fishingrod_strength");
-
     }
 }

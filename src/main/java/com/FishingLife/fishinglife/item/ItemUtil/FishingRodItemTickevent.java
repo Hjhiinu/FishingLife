@@ -4,7 +4,9 @@ import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvid
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishVitalityValue;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingInteraction;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingLineLength;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingProcess;
+import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -32,18 +34,18 @@ public class FishingRodItemTickevent {
             if (fishingrodPlayerDataUtil.isGameflag()) {
                 HUDIntegration.allinit();
                 fishingrodPlayerDataUtil.addTickcount();
+                fishingrodPlayerDataUtil.addTensionTickcount();
                 Player pPlayer=fishingrodPlayerDataUtil.getplayer();
+                //LOGGER.info("Client Tick is "+fishingrodPlayerDataUtil.getTickcount());
                 pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                     //total 10 phase
-                    FishingProcess.set(fishingrodPlayerDataUtil.getTickcount()*10/fishingrodPlayerDataUtil.getTotalcount());
-                    if(fishing.getFish_vitality()!=0){//Vitality
-                        FishVitalityValue.set(fishing.getFish_vitality()/10+1);
-                    }
-                    else{
-                        FishVitalityValue.set(0);
-                    }
                     if(fishing.getTime()>0) {
                         fishing.timeDecreasing();
+                    }
+                    if (fishingrodPlayerDataUtil.getTension_tickcount()==fishingrodPlayerDataUtil.getTension_total_count()){
+                        fishingrodPlayerDataUtil.setTension_tickcount(0);
+                        fishing.setFishingline_strength(FishingGameFishLogicHandler.change_to_next_tension_position(fishing.getFishingline_strength()));
+                        LOGGER.info("fishingline_value: "+fishing.getFishingline_strength());
                     }
                     if(FishingInteraction.isSuccessful()){
                         fishing.vitalityDecreasing();//determine if it is Successful for each tick
@@ -52,15 +54,14 @@ public class FishingRodItemTickevent {
                         }
                     }
                     else{
-                        if(fishingrodPlayerDataUtil.getTick_for_vitality()!=5) {//penalty for vitality
+                        if(fishingrodPlayerDataUtil.getTick_for_vitality()!=2) {//penalty for vitality
                             fishingrodPlayerDataUtil.addTickcount_Vitality();
                         }
                         else{
                             fishing.vitalityincreasing();
-                            fishingrodPlayerDataUtil.setTick_for_vitality(0);
+                           fishingrodPlayerDataUtil.setTick_for_vitality(0);
                         }
                     }
-                    LOGGER.info("Vitality is "+fishing.getFish_vitality());
                 });
                 if (pPlayer.fishing == null) {    //use other item
                     setToDefault();

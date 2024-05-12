@@ -2,6 +2,7 @@ package com.FishingLife.fishinglife.item;
 import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
+import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -75,6 +76,7 @@ public class ModFishingRodItem extends FishingRodItem {
                             pPlayer.fishing.discard();
                         }
                         else {
+                            FishingGameFishLogicHandler.tension_init();
                             fishingrodPlayerDataUtil.setGameflag(true);
                         }
                     }
@@ -101,6 +103,7 @@ public class ModFishingRodItem extends FishingRodItem {
                 reset();
                 pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                     fishing.resetALL();
+                    fishing.generateRandomTension();
                 });
                 LOGGER.info("Starting trigger from empty");
                 FishingHook fishingHook=new FishingHook(pPlayer, pLevel, j, k);

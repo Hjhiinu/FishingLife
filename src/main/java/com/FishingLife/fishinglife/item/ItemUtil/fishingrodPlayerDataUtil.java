@@ -22,7 +22,12 @@ public class fishingrodPlayerDataUtil {
 
     private static int tickcount=0;
 
-    private static final int totalcount=500;
+    private static int tension_tickcount=0;
+
+    private static final int tension_total_count=15;
+
+    private static final int totalcount=700;
+
 
     private static int luck;
 
@@ -109,6 +114,21 @@ public class fishingrodPlayerDataUtil {
 
     public static void addTickcount(){
         fishingrodPlayerDataUtil.tickcount++;
+    }
+    public static void addTensionTickcount(){
+        fishingrodPlayerDataUtil.tension_tickcount++;
+    }
+
+    public static void setTension_tickcount(int tension_tickcount) {
+        fishingrodPlayerDataUtil.tension_tickcount = tension_tickcount;
+    }
+
+    public static int getTension_tickcount() {
+        return tension_tickcount;
+    }
+
+    public static int getTension_total_count() {
+        return tension_total_count;
     }
     public static void addTickcount_Vitality(){
         fishingrodPlayerDataUtil.tick_for_vitality++;

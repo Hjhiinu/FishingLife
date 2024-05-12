@@ -2,10 +2,13 @@ package com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay;
 
 import com.FishingLife.fishinglife.capability.fishingMechanism.Integration;
 
+import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -36,6 +39,11 @@ public class FishingProcess {
 
     public static final IGuiOverlay HUD_TIME = ((gui, poseStack, partialTick, width, height) -> {
         if(show) {
+            Player pPlayer= fishingrodPlayerDataUtil.getplayer();
+            pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                //total 10 phase
+                FishingProcess.set(fishingrodPlayerDataUtil.getTickcount()*10/fishingrodPlayerDataUtil.getTotalcount());//share the same tick
+            });
             int x = width / 2;
             int y = height;
             int y_temp = height / 2;
