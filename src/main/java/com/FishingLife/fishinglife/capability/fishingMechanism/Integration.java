@@ -58,9 +58,6 @@ public class Integration {
     public void subFishingline_strength(int sub) {
         this.fishingline_strength = Math.max(fishingline_strength - sub, MIN);
     }
-    public void subFishingrod_strength(int sub) {
-        this.fishingline_strength = Math.max(fishingline_strength - sub, MIN);
-    }
     public void subFish_vitality(int sub) {
         this.fish_vitality = Math.max(fish_vitality - sub, MIN);
     }

@@ -101,22 +101,23 @@ public class FishingInteraction {
             int x = width / 2;
             int y = height;
             int y_temp = height / 2;
+            //LOGGER.info("HUD TICK");
             //LOGGER.info("Tick Game is"+fishingrodPlayerDataUtil.getTickcount());
             if(fishingrodPlayerDataUtil.getTickcount()==1) {
                 //LOGGER.info("Tick is 1!");
                 //Reset all the data
                 int level=y - 54 - y_temp +20;
-                setGameYlevel(level);//adjust the gamebar based on the size of screen    icon should be y - 54 - y_temp +10
+                FishingInteraction.setGameYlevel(level);//adjust the gamebar based on the size of screen    icon should be y - 54 - y_temp +10
                 int left=x-75;
                 int right=x+100;
 
-                setGameleftboundary(left);//make the system more dynamic
-                setGamerightboundary(right);
+                FishingInteraction.setGameleftboundary(left);//make the system more dynamic
+                FishingInteraction.setGamerightboundary(right);
 
                 FishingGameFishLogicHandler.setX_left_boundary(left);
                 FishingGameFishLogicHandler.setX_right_boundary(right);
                 fish_position = left + random.nextInt(right - left + 1);// point here is the starting point of the game
-                setPlayer_boundary_position(fish_position);
+                FishingInteraction.setPlayer_boundary_position(fish_position);
                 //Reset Starting point
                 FishingGameFishLogicHandler.setStarting_position(fish_position);
                 HUDIntegration.gamePre_init();
@@ -126,8 +127,8 @@ public class FishingInteraction {
                 successful=false;
             }
             else{
-                //LOGGER.info("Tick is not 1!");
-                fish_position=FishingGameFishLogicHandler.change_to_next_position(fish_position);   //reset the logic setting each position phase
+                fish_position=FishingGameFishLogicHandler.change_to_next_position(fish_position);
+                //LOGGER.info("fishing_position"+ fish_position);
                 if (FishingGameFishLogicHandler.getCounter_for_position()==FishingGameFishLogicHandler.getMoving_distance()){
                     FishingGameFishLogicHandler.game_start_init();
                 }
@@ -136,10 +137,6 @@ public class FishingInteraction {
                 successful_right=fish_position+18;
                 successful=FishingGameFishLogicHandler.getSuccess_each_tick(successful_left,successful_right, player_boundary_position);
             }
-
-
-
-
             RenderSystem.setShader(GameRenderer::getPositionTexShader);
             RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 

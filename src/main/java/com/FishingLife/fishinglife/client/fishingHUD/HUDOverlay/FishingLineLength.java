@@ -9,8 +9,11 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class FishingLineLength {
+    private static final Logger LOGGER = LogManager.getLogger();
     private static boolean show=false;
     private static int processphase;
     private static final ResourceLocation FILLED_LENGTH_Value = new ResourceLocation(fishinglife.MOD_ID,
@@ -35,12 +38,13 @@ public class FishingLineLength {
         FishingLineLength.processphase= p;
     }
 
+
     public static final IGuiOverlay HUD_FISHINGLINE_LENGTH = ((gui, poseStack, partialTick, width, height) -> {
         if(show) {
             int x = width / 2;
             int y = height;
             int y_temp = height / 2;
-
+            //LOGGER.info("phase-TEST "+processphase);//Test
             Player pPlayer=fishingrodPlayerDataUtil.getplayer();
             pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
                 //total 13 phase
@@ -52,6 +56,18 @@ public class FishingLineLength {
                 }
                 else{
                     FishingLineLength.set(0);
+                }
+                if(fishing.getFishingline_strength()<30){
+                    FishingGameFishLogicHandler.setTension_low(true);
+                    FishingGameFishLogicHandler.setTension_high(false);
+                }
+                else if(fishing.getFishingline_strength()>100){
+                    FishingGameFishLogicHandler.setTension_low(false);
+                    FishingGameFishLogicHandler.setTension_high(true);
+                }
+                else{
+                    FishingGameFishLogicHandler.setTension_low(false);
+                    FishingGameFishLogicHandler.setTension_high(false);
                 }
             });
 

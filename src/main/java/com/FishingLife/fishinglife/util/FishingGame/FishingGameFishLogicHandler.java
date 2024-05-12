@@ -44,6 +44,10 @@ public class FishingGameFishLogicHandler {
     private static int moving_speed;       //level 1: 6 pixels per seconds, level 2: 10 pixels per seconds, level 3: 15 pixels per seconds, level 4: 20 pixels per seconds, level 5: 25 pixels per seconds
     private static boolean direction;      //true right, false left
 
+    private static boolean tension_low;
+
+    private static boolean tension_high;
+
     private static final Random random = new Random();
 
     public static void tension_init(){
@@ -53,7 +57,9 @@ public class FishingGameFishLogicHandler {
         setCounter_for_tension_position(0);
         directlySetExcited(2);
         setState_last_tension(random.nextInt(5)+2);
-        LOGGER.info("TENSION INIT");
+        setTension_high(false);
+        setTension_low(false);
+        //LOGGER.info("TENSION INIT");
     }
 
     public static void game_start_init(){
@@ -77,12 +83,12 @@ public class FishingGameFishLogicHandler {
         else{
             pos= pre_position +10;
         }
-        LOGGER.info("POSITION IS "+pos+" with excite "+ temp_excited);
+        //LOGGER.info("POSITION IS "+pos+" with excite "+ temp_excited);
         if(counter_for_tension_speed==state_last_tension){
 
             setCounter_for_tension_speed(0);
             setExcited();
-            LOGGER.info("Change the tension state to" +getExcited());
+            //LOGGER.info("Change the tension state to" +getExcited());
             setState_last_tension(random.nextInt(5)+2);
         }
         return pos;
@@ -199,5 +205,21 @@ public class FishingGameFishLogicHandler {
 
     public static int getState_last_tension() {
         return state_last_tension;
+    }
+
+    public static boolean isTension_high() {
+        return tension_high;
+    }
+
+    public static boolean isTension_low() {
+        return tension_low;
+    }
+
+    public static void setTension_high(boolean tension_high) {
+        FishingGameFishLogicHandler.tension_high = tension_high;
+    }
+
+    public static void setTension_low(boolean tension_low) {
+        FishingGameFishLogicHandler.tension_low = tension_low;
     }
 }

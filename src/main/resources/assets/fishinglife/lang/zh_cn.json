@@ -218,6 +218,8 @@
   "key.category.fishinglife.fishing": "钓鱼生活 钓鱼游戏",
   "key.fishinglife.fishing_left": "钓鱼生活 钓鱼游戏控制往左",
   "key.fishinglife.fishing_right": "钓鱼生活 钓鱼游戏控制往右",
+  "key.fishinglife.tension_left": "钓鱼生活 钓鱼线张力控制往左（减少）",
+  "key.fishinglife.tension_right": "钓鱼生活 钓鱼线张力控制往右（增加）",
 
   "creativetab.fishinglife_tab": "渔夫生活"
 }

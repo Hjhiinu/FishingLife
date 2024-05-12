@@ -1,9 +1,13 @@
 package com.FishingLife.fishinglife.event;
 
+import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingInteraction;
+import com.FishingLife.fishinglife.client.fishingHUD.HUDOverlay.FishingLineLength;
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import com.FishingLife.fishinglife.util.Keybinding.KeyBinding;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -21,6 +25,18 @@ public class ClientKeyBindingEvent {
             if(KeyBinding.RIGHT_KEY.consumeClick()) {
                 FishingInteraction.setPlayer_boundary_position_right();
             }
+            if(KeyBinding.LEFT_TENSION_KEY.consumeClick()) {
+                Player pPlayer= fishingrodPlayerDataUtil.getplayer();
+                pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                   fishing.subFishingline_strength(3);
+                });
+            }
+            if(KeyBinding.RIGHT_TENSION_KEY.consumeClick()) {
+                Player pPlayer= fishingrodPlayerDataUtil.getplayer();
+                pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                    fishing.addFishingline_strength(3);
+                });
+            }
         }
     }
 
@@ -30,6 +46,8 @@ public class ClientKeyBindingEvent {
         public static void onKeyRegister(RegisterKeyMappingsEvent event) {
             event.register(KeyBinding.LEFT_KEY);
             event.register(KeyBinding.RIGHT_KEY);
+            event.register(KeyBinding.LEFT_TENSION_KEY);
+            event.register(KeyBinding.RIGHT_TENSION_KEY);
         }
     }
 }

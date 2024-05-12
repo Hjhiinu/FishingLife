@@ -27,7 +27,8 @@ public class FishQualityEventHandler{
     @SubscribeEvent
     public static void onItemFished(ItemFishedEvent event) {
         Player player=event.getEntity();
-        boolean k=player.getMainHandItem().getItem().equals(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get());
+        ItemStack compare=player.getMainHandItem();
+        boolean k=compare.is(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())||compare.is(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get());
 
 
         if (!event.getDrops().isEmpty()) {

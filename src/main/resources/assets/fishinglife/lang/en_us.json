@@ -240,6 +240,8 @@
   "key.category.fishinglife.fishing": "Fishinglife fishing game",
   "key.fishinglife.fishing_left": "Fishinglife fishing game left control",
   "key.fishinglife.fishing_right": "Fishinglife fishing game right control",
+  "key.fishinglife.tension_left": "Fishinglife fishingline tension left (decrease) control",
+  "key.fishinglife.tension_right": "Fishinglife fishingline tension right (increase) control",
 
   "creativetab.fishinglife_tab": "Fishing Life"
 
