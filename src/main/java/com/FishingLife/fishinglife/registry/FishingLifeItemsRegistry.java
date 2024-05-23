@@ -3,7 +3,6 @@ package com.FishingLife.fishinglife.registry;
 import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.item.LootNetItem;
 import com.FishingLife.fishinglife.item.ModFishingRodItem;
-import com.FishingLife.fishinglife.util.ModFishLoot;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;

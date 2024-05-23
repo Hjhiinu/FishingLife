@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:mexican_tetra",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:madagascar_blind_cave_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:trogloglanis_pattersoni",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:toothless_blind_cat",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:blind_cave_fish",
+          "weight": 5,
+          "quality": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/fishing/underground_fish"
+}

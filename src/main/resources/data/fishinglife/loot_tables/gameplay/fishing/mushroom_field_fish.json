@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:brown_mushroom_fish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:red_mushroom_fish",
+          "weight": 5,
+          "quality": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/fishing/mushroom_field_fish"
+}

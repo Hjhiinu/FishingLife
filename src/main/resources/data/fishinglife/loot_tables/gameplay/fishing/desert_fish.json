@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:african_barb",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:african_desert_catfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:african_lungfish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:australian_desert_goby",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:desert_zebrafish",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:egyptian_mouthbrooder",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:highland_swordtail",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:nile_perch",
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishinglife:nothobranchius_furzeri",
+          "weight": 5,
+          "quality": 1
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/fishing/desert_fish"
+}

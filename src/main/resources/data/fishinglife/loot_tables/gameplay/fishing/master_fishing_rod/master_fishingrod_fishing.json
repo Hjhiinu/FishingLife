@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/master_fishing_rod/master_fish",
+          "weight": 85
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/fishinglife_junk",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/fishinglife_treasure",
+          "weight": 5
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/fishing/master_fishing_rod/master_fishingrod_fishing"
+}

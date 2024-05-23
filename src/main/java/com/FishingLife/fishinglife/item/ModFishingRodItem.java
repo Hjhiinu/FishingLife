@@ -2,9 +2,11 @@ package com.FishingLife.fishinglife.item;
 import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
+import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -66,7 +68,24 @@ public class ModFishingRodItem extends FishingRodItem {
                     } else if (pPlayer.fishing.nibble > 0) {
                         //Generate the fished item before the game. (It is a little bit unrealistic)
                         LootParams lootparams = (new LootParams.Builder((ServerLevel) pPlayer.fishing.level())).withParameter(LootContextParams.ORIGIN, pPlayer.fishing.position()).withParameter(LootContextParams.TOOL, fishingrodPlayerDataUtil.getitemstack()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withParameter(LootContextParams.KILLER_ENTITY, pPlayer.fishing.getOwner()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withLuck((float) fishingrodPlayerDataUtil.getluck() + pPlayer.getLuck()).create(LootContextParamSets.FISHING);   //luck should also be localized
-                        LootTable loottable = pPlayer.fishing.level().getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
+                        ResourceLocation loot =null;
+                        if(itemstack.is(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())){
+
+                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/professional_fishing_rod/professional_fishingrod_fishing");
+                        }
+                        else if(itemstack.is(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())){
+
+                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/elite_fishing_rod/elite_fishingrod_fishing");
+                        }
+                        else if(itemstack.is(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get())){
+                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/master_fishing_rod/master_fishingrod_fishing");
+                        }
+                        else{
+                            LOGGER.info("Errors on fishing loot table");
+                            //LootTable loottable = pPlayer.fishing.level().getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
+                            //list = loottable.getRandomItems(lootparams);
+                        }
+                        LootTable loottable = ((ServerLevel) pPlayer.fishing.level()).getServer().getLootData().getLootTable(loot);
                         List<ItemStack> list = loottable.getRandomItems(lootparams);
                         LOGGER.info("LIST:" + list);
                         fishingrodPlayerDataUtil.setFishedItemList(list);
@@ -74,11 +93,11 @@ public class ModFishingRodItem extends FishingRodItem {
                             pPlayer.sendSystemMessage(Component.literal("You need a more advanced fishing rod to catch it")); //List maybe empty because the limitation of fishing rod
                             i=4;
                             pPlayer.fishing.discard();
-                        }
-                        else {
-                            FishingGameFishLogicHandler.tension_init();
-                            fishingrodPlayerDataUtil.setGameflag(true);
-                        }
+                        }//fishing game
+                       // else {
+                        //    FishingGameFishLogicHandler.tension_init();
+                      //      fishingrodPlayerDataUtil.setGameflag(true);
+                       // }
                     }
                     if (pPlayer.fishing.onGround()) {
                         i = 2;

@@ -1,0 +1,79 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/desert_fish",
+          "weight": 5
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "fishinglife:biome_tag_check",
+          "predicate": {
+            "include": [
+              "forge:is_desert",
+              "minecraft:is_badlands"
+            ],
+            "and": false
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/general_river_fish_basic",
+          "weight": 5
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "fishinglife:biome_tag_check",
+          "predicate": {
+            "include": [
+              "minecraft:is_overworld"
+            ],
+            "exclude": [
+              "forge:is_dry/overworld",
+              "forge:is_cold/overworld",
+              "minecraft:is_jungle",
+              "forge:is_swamp",
+              "forge:is_mushroom",
+              "forge:is_underground",
+              "minecraft:is_ocean"
+            ],
+            "and": true
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/fishing/jungle_fish_basic",
+          "weight": 5
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "fishinglife:biome_tag_check",
+          "predicate": {
+            "include": [
+              "minecraft:is_jungle"
+            ],
+            "and": true
+          }
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/fishing/professional_fishing_rod/professional_fish"
+}
