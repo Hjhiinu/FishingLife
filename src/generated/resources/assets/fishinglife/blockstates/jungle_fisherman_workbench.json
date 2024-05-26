@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "fishinglife:block/jungle_fisherman_workbench"
-    }
+    "facing=north": { "model": "fishinglife:block/jungle_fisherman_workbench" },
+    "facing=south": { "model": "fishinglife:block/jungle_fisherman_workbench", "y": 180 },
+    "facing=west": { "model": "fishinglife:block/jungle_fisherman_workbench", "y": 270 },
+    "facing=east": { "model": "fishinglife:block/jungle_fisherman_workbench", "y": 90 }
   }
 }

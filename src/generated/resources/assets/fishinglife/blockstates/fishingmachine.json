@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "fishinglife:block/fishingmachine"
-    }
+    "facing=north": { "model": "fishinglife:block/fishingmachine" },
+    "facing=south": { "model": "fishinglife:block/fishingmachine", "y": 180 },
+    "facing=west": { "model": "fishinglife:block/fishingmachine", "y": 270 },
+    "facing=east": { "model": "fishinglife:block/fishingmachine", "y": 90 }
   }
 }

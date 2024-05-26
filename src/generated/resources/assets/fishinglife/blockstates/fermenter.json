@@ -1,7 +1,8 @@
 {
   "variants": {
-    "": {
-      "model": "fishinglife:block/fermenter"
-    }
+    "facing=north": { "model": "fishinglife:block/fermenter" },
+    "facing=south": { "model": "fishinglife:block/fermenter", "y": 180 },
+    "facing=west": { "model": "fishinglife:block/fermenter", "y": 270 },
+    "facing=east": { "model": "fishinglife:block/fermenter", "y": 90 }
   }
 }

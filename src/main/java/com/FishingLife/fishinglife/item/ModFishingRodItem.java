@@ -94,10 +94,10 @@ public class ModFishingRodItem extends FishingRodItem {
                             i=4;
                             pPlayer.fishing.discard();
                         }//fishing game
-                       // else {
-                        //    FishingGameFishLogicHandler.tension_init();
-                      //      fishingrodPlayerDataUtil.setGameflag(true);
-                       // }
+                        else {
+                           FishingGameFishLogicHandler.tension_init();
+                            fishingrodPlayerDataUtil.setGameflag(true);
+                        }
                     }
                     if (pPlayer.fishing.onGround()) {
                         i = 2;

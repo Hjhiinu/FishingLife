@@ -1,5 +1,6 @@
 package com.FishingLife.fishinglife.registry;
 
+import com.FishingLife.fishinglife.block.ModBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.*;
 import com.FishingLife.fishinglife.block.utilBlock.Fermenter;
 import com.FishingLife.fishinglife.block.utilBlock.FishingMachine;
@@ -22,13 +23,13 @@ public class FishingLifeBlocksRegistry {
 
     //General Block
     public static final RegistryObject<Block> JUNGLE_FISHERMAN_WORKBENCH= registerBlock("jungle_fisherman_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+            () -> new ModBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> GENERAL_FISHERMAN_WORKBENCH= registerBlock("general_fisherman_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+            () -> new ModBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DESERT_FISHERMAN_WORKBENCH= registerBlock("desert_fisherman_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+            () -> new ModBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> OCEAN_FISHERMAN_WORKBENCH= registerBlock("ocean_fisherman_workbench",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
+            () -> new ModBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.AMETHYST)));
 
 
     //UtilBlock
