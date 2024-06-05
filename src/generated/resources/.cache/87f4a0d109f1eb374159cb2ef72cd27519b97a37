@@ -1,6 +1,7 @@
-// 1.20.1	2024-04-02T23:39:04.1174149	Block States: fishinglife
+// 1.20.1	2024-05-25T21:47:47.9561402	Block States: fishinglife
 50f6753c9fa402c4b8e5ecd0195ab9926847c467 assets/fishinglife/blockstates/bok_choy_crop.json
 e3837308762308df8caed477865b01ffd160b382 assets/fishinglife/blockstates/chili_pepper_crop.json
+a8514cf46af4e0ca88c1e2b8901491d0585158ea assets/fishinglife/blockstates/chopping_board.json
 4aff05b9d4ccf729f30538020c684462deb339cd assets/fishinglife/blockstates/desert_fisherman_workbench.json
 ef3f5118193c799c4698af7cd0140ba2b49cc363 assets/fishinglife/blockstates/fermenter.json
 fc4a408856dc16f99e78dbb22659288fd059e5e8 assets/fishinglife/blockstates/fishingmachine.json
@@ -47,6 +48,7 @@ a1395797076da0015a12546e240668ccb46f46d2 assets/fishinglife/models/block/soybean
 6a87c331f94373ba11e754edb5d192baa4ac42bc assets/fishinglife/models/block/soybean_stage3.json
 6434be3d001103a45a4eead9c329d1d49851ad07 assets/fishinglife/models/block/soybean_stage4.json
 99e9ed0472ecfaaa7975f3323cdc97ed4a1d3d68 assets/fishinglife/models/block/soybean_stage5.json
+df7c694cce97e4cfff24db8dad6c1f76c4a903b6 assets/fishinglife/models/item/chopping_board.json
 017a93a7203661004cc37610f8ce70ca06d69341 assets/fishinglife/models/item/desert_fisherman_workbench.json
 c52ea374ef0e8cf4ec773eda2f07461d0245655d assets/fishinglife/models/item/fermenter.json
 c530964fcf938cb3deb6d3d544bf958c75d9e0cc assets/fishinglife/models/item/fishingmachine.json

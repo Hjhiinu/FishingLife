@@ -118,6 +118,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.PADDY_SEEDS);
         simpleItem(FishingLifeItemsRegistry.PADDY);
 
+        simpleItem(FishingLifeItemsRegistry.FISH_ROE);
+        simpleItem(FishingLifeItemsRegistry.FISH_GILL);
+        simpleItem(FishingLifeItemsRegistry.FISH_SCALE);
+        simpleItem(FishingLifeItemsRegistry.FISH_FIN);
+
+        simpleItem(FishingLifeItemsRegistry.IRON_FISH_PROCESSING_KNIFE);
+        simpleItem(FishingLifeItemsRegistry.DIAMOND_FISH_PROCESSING_KNIFE);
 
         simpleItem(FishingLifeItemsRegistry.FISH_MEAT);
         simpleItem(FishingLifeItemsRegistry.CREAM);

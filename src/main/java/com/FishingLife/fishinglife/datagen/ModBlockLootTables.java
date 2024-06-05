@@ -29,6 +29,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
         this.dropSelf(FishingLifeBlocksRegistry.DESERT_FISHERMAN_WORKBENCH.get());
         this.dropSelf(FishingLifeBlocksRegistry.OCEAN_FISHERMAN_WORKBENCH.get());
+        this.dropSelf(FishingLifeBlocksRegistry.CHOPPING_BOARD.get());
 
 
         //Scallion

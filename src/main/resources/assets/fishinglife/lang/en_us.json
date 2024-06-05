@@ -208,9 +208,18 @@
   "item.fishinglife.medium_net_with_ultimate_baits": "A Moderate yet Exceptional Catch of Fish",
   "item.fishinglife.large_net_with_ultimate_baits": "An Abundant and Exceptional Catch of Fish",
 
+  "item.fishinglife.fish_gill": "Fish Gill",
+  "item.fishinglife.fish_fin": "Fish Fin",
+  "item.fishinglife.fish_roe": "Fish Roe",
+  "item.fishinglife.fish_scale": "Fish Scale",
+
+  "item.fishinglife.iron_fish_processing_knife": "Iron Fish Processing Knife",
+  "item.fishinglife.diamond_fish_processing_knife": "Diamond Fish Processing Knife",
+
 
   "block.fishinglife.fermenter": "Fermenter",
   "block.fishinglife.fishingmachine": "Fishing Machine",
+  "block.fishinglife.chopping_board": "Chopping Board",
 
   "block.fishinglife.jungle_fisherman_workbench": "Jungle Fisherman Workbench",
   "block.fishinglife.general_fisherman_workbench": "General Fisherman Workbench",
@@ -236,7 +245,7 @@
 
   "fishinglife.Quality.quality": "Quality: %s",
   "fishinglife.Age.age": "Age: %s years",
-
+  "fishinglife.Completeness.completeness": "Completeness: %s",
   "key.category.fishinglife.fishing": "Fishinglife fishing game",
   "key.fishinglife.fishing_left": "Fishinglife fishing game left control",
   "key.fishinglife.fishing_right": "Fishinglife fishing game right control",

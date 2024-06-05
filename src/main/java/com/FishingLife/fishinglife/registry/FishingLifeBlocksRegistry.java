@@ -2,6 +2,7 @@ package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.block.ModBlock;
 import com.FishingLife.fishinglife.block.cropsBlock.*;
+import com.FishingLife.fishinglife.block.utilBlock.ChoppingBoardBlock;
 import com.FishingLife.fishinglife.block.utilBlock.Fermenter;
 import com.FishingLife.fishinglife.block.utilBlock.FishingMachine;
 import com.FishingLife.fishinglife.fishinglife;
@@ -38,6 +39,9 @@ public class FishingLifeBlocksRegistry {
             () -> new Fermenter(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> FISHINGMACHINE = registerBlock("fishingmachine",
             () -> new FishingMachine(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).noOcclusion()));
+
+    public static final RegistryObject<Block> CHOPPING_BOARD = registerBlock("chopping_board",
+            () -> new ChoppingBoardBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     //CropBlock
     public static final RegistryObject<Block> SCALLION_CROP = BLOCKS.register("scallion_crop",
             () -> new ScallionCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

@@ -31,9 +31,9 @@ public class VillagerEntityGeneration {
                 if (structureStart != StructureStart.INVALID_START) {
                     ResourceLocation structureLoc = world.registryAccess().registryOrThrow(Registries.STRUCTURE).getKey(structure);
                     BlockPos structurePos = structureStart.getPieces().get(0).getBoundingBox().getCenter();
-                    LOGGER.info("structurePos "+structurePos+" structure "+structureLoc);
+                   // LOGGER.info("structurePos "+structurePos+" structure "+structureLoc);
                     if (new ResourceLocation("fishinglife:fishing_village").equals(structureLoc)) {
-                        LOGGER.info("structure is matched");
+                     //   LOGGER.info("structure is matched");
                         int spawnnum=0;
                         while(spawnnum<6) {
                             spawn(world, structurePos.getX(), structurePos.getY() - 3, structurePos.getZ());
@@ -47,15 +47,15 @@ public class VillagerEntityGeneration {
 
     private static void spawn(ServerLevel world, int X, int Y, int Z) {
         NewVillager villager = ModEntity.NEWVILLAGER.get().create(world);
-        LOGGER.info("Mob is created");
+      //  LOGGER.info("Mob is created");
         if(villager==null){
-            LOGGER.info("Mob is null");
+        //    LOGGER.info("Mob is null");
         }
         else {
             villager.moveTo(X, Y, Z);
-            LOGGER.info("Mob is moved to right place");
+         //   LOGGER.info("Mob is moved to right place");
             world.addFreshEntity(villager);
-            LOGGER.info("Mob is add");
+        //    LOGGER.info("Mob is add");
         }
     }
 }

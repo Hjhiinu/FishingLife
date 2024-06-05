@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "fishinglife:block/chopping_board" },
+    "facing=south": { "model": "fishinglife:block/chopping_board", "y": 180 },
+    "facing=west": { "model": "fishinglife:block/chopping_board", "y": 270 },
+    "facing=east": { "model": "fishinglife:block/chopping_board", "y": 90 }
+  }
+}

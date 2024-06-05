@@ -39,6 +39,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ModelFile.UncheckedModelFile(modLoc("block/fermenter")));
         simpleBlockWithItem(FishingLifeBlocksRegistry.FISHINGMACHINE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/fishingmachine")));
+        simpleBlockWithItem(FishingLifeBlocksRegistry.CHOPPING_BOARD.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/chopping_board")));
         //Crop  Blocks
         makeScallionCrop((CropBlock) FishingLifeBlocksRegistry.SCALLION_CROP.get(), "scallion_stage", "scallion_stage");
         makeGreenPepperCrop((CropBlock) FishingLifeBlocksRegistry.GREEN_PEPPER_CROP.get(), "green_pepper_stage", "green_pepper_stage");

@@ -188,8 +188,18 @@
   "item.fishinglife.medium_net_with_ultimate_baits": "使用终极鱼饵的中型渔网捕获",
   "item.fishinglife.large_net_with_ultimate_baits": "使用终极鱼饵的大型渔网捕获",
 
+  "item.fishinglife.fish_gill": "鱼鳃",
+  "item.fishinglife.fish_fin": "鱼鳍",
+  "item.fishinglife.fish_roe": "鱼卵",
+  "item.fishinglife.fish_scale": "鱼鳞",
+
+  "item.fishinglife.iron_fish_processing_knife": "铁制鱼类处理刀",
+  "item.fishinglife.diamond_fish_processing_knife": "钻石制鱼类处理刀",
+
   "block.fishinglife.fermenter": "发酵器",
   "block.fishinglife.fishingmachine": "钓鱼机器",
+  "block.fishinglife.chopping_board": "砧板",
+
 
   "block.fishinglife.jungle_fisherman_workbench": "丛林渔夫工作台",
   "block.fishinglife.general_fisherman_workbench": "通用渔夫工作台",
@@ -215,6 +225,7 @@
 
   "fishinglife.Quality.quality": "品质：%s",
   "fishinglife.Age.age": "年龄：%s年",
+  "fishinglife.Completeness.completeness": "完整程度: %s",
   "key.category.fishinglife.fishing": "钓鱼生活 钓鱼游戏",
   "key.fishinglife.fishing_left": "钓鱼生活 钓鱼游戏控制往左",
   "key.fishinglife.fishing_right": "钓鱼生活 钓鱼游戏控制往右",

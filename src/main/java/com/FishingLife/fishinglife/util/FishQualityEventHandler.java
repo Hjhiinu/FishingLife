@@ -61,32 +61,6 @@ public class FishQualityEventHandler{
         }
 
     }
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void onTooltip(ItemTooltipEvent event) {
-        ItemStack stack = event.getItemStack();
-        if (!stack.isEmpty() && stack != null && stack.hasTag() && stack.getTag() != null) {
-
-            if (stack.getTag().contains("Quality")) {
-                String quality = stack.getTag().getString("Quality");
-                /*
-                double age = stack.getTag().getDouble("Age");
-                BigDecimal bd = new BigDecimal(age);
-                bd = bd.round(new MathContext(3));
-*/
-
-
-                MutableComponent string = Component.translatable("fishinglife.Quality.quality",quality);
-                event.getToolTip().add(string.withStyle(string.getStyle().withItalic(true).withColor(ChatFormatting.DARK_AQUA)));
-
-               // MutableComponent decimalAge = Component.translatable("fishinglife.Age.age",bd);
-                //event.getToolTip().add(decimalAge.withStyle(decimalAge.getStyle().withItalic(true).withColor(ChatFormatting.YELLOW)));
-
-            }
-        }
-    }
-
-
 
     public static void assignCertainQuality(ItemStack object, int quality){
         if (object.isEmpty()) {
@@ -97,16 +71,11 @@ public class FishQualityEventHandler{
         }
         CompoundTag tag = object.getTag();
         if(tag != null) {
-            if (quality == 1) {
-
-                tag.putString("Quality", "Common");
-            } else if (quality == 2) {
-                tag.putString("Quality", "Rare");
-            } else if (quality == 3) {
-                tag.putString("Quality", "Special");
-            }
-            else{
-                tag.putString("Quality", "Extraordinary");
+            switch (quality) {
+                case 1 -> tag.putString("Quality", "Common");
+                case 2 -> tag.putString("Quality", "Rare");
+                case 3 -> tag.putString("Quality", "Special");
+                default -> tag.putString("Quality", "Extraordinary");
             }
         }
     }

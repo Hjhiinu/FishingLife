@@ -21,6 +21,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ModTags.Items.FISH_PROCESSING_KNIFE)
+                .add(FishingLifeItemsRegistry.IRON_FISH_PROCESSING_KNIFE.get(),
+                        FishingLifeItemsRegistry.DIAMOND_FISH_PROCESSING_KNIFE.get());
+
         this.tag(ModTags.Items.FISHING_TRASH)
                 .add(Items.LEATHER_BOOTS,
                         Items.LEATHER,

@@ -185,6 +185,7 @@ public class FishingLifeCreativeTabs {
                         //Blocks
                         pOutput.accept(FishingLifeBlocksRegistry.FERMENTER.get());//Fermenter
                         pOutput.accept(FishingLifeBlocksRegistry.FISHINGMACHINE.get());//Fishing Machine
+                        pOutput.accept(FishingLifeBlocksRegistry.CHOPPING_BOARD.get());
 
                         pOutput.accept(FishingLifeBlocksRegistry.JUNGLE_FISHERMAN_WORKBENCH.get());
                         pOutput.accept(FishingLifeBlocksRegistry.GENERAL_FISHERMAN_WORKBENCH.get());
@@ -198,7 +199,15 @@ public class FishingLifeCreativeTabs {
                         //Material
                         pOutput.accept(FishingLifeItemsRegistry.REINFORCED_PLASTIC.get());
 
+                        //Fish Components
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_GILL.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_ROE.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_FIN.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FISH_SCALE.get());
 
+                        //Knife
+                        pOutput.accept(FishingLifeItemsRegistry.IRON_FISH_PROCESSING_KNIFE.get());
+                        pOutput.accept(FishingLifeItemsRegistry.DIAMOND_FISH_PROCESSING_KNIFE.get());
 
 
                         pOutput.accept(FishingLifeItemsRegistry.BASIC_BAITS.get());

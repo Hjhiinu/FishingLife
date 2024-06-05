@@ -24,7 +24,10 @@ public class ModBlockEntities {
                             FishingLifeBlocksRegistry.FISHINGMACHINE.get()).build(null));
 
 
-
+    public static final RegistryObject<BlockEntityType<ChoppingBoardBlockEntity>> CHOPPING_BOARD_PROCESS_BE =
+            BLOCK_ENTITIES.register("chopping_board_process_be", () ->
+                    BlockEntityType.Builder.of(ChoppingBoardBlockEntity::new,
+                            FishingLifeBlocksRegistry.CHOPPING_BOARD.get()).build(null));
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
