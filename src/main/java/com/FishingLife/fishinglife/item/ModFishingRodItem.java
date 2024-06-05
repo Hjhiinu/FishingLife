@@ -4,6 +4,7 @@ import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
+import com.FishingLife.fishinglife.util.ModTags;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -33,6 +34,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Collections;
 import java.util.List;
+
+import static com.FishingLife.fishinglife.item.ItemUtil.FishingRodItemTickevent.general_fishing_ending;
 
 public class ModFishingRodItem extends FishingRodItem {
     private static final Logger LOGGER = LogManager.getLogger();
@@ -95,8 +98,14 @@ public class ModFishingRodItem extends FishingRodItem {
                             pPlayer.fishing.discard();
                         }//fishing game
                         else {
-                           FishingGameFishLogicHandler.tension_init();
-                            fishingrodPlayerDataUtil.setGameflag(true);
+                            if(list.get(0).is(ModTags.Items.MODFISH)) {
+                                FishingGameFishLogicHandler.tension_init();
+                                fishingrodPlayerDataUtil.setGameflag(true);
+                            }
+                            else{
+                                general_fishing_ending(pPlayer,0);
+                                return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+                            }
                         }
                     }
                     if (pPlayer.fishing.onGround()) {

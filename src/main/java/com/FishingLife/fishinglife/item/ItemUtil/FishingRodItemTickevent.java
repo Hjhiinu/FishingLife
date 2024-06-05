@@ -178,4 +178,45 @@ public class FishingRodItemTickevent {
         }
         finish(pPlayer,i);
     }
+
+    public static void general_fishing_ending(Player pPlayer, int init){
+        int i=0;
+        if (!fishingrodPlayerDataUtil.getlevel().isClientSide) {
+            if (!pPlayer.fishing.level().isClientSide && pPlayer != null && !shouldStopFishing(pPlayer, pPlayer.fishing)) {
+                LOGGER.info("PROCEED TO CUSTOM FISHING");
+                net.minecraftforge.event.entity.player.ItemFishedEvent new_event = new ItemFishedEvent(fishingrodPlayerDataUtil.getFishedItemList(), pPlayer.fishing.onGround() ? 2 : 1, pPlayer.fishing);
+                net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new_event);
+                LOGGER.info("POST ITEMFISHED EVENT");
+                if (new_event.isCanceled()) {
+                    LOGGER.info("ITEMFISHED EVENT CANCELLED OR FINISHED");
+                    i = new_event.getRodDamage();
+                    if (i==1) {   //Default: i=1 means getting fish
+                        pPlayer.level().addFreshEntity(new ExperienceOrb(pPlayer.level(), pPlayer.getX(), pPlayer.getY() + 0.5D, pPlayer.getZ() + 0.5D, pPlayer.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
+                        pPlayer.awardStat(Stats.FISH_CAUGHT, 1);
+                    }
+                }
+                else {
+                    CriteriaTriggers.FISHING_ROD_HOOKED.trigger((ServerPlayer) pPlayer, fishingrodPlayerDataUtil.getitemstack(), pPlayer.fishing, fishingrodPlayerDataUtil.getFishedItemList());
+                    for (ItemStack itemstack : fishingrodPlayerDataUtil.getFishedItemList()) {
+                        ItemEntity itementity = new ItemEntity(pPlayer.fishing.level(), pPlayer.fishing.getX(), pPlayer.fishing.getY(), pPlayer.fishing.getZ(), itemstack);
+                        double d0 = pPlayer.getX() - pPlayer.fishing.getX();
+                        double d1 = pPlayer.getY() - pPlayer.fishing.getY();
+                        double d2 = pPlayer.getZ() - pPlayer.fishing.getZ();
+                        double d3 = 0.1D;
+                        itementity.setDeltaMovement(d0 * 0.1D, d1 * 0.1D + Math.sqrt(Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2)) * 0.08D, d2 * 0.1D);
+                        pPlayer.fishing.level().addFreshEntity(itementity);
+                        pPlayer.level().addFreshEntity(new ExperienceOrb(pPlayer.level(), pPlayer.getX(), pPlayer.getY() + 0.5D, pPlayer.getZ() + 0.5D, pPlayer.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
+                        if (itemstack.is(ItemTags.FISHES)) {
+                            pPlayer.awardStat(Stats.FISH_CAUGHT, 1);
+                        }
+                    }
+                    i = 1;
+                }
+            }
+        }
+        if(init!=0){
+            i=init;
+        }
+        finish(pPlayer,i);
+    }
 }

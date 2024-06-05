@@ -146,16 +146,6 @@ public class FishProcessingKnifeItem extends TieredItem implements Vanishable {
         return InteractionResult.PASS;
     }
 
-    private static void pushTagCopleteness(ItemStack stack){
-        if (!stack.hasTag()) {
-            stack.setTag(new CompoundTag());
-            LOGGER.info("Unusual method to obtain the fish");
-        }
-        CompoundTag tag = stack.getTag();
-        if(tag != null) {
-            tag.putString("Completeness", "Some parts are missing");
-        }
-    }
 }
 
 
