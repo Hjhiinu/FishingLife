@@ -27,15 +27,19 @@ public class ClientKeyBindingEvent {
             }
             if(KeyBinding.LEFT_TENSION_KEY.consumeClick()) {
                 Player pPlayer= fishingrodPlayerDataUtil.getplayer();
-                pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
-                   fishing.subFishingline_strength(3);
-                });
+                if(pPlayer!=null) {
+                    pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                        fishing.subFishingline_strength(3);
+                    });
+                }
             }
             if(KeyBinding.RIGHT_TENSION_KEY.consumeClick()) {
                 Player pPlayer= fishingrodPlayerDataUtil.getplayer();
-                pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
-                    fishing.addFishingline_strength(3);
-                });
+                if(pPlayer!=null) {
+                    pPlayer.getCapability(IntegrationProvider.FISHING_INTEGRATION).ifPresent(fishing -> {
+                        fishing.addFishingline_strength(3);
+                    });
+                }
             }
         }
     }
