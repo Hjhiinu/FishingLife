@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-30T23:58:10.9587147	Tags for minecraft:item mod id fishinglife
+// 1.20.1	2024-06-09T22:18:11.8972198	Tags for minecraft:item mod id fishinglife
 f8ce4a6884207ff10a62f3c41350ff7e1b23b88e data/fishinglife/tags/items/big_fishes.json
 047229c8aee91d7b22d4b1bd690bbf3bbb4123fb data/fishinglife/tags/items/cave_fishes.json
 9b526c3c9fce551d7433a28b2742d123f2448ebd data/fishinglife/tags/items/cold_ocean_fishes.json
@@ -20,3 +20,4 @@ cc422da1b39fde4a956fde799a1c7d900a7b0cdc data/fishinglife/tags/items/sea_urchin.
 c4458a2e033fe9ae00a1f0f70c84097d37875821 data/fishinglife/tags/items/swamp_fishes.json
 f21418fc4f4f09b7a158927edd2782e3f16f5e27 data/fishinglife/tags/items/temperate_fishes.json
 02d7b89e82aeb191a4ca17f4e1f8e64c006d84e9 data/fishinglife/tags/items/warm_ocean_fishes.json
+9eaa8bc16512dbf3fe1f136cdda7ee8adc66e2b5 data/minecraft/tags/items/trimmable_armor.json

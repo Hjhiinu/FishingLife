@@ -1,5 +1,10 @@
 {
-
+  "item.fishinglife.chainmail_piece": "Chainmail Piece",
+  "item.fishinglife.scale_helmet": "Scale Helmet",
+  "item.fishinglife.scale_chestplate": "Scale Chestplate",
+  "item.fishinglife.scale_leggings": "Scale Leggings",
+  "item.fishinglife.scale_boots": "Scale Boots",
+  "item.fishinglife.advanced_turtle_shell": "Turtle Gill Shell",
 
   "item.fishinglife.arapaima_gigas": "Arapaima Gigas",
   "item.fishinglife.silver_arowana": "Silver Arowana",

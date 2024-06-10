@@ -1,4 +1,11 @@
 {
+  "item.fishinglife.chainmail_piece": "锁链甲片",
+  "item.fishinglife.scale_helmet": "鱼鳞头盔",
+  "item.fishinglife.scale_chestplate": "鱼鳞胸甲",
+  "item.fishinglife.scale_leggings": "鱼鳞护腿",
+  "item.fishinglife.scale_boots": "鱼鳞靴子",
+  "item.fishinglife.advanced_turtle_shell": "龟鳃头盔",
+
   "item.fishinglife.arapaima_gigas": "巨骨舌鱼",
   "item.fishinglife.silver_arowana": "银龙鱼",
   "item.fishinglife.brycon_hilarii": "大鳞石脂鲤",

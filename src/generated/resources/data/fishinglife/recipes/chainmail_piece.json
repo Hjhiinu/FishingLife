@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:iron_nugget"
+    },
+    "W": {
+      "item": "fishinglife:fish_scale"
+    }
+  },
+  "pattern": [
+    "SWS"
+  ],
+  "result": {
+    "item": "fishinglife:chainmail_piece"
+  },
+  "show_notification": true
+}

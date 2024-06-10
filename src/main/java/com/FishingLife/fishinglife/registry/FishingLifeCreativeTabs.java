@@ -209,7 +209,17 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.IRON_FISH_PROCESSING_KNIFE.get());
                         pOutput.accept(FishingLifeItemsRegistry.DIAMOND_FISH_PROCESSING_KNIFE.get());
 
+                        //Armor Related Items
+                        pOutput.accept(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get());
 
+                        //Armor
+                        pOutput.accept(FishingLifeItemsRegistry.SCALE_HELMET.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SCALE_CHESTPLATE.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SCALE_LEGGINGS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SCALE_BOOTS.get());
+
+                        pOutput.accept(FishingLifeItemsRegistry.ADVANCED_TURTLE_SHELL.get());
+                        //Bait
                         pOutput.accept(FishingLifeItemsRegistry.BASIC_BAITS.get());
                         pOutput.accept(FishingLifeItemsRegistry.ADVANCED_BAITS.get());
                         pOutput.accept(FishingLifeItemsRegistry.PREMIUM_BAITS.get());

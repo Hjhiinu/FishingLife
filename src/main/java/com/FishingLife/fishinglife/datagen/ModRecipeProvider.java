@@ -31,6 +31,71 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
         //Shaped
+        //Armor
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_HELMET)
+                .pattern("KKK")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.CHAINMAIL_PIECE.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()), has(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_BOOTS)
+                .pattern("K K")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.CHAINMAIL_PIECE.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()), has(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_LEGGINGS)
+                .pattern("KKK")
+                .pattern("K K")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.CHAINMAIL_PIECE.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()), has(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_CHESTPLATE)
+                .pattern("K K")
+                .pattern("KKK")
+                .pattern("KKK")
+                .define('K', FishingLifeItemsRegistry.CHAINMAIL_PIECE.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()), has(FishingLifeItemsRegistry.CHAINMAIL_PIECE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, FishingLifeItemsRegistry.SCALE_HELMET.get())
+                .pattern("KKK")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.FISH_GILL.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_GILL.get()), has(FishingLifeItemsRegistry.FISH_GILL.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, FishingLifeItemsRegistry.SCALE_BOOTS.get())
+                .pattern("K K")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.FISH_GILL.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_GILL.get()), has(FishingLifeItemsRegistry.FISH_GILL.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, FishingLifeItemsRegistry.SCALE_LEGGINGS.get())
+                .pattern("KKK")
+                .pattern("K K")
+                .pattern("K K")
+                .define('K', FishingLifeItemsRegistry.FISH_GILL.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_GILL.get()), has(FishingLifeItemsRegistry.FISH_GILL.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, FishingLifeItemsRegistry.SCALE_CHESTPLATE.get())
+                .pattern("K K")
+                .pattern("KKK")
+                .pattern("KKK")
+                .define('K', FishingLifeItemsRegistry.FISH_GILL.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_GILL.get()), has(FishingLifeItemsRegistry.FISH_GILL.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, FishingLifeItemsRegistry.ADVANCED_TURTLE_SHELL.get())
+                .pattern(" W ")
+                .pattern("QKQ")
+                .define('Q', FishingLifeItemsRegistry.FISH_GILL.get())
+                .define('K', Items.TURTLE_HELMET)
+                .define('W', FishingLifeItemsRegistry.REINFORCED_PLASTIC.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_GILL.get()), has(FishingLifeItemsRegistry.FISH_GILL.get()))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.REINFORCED_PLASTIC.get()), has(FishingLifeItemsRegistry.REINFORCED_PLASTIC.get()))
+                .unlockedBy(getHasName(Items.TURTLE_HELMET), has(Items.TURTLE_HELMET))
+                .save(pWriter);
 
         //Fishing net
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FishingLifeItemsRegistry.SMALL_FISHING_NET.get())
@@ -139,7 +204,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('Q', Items.SAND)
                 .unlockedBy(getHasName(FishingLifeItemsRegistry.PLASTIC_TRASH.get()), has(FishingLifeItemsRegistry.PLASTIC_TRASH.get()))
                 .save(pWriter);
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, FishingLifeItemsRegistry.CHAINMAIL_PIECE.get())
+                .pattern("SWS")
+                .define('S', Items.IRON_NUGGET)
+                .define('W', FishingLifeItemsRegistry.FISH_SCALE.get())
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_SCALE.get()), has(FishingLifeItemsRegistry.FISH_SCALE.get()))
+                .save(pWriter);
 
 
 

@@ -11,6 +11,7 @@ import com.FishingLife.fishinglife.entity.ModEntity;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
+import com.FishingLife.fishinglife.registry.FishingLifePotionRecipeRegistry;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -72,6 +73,7 @@ public class fishinglife
         ModRecipes.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModEntity.register(modEventBus);
+        modEventBus.register(FishingLifePotionRecipeRegistry.class);
 
 
 
@@ -92,6 +94,7 @@ public class fishinglife
     {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
+        FishingLifePotionRecipeRegistry.registerBrewingRecipes();
 
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
@@ -114,6 +117,7 @@ public class fishinglife
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
+
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

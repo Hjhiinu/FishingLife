@@ -3,6 +3,7 @@ package com.FishingLife.fishinglife.registry;
 import com.FishingLife.fishinglife.fishinglife;
 import com.FishingLife.fishinglife.item.FishProcessingKnifeItem;
 import com.FishingLife.fishinglife.item.LootNetItem;
+import com.FishingLife.fishinglife.item.ModArmorMaterials;
 import com.FishingLife.fishinglife.item.ModFishingRodItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.food.FoodProperties;
@@ -15,6 +16,22 @@ public class FishingLifeItemsRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, fishinglife.MOD_ID);
+
+    //Armor Related Items
+    public static final RegistryObject<Item> CHAINMAIL_PIECE = ITEMS.register("chainmail_piece", () -> new Item(new Item.Properties()));
+
+    //Armor
+    public static final RegistryObject<Item> SCALE_HELMET = ITEMS.register("scale_helmet",
+            () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SCALE_CHESTPLATE = ITEMS.register("scale_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SCALE_LEGGINGS = ITEMS.register("scale_leggings",
+            () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SCALE_BOOTS = ITEMS.register("scale_boots",
+            () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> ADVANCED_TURTLE_SHELL = ITEMS.register("advanced_turtle_shell",
+            () -> new ArmorItem(ModArmorMaterials.ADVANCED_TURTLE_SHELL, ArmorItem.Type.HELMET, new Item.Properties()));
+
     //Fishing Rods
 
 
@@ -296,8 +313,8 @@ public class FishingLifeItemsRegistry {
     //Tool
 
     //Knife
-    public static final RegistryObject<Item> IRON_FISH_PROCESSING_KNIFE = ITEMS.register("iron_fish_processing_knife", () -> new FishProcessingKnifeItem( Tiers.IRON,1.5F,-2.8F, new Item.Properties().defaultDurability(80)));
-    public static final RegistryObject<Item> DIAMOND_FISH_PROCESSING_KNIFE = ITEMS.register("diamond_fish_processing_knife", () -> new FishProcessingKnifeItem(Tiers.DIAMOND, 1.5F,-2.8F, new Item.Properties().defaultDurability(90)));
+    public static final RegistryObject<Item> IRON_FISH_PROCESSING_KNIFE = ITEMS.register("iron_fish_processing_knife", () -> new FishProcessingKnifeItem( Tiers.IRON,-1.5F,-1.5F, new Item.Properties().defaultDurability(80)));
+    public static final RegistryObject<Item> DIAMOND_FISH_PROCESSING_KNIFE = ITEMS.register("diamond_fish_processing_knife", () -> new FishProcessingKnifeItem(Tiers.DIAMOND, -2F,-1.5F, new Item.Properties().defaultDurability(90)));
 
     //Fish components
     public static final RegistryObject<Item> FISH_ROE = ITEMS.register("fish_roe",()->new Item(new Item.Properties()));
