@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": {
+      "item": "minecraft:turtle_helmet"
+    },
+    "Q": {
+      "item": "fishinglife:fish_gill"
+    },
+    "W": {
+      "item": "fishinglife:reinforced_plastic"
+    }
+  },
+  "pattern": [
+    " W ",
+    "QKQ"
+  ],
+  "result": {
+    "item": "fishinglife:advanced_turtle_shell"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fish_gill": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_gill"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_reinforced_plastic": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:reinforced_plastic"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:advanced_turtle_shell"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_turtle_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:turtle_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_fish_gill",
+      "has_reinforced_plastic",
+      "has_turtle_helmet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:advanced_turtle_shell"
+    ]
+  },
+  "sends_telemetry_event": false
+}

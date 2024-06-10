@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": {
+      "item": "fishinglife:fish_gill"
+    }
+  },
+  "pattern": [
+    "K K",
+    "K K"
+  ],
+  "result": {
+    "item": "fishinglife:scale_boots"
+  },
+  "show_notification": true
+}

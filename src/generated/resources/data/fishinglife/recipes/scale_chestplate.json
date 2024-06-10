@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": {
+      "item": "fishinglife:fish_gill"
+    }
+  },
+  "pattern": [
+    "K K",
+    "KKK",
+    "KKK"
+  ],
+  "result": {
+    "item": "fishinglife:scale_chestplate"
+  },
+  "show_notification": true
+}

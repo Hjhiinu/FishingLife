@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "K": {
+      "item": "fishinglife:fish_gill"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "K K"
+  ],
+  "result": {
+    "item": "fishinglife:scale_helmet"
+  },
+  "show_notification": true
+}
