@@ -8,6 +8,7 @@ import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
 
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.entity.ModEntity;
+import com.FishingLife.fishinglife.item.ArmorItem.ArmorEffectHandler;
 import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
 import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
@@ -74,8 +75,7 @@ public class fishinglife
         ModVillagers.register(modEventBus);
         ModEntity.register(modEventBus);
         modEventBus.register(FishingLifePotionRecipeRegistry.class);
-
-
+        MinecraftForge.EVENT_BUS.register(new ArmorEffectHandler());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,6 +1,7 @@
 package com.FishingLife.fishinglife.registry;
 
 import com.FishingLife.fishinglife.fishinglife;
+import com.FishingLife.fishinglife.item.ArmorItem.FullArmors;
 import com.FishingLife.fishinglife.item.FishProcessingKnifeItem;
 import com.FishingLife.fishinglife.item.LootNetItem;
 import com.FishingLife.fishinglife.item.ModArmorMaterials;
@@ -22,7 +23,7 @@ public class FishingLifeItemsRegistry {
 
     //Armor
     public static final RegistryObject<Item> SCALE_HELMET = ITEMS.register("scale_helmet",
-            () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.HELMET, new Item.Properties()));
+            () -> new FullArmors(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> SCALE_CHESTPLATE = ITEMS.register("scale_chestplate",
             () -> new ArmorItem(ModArmorMaterials.FISH_SCALE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> SCALE_LEGGINGS = ITEMS.register("scale_leggings",

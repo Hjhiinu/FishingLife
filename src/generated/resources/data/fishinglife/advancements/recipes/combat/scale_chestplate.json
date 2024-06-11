@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_fish_gill": {
+    "has_fish_scale": {
       "conditions": {
         "items": [
           {
             "items": [
-              "fishinglife:fish_gill"
+              "fishinglife:fish_scale"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_fish_gill",
+      "has_fish_scale",
       "has_the_recipe"
     ]
   ],
