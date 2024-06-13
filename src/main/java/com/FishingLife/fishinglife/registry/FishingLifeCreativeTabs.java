@@ -127,6 +127,11 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.JUNGLEFISH_COLLECTION.get()); // Junglefish Collection
                         pOutput.accept(FishingLifeItemsRegistry.OCEAN_COLLECTION.get());
 
+                        //Banner Pattern Item
+                        pOutput.accept(FishingLifeItemsRegistry.ANCHOR_PATTERN_ITEM.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SHIP_PATTERN_ITEM.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SEASHELL_PATTERN_ITEM.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PIRATE_PATTERN_ITEM.get());
                         // Seeds
                         pOutput.accept(FishingLifeItemsRegistry.SCALLION_SEEDS.get());//Scallion seeds
                         pOutput.accept(FishingLifeItemsRegistry.GREEN_PEPPER_SEEDS.get());//Green pepper seeds

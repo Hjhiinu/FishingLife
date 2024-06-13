@@ -2,6 +2,8 @@ package com.FishingLife.fishinglife.entity;
 
 import com.google.common.collect.Sets;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerData;
@@ -48,6 +50,10 @@ public class NewVillager extends Villager {
                 pGivenMerchantOffers.add(merchantoffer);
             }
         }
+    }
+    @Override
+    public NewVillager getBreedOffspring(ServerLevel serverLevel, AgeableMob ageable) {
+        return ModEntity.NEWVILLAGER.get().create(serverLevel);
     }
 
 

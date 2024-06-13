@@ -1,13 +1,28 @@
 package com.FishingLife.fishinglife.util;
 
 import com.FishingLife.fishinglife.fishinglife;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BannerPatternTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.entity.BannerPattern;
 
 
 public class ModTags {
+    public static class BannersPattern {
+        public static final TagKey<BannerPattern> ANCHOR_PATTERN_TAG = tag("anchor_pattern_tag");
+        public static final TagKey<BannerPattern> SHIP_PATTERN_TAG = tag("ship_pattern_tag");
+        public static final TagKey<BannerPattern> SEASHELL_PATTERN_TAG = tag("seashell_pattern_tag");
+        public static final TagKey<BannerPattern> PIRATE_PATTERN_TAG = tag("pirate_pattern_tag");
+        private static TagKey<BannerPattern> tag(String name) {
+            return ModTags.BannersPattern.create(name);
+        }
+        private static TagKey<BannerPattern> create(String pName) {
+            return TagKey.create(Registries.BANNER_PATTERN, new ResourceLocation(pName));
+        }
+    }
     public static class Items {
 
         public static final TagKey<Item> MODFISH = tag("modfish");
@@ -41,7 +56,7 @@ public class ModTags {
 
         public static final TagKey<Item> SHRIMP=tag("shrimp");
 
-            public static final TagKey<Item> FISHING_TRASH = tag("fishing_trash");
+        public static final TagKey<Item> FISHING_TRASH = tag("fishing_trash");
 
         public static final TagKey<Item> CAVE_FISHES = tag("cave_fishes");
 

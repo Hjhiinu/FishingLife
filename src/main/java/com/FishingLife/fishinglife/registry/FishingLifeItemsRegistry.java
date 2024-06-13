@@ -6,6 +6,7 @@ import com.FishingLife.fishinglife.item.FishProcessingKnifeItem;
 import com.FishingLife.fishinglife.item.LootNetItem;
 import com.FishingLife.fishinglife.item.ModArmorMaterials;
 import com.FishingLife.fishinglife.item.ModFishingRodItem;
+import com.FishingLife.fishinglife.util.ModTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -17,6 +18,17 @@ public class FishingLifeItemsRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, fishinglife.MOD_ID);
+    //Banner
+    public static final RegistryObject<BannerPatternItem> ANCHOR_PATTERN_ITEM = ITEMS.register("anchor_pattern_item",
+            () -> new BannerPatternItem(ModTags.BannersPattern.ANCHOR_PATTERN_TAG, new Item.Properties()));
+    public static final RegistryObject<BannerPatternItem> SHIP_PATTERN_ITEM = ITEMS.register("ship_pattern_item",
+            () -> new BannerPatternItem(ModTags.BannersPattern.SHIP_PATTERN_TAG, new Item.Properties()));
+
+    public static final RegistryObject<BannerPatternItem> PIRATE_PATTERN_ITEM = ITEMS.register("pirate_pattern_item",
+            () -> new BannerPatternItem(ModTags.BannersPattern.PIRATE_PATTERN_TAG, new Item.Properties()));
+
+    public static final RegistryObject<BannerPatternItem> SEASHELL_PATTERN_ITEM = ITEMS.register("seashell_pattern_item",
+            () -> new BannerPatternItem(ModTags.BannersPattern.SEASHELL_PATTERN_TAG, new Item.Properties()));
 
     //Armor Related Items
     public static final RegistryObject<Item> CHAINMAIL_PIECE = ITEMS.register("chainmail_piece", () -> new Item(new Item.Properties()));

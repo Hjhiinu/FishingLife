@@ -1,0 +1,5 @@
+// 1.20.1	2024-06-12T22:29:38.0606709	Tags for minecraft:banner_pattern mod id fishinglife
+bcc1f0fdbe49ba60c1405d8a6c46c27c8606898b data/minecraft/tags/banner_pattern/anchor_pattern_tag.json
+4e1b7c7b095479737e6ad4946c18e51e58e537af data/minecraft/tags/banner_pattern/pirate_pattern_tag.json
+86cd20998d1dfb3eb0ac25765bddc4d8d86e88c9 data/minecraft/tags/banner_pattern/seashell_pattern_tag.json
+fef7f77a33a6591e14308b9fe8ffc336a1e763d8 data/minecraft/tags/banner_pattern/ship_pattern_tag.json

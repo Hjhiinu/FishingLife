@@ -9,10 +9,7 @@ import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.entity.ModEntity;
 import com.FishingLife.fishinglife.item.ArmorItem.ArmorEffectHandler;
-import com.FishingLife.fishinglife.registry.FishingLifeBlocksRegistry;
-import com.FishingLife.fishinglife.registry.FishingLifeCreativeTabs;
-import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
-import com.FishingLife.fishinglife.registry.FishingLifePotionRecipeRegistry;
+import com.FishingLife.fishinglife.registry.*;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -74,6 +71,7 @@ public class fishinglife
         ModRecipes.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModEntity.register(modEventBus);
+        ModBannerPatterns.register(modEventBus);
         modEventBus.register(FishingLifePotionRecipeRegistry.class);
         MinecraftForge.EVENT_BUS.register(new ArmorEffectHandler());
 
