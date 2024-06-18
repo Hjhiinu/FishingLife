@@ -13,6 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
@@ -30,15 +31,19 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.fml.ModList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import static com.FishingLife.fishinglife.item.ItemUtil.FishingRodItemTickevent.general_fishing_ending;
+import static com.FishingLife.fishinglife.item.ItemUtil.FishingRodItemTickevent.stop;
 
 public class ModFishingRodItem extends FishingRodItem {
     private static final Logger LOGGER = LogManager.getLogger();
+    private static final Random random = new Random();
     public ModFishingRodItem(Properties pProperties) {
         super(pProperties);
     }
@@ -72,22 +77,30 @@ public class ModFishingRodItem extends FishingRodItem {
                         //Generate the fished item before the game. (It is a little bit unrealistic)
                         LootParams lootparams = (new LootParams.Builder((ServerLevel) pPlayer.fishing.level())).withParameter(LootContextParams.ORIGIN, pPlayer.fishing.position()).withParameter(LootContextParams.TOOL, fishingrodPlayerDataUtil.getitemstack()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withParameter(LootContextParams.KILLER_ENTITY, pPlayer.fishing.getOwner()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withLuck((float) fishingrodPlayerDataUtil.getluck() + pPlayer.getLuck()).create(LootContextParamSets.FISHING);   //luck should also be localized
                         ResourceLocation loot =null;
-                        if(itemstack.is(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())){
+                        int number =1; //Fishinglife
+                        if(ModList.get().isLoaded("aquaculture")){
+                           number= 2;//generateOneOrTwo();
+                        }
+                        switch (number) {
+                            case 1 -> { //FishingLife
+                                if (itemstack.is(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())) {
 
-                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/professional_fishing_rod/professional_fishingrod_fishing");
-                        }
-                        else if(itemstack.is(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())){
+                                    loot = new ResourceLocation("fishinglife", "gameplay/fishing/professional_fishing_rod/professional_fishingrod_fishing");
+                                } else if (itemstack.is(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())) {
 
-                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/elite_fishing_rod/elite_fishingrod_fishing");
+                                    loot = new ResourceLocation("fishinglife", "gameplay/fishing/elite_fishing_rod/elite_fishingrod_fishing");
+                                } else if (itemstack.is(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get())) {
+                                    loot = new ResourceLocation("fishinglife", "gameplay/fishing/master_fishing_rod/master_fishingrod_fishing");
+                                } else {
+                                    throw new IllegalStateException("(Fishing loot table) No loot table");
+                                }
+                            }
+                            case 2 ->//If other fishing mod exists
+                                    loot = new ResourceLocation("fishinglife", "gameplay/compat_fishing/fishing");
+                            default ->
+                                    throw new IllegalStateException("(Fishing loot table) Unexpected value: " + number);
                         }
-                        else if(itemstack.is(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get())){
-                            loot = new ResourceLocation("fishinglife", "gameplay/fishing/master_fishing_rod/master_fishingrod_fishing");
-                        }
-                        else{
-                            LOGGER.info("Errors on fishing loot table");
-                            //LootTable loottable = pPlayer.fishing.level().getServer().getLootData().getLootTable(BuiltInLootTables.FISHING);
-                            //list = loottable.getRandomItems(lootparams);
-                        }
+
                         LootTable loottable = ((ServerLevel) pPlayer.fishing.level()).getServer().getLootData().getLootTable(loot);
                         List<ItemStack> list = loottable.getRandomItems(lootparams);
                         LOGGER.info("LIST:" + list);
@@ -98,7 +111,7 @@ public class ModFishingRodItem extends FishingRodItem {
                             pPlayer.fishing.discard();
                         }//fishing game
                         else {
-                            if(list.get(0).is(ModTags.Items.MODFISH)) {
+                            if(list.get(0).is(ModTags.Items.MODFISH)||list.get(0).is(ModTags.Items.COMPAT_FISH)||list.get(0).is(ItemTags.FISHES)){
                                 FishingGameFishLogicHandler.tension_init();
                                 fishingrodPlayerDataUtil.setGameflag(true);
                             }
@@ -145,22 +158,7 @@ public class ModFishingRodItem extends FishingRodItem {
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }
     private static boolean shouldStopFishing(Player pPlayer, FishingHook hook) {
-        LOGGER.info("SHOULD STOP- "+hook);
-        ItemStack itemstack = pPlayer.getMainHandItem();
-        ItemStack itemstack1 = pPlayer.getOffhandItem();
-        boolean flag = itemstack.canPerformAction(net.minecraftforge.common.ToolActions.FISHING_ROD_CAST);
-        boolean flag1 = itemstack1.canPerformAction(net.minecraftforge.common.ToolActions.FISHING_ROD_CAST);
-        if (!pPlayer.isRemoved() && pPlayer.isAlive() && (flag || flag1) && !(hook.distanceToSqr(pPlayer) > 1024.0D)) {
-            LOGGER.info("SHOULD STOP- false");
-            return false;
-        } else {
-            if(pPlayer.fishing!=null){
-                LOGGER.info("SHOULD STOP- hook discard true");
-                hook.discard();
-            }
-            LOGGER.info("SHOULD STOP- true");
-            return true;
-        }
+        return stop(pPlayer, hook, LOGGER);
     }
     private void pullEntity(Entity pEntity, FishingHook hook) {
         Entity entity = hook.getOwner();
@@ -168,6 +166,9 @@ public class ModFishingRodItem extends FishingRodItem {
             Vec3 vec3 = (new Vec3(entity.getX() - hook.getX(), entity.getY() - hook.getY(), entity.getZ() - hook.getZ())).scale(0.1D);
             pEntity.setDeltaMovement(pEntity.getDeltaMovement().add(vec3));
         }
+    }
+    public static int generateOneOrTwo() {
+        return random.nextInt(2) + 1;
     }
     private void reset(){
         fishingrodPlayerDataUtil.setplayer(null) ;

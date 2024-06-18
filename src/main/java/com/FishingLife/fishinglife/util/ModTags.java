@@ -24,6 +24,7 @@ public class ModTags {
         }
     }
     public static class Items {
+        public static final TagKey <Item> COMPAT_FISH = tag("compat_fish");
 
         public static final TagKey<Item> MODFISH = tag("modfish");
 

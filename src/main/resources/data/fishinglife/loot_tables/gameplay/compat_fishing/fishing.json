@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/compat_fishing/compat_fish",
+          "weight": 85
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/compat_fishing/compat_junk",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "fishinglife:gameplay/compat_fishing/compat_treasure",
+          "weight": 5
+        }
+      ]
+    }
+  ],
+  "random_sequence": "fishinglife:gameplay/compat_fishing/fishing"
+}

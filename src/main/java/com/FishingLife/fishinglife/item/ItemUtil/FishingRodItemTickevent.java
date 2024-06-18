@@ -105,23 +105,28 @@ public class FishingRodItemTickevent {
     }
 
     private static boolean shouldStopFishing(Player pPlayer, FishingHook hook) {
-        LOGGER.info("SHOULD STOP- "+hook);
+        return stop(pPlayer, hook, LOGGER);
+    }
+
+    public static boolean stop(Player pPlayer, FishingHook hook, Logger logger) {
+        logger.info("SHOULD STOP- "+hook);
         ItemStack itemstack = pPlayer.getMainHandItem();
         ItemStack itemstack1 = pPlayer.getOffhandItem();
         boolean flag = itemstack.canPerformAction(net.minecraftforge.common.ToolActions.FISHING_ROD_CAST);
         boolean flag1 = itemstack1.canPerformAction(net.minecraftforge.common.ToolActions.FISHING_ROD_CAST);
         if (!pPlayer.isRemoved() && pPlayer.isAlive() && (flag || flag1) && !(hook.distanceToSqr(pPlayer) > 1024.0D)) {
-            LOGGER.info("SHOULD STOP- false");
+            logger.info("SHOULD STOP- false");
             return false;
         } else {
             if(pPlayer.fishing!=null){
-                LOGGER.info("SHOULD STOP- hook discard true");
+                logger.info("SHOULD STOP- hook discard true");
                 hook.discard();
             }
-            LOGGER.info("SHOULD STOP- true");
+            logger.info("SHOULD STOP- true");
             return true;
         }
     }
+
     private static void finish(Player pPlayer, int i){
         pPlayer.fishing.discard();
         fishingrodPlayerDataUtil.getitemstack().hurtAndBreak(i, pPlayer, (p_41288_) -> {
@@ -139,11 +144,15 @@ public class FishingRodItemTickevent {
     private static void general_fishinggame_ending(Player pPlayer, int init){
         LOGGER.info("This is an TICK log message for end of fishing");
         setToDefault();
+        end(pPlayer, init);
+    }
+
+    private static void end(Player pPlayer, int init) {
         int i=0;
         if (!fishingrodPlayerDataUtil.getlevel().isClientSide) {
             if (!pPlayer.fishing.level().isClientSide && pPlayer != null && !shouldStopFishing(pPlayer, pPlayer.fishing)) {
                 LOGGER.info("PROCEED TO CUSTOM FISHING");
-                net.minecraftforge.event.entity.player.ItemFishedEvent new_event = new ItemFishedEvent(fishingrodPlayerDataUtil.getFishedItemList(), pPlayer.fishing.onGround() ? 2 : 1, pPlayer.fishing);
+                ItemFishedEvent new_event = new ItemFishedEvent(fishingrodPlayerDataUtil.getFishedItemList(), pPlayer.fishing.onGround() ? 2 : 1, pPlayer.fishing);
                 net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new_event);
                 LOGGER.info("POST ITEMFISHED EVENT");
                 if (new_event.isCanceled()) {
@@ -180,43 +189,6 @@ public class FishingRodItemTickevent {
     }
 
     public static void general_fishing_ending(Player pPlayer, int init){
-        int i=0;
-        if (!fishingrodPlayerDataUtil.getlevel().isClientSide) {
-            if (!pPlayer.fishing.level().isClientSide && pPlayer != null && !shouldStopFishing(pPlayer, pPlayer.fishing)) {
-                LOGGER.info("PROCEED TO CUSTOM FISHING");
-                net.minecraftforge.event.entity.player.ItemFishedEvent new_event = new ItemFishedEvent(fishingrodPlayerDataUtil.getFishedItemList(), pPlayer.fishing.onGround() ? 2 : 1, pPlayer.fishing);
-                net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new_event);
-                LOGGER.info("POST ITEMFISHED EVENT");
-                if (new_event.isCanceled()) {
-                    LOGGER.info("ITEMFISHED EVENT CANCELLED OR FINISHED");
-                    i = new_event.getRodDamage();
-                    if (i==1) {   //Default: i=1 means getting fish
-                        pPlayer.level().addFreshEntity(new ExperienceOrb(pPlayer.level(), pPlayer.getX(), pPlayer.getY() + 0.5D, pPlayer.getZ() + 0.5D, pPlayer.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
-                        pPlayer.awardStat(Stats.FISH_CAUGHT, 1);
-                    }
-                }
-                else {
-                    CriteriaTriggers.FISHING_ROD_HOOKED.trigger((ServerPlayer) pPlayer, fishingrodPlayerDataUtil.getitemstack(), pPlayer.fishing, fishingrodPlayerDataUtil.getFishedItemList());
-                    for (ItemStack itemstack : fishingrodPlayerDataUtil.getFishedItemList()) {
-                        ItemEntity itementity = new ItemEntity(pPlayer.fishing.level(), pPlayer.fishing.getX(), pPlayer.fishing.getY(), pPlayer.fishing.getZ(), itemstack);
-                        double d0 = pPlayer.getX() - pPlayer.fishing.getX();
-                        double d1 = pPlayer.getY() - pPlayer.fishing.getY();
-                        double d2 = pPlayer.getZ() - pPlayer.fishing.getZ();
-                        double d3 = 0.1D;
-                        itementity.setDeltaMovement(d0 * 0.1D, d1 * 0.1D + Math.sqrt(Math.sqrt(d0 * d0 + d1 * d1 + d2 * d2)) * 0.08D, d2 * 0.1D);
-                        pPlayer.fishing.level().addFreshEntity(itementity);
-                        pPlayer.level().addFreshEntity(new ExperienceOrb(pPlayer.level(), pPlayer.getX(), pPlayer.getY() + 0.5D, pPlayer.getZ() + 0.5D, pPlayer.fishing.random.nextInt(6) + 1));   //--edit random will cause multiple threads issues
-                        if (itemstack.is(ItemTags.FISHES)) {
-                            pPlayer.awardStat(Stats.FISH_CAUGHT, 1);
-                        }
-                    }
-                    i = 1;
-                }
-            }
-        }
-        if(init!=0){
-            i=init;
-        }
-        finish(pPlayer,i);
+        end(pPlayer, init);
     }
 }
