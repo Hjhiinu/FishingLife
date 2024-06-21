@@ -79,15 +79,13 @@ public class ModFishingRodItem extends FishingRodItem {
                         ResourceLocation loot =null;
                         int number =1; //Fishinglife
                         if(ModList.get().isLoaded("aquaculture")){
-                           number= 2;//generateOneOrTwo();
+                           number= generateOneOrTwo();
                         }
                         switch (number) {
                             case 1 -> { //FishingLife
                                 if (itemstack.is(FishingLifeItemsRegistry.PROFESSIONAL_FISHING_ROD.get())) {
-
                                     loot = new ResourceLocation("fishinglife", "gameplay/fishing/professional_fishing_rod/professional_fishingrod_fishing");
                                 } else if (itemstack.is(FishingLifeItemsRegistry.ELITE_FISHING_ROD.get())) {
-
                                     loot = new ResourceLocation("fishinglife", "gameplay/fishing/elite_fishing_rod/elite_fishingrod_fishing");
                                 } else if (itemstack.is(FishingLifeItemsRegistry.MASTER_FISHING_ROD.get())) {
                                     loot = new ResourceLocation("fishinglife", "gameplay/fishing/master_fishing_rod/master_fishingrod_fishing");

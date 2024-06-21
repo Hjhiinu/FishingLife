@@ -40,7 +40,7 @@ public class ArmorEffectHandler {
         ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
         if (helmet.getItem() instanceof ArmorItem armorItem && armorItem.getMaterial() == ModArmorMaterials.ADVANCED_TURTLE_SHELL) {
             if (player.isInWater()) {
-                applyEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING, 220, 0, false, false, true));
+                applyEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING, Integer.MAX_VALUE, 0, false, false, true));
             } else {
                 removeEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING));
             }
