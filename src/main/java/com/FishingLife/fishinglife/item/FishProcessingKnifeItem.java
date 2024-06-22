@@ -39,7 +39,6 @@ public class FishProcessingKnifeItem extends TieredItem implements Vanishable {
 
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
 
-    // private int Roughness;
     public FishProcessingKnifeItem(Tier pTier, float pAttackDamageModifier, float pAttackSpeedModifier, Item.Properties pProperties) {
         super(pTier, pProperties);
         this.attackDamageBaseline = pAttackDamageModifier + pTier.getAttackDamageBonus();
@@ -47,7 +46,6 @@ public class FishProcessingKnifeItem extends TieredItem implements Vanishable {
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", (double)this.attackDamageBaseline, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", (double)pAttackSpeedModifier, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
-        //   this.Roughness=0;
     }
     public float getAttackDamage() {
         return this.attackDamageBaseline;
@@ -90,22 +88,15 @@ public class FishProcessingKnifeItem extends TieredItem implements Vanishable {
         ItemStack itemStack = pPlayer.getItemInHand(InteractionHand.MAIN_HAND);
         ItemStack offhandItem = pPlayer.getItemInHand(InteractionHand.OFF_HAND);
         if (!pLevel.isClientSide&&!pPlayer.getCooldowns().isOnCooldown(this)) {
-
-
-            if (offhandItem.is(ModTags.Items.MODFISH)) {
-                giveItem(pPlayer,RandomProcess(offhandItem,pPlayer));
+            if (offhandItem.is(ModTags.Items.MODFISH)||offhandItem.is(ModTags.Items.COMPAT_FISH)) {
+                giveItem(pPlayer,RandomProcess(pPlayer));
                 itemStack.hurtAndBreak(2, pPlayer, (p) -> {
                     p.broadcastBreakEvent(InteractionHand.MAIN_HAND);
                 });
-                offhandItem.hurtAndBreak(60, pPlayer, (p) -> {
-                    p.broadcastBreakEvent(InteractionHand.OFF_HAND);
-                });
-               // LOGGER.info("Use");
+                offhandItem.shrink(1);
                 pPlayer.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
                 return InteractionResultHolder.success(itemStack);
             }
-
-
         }
         return InteractionResultHolder.pass(itemStack);
     }
@@ -118,50 +109,5 @@ public class FishProcessingKnifeItem extends TieredItem implements Vanishable {
         }
     }
 
-    public InteractionResult useOn(UseOnContext context) {
-        Level level = context.getLevel();
-        BlockPos pos = context.getClickedPos();
-        Player player = context.getPlayer();
-        ItemStack itemStack = context.getItemInHand();
-        Direction facing = context.getClickedFace();
-
-        if (!level.isClientSide && player!=null&&!player.getCooldowns().isOnCooldown(this)) {
-            if (level.getBlockEntity(pos) instanceof ChoppingBoardBlockEntity blockEntity) {
-                Direction direction = facing.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : facing;
-                ItemEntity itemEntity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction.getStepZ() * 0.65D, RandomProcess(blockEntity.getRenderStack(),player));
-                itemEntity.setDeltaMovement(0.05D * (double) direction.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction.getStepZ() + level.random.nextDouble() * 0.02D);
-                level.addFreshEntity(itemEntity);
-                player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);
-                if(player.isCreative()){
-                    return InteractionResult.SUCCESS;
-                }
-                blockEntity.decreaseStoredItemDurability(20);
-                itemStack.hurtAndBreak(2, player, (p) -> {
-                    p.broadcastBreakEvent(InteractionHand.MAIN_HAND);
-                });
-
-                return InteractionResult.SUCCESS;
-            }
-        }
-        return InteractionResult.PASS;
-    }
-
 }
-
-
-
-
-/*
-    public int getRoughness() {
-        return this.Roughness;
-    }
-
-    public void setRoughness(int roughness) {
-        this.Roughness = roughness;
-    }
-    public void IncreaseRoughness() {
-        this.Roughness++;
-    }
-
-     */
 

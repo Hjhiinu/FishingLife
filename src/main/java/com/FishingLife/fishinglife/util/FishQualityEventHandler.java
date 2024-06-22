@@ -18,6 +18,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = fishinglife.MOD_ID)
@@ -43,6 +44,15 @@ public class FishQualityEventHandler{
                     player.sendSystemMessage(Component.literal("You got 10xp!")
                             .withStyle(ChatFormatting.AQUA));
                 });
+            }
+            else if(ModList.get().isLoaded("aquaculture")){
+                if(fish.is(ModTags.Items.COMPAT_TRASH)){
+                    player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
+                        fishingexperience.addfishingexperience(5,player);
+                        player.sendSystemMessage(Component.literal("You got 5xp!")
+                                .withStyle(ChatFormatting.DARK_GRAY));
+                    });
+                }
             }
             else if(fish.is(ModTags.Items.FISHING_TRASH)){
                 player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {

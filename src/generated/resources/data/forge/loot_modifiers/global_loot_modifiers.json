@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "fishinglife:anchor_pattern_item_from_shipwreck_treasure",
+    "fishinglife:ship_pattern_item_from_shipwreck_treasure",
+    "fishinglife:seashell_pattern_item_from_shipwreck_treasure",
+    "fishinglife:pirate_pattern_item_from_shipwreck_treasure"
+  ],
+  "replace": false
+}

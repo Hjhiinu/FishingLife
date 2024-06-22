@@ -9,6 +9,7 @@ import com.FishingLife.fishinglife.Modrecipe.ModRecipes;
 import com.FishingLife.fishinglife.block.entity.ModBlockEntities;
 import com.FishingLife.fishinglife.entity.ModEntity;
 import com.FishingLife.fishinglife.item.ArmorItem.ArmorEffectHandler;
+import com.FishingLife.fishinglife.loot.ModLootModifiers;
 import com.FishingLife.fishinglife.registry.*;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
 import com.mojang.logging.LogUtils;
@@ -62,7 +63,7 @@ public class fishinglife
         modEventBus.addListener(this::commonSetup);
 
 
-
+        ModLootModifiers.register(modEventBus);
         FishingLifeCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         FishingLifeItemsRegistry.ITEMS.register(modEventBus);
         FishingLifeBlocksRegistry.BLOCKS.register(modEventBus);

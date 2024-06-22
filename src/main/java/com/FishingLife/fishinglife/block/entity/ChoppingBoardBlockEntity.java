@@ -31,11 +31,6 @@ public class ChoppingBoardBlockEntity extends BlockEntity {
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
         }
     }
-    public void decreaseStoredItemDurability(int amount) {
-        this.renderStack.setDamageValue(this.renderStack.getDamageValue() + amount);
-        setChanged();
-
-    }
 
     public boolean hasItem() {
         return !renderStack.isEmpty();
