@@ -26,7 +26,7 @@ public class fishingrodPlayerDataUtil {
 
     private static final int tension_total_count=60;
 
-    private static final int totalcount=900;
+    private static final int totalcount=1200;
 
 
     private static int luck;

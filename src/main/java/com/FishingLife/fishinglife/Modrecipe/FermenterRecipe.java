@@ -34,6 +34,10 @@ public class FermenterRecipe implements Recipe<SimpleContainer> {
 
         return inputItems.get(0).test(pContainer.getItem(0))&&inputItems.get(1).test(pContainer.getItem(1));
     }
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputItems;
+    }
 
     @Override
     public ItemStack assemble(SimpleContainer pContainer, RegistryAccess pRegistryAccess) {
