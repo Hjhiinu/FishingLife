@@ -35,35 +35,41 @@ public class FishQualityEventHandler{
         if (!event.getDrops().isEmpty()) {
             ItemStack fish = event.getDrops().get(0);
             player.sendSystemMessage(Component.literal("You got "+ fish.getDisplayName().getString()+" !"));
-            if(fish.is(ModTags.Items.MODFISH)) {
-                assignRandomQuality(fish,k,player);
+            if (fish.is(ModTags.Items.MODFISH)) {
+                assignRandomQuality(fish, k, player);
             }
-            else if(fish.is(ItemTags.FISHES)){
+            else if (fish.is(Items.COD) || fish.is(Items.SALMON)) {
                 player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
-                    fishingexperience.addfishingexperience(10,player);
+                    fishingexperience.addfishingexperience(10, player);
                     player.sendSystemMessage(Component.literal("You got 10xp!")
                             .withStyle(ChatFormatting.AQUA));
                 });
             }
+            else if (fish.is(ModTags.Items.FISHING_TRASH)) {
+                player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
+                    fishingexperience.addfishingexperience(5, player);
+                    player.sendSystemMessage(Component.literal("You got 5xp!")
+                            .withStyle(ChatFormatting.DARK_GRAY));
+                });
+            }
             else if(ModList.get().isLoaded("aquaculture")){
-                if(fish.is(ModTags.Items.COMPAT_TRASH)){
+                if (fish.is(ModTags.Items.COMPAT_FISH)) {
                     player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
-                        fishingexperience.addfishingexperience(5,player);
+                        fishingexperience.addfishingexperience(10, player);
+                        player.sendSystemMessage(Component.literal("You got 10xp!")
+                                .withStyle(ChatFormatting.AQUA));
+                    });
+                } else if (fish.is(ModTags.Items.COMPAT_TRASH)) {
+                    player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
+                        fishingexperience.addfishingexperience(5, player);
                         player.sendSystemMessage(Component.literal("You got 5xp!")
                                 .withStyle(ChatFormatting.DARK_GRAY));
                     });
                 }
             }
-            else if(fish.is(ModTags.Items.FISHING_TRASH)){
-                player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
-                    fishingexperience.addfishingexperience(5,player);
-                    player.sendSystemMessage(Component.literal("You got 5xp!")
-                            .withStyle(ChatFormatting.DARK_GRAY));
-                });
-            }
             else{
                 player.getCapability(fishingexperienceProvider.PLAYER_FISHING_EXPERIENCE).ifPresent(fishingexperience -> {
-                    fishingexperience.addfishingexperience(20,player);
+                    fishingexperience.addfishingexperience(20, player);
                     player.sendSystemMessage(Component.literal("You got 20xp!")
                             .withStyle(ChatFormatting.LIGHT_PURPLE));
                 });

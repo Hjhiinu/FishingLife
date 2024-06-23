@@ -1,6 +1,7 @@
 package com.FishingLife.fishinglife.item;
 import com.FishingLife.fishinglife.capability.fishingMechanism.IntegrationProvider;
 import com.FishingLife.fishinglife.client.fishingHUD.HUDIntegration;
+import com.FishingLife.fishinglife.config.FishingLifeConfig;
 import com.FishingLife.fishinglife.item.ItemUtil.fishingrodPlayerDataUtil;
 import com.FishingLife.fishinglife.registry.FishingLifeItemsRegistry;
 import com.FishingLife.fishinglife.util.FishingGame.FishingGameFishLogicHandler;
@@ -77,8 +78,10 @@ public class ModFishingRodItem extends FishingRodItem {
                         LootParams lootparams = (new LootParams.Builder((ServerLevel) pPlayer.fishing.level())).withParameter(LootContextParams.ORIGIN, pPlayer.fishing.position()).withParameter(LootContextParams.TOOL, fishingrodPlayerDataUtil.getitemstack()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withParameter(LootContextParams.KILLER_ENTITY, pPlayer.fishing.getOwner()).withParameter(LootContextParams.THIS_ENTITY, pPlayer.fishing).withLuck((float) fishingrodPlayerDataUtil.getluck() + pPlayer.getLuck()).create(LootContextParamSets.FISHING);   //luck should also be localized
                         ResourceLocation loot =null;
                         int number =1; //Fishinglife
-                        if(ModList.get().isLoaded("aquaculture")){
-                           number= generateOneOrTwo();
+                        if(FishingLifeConfig.compat_other_mod_fish.get()) {
+                            if (ModList.get().isLoaded("aquaculture")) {
+                                number = generateOneOrTwo();
+                            }
                         }
                         switch (number) {
                             case 1 -> { //FishingLife
@@ -108,12 +111,17 @@ public class ModFishingRodItem extends FishingRodItem {
                             pPlayer.fishing.discard();
                         }//fishing game
                         else {
-                            if(list.get(0).is(ModTags.Items.MODFISH)||list.get(0).is(ModTags.Items.COMPAT_FISH)||list.get(0).is(ItemTags.FISHES)){
-                                FishingGameFishLogicHandler.tension_init();
-                                fishingrodPlayerDataUtil.setGameflag(true);
+                            if(FishingLifeConfig.is_fishinggame.get()) {
+                                if (list.get(0).is(ModTags.Items.MODFISH) || list.get(0).is(ModTags.Items.COMPAT_FISH) || list.get(0).is(ItemTags.FISHES)) {
+                                    FishingGameFishLogicHandler.tension_init();
+                                    fishingrodPlayerDataUtil.setGameflag(true);
+                                } else {
+                                    general_fishing_ending(pPlayer, 0);
+                                    return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+                                }
                             }
                             else{
-                                general_fishing_ending(pPlayer,0);
+                                general_fishing_ending(pPlayer, 0);
                                 return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
                             }
                         }
