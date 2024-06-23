@@ -225,10 +225,6 @@ public class GeneralVillagerTradeEvent {
             ItemStack itemToBuy = randomfunction(quality, fishgroup);
             ItemStack itemToSell = new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), coinCount);
 
-            // Check if the item to buy is at full durability
-            if (itemToBuy.isDamageableItem() && itemToBuy.getDamageValue() != 0) {
-                return null;
-            }
             return new MerchantOffer(itemToBuy, itemToSell, maxUses, xpValue, 0);
         });
     }
@@ -239,10 +235,6 @@ public class GeneralVillagerTradeEvent {
             ItemStack itemToBuy = randomfunction(quality, fishgroup,fishcount);
             ItemStack itemToSell = new ItemStack(FishingLifeItemsRegistry.ARISQUEDO_COIN.get(), coinCount);
 
-            // Check if the item to buy is at full durability
-            if (itemToBuy.isDamageableItem() && itemToBuy.getDamageValue() != 0) {
-                return null;
-            }
             return new MerchantOffer(itemToBuy, itemToSell, maxUses, xpValue, 0);
         });
     }
