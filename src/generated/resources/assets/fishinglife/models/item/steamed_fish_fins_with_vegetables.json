@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fishinglife:item/steamed_fish_fins_with_vegetables"
+  }
+}

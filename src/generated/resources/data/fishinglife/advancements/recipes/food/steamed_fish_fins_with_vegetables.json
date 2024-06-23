@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bok_choy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:bok_choy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fish_fin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:fish_fin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scallion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:scallion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:steamed_fish_fins_with_vegetables"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fish_fin",
+      "has_scallion",
+      "has_bok_choy",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:steamed_fish_fins_with_vegetables"
+    ]
+  },
+  "sends_telemetry_event": false
+}

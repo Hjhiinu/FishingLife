@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "fishinglife:scallion"
+    },
+    "S": {
+      "item": "fishinglife:fish_fin"
+    },
+    "X": {
+      "item": "fishinglife:bok_choy"
+    }
+  },
+  "pattern": [
+    "SKS",
+    " X "
+  ],
+  "result": {
+    "item": "fishinglife:steamed_fish_fins_with_vegetables"
+  },
+  "show_notification": true
+}

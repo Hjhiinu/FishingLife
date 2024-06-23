@@ -175,6 +175,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(FishingLifeItemsRegistry.COOKED_FISH_MEAT);
         simpleItem(FishingLifeItemsRegistry.COOKED_SHRIMP);
         simpleItem(FishingLifeItemsRegistry.COOKED_SEA_URCHIN);
+        simpleItem(FishingLifeItemsRegistry.PEPPER_SHAKE);
+        simpleItem(FishingLifeItemsRegistry.STIR_FRIED_BAMBOO_SHOOTS_WITH_PICKLED_VEGETABLES);
+        simpleItem(FishingLifeItemsRegistry.STIR_FRIED_PORK_WITH_PICKLED_VEGETABLES);
+        simpleItem(FishingLifeItemsRegistry.CRISPY_CREAMY_CAVIAR_FISH_ROLL);
+        simpleItem(FishingLifeItemsRegistry.PICKLED_VEGETABLES);
+        simpleItem(FishingLifeItemsRegistry.FRIED_SHRIMP_AND_SEAWEED_RICE_BOWL);
+        simpleItem(FishingLifeItemsRegistry.SEA_URCHIN_VEGETABLE_RICE_BOWL);
+        simpleItem(FishingLifeItemsRegistry.SEA_URCHIN_SUSHI);
+        simpleItem(FishingLifeItemsRegistry.BOILED_SHRIMP_WITH_GREENS);
+        simpleItem(FishingLifeItemsRegistry.SCRAMBLED_EGGS_WITH_SHRIMP);
+        simpleItem(FishingLifeItemsRegistry.FRIED_EGG_WITH_BACON);
+        simpleItem(FishingLifeItemsRegistry.CREAMY_BAKED_MUSHROOM_STUFFED_BREAD_WITH_CAVIAR);
+        simpleItem(FishingLifeItemsRegistry.FRIED_FISH_FINS);
+        simpleItem(FishingLifeItemsRegistry.STEAMED_FISH_FINS_WITH_VEGETABLES);
+
 
         simpleItem(FishingLifeItemsRegistry.DESERTFISH_COLLECTION); // Desertfish Collection
         simpleItem(FishingLifeItemsRegistry.TEMPERATEFISH_COLLECTION); // Temperatefish Collection

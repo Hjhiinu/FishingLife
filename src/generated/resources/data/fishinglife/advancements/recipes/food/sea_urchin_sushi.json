@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kelp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:kelp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sea_urchin": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "fishinglife:sea_urchin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:sea_urchin_sushi"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sea_urchin",
+      "has_kelp",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:sea_urchin_sushi"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "tag": "fishinglife:shrimp"
+    },
+    "M": {
+      "item": "minecraft:egg"
+    },
+    "S": {
+      "item": "fishinglife:scallion"
+    }
+  },
+  "pattern": [
+    "SKM",
+    " K "
+  ],
+  "result": {
+    "item": "fishinglife:scrambled_eggs_with_shrimp"
+  },
+  "show_notification": true
+}

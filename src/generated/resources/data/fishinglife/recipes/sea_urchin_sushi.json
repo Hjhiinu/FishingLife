@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:kelp"
+    },
+    "S": {
+      "tag": "fishinglife:sea_urchin"
+    }
+  },
+  "pattern": [
+    "SK "
+  ],
+  "result": {
+    "item": "fishinglife:sea_urchin_sushi"
+  },
+  "show_notification": true
+}

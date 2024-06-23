@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:porkchop"
+    },
+    "S": {
+      "item": "fishinglife:pickled_vegetables"
+    }
+  },
+  "pattern": [
+    "KS "
+  ],
+  "result": {
+    "item": "fishinglife:stir_fried_pork_with_pickled_vegetables"
+  },
+  "show_notification": true
+}

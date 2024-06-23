@@ -1,0 +1,59 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:egg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_scallion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:scallion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shrimp": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "fishinglife:shrimp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:scrambled_eggs_with_shrimp"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_shrimp",
+      "has_scallion",
+      "has_egg",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:scrambled_eggs_with_shrimp"
+    ]
+  },
+  "sends_telemetry_event": false
+}

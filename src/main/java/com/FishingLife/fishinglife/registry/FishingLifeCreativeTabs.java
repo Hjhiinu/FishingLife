@@ -170,6 +170,20 @@ public class FishingLifeCreativeTabs {
                         pOutput.accept(FishingLifeItemsRegistry.FISH_SANDWICH.get());
                         pOutput.accept(FishingLifeItemsRegistry.FISH_SUSHI.get());
                         pOutput.accept(FishingLifeItemsRegistry.FISH_RICE_ROLL.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PEPPER_SHAKE.get());
+                        pOutput.accept(FishingLifeItemsRegistry.STIR_FRIED_BAMBOO_SHOOTS_WITH_PICKLED_VEGETABLES.get());
+                        pOutput.accept(FishingLifeItemsRegistry.STIR_FRIED_PORK_WITH_PICKLED_VEGETABLES.get());
+                        pOutput.accept(FishingLifeItemsRegistry.CRISPY_CREAMY_CAVIAR_FISH_ROLL.get());
+                        pOutput.accept(FishingLifeItemsRegistry.PICKLED_VEGETABLES.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FRIED_SHRIMP_AND_SEAWEED_RICE_BOWL.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SEA_URCHIN_VEGETABLE_RICE_BOWL.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SEA_URCHIN_SUSHI.get());
+                        pOutput.accept(FishingLifeItemsRegistry.BOILED_SHRIMP_WITH_GREENS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.SCRAMBLED_EGGS_WITH_SHRIMP.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FRIED_EGG_WITH_BACON.get());
+                        pOutput.accept(FishingLifeItemsRegistry.CREAMY_BAKED_MUSHROOM_STUFFED_BREAD_WITH_CAVIAR.get());
+                        pOutput.accept(FishingLifeItemsRegistry.FRIED_FISH_FINS.get());
+                        pOutput.accept(FishingLifeItemsRegistry.STEAMED_FISH_FINS_WITH_VEGETABLES.get());
 
 
 

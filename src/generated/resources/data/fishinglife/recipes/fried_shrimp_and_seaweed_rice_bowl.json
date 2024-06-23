@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "fishinglife:paddy"
+    },
+    "S": {
+      "tag": "fishinglife:shrimp"
+    },
+    "X": {
+      "item": "minecraft:seagrass"
+    }
+  },
+  "pattern": [
+    "SXM"
+  ],
+  "result": {
+    "item": "fishinglife:fried_shrimp_and_seaweed_rice_bowl"
+  },
+  "show_notification": true
+}

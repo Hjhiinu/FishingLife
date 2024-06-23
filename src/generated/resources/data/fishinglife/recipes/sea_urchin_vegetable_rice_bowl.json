@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "tag": "fishinglife:sea_urchin"
+    },
+    "M": {
+      "item": "fishinglife:bok_choy"
+    },
+    "S": {
+      "item": "fishinglife:paddy"
+    }
+  },
+  "pattern": [
+    "SKM",
+    " K "
+  ],
+  "result": {
+    "item": "fishinglife:sea_urchin_vegetable_rice_bowl"
+  },
+  "show_notification": true
+}

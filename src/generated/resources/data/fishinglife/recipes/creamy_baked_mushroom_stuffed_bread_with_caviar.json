@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:brown_mushroom"
+    },
+    "M": {
+      "item": "fishinglife:fish_roe"
+    },
+    "S": {
+      "item": "fishinglife:cream"
+    },
+    "X": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    "SKM",
+    "KX "
+  ],
+  "result": {
+    "item": "fishinglife:creamy_baked_mushroom_stuffed_bread_with_caviar"
+  },
+  "show_notification": true
+}

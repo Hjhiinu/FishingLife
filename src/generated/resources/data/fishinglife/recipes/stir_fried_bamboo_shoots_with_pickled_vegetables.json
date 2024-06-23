@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:bamboo"
+    },
+    "S": {
+      "item": "fishinglife:pickled_vegetables"
+    }
+  },
+  "pattern": [
+    "KS "
+  ],
+  "result": {
+    "item": "fishinglife:stir_fried_bamboo_shoots_with_pickled_vegetables"
+  },
+  "show_notification": true
+}

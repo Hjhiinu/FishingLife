@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fishinglife:item/crispy_creamy_caviar_fish_roll"
+  }
+}

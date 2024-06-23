@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "minecraft:porkchop"
+    },
+    "S": {
+      "item": "minecraft:egg"
+    }
+  },
+  "pattern": [
+    "SKS"
+  ],
+  "result": {
+    "item": "fishinglife:fried_egg_with_bacon"
+  },
+  "show_notification": true
+}

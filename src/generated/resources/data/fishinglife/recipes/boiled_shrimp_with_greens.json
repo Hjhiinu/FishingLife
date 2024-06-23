@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "tag": "fishinglife:shrimp"
+    },
+    "X": {
+      "item": "fishinglife:bok_choy"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " X "
+  ],
+  "result": {
+    "item": "fishinglife:boiled_shrimp_with_greens"
+  },
+  "show_notification": true
+}

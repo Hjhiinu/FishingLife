@@ -1,0 +1,15 @@
+{
+  "type": "fishinglife:fermenting",
+  "ingredients": [
+    {
+      "item": "fishinglife:yeast_powder"
+    },
+    {
+      "item": "fishinglife:red_pepper"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "fishinglife:pickled_vegetables"
+  }
+}

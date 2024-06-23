@@ -1,0 +1,59 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_paddy": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:paddy"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_seagrass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:seagrass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shrimp": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "fishinglife:shrimp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:fried_shrimp_and_seaweed_rice_bowl"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_shrimp",
+      "has_paddy",
+      "has_seagrass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:fried_shrimp_and_seaweed_rice_bowl"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fishinglife:item/fried_shrimp_and_seaweed_rice_bowl"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "fishinglife:fish_fin"
+    }
+  },
+  "pattern": [
+    "SSS"
+  ],
+  "result": {
+    "item": "fishinglife:fried_fish_fins"
+  },
+  "show_notification": true
+}

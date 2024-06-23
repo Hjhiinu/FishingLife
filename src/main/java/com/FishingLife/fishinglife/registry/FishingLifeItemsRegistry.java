@@ -441,11 +441,11 @@ public class FishingLifeItemsRegistry {
 
     public static final RegistryObject<Item> COOKED_FISH_MEAT = ITEMS.register("cooked_fish_meat",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.5F).build())));
 
-    public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.4F).build())));
+    public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).build())));
 
-    public static final RegistryObject<Item> COOKED_SHRIMP = ITEMS.register("cooked_shrimp",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.4F).fast().build())));
+    public static final RegistryObject<Item> COOKED_SHRIMP = ITEMS.register("cooked_shrimp",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.6F).fast().build())));
 
-    public static final RegistryObject<Item> COOKED_SEA_URCHIN = ITEMS.register("cooked_sea_urchin",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.3F).fast().build())));
+    public static final RegistryObject<Item> COOKED_SEA_URCHIN = ITEMS.register("cooked_sea_urchin",()->new Item(new Item.Properties().food((new FoodProperties.Builder()).nutrition(5).saturationMod(0.5F).fast().build())));
 
 
     //Net
@@ -530,25 +530,64 @@ public class FishingLifeItemsRegistry {
 
     //Dishes
     public static final RegistryObject<Item>  BRAISED_FISH= ITEMS.register("braised_fish",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Braised_fish)));
 
     public static final RegistryObject<Item>  SWEET_AND_SOUR_FISH_SLICES= ITEMS.register("sweet_and_sour_fish_slices",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Sweet_and_sour_fish_slices)));
 
     public static final RegistryObject<Item>  FISH_OMELETTE= ITEMS.register("fish_omelette",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fish_omelette)));
 
     public static final RegistryObject<Item>  MISO_GRILLED_FISH= ITEMS.register("miso_grilled_fish",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Miso_grilled_fish)));
 
     public static final RegistryObject<Item>  FISH_RICE_ROLL= ITEMS.register("fish_rice_roll",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fish_rice_roll)));
 
     public static final RegistryObject<Item>  FISH_SANDWICH= ITEMS.register("fish_sandwich",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.COMMON_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fish_sandwich)));
 
     public static final RegistryObject<Item>  FISH_SUSHI= ITEMS.register("fish_sushi",
-            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.GENERAL_DISHES)));
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fish_sushi)));
+
+    public static final RegistryObject<Item> STIR_FRIED_BAMBOO_SHOOTS_WITH_PICKLED_VEGETABLES = ITEMS.register("stir_fried_bamboo_shoots_with_pickled_vegetables",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Stir_fried_bamboo_shoots_with_pickled_vegetables)));
+
+    public static final RegistryObject<Item> STIR_FRIED_PORK_WITH_PICKLED_VEGETABLES = ITEMS.register("stir_fried_pork_with_pickled_vegetables",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Stir_fried_pork_with_pickled_vegetables)));
+
+    public static final RegistryObject<Item> CRISPY_CREAMY_CAVIAR_FISH_ROLL = ITEMS.register("crispy_creamy_caviar_fish_roll",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Crispy_creamy_caviar_fish_roll)));
+
+    public static final RegistryObject<Item> PICKLED_VEGETABLES = ITEMS.register("pickled_vegetables",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Pickled_vegetables)));
+
+    public static final RegistryObject<Item> FRIED_SHRIMP_AND_SEAWEED_RICE_BOWL = ITEMS.register("fried_shrimp_and_seaweed_rice_bowl",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fried_shrimp_and_seaweed_rice_bowl)));
+
+    public static final RegistryObject<Item> SEA_URCHIN_VEGETABLE_RICE_BOWL = ITEMS.register("sea_urchin_vegetable_rice_bowl",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Sea_urchin_vegetable_rice_bowl)));
+
+    public static final RegistryObject<Item> SEA_URCHIN_SUSHI = ITEMS.register("sea_urchin_sushi",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Sea_urchin_sushi)));
+
+    public static final RegistryObject<Item> BOILED_SHRIMP_WITH_GREENS = ITEMS.register("boiled_shrimp_with_greens",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Boiled_shrimp_with_greens)));
+
+    public static final RegistryObject<Item> SCRAMBLED_EGGS_WITH_SHRIMP = ITEMS.register("scrambled_eggs_with_shrimp",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Scrambled_eggs_with_shrimp)));
+
+    public static final RegistryObject<Item> FRIED_EGG_WITH_BACON = ITEMS.register("fried_egg_with_bacon",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fried_egg_with_bacon)));
+
+    public static final RegistryObject<Item> CREAMY_BAKED_MUSHROOM_STUFFED_BREAD_WITH_CAVIAR = ITEMS.register("creamy_baked_mushroom_stuffed_bread_with_caviar",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Creamy_baked_mushroom_stuffed_bread_with_caviar)));
+
+    public static final RegistryObject<Item> FRIED_FISH_FINS = ITEMS.register("fried_fish_fins",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Fried_fish_fins)));
+
+    public static final RegistryObject<Item> STEAMED_FISH_FINS_WITH_VEGETABLES = ITEMS.register("steamed_fish_fins_with_vegetables",
+            () -> new Item(new Item.Properties().food(FishingLifeFoodsRegistry.Steamed_fish_fins_with_vegetables)));
 
 
     //Currency

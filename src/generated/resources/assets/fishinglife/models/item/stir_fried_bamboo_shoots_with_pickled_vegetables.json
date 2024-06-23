@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fishinglife:item/stir_fried_bamboo_shoots_with_pickled_vegetables"
+  }
+}

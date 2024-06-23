@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pickled_vegetables": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fishinglife:pickled_vegetables"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fishinglife:stir_fried_bamboo_shoots_with_pickled_vegetables"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo",
+      "has_pickled_vegetables",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fishinglife:stir_fried_bamboo_shoots_with_pickled_vegetables"
+    ]
+  },
+  "sends_telemetry_event": false
+}

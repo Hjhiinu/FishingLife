@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fishinglife:item/creamy_baked_mushroom_stuffed_bread_with_caviar"
+  }
+}

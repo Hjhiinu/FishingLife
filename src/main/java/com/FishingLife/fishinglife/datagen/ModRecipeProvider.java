@@ -366,10 +366,98 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(FishingLifeItemsRegistry.PADDY.get()), has(FishingLifeItemsRegistry.PADDY.get()))
                 .unlockedBy(getHasName(FishingLifeItemsRegistry.CHILI_PEPPER.get()), has(FishingLifeItemsRegistry.CHILI_PEPPER.get()))
                 .save(pWriter);
-
-
-
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.STEAMED_FISH_FINS_WITH_VEGETABLES.get())
+                .pattern("SKS")
+                .pattern(" X ")
+                .define('S',FishingLifeItemsRegistry.FISH_FIN.get())
+                .define('K',FishingLifeItemsRegistry.SCALLION.get())
+                .define('X',FishingLifeItemsRegistry.BOK_CHOY.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_FIN.get()), has(FishingLifeItemsRegistry.FISH_FIN.get()))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.SCALLION.get()), has(FishingLifeItemsRegistry.SCALLION.get()))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.BOK_CHOY.get()), has(FishingLifeItemsRegistry.BOK_CHOY.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.BOILED_SHRIMP_WITH_GREENS.get())
+                .pattern("SSS")
+                .pattern(" X ")
+                .define('S',ModTags.Items.SHRIMP)
+                .define('X',FishingLifeItemsRegistry.BOK_CHOY.get())
+                .unlockedBy("has_shrimp", has(ModTags.Items.SHRIMP))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.BOK_CHOY.get()), has(FishingLifeItemsRegistry.BOK_CHOY.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.FRIED_EGG_WITH_BACON.get())
+                .pattern("SKS")
+                .define('S',Items.EGG)
+                .define('K',Items.PORKCHOP)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.FRIED_FISH_FINS.get())
+                .pattern("SSS")
+                .define('S',FishingLifeItemsRegistry.FISH_FIN.get())
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_FIN.get()), has(FishingLifeItemsRegistry.FISH_FIN.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.CREAMY_BAKED_MUSHROOM_STUFFED_BREAD_WITH_CAVIAR.get())
+                .pattern("SKM")
+                .pattern("KX ")
+                .define('S',FishingLifeItemsRegistry.CREAM.get())
+                .define('X',Items.BREAD)
+                .define('K',Items.BROWN_MUSHROOM)
+                .define('M',FishingLifeItemsRegistry.FISH_ROE.get())
+                .unlockedBy(getHasName(Items.BROWN_MUSHROOM), has(Items.BROWN_MUSHROOM))
+                .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.CREAM.get()), has(FishingLifeItemsRegistry.CREAM.get()))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.FISH_ROE.get()), has(FishingLifeItemsRegistry.FISH_ROE.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.FRIED_SHRIMP_AND_SEAWEED_RICE_BOWL.get())
+                .pattern("SXM")
+                .define('S',ModTags.Items.SHRIMP)
+                .define('X',Items.SEAGRASS)
+                .define('M',FishingLifeItemsRegistry.PADDY.get())
+                .unlockedBy("has_shrimp", has(ModTags.Items.SHRIMP))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PADDY.get()), has(FishingLifeItemsRegistry.PADDY.get()))
+                .unlockedBy(getHasName(Items.SEAGRASS), has(Items.SEAGRASS))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.SCRAMBLED_EGGS_WITH_SHRIMP.get())
+                .pattern("SKM")
+                .pattern(" K ")
+                .define('K',ModTags.Items.SHRIMP)
+                .define('S',FishingLifeItemsRegistry.SCALLION.get())
+                .define('M',Items.EGG)
+                .unlockedBy("has_shrimp", has(ModTags.Items.SHRIMP))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.SCALLION.get()), has(FishingLifeItemsRegistry.SCALLION.get()))
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.SEA_URCHIN_SUSHI.get())
+                .pattern("SK ")
+                .define('S',ModTags.Items.SEA_URCHIN)
+                .define('K',Items.KELP)
+                .unlockedBy("has_sea_urchin", has(ModTags.Items.SEA_URCHIN))
+                .unlockedBy(getHasName(Items.KELP), has(Items.KELP))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.SEA_URCHIN_VEGETABLE_RICE_BOWL.get())
+                .pattern("SKM")
+                .pattern(" K ")
+                .define('K',ModTags.Items.SEA_URCHIN)
+                .define('S',FishingLifeItemsRegistry.PADDY.get())
+                .define('M',FishingLifeItemsRegistry.BOK_CHOY.get())
+                .unlockedBy("has_sea_urchin", has(ModTags.Items.SEA_URCHIN))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PADDY.get()), has(FishingLifeItemsRegistry.PADDY.get()))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.BOK_CHOY.get()), has(FishingLifeItemsRegistry.BOK_CHOY.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.STIR_FRIED_PORK_WITH_PICKLED_VEGETABLES.get())
+                .pattern("KS ")
+                .define('K',Items.PORKCHOP)
+                .define('S',FishingLifeItemsRegistry.PICKLED_VEGETABLES.get())
+                .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PICKLED_VEGETABLES.get()), has(FishingLifeItemsRegistry.PICKLED_VEGETABLES.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, FishingLifeItemsRegistry.STIR_FRIED_BAMBOO_SHOOTS_WITH_PICKLED_VEGETABLES.get())
+                .pattern("KS ")
+                .define('K',Items.BAMBOO)
+                .define('S',FishingLifeItemsRegistry.PICKLED_VEGETABLES.get())
+                .unlockedBy(getHasName(Items.BAMBOO), has(Items.BAMBOO))
+                .unlockedBy(getHasName(FishingLifeItemsRegistry.PICKLED_VEGETABLES.get()), has(FishingLifeItemsRegistry.PICKLED_VEGETABLES.get()))
+                .save(pWriter);
 
 
 
