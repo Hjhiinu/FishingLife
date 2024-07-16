@@ -12,7 +12,7 @@ import java.util.Map;
 public class FullArmors extends ArmorItem {
     public static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.FISH_SCALE, new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 1,
+                    .put(ModArmorMaterials.FISH_SCALE, new MobEffectInstance(MobEffects.NIGHT_VISION, 1200, 1,
                             false, false, true))
                     .build();
 

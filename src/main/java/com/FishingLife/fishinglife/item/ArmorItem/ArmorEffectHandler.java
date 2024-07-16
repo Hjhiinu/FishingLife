@@ -31,8 +31,6 @@ public class ArmorEffectHandler {
 
             if (hasFullSuitOfArmorOn(player, material)) {
                 applyEffect(player, effect);
-            }else {
-                removeEffect(player, effect);
             }
         }
     }
@@ -40,12 +38,8 @@ public class ArmorEffectHandler {
         ItemStack helmet = player.getItemBySlot(EquipmentSlot.HEAD);
         if (helmet.getItem() instanceof ArmorItem armorItem && armorItem.getMaterial() == ModArmorMaterials.ADVANCED_TURTLE_SHELL) {
             if (player.isInWater()) {
-                applyEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING, Integer.MAX_VALUE, 0, false, false, true));
-            } else {
-                removeEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING));
+                applyEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING, 1200, 0, false, false, true));
             }
-        } else {
-            removeEffect(player, new MobEffectInstance(MobEffects.WATER_BREATHING));
         }
     }
     private static boolean hasFullSuitOfArmorOn(Player player, ArmorMaterial material) {
@@ -65,10 +59,12 @@ public class ArmorEffectHandler {
             player.addEffect(new MobEffectInstance(effect));
         }
     }
-
+/*
     private static void removeEffect(Player player, MobEffectInstance effect) {
         if (player.hasEffect(effect.getEffect())) {
             player.removeEffect(effect.getEffect());
         }
     }
+
+ */
 }
